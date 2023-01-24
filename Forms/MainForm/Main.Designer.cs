@@ -40,6 +40,7 @@
             this.PFormGetir = new System.Windows.Forms.Panel();
             this.gradientPanel1 = new PerModule.Tools.GradientPanel();
             this.GPTop2 = new PerModule.Tools.GradientPanel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GPTop = new PerModule.Tools.GradientPanel();
@@ -47,14 +48,17 @@
             this.btnQMark = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.Pmenu.SuspendLayout();
             this.GPTop2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GPTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // Pmenu
@@ -68,9 +72,9 @@
             this.Pmenu.Controls.Add(this.btnPersonel);
             this.Pmenu.Controls.Add(this.btnAnasayfa);
             this.Pmenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Pmenu.Location = new System.Drawing.Point(0, 99);
+            this.Pmenu.Location = new System.Drawing.Point(0, 96);
             this.Pmenu.Name = "Pmenu";
-            this.Pmenu.Size = new System.Drawing.Size(100, 662);
+            this.Pmenu.Size = new System.Drawing.Size(100, 665);
             this.Pmenu.TabIndex = 5;
             // 
             // btnBordro
@@ -89,6 +93,8 @@
             this.btnBordro.TabIndex = 14;
             this.btnBordro.UseVisualStyleBackColor = false;
             this.btnBordro.Click += new System.EventHandler(this.btnBordro_Click_1);
+            this.btnBordro.MouseEnter += new System.EventHandler(this.btnBordro_MouseEnter);
+            this.btnBordro.MouseLeave += new System.EventHandler(this.btnBordro_MouseLeave);
             // 
             // btnOzlukB
             // 
@@ -106,6 +112,8 @@
             this.btnOzlukB.TabIndex = 13;
             this.btnOzlukB.UseVisualStyleBackColor = false;
             this.btnOzlukB.Click += new System.EventHandler(this.btnOzlukB_Click_1);
+            this.btnOzlukB.MouseEnter += new System.EventHandler(this.btnOzlukB_MouseEnter);
+            this.btnOzlukB.MouseLeave += new System.EventHandler(this.btnOzlukB_MouseLeave);
             // 
             // btnZimmet
             // 
@@ -123,6 +131,8 @@
             this.btnZimmet.TabIndex = 12;
             this.btnZimmet.UseVisualStyleBackColor = false;
             this.btnZimmet.Click += new System.EventHandler(this.btnZimmet_Click_1);
+            this.btnZimmet.MouseEnter += new System.EventHandler(this.btnZimmet_MouseEnter);
+            this.btnZimmet.MouseLeave += new System.EventHandler(this.btnZimmet_MouseLeave);
             // 
             // BtnIzin
             // 
@@ -140,6 +150,8 @@
             this.BtnIzin.TabIndex = 11;
             this.BtnIzin.UseVisualStyleBackColor = false;
             this.BtnIzin.Click += new System.EventHandler(this.BtnIzin_Click_1);
+            this.BtnIzin.MouseEnter += new System.EventHandler(this.BtnIzin_MouseEnter);
+            this.BtnIzin.MouseLeave += new System.EventHandler(this.BtnIzin_MouseLeave);
             // 
             // btnPerRaport
             // 
@@ -157,6 +169,8 @@
             this.btnPerRaport.TabIndex = 10;
             this.btnPerRaport.UseVisualStyleBackColor = false;
             this.btnPerRaport.Click += new System.EventHandler(this.btnPerRaport_Click_1);
+            this.btnPerRaport.MouseEnter += new System.EventHandler(this.btnPerRaport_MouseEnter);
+            this.btnPerRaport.MouseLeave += new System.EventHandler(this.btnPerRaport_MouseLeave);
             // 
             // btnPersonel
             // 
@@ -174,6 +188,8 @@
             this.btnPersonel.TabIndex = 9;
             this.btnPersonel.UseVisualStyleBackColor = false;
             this.btnPersonel.Click += new System.EventHandler(this.btnPersonel_Click);
+            this.btnPersonel.MouseEnter += new System.EventHandler(this.btnPersonel_MouseEnter);
+            this.btnPersonel.MouseLeave += new System.EventHandler(this.btnPersonel_MouseLeave);
             // 
             // btnAnasayfa
             // 
@@ -191,14 +207,16 @@
             this.btnAnasayfa.TabIndex = 8;
             this.btnAnasayfa.UseVisualStyleBackColor = false;
             this.btnAnasayfa.Click += new System.EventHandler(this.btnAnasayfa_Click);
+            this.btnAnasayfa.MouseEnter += new System.EventHandler(this.btnAnasayfa_MouseEnter);
+            this.btnAnasayfa.MouseLeave += new System.EventHandler(this.btnAnasayfa_MouseLeave);
             // 
             // PFormGetir
             // 
             this.PFormGetir.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.PFormGetir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PFormGetir.Location = new System.Drawing.Point(100, 99);
+            this.PFormGetir.Location = new System.Drawing.Point(100, 96);
             this.PFormGetir.Name = "PFormGetir";
-            this.PFormGetir.Size = new System.Drawing.Size(1228, 652);
+            this.PFormGetir.Size = new System.Drawing.Size(1228, 655);
             this.PFormGetir.TabIndex = 6;
             // 
             // gradientPanel1
@@ -217,15 +235,27 @@
             this.GPTop2.BackColor = System.Drawing.Color.Transparent;
             this.GPTop2.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.GPTop2.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(80)))), ((int)(((byte)(87)))));
-            this.GPTop2.Controls.Add(this.pictureBox4);
+            this.GPTop2.Controls.Add(this.pictureBox6);
+            this.GPTop2.Controls.Add(this.pictureBox5);
             this.GPTop2.Controls.Add(this.pictureBox3);
+            this.GPTop2.Controls.Add(this.pictureBox4);
             this.GPTop2.Controls.Add(this.pictureBox2);
             this.GPTop2.Controls.Add(this.pictureBox1);
             this.GPTop2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.GPTop2.Location = new System.Drawing.Point(0, 24);
+            this.GPTop2.Location = new System.Drawing.Point(0, 21);
             this.GPTop2.Name = "GPTop2";
             this.GPTop2.Size = new System.Drawing.Size(1328, 75);
             this.GPTop2.TabIndex = 4;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox4.Location = new System.Drawing.Point(15, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(1313, 12);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -251,14 +281,14 @@
             // 
             this.GPTop.BackColor = System.Drawing.Color.Transparent;
             this.GPTop.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.GPTop.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(80)))), ((int)(((byte)(87)))));
+            this.GPTop.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.GPTop.Controls.Add(this.btnMin);
             this.GPTop.Controls.Add(this.btnQMark);
             this.GPTop.Controls.Add(this.btnClose);
             this.GPTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.GPTop.Location = new System.Drawing.Point(0, 0);
             this.GPTop.Name = "GPTop";
-            this.GPTop.Size = new System.Drawing.Size(1328, 24);
+            this.GPTop.Size = new System.Drawing.Size(1328, 21);
             this.GPTop.TabIndex = 3;
             // 
             // btnMin
@@ -271,7 +301,7 @@
             this.btnMin.Location = new System.Drawing.Point(1265, 0);
             this.btnMin.Margin = new System.Windows.Forms.Padding(2);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(21, 24);
+            this.btnMin.Size = new System.Drawing.Size(21, 21);
             this.btnMin.TabIndex = 8;
             this.btnMin.UseVisualStyleBackColor = false;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
@@ -286,7 +316,7 @@
             this.btnQMark.Location = new System.Drawing.Point(1286, 0);
             this.btnQMark.Margin = new System.Windows.Forms.Padding(2);
             this.btnQMark.Name = "btnQMark";
-            this.btnQMark.Size = new System.Drawing.Size(21, 24);
+            this.btnQMark.Size = new System.Drawing.Size(21, 21);
             this.btnQMark.TabIndex = 7;
             this.btnQMark.UseVisualStyleBackColor = false;
             this.btnQMark.Click += new System.EventHandler(this.btnQMark_Click);
@@ -301,7 +331,7 @@
             this.btnClose.Location = new System.Drawing.Point(1307, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(21, 24);
+            this.btnClose.Size = new System.Drawing.Size(21, 21);
             this.btnClose.TabIndex = 6;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -310,22 +340,32 @@
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(15, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(15, 12);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(73, 63);
+            this.pictureBox3.Size = new System.Drawing.Size(73, 51);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox4
+            // pictureBox5
             // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox4.Location = new System.Drawing.Point(88, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(12, 63);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox5.Location = new System.Drawing.Point(88, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(12, 51);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox6.Location = new System.Drawing.Point(1307, 12);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(21, 51);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 6;
+            this.pictureBox6.TabStop = false;
             // 
             // Main
             // 
@@ -343,11 +383,13 @@
             this.Text = "Main";
             this.Pmenu.ResumeLayout(false);
             this.GPTop2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GPTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -370,8 +412,10 @@
         private Tools.GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
 
