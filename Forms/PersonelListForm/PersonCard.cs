@@ -10,14 +10,11 @@ using System.Windows.Forms;
 
 namespace PerModule.Forms.AnasayfaForm
 {
-    public partial class Anasayfa : Form
+    public partial class PersonCard : Form
     {
-        public Anasayfa()
+        public PersonCard()
         {
             InitializeComponent();
-            
         }
-
-        
     }
 }

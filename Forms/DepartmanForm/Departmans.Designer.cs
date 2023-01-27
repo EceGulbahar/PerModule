@@ -1,6 +1,6 @@
-﻿namespace PerModule.Forms.AnasayfaForm
+﻿namespace PerModule.Forms.DepartmanForm
 {
-    partial class Anasayfa
+    partial class Departmans
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // Anasayfa
+            // Departmans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(1825, 947);
+            this.ClientSize = new System.Drawing.Size(1809, 952);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Anasayfa";
-            this.Text = "Anasayfa";
+            this.Name = "Departmans";
+            this.Text = "Departmans";
             this.ResumeLayout(false);
 
         }

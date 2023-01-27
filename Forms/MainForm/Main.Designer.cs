@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Pmenu = new System.Windows.Forms.Panel();
+            this.pnlHLight = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.btnBordro = new System.Windows.Forms.Button();
             this.btnOzlukB = new System.Windows.Forms.Button();
             this.btnZimmet = new System.Windows.Forms.Button();
@@ -40,6 +41,9 @@
             this.PFormGetir = new System.Windows.Forms.Panel();
             this.gradientPanel1 = new PerModule.Tools.GradientPanel();
             this.GPTop2 = new PerModule.Tools.GradientPanel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -47,23 +51,21 @@
             this.btnMin = new System.Windows.Forms.Button();
             this.btnQMark = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.Pmenu.SuspendLayout();
             this.GPTop2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GPTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // Pmenu
             // 
             this.Pmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(80)))), ((int)(((byte)(87)))));
+            this.Pmenu.Controls.Add(this.pnlHLight);
             this.Pmenu.Controls.Add(this.btnBordro);
             this.Pmenu.Controls.Add(this.btnOzlukB);
             this.Pmenu.Controls.Add(this.btnZimmet);
@@ -76,6 +78,22 @@
             this.Pmenu.Name = "Pmenu";
             this.Pmenu.Size = new System.Drawing.Size(100, 665);
             this.Pmenu.TabIndex = 5;
+            // 
+            // pnlHLight
+            // 
+            this.pnlHLight.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHLight.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlHLight.BackgroundImage")));
+            this.pnlHLight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlHLight.BorderRadius = 1;
+            this.pnlHLight.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.pnlHLight.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(80)))), ((int)(((byte)(87)))));
+            this.pnlHLight.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.pnlHLight.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(80)))), ((int)(((byte)(87)))));
+            this.pnlHLight.Location = new System.Drawing.Point(-7, 0);
+            this.pnlHLight.Name = "pnlHLight";
+            this.pnlHLight.Quality = 10;
+            this.pnlHLight.Size = new System.Drawing.Size(38, 75);
+            this.pnlHLight.TabIndex = 0;
             // 
             // btnBordro
             // 
@@ -212,12 +230,11 @@
             // 
             // PFormGetir
             // 
-            this.PFormGetir.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.PFormGetir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PFormGetir.Location = new System.Drawing.Point(100, 96);
             this.PFormGetir.Name = "PFormGetir";
             this.PFormGetir.Size = new System.Drawing.Size(1228, 655);
-            this.PFormGetir.TabIndex = 6;
+            this.PFormGetir.TabIndex = 7;
             // 
             // gradientPanel1
             // 
@@ -246,6 +263,37 @@
             this.GPTop2.Name = "GPTop2";
             this.GPTop2.Size = new System.Drawing.Size(1328, 75);
             this.GPTop2.TabIndex = 4;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox6.Location = new System.Drawing.Point(1307, 12);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(21, 51);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 6;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox5.Location = new System.Drawing.Point(88, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(12, 51);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(15, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(73, 51);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -336,37 +384,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(15, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(73, 51);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox5.Location = new System.Drawing.Point(88, 12);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(12, 51);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 5;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox6.Location = new System.Drawing.Point(1307, 12);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(21, 51);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 6;
-            this.pictureBox6.TabStop = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,13 +400,13 @@
             this.Text = "Main";
             this.Pmenu.ResumeLayout(false);
             this.GPTop2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GPTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -401,14 +418,8 @@
         private System.Windows.Forms.Button btnQMark;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel Pmenu;
-        private System.Windows.Forms.Button btnBordro;
-        private System.Windows.Forms.Button btnOzlukB;
-        private System.Windows.Forms.Button btnZimmet;
-        private System.Windows.Forms.Button BtnIzin;
-        private System.Windows.Forms.Button btnPerRaport;
         private System.Windows.Forms.Button btnPersonel;
         private System.Windows.Forms.Button btnAnasayfa;
-        private System.Windows.Forms.Panel PFormGetir;
         private Tools.GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -416,6 +427,13 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel PFormGetir;
+        private System.Windows.Forms.Button btnBordro;
+        private System.Windows.Forms.Button btnOzlukB;
+        private System.Windows.Forms.Button btnZimmet;
+        private System.Windows.Forms.Button BtnIzin;
+        private System.Windows.Forms.Button btnPerRaport;
+        private Bunifu.UI.WinForms.BunifuGradientPanel pnlHLight;
     }
 }
 

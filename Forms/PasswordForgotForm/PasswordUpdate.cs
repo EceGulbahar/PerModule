@@ -23,13 +23,13 @@ namespace PerModule.Forms.PasswordForgotForm
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         int PerID = 0;
         private void btnPassUpGonder_Click(object sender, EventArgs e)
         {
-            SqlConnection baglan = new SqlConnection(ConfigurationManager.ConnectionStrings["PersonelModul.Properties.Settings.PERSONELMODULUConnectionString1"].ConnectionString);
+            SqlConnection baglan = new SqlConnection();
             baglan.Open();
 
             SqlCommand passupoku = new SqlCommand("SELECT Tbl_Personels.PerMail, Tbl_Passwords.Sifre, Tbl_Personels.ID FROM Tbl_Personels CROSS JOIN Tbl_Passwords where PerMail=@PerMail", baglan);

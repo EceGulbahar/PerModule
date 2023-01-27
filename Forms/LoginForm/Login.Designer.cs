@@ -30,38 +30,38 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGiris = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCikis = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtKAdi = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.txtKSifre = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.btnSifreGoster = new System.Windows.Forms.Button();
+            this.btnSifreGizle = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.linklblSifre = new System.Windows.Forms.LinkLabel();
+            this.txtKSifre = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.pictureBoxLoginLogo = new System.Windows.Forms.PictureBox();
             this.pnlGrad = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.lblbilgilogin = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBoxLoginLogo = new System.Windows.Forms.PictureBox();
-            this.btnSifreGizle = new System.Windows.Forms.Button();
-            this.btnSifreGoster = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuShadowPanel1.SuspendLayout();
-            this.pnlGrad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoginLogo)).BeginInit();
+            this.pnlGrad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -94,11 +94,11 @@
             this.btnGiris.ColorContrastOnClick = 45;
             this.btnGiris.ColorContrastOnHover = 45;
             this.btnGiris.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnGiris.CustomizableEdges = borderEdges3;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnGiris.CustomizableEdges = borderEdges1;
             this.btnGiris.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnGiris.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnGiris.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -184,11 +184,11 @@
             this.btnCikis.ColorContrastOnClick = 45;
             this.btnCikis.ColorContrastOnHover = 45;
             this.btnCikis.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnCikis.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnCikis.CustomizableEdges = borderEdges2;
             this.btnCikis.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCikis.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCikis.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -288,26 +288,26 @@
             this.txtKAdi.Modified = false;
             this.txtKAdi.Multiline = false;
             this.txtKAdi.Name = "txtKAdi";
-            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtKAdi.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtKAdi.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtKAdi.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.White;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtKAdi.OnIdleState = stateProperties12;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtKAdi.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtKAdi.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtKAdi.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.White;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtKAdi.OnIdleState = stateProperties4;
             this.txtKAdi.Padding = new System.Windows.Forms.Padding(3);
             this.txtKAdi.PasswordChar = '\0';
             this.txtKAdi.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
@@ -359,6 +359,64 @@
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 7;
             // 
+            // btnSifreGoster
+            // 
+            this.btnSifreGoster.BackColor = System.Drawing.Color.White;
+            this.btnSifreGoster.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSifreGoster.BackgroundImage")));
+            this.btnSifreGoster.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSifreGoster.FlatAppearance.BorderSize = 0;
+            this.btnSifreGoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSifreGoster.Location = new System.Drawing.Point(315, 285);
+            this.btnSifreGoster.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSifreGoster.Name = "btnSifreGoster";
+            this.btnSifreGoster.Size = new System.Drawing.Size(23, 23);
+            this.btnSifreGoster.TabIndex = 17;
+            this.btnSifreGoster.UseVisualStyleBackColor = false;
+            this.btnSifreGoster.Click += new System.EventHandler(this.btnSifreGoster_Click);
+            // 
+            // btnSifreGizle
+            // 
+            this.btnSifreGizle.BackColor = System.Drawing.Color.White;
+            this.btnSifreGizle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSifreGizle.BackgroundImage")));
+            this.btnSifreGizle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSifreGizle.FlatAppearance.BorderSize = 0;
+            this.btnSifreGizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSifreGizle.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSifreGizle.Location = new System.Drawing.Point(315, 285);
+            this.btnSifreGizle.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSifreGizle.Name = "btnSifreGizle";
+            this.btnSifreGizle.Size = new System.Drawing.Size(23, 23);
+            this.btnSifreGizle.TabIndex = 16;
+            this.btnSifreGizle.UseVisualStyleBackColor = false;
+            this.btnSifreGizle.Click += new System.EventHandler(this.btnSifreGizle_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cambria", 12F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.label1.Location = new System.Drawing.Point(69, 162);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(280, 19);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Wyrd Personel Modülü\'ne hoş geldiniz.";
+            // 
+            // linklblSifre
+            // 
+            this.linklblSifre.ActiveLinkColor = System.Drawing.Color.Gold;
+            this.linklblSifre.AutoSize = true;
+            this.linklblSifre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linklblSifre.Font = new System.Drawing.Font("Cambria", 12F);
+            this.linklblSifre.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linklblSifre.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.linklblSifre.Location = new System.Drawing.Point(194, 333);
+            this.linklblSifre.Name = "linklblSifre";
+            this.linklblSifre.Size = new System.Drawing.Size(181, 19);
+            this.linklblSifre.TabIndex = 8;
+            this.linklblSifre.TabStop = true;
+            this.linklblSifre.Text = "Parolanızı mı unuttunuz?";
+            this.linklblSifre.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblSifre_LinkClicked);
+            // 
             // txtKSifre
             // 
             this.txtKSifre.AcceptsReturn = false;
@@ -392,26 +450,26 @@
             this.txtKSifre.Modified = false;
             this.txtKSifre.Multiline = false;
             this.txtKSifre.Name = "txtKSifre";
-            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtKSifre.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtKSifre.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtKSifre.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.White;
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtKSifre.OnIdleState = stateProperties16;
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtKSifre.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtKSifre.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtKSifre.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.White;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtKSifre.OnIdleState = stateProperties8;
             this.txtKSifre.Padding = new System.Windows.Forms.Padding(3);
             this.txtKSifre.PasswordChar = '*';
             this.txtKSifre.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
@@ -433,21 +491,17 @@
             this.txtKSifre.UseSystemPasswordChar = false;
             this.txtKSifre.WordWrap = true;
             // 
-            // linklblSifre
+            // pictureBoxLoginLogo
             // 
-            this.linklblSifre.ActiveLinkColor = System.Drawing.Color.Gold;
-            this.linklblSifre.AutoSize = true;
-            this.linklblSifre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linklblSifre.Font = new System.Drawing.Font("Cambria", 12F);
-            this.linklblSifre.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linklblSifre.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.linklblSifre.Location = new System.Drawing.Point(194, 333);
-            this.linklblSifre.Name = "linklblSifre";
-            this.linklblSifre.Size = new System.Drawing.Size(181, 19);
-            this.linklblSifre.TabIndex = 8;
-            this.linklblSifre.TabStop = true;
-            this.linklblSifre.Text = "Parolanızı mı unuttunuz?";
-            this.linklblSifre.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblSifre_LinkClicked);
+            this.pictureBoxLoginLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLoginLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLoginLogo.Image")));
+            this.pictureBoxLoginLogo.Location = new System.Drawing.Point(147, 24);
+            this.pictureBoxLoginLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxLoginLogo.Name = "pictureBoxLoginLogo";
+            this.pictureBoxLoginLogo.Size = new System.Drawing.Size(122, 117);
+            this.pictureBoxLoginLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLoginLogo.TabIndex = 10;
+            this.pictureBoxLoginLogo.TabStop = false;
             // 
             // pnlGrad
             // 
@@ -457,6 +511,19 @@
             this.pnlGrad.Name = "pnlGrad";
             this.pnlGrad.Size = new System.Drawing.Size(1283, 39);
             this.pnlGrad.TabIndex = 8;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(1124, -47);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(137, 86);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
             // 
             // bunifuDragControl1
             // 
@@ -490,73 +557,6 @@
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1124, -47);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(137, 86);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 12F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.label1.Location = new System.Drawing.Point(58, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 19);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Wyrd Personel Modülü\'ne hoş geldiniz.";
-            // 
-            // pictureBoxLoginLogo
-            // 
-            this.pictureBoxLoginLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxLoginLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLoginLogo.Image")));
-            this.pictureBoxLoginLogo.Location = new System.Drawing.Point(143, 41);
-            this.pictureBoxLoginLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBoxLoginLogo.Name = "pictureBoxLoginLogo";
-            this.pictureBoxLoginLogo.Size = new System.Drawing.Size(122, 117);
-            this.pictureBoxLoginLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLoginLogo.TabIndex = 10;
-            this.pictureBoxLoginLogo.TabStop = false;
-            // 
-            // btnSifreGizle
-            // 
-            this.btnSifreGizle.BackColor = System.Drawing.Color.White;
-            this.btnSifreGizle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSifreGizle.BackgroundImage")));
-            this.btnSifreGizle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSifreGizle.FlatAppearance.BorderSize = 0;
-            this.btnSifreGizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSifreGizle.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnSifreGizle.Location = new System.Drawing.Point(315, 285);
-            this.btnSifreGizle.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSifreGizle.Name = "btnSifreGizle";
-            this.btnSifreGizle.Size = new System.Drawing.Size(23, 23);
-            this.btnSifreGizle.TabIndex = 16;
-            this.btnSifreGizle.UseVisualStyleBackColor = false;
-            this.btnSifreGizle.Click += new System.EventHandler(this.btnSifreGizle_Click);
-            // 
-            // btnSifreGoster
-            // 
-            this.btnSifreGoster.BackColor = System.Drawing.Color.White;
-            this.btnSifreGoster.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSifreGoster.BackgroundImage")));
-            this.btnSifreGoster.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSifreGoster.FlatAppearance.BorderSize = 0;
-            this.btnSifreGoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSifreGoster.Location = new System.Drawing.Point(315, 285);
-            this.btnSifreGoster.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSifreGoster.Name = "btnSifreGoster";
-            this.btnSifreGoster.Size = new System.Drawing.Size(23, 23);
-            this.btnSifreGoster.TabIndex = 17;
-            this.btnSifreGoster.UseVisualStyleBackColor = false;
-            this.btnSifreGoster.Click += new System.EventHandler(this.btnSifreGoster_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -575,10 +575,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuShadowPanel1.ResumeLayout(false);
             this.bunifuShadowPanel1.PerformLayout();
-            this.pnlGrad.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoginLogo)).EndInit();
+            this.pnlGrad.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,4 +1,5 @@
-﻿using PerModule.Forms.LoginForm;
+﻿using PerModule.Forms.AnasayfaForm;
+using PerModule.Forms.LoginForm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace PerModule
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Main());
         }
     }
 }

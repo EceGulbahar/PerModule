@@ -8,16 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PerModule.Forms.AnasayfaForm
+namespace PerModule.Forms.DepartmanForm
 {
-    public partial class Anasayfa : Form
+    public partial class Departmans : Form
     {
-        public Anasayfa()
+        public Departmans()
         {
             InitializeComponent();
-            
         }
-
-        
     }
 }
