@@ -99,5 +99,12 @@ namespace PerModule.Forms.PersonelListForm
         {
 
         }
+
+        private void KontrolPanelLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Anasayfa anasayfa = new Anasayfa();
+            FormGetir(anasayfa);
+            //bu kısımda kaldık, tıklanmış gibi yapmayı deneyelim
+        }
     }
 }

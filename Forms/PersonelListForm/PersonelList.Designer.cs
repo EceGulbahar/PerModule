@@ -30,20 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonelList));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.btnPerCikar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnPerEkle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.GridHugeList = new System.Windows.Forms.DataGridView();
@@ -67,15 +67,21 @@
             this.btnDepEkleIptal = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDepEkle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtKAdi = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.personelListGridViewTableAdapter = new PerModule.PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlTopItems = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.KontrolPanelLink = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PersonelListesiLink = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.GridHugeList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personelListGridViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERSONNELMODULEDataSet)).BeginInit();
             this.pnlDepEkle.SuspendLayout();
+            this.pnlTopItems.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPerCikar
@@ -97,11 +103,11 @@
             this.btnPerCikar.ColorContrastOnClick = 45;
             this.btnPerCikar.ColorContrastOnHover = 45;
             this.btnPerCikar.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnPerCikar.CustomizableEdges = borderEdges1;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btnPerCikar.CustomizableEdges = borderEdges7;
             this.btnPerCikar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnPerCikar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPerCikar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -151,11 +157,11 @@
             this.btnPerCikar.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnPerCikar.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnPerCikar.OnIdleState.IconLeftImage")));
             this.btnPerCikar.OnIdleState.IconRightImage = null;
-            this.btnPerCikar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnPerCikar.OnPressedState.BorderColor = System.Drawing.Color.Thistle;
             this.btnPerCikar.OnPressedState.BorderRadius = 15;
             this.btnPerCikar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnPerCikar.OnPressedState.BorderThickness = 2;
-            this.btnPerCikar.OnPressedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnPerCikar.OnPressedState.FillColor = System.Drawing.Color.Thistle;
             this.btnPerCikar.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnPerCikar.OnPressedState.IconLeftImage = null;
             this.btnPerCikar.OnPressedState.IconRightImage = null;
@@ -186,11 +192,11 @@
             this.btnPerEkle.ColorContrastOnClick = 45;
             this.btnPerEkle.ColorContrastOnHover = 45;
             this.btnPerEkle.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnPerEkle.CustomizableEdges = borderEdges2;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.btnPerEkle.CustomizableEdges = borderEdges8;
             this.btnPerEkle.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnPerEkle.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPerEkle.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -240,11 +246,11 @@
             this.btnPerEkle.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnPerEkle.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnPerEkle.OnIdleState.IconLeftImage")));
             this.btnPerEkle.OnIdleState.IconRightImage = null;
-            this.btnPerEkle.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnPerEkle.OnPressedState.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnPerEkle.OnPressedState.BorderRadius = 15;
             this.btnPerEkle.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnPerEkle.OnPressedState.BorderThickness = 2;
-            this.btnPerEkle.OnPressedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnPerEkle.OnPressedState.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnPerEkle.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnPerEkle.OnPressedState.IconLeftImage = null;
             this.btnPerEkle.OnPressedState.IconRightImage = null;
@@ -274,26 +280,26 @@
             this.adresSehirDataGridViewTextBoxColumn,
             this.Kartlar});
             this.GridHugeList.DataSource = this.personelListGridViewBindingSource;
-            this.GridHugeList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.GridHugeList.Location = new System.Drawing.Point(57, 323);
+            this.GridHugeList.GridColor = System.Drawing.Color.Gray;
+            this.GridHugeList.Location = new System.Drawing.Point(75, 320);
             this.GridHugeList.Name = "GridHugeList";
-            this.GridHugeList.Size = new System.Drawing.Size(1711, 599);
+            this.GridHugeList.Size = new System.Drawing.Size(1671, 656);
             this.GridHugeList.TabIndex = 3;
             this.GridHugeList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridHugeList_CellContentClick);
             // 
             // perTcknDataGridViewTextBoxColumn
             // 
             this.perTcknDataGridViewTextBoxColumn.DataPropertyName = "PerTckn";
-            this.perTcknDataGridViewTextBoxColumn.FillWeight = 300F;
-            this.perTcknDataGridViewTextBoxColumn.HeaderText = "PerTckn";
+            this.perTcknDataGridViewTextBoxColumn.FillWeight = 275F;
+            this.perTcknDataGridViewTextBoxColumn.HeaderText = "Kimlik Numarası";
             this.perTcknDataGridViewTextBoxColumn.Name = "perTcknDataGridViewTextBoxColumn";
-            this.perTcknDataGridViewTextBoxColumn.Width = 300;
+            this.perTcknDataGridViewTextBoxColumn.Width = 275;
             // 
             // perAdDataGridViewTextBoxColumn
             // 
             this.perAdDataGridViewTextBoxColumn.DataPropertyName = "PerAd";
             this.perAdDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.perAdDataGridViewTextBoxColumn.HeaderText = "PerAd";
+            this.perAdDataGridViewTextBoxColumn.HeaderText = "Ad";
             this.perAdDataGridViewTextBoxColumn.Name = "perAdDataGridViewTextBoxColumn";
             this.perAdDataGridViewTextBoxColumn.Width = 150;
             // 
@@ -301,7 +307,7 @@
             // 
             this.perSoyadDataGridViewTextBoxColumn.DataPropertyName = "PerSoyad";
             this.perSoyadDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.perSoyadDataGridViewTextBoxColumn.HeaderText = "PerSoyad";
+            this.perSoyadDataGridViewTextBoxColumn.HeaderText = "Soyad";
             this.perSoyadDataGridViewTextBoxColumn.Name = "perSoyadDataGridViewTextBoxColumn";
             this.perSoyadDataGridViewTextBoxColumn.Width = 150;
             // 
@@ -309,7 +315,7 @@
             // 
             this.perDogumTarihiDataGridViewTextBoxColumn.DataPropertyName = "PerDogumTarihi";
             this.perDogumTarihiDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.perDogumTarihiDataGridViewTextBoxColumn.HeaderText = "PerDogumTarihi";
+            this.perDogumTarihiDataGridViewTextBoxColumn.HeaderText = "Doğum Tarihi";
             this.perDogumTarihiDataGridViewTextBoxColumn.Name = "perDogumTarihiDataGridViewTextBoxColumn";
             this.perDogumTarihiDataGridViewTextBoxColumn.Width = 150;
             // 
@@ -317,7 +323,7 @@
             // 
             this.depAdiDataGridViewTextBoxColumn.DataPropertyName = "DepAdi";
             this.depAdiDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.depAdiDataGridViewTextBoxColumn.HeaderText = "DepAdi";
+            this.depAdiDataGridViewTextBoxColumn.HeaderText = "Departman";
             this.depAdiDataGridViewTextBoxColumn.Name = "depAdiDataGridViewTextBoxColumn";
             this.depAdiDataGridViewTextBoxColumn.Width = 150;
             // 
@@ -325,7 +331,7 @@
             // 
             this.depRoluDataGridViewTextBoxColumn.DataPropertyName = "DepRolu";
             this.depRoluDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.depRoluDataGridViewTextBoxColumn.HeaderText = "DepRolu";
+            this.depRoluDataGridViewTextBoxColumn.HeaderText = "Unvan";
             this.depRoluDataGridViewTextBoxColumn.Name = "depRoluDataGridViewTextBoxColumn";
             this.depRoluDataGridViewTextBoxColumn.Width = 150;
             // 
@@ -333,7 +339,7 @@
             // 
             this.perBaslamaTDataGridViewTextBoxColumn.DataPropertyName = "PerBaslamaT";
             this.perBaslamaTDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.perBaslamaTDataGridViewTextBoxColumn.HeaderText = "PerBaslamaT";
+            this.perBaslamaTDataGridViewTextBoxColumn.HeaderText = "İşe Giriş Tarihi";
             this.perBaslamaTDataGridViewTextBoxColumn.Name = "perBaslamaTDataGridViewTextBoxColumn";
             this.perBaslamaTDataGridViewTextBoxColumn.Width = 150;
             // 
@@ -341,7 +347,7 @@
             // 
             this.adresUlkeDataGridViewTextBoxColumn.DataPropertyName = "AdresUlke";
             this.adresUlkeDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.adresUlkeDataGridViewTextBoxColumn.HeaderText = "AdresUlke";
+            this.adresUlkeDataGridViewTextBoxColumn.HeaderText = "Ülke";
             this.adresUlkeDataGridViewTextBoxColumn.Name = "adresUlkeDataGridViewTextBoxColumn";
             this.adresUlkeDataGridViewTextBoxColumn.Width = 150;
             // 
@@ -349,19 +355,18 @@
             // 
             this.adresSehirDataGridViewTextBoxColumn.DataPropertyName = "AdresSehir";
             this.adresSehirDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.adresSehirDataGridViewTextBoxColumn.HeaderText = "AdresSehir";
+            this.adresSehirDataGridViewTextBoxColumn.HeaderText = "Şehir";
             this.adresSehirDataGridViewTextBoxColumn.Name = "adresSehirDataGridViewTextBoxColumn";
             this.adresSehirDataGridViewTextBoxColumn.Width = 150;
             // 
             // Kartlar
             // 
-            this.Kartlar.FillWeight = 169F;
-            this.Kartlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kartlar.FillWeight = 145F;
             this.Kartlar.HeaderText = "Kartlar";
             this.Kartlar.Name = "Kartlar";
             this.Kartlar.Text = "Kartı Görüntüle";
             this.Kartlar.UseColumnTextForButtonValue = true;
-            this.Kartlar.Width = 169;
+            this.Kartlar.Width = 145;
             // 
             // personelListGridViewBindingSource
             // 
@@ -390,7 +395,7 @@
             this.txtSearchboxPerList.BorderThickness = 1;
             this.txtSearchboxPerList.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtSearchboxPerList.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchboxPerList.DefaultFont = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSearchboxPerList.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSearchboxPerList.DefaultText = "";
             this.txtSearchboxPerList.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.txtSearchboxPerList.ForeColor = System.Drawing.Color.White;
@@ -407,44 +412,44 @@
             this.txtSearchboxPerList.Modified = false;
             this.txtSearchboxPerList.Multiline = false;
             this.txtSearchboxPerList.Name = "txtSearchboxPerList";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(59)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearchboxPerList.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtSearchboxPerList.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.White;
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearchboxPerList.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            stateProperties4.ForeColor = System.Drawing.Color.White;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearchboxPerList.OnIdleState = stateProperties4;
+            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(59)))));
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearchboxPerList.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearchboxPerList.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.White;
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearchboxPerList.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            stateProperties12.ForeColor = System.Drawing.Color.White;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearchboxPerList.OnIdleState = stateProperties12;
             this.txtSearchboxPerList.Padding = new System.Windows.Forms.Padding(3);
             this.txtSearchboxPerList.PasswordChar = '\0';
             this.txtSearchboxPerList.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtSearchboxPerList.PlaceholderText = "Personel listesinde...";
+            this.txtSearchboxPerList.PlaceholderText = "Personel Listesinde Ara...";
             this.txtSearchboxPerList.ReadOnly = false;
             this.txtSearchboxPerList.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSearchboxPerList.SelectedText = "";
             this.txtSearchboxPerList.SelectionLength = 0;
             this.txtSearchboxPerList.SelectionStart = 0;
             this.txtSearchboxPerList.ShortcutsEnabled = true;
-            this.txtSearchboxPerList.Size = new System.Drawing.Size(659, 42);
+            this.txtSearchboxPerList.Size = new System.Drawing.Size(659, 39);
             this.txtSearchboxPerList.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSearchboxPerList.TabIndex = 7;
             this.txtSearchboxPerList.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSearchboxPerList.TextMarginBottom = 0;
             this.txtSearchboxPerList.TextMarginLeft = 3;
             this.txtSearchboxPerList.TextMarginTop = 0;
-            this.txtSearchboxPerList.TextPlaceholder = "Personel listesinde...";
+            this.txtSearchboxPerList.TextPlaceholder = "Personel Listesinde Ara...";
             this.txtSearchboxPerList.UseSystemPasswordChar = false;
             this.txtSearchboxPerList.WordWrap = true;
             // 
@@ -467,11 +472,11 @@
             this.btnExceleAl.ColorContrastOnClick = 45;
             this.btnExceleAl.ColorContrastOnHover = 45;
             this.btnExceleAl.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnExceleAl.CustomizableEdges = borderEdges3;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.btnExceleAl.CustomizableEdges = borderEdges9;
             this.btnExceleAl.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnExceleAl.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExceleAl.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -521,11 +526,11 @@
             this.btnExceleAl.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnExceleAl.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnExceleAl.OnIdleState.IconLeftImage")));
             this.btnExceleAl.OnIdleState.IconRightImage = null;
-            this.btnExceleAl.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnExceleAl.OnPressedState.BorderColor = System.Drawing.Color.Salmon;
             this.btnExceleAl.OnPressedState.BorderRadius = 15;
             this.btnExceleAl.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnExceleAl.OnPressedState.BorderThickness = 2;
-            this.btnExceleAl.OnPressedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnExceleAl.OnPressedState.FillColor = System.Drawing.Color.Salmon;
             this.btnExceleAl.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnExceleAl.OnPressedState.IconLeftImage = null;
             this.btnExceleAl.OnPressedState.IconRightImage = null;
@@ -558,7 +563,7 @@
             this.DropDepartmans.FillDropDown = true;
             this.DropDepartmans.FillIndicator = false;
             this.DropDepartmans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DropDepartmans.Font = new System.Drawing.Font("Cambria", 12F);
+            this.DropDepartmans.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.DropDepartmans.ForeColor = System.Drawing.Color.Black;
             this.DropDepartmans.FormattingEnabled = true;
             this.DropDepartmans.Icon = null;
@@ -572,11 +577,11 @@
             this.DropDepartmans.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.DropDepartmans.ItemHighLightForeColor = System.Drawing.Color.White;
             this.DropDepartmans.ItemTopMargin = 3;
-            this.DropDepartmans.Location = new System.Drawing.Point(1381, 165);
+            this.DropDepartmans.Location = new System.Drawing.Point(1302, 27);
             this.DropDepartmans.Name = "DropDepartmans";
             this.DropDepartmans.Size = new System.Drawing.Size(339, 32);
             this.DropDepartmans.TabIndex = 9;
-            this.DropDepartmans.Text = "Depertman seçiniz.";
+            this.DropDepartmans.Text = "Departman seçiniz.";
             this.DropDepartmans.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.DropDepartmans.TextLeftMargin = 5;
             this.DropDepartmans.SelectedIndexChanged += new System.EventHandler(this.DropDepartmans_SelectedIndexChanged);
@@ -600,11 +605,11 @@
             this.btnDepEklePnlAc.ColorContrastOnClick = 45;
             this.btnDepEklePnlAc.ColorContrastOnHover = 45;
             this.btnDepEklePnlAc.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnDepEklePnlAc.CustomizableEdges = borderEdges4;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.btnDepEklePnlAc.CustomizableEdges = borderEdges10;
             this.btnDepEklePnlAc.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDepEklePnlAc.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepEklePnlAc.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -628,7 +633,7 @@
             this.btnDepEklePnlAc.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDepEklePnlAc.IdleIconLeftImage")));
             this.btnDepEklePnlAc.IdleIconRightImage = null;
             this.btnDepEklePnlAc.IndicateFocus = false;
-            this.btnDepEklePnlAc.Location = new System.Drawing.Point(1733, 165);
+            this.btnDepEklePnlAc.Location = new System.Drawing.Point(1654, 27);
             this.btnDepEklePnlAc.Name = "btnDepEklePnlAc";
             this.btnDepEklePnlAc.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepEklePnlAc.OnDisabledState.BorderRadius = 1;
@@ -677,7 +682,7 @@
             this.pnlDepEkle.Controls.Add(this.btnDepEkleIptal);
             this.pnlDepEkle.Controls.Add(this.btnDepEkle);
             this.pnlDepEkle.Controls.Add(this.txtKAdi);
-            this.pnlDepEkle.Location = new System.Drawing.Point(1381, 203);
+            this.pnlDepEkle.Location = new System.Drawing.Point(1302, 79);
             this.pnlDepEkle.Name = "pnlDepEkle";
             this.pnlDepEkle.Size = new System.Drawing.Size(339, 101);
             this.pnlDepEkle.TabIndex = 11;
@@ -703,11 +708,11 @@
             this.btnDepEkleIptal.ColorContrastOnClick = 45;
             this.btnDepEkleIptal.ColorContrastOnHover = 45;
             this.btnDepEkleIptal.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btnDepEkleIptal.CustomizableEdges = borderEdges5;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.btnDepEkleIptal.CustomizableEdges = borderEdges11;
             this.btnDepEkleIptal.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDepEkleIptal.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepEkleIptal.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -793,11 +798,11 @@
             this.btnDepEkle.ColorContrastOnClick = 45;
             this.btnDepEkle.ColorContrastOnHover = 45;
             this.btnDepEkle.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btnDepEkle.CustomizableEdges = borderEdges6;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.btnDepEkle.CustomizableEdges = borderEdges12;
             this.btnDepEkle.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDepEkle.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepEkle.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -881,7 +886,7 @@
             this.txtKAdi.BorderThickness = 1;
             this.txtKAdi.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtKAdi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtKAdi.DefaultFont = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKAdi.DefaultFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKAdi.DefaultText = "";
             this.txtKAdi.FillColor = System.Drawing.Color.White;
             this.txtKAdi.HideSelection = true;
@@ -897,26 +902,26 @@
             this.txtKAdi.Modified = false;
             this.txtKAdi.Multiline = false;
             this.txtKAdi.Name = "txtKAdi";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtKAdi.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtKAdi.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtKAdi.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.White;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtKAdi.OnIdleState = stateProperties8;
+            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            stateProperties13.FillColor = System.Drawing.Color.Empty;
+            stateProperties13.ForeColor = System.Drawing.Color.Empty;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtKAdi.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtKAdi.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            stateProperties15.FillColor = System.Drawing.Color.Empty;
+            stateProperties15.ForeColor = System.Drawing.Color.Empty;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtKAdi.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.White;
+            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.ForeColor = System.Drawing.Color.Empty;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtKAdi.OnIdleState = stateProperties16;
             this.txtKAdi.Padding = new System.Windows.Forms.Padding(3);
             this.txtKAdi.PasswordChar = '\0';
             this.txtKAdi.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
@@ -938,44 +943,114 @@
             this.txtKAdi.UseSystemPasswordChar = false;
             this.txtKAdi.WordWrap = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(909, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(480, 301);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
             // personelListGridViewTableAdapter
             // 
             this.personelListGridViewTableAdapter.ClearBeforeFill = true;
             // 
-            // panel1
+            // pnlTopItems
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Controls.Add(this.txtSearchboxPerList);
-            this.panel1.Controls.Add(this.btnPerEkle);
-            this.panel1.Controls.Add(this.btnPerCikar);
-            this.panel1.Controls.Add(this.btnExceleAl);
-            this.panel1.Location = new System.Drawing.Point(57, 42);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1711, 48);
-            this.panel1.TabIndex = 13;
+            this.pnlTopItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            this.pnlTopItems.Controls.Add(this.PersonelListesiLink);
+            this.pnlTopItems.Controls.Add(this.label2);
+            this.pnlTopItems.Controls.Add(this.KontrolPanelLink);
+            this.pnlTopItems.Controls.Add(this.txtSearchboxPerList);
+            this.pnlTopItems.Controls.Add(this.btnPerEkle);
+            this.pnlTopItems.Controls.Add(this.btnPerCikar);
+            this.pnlTopItems.Controls.Add(this.btnExceleAl);
+            this.pnlTopItems.Location = new System.Drawing.Point(57, 42);
+            this.pnlTopItems.Name = "pnlTopItems";
+            this.pnlTopItems.Size = new System.Drawing.Size(1711, 48);
+            this.pnlTopItems.TabIndex = 13;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            this.panel2.Controls.Add(this.btnDepEklePnlAc);
+            this.panel2.Controls.Add(this.pnlDepEkle);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.DropDepartmans);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(57, 119);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1711, 870);
+            this.panel2.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(15, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(434, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Personel kartına ulaşmak için \"Kartı Görüntüle\" yazısına tıklayınız.";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1302, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(396, 209);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // KontrolPanelLink
+            // 
+            this.KontrolPanelLink.ActiveLinkColor = System.Drawing.Color.WhiteSmoke;
+            this.KontrolPanelLink.AutoSize = true;
+            this.KontrolPanelLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.KontrolPanelLink.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.KontrolPanelLink.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.KontrolPanelLink.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.KontrolPanelLink.LinkColor = System.Drawing.Color.WhiteSmoke;
+            this.KontrolPanelLink.Location = new System.Drawing.Point(15, 15);
+            this.KontrolPanelLink.Name = "KontrolPanelLink";
+            this.KontrolPanelLink.Size = new System.Drawing.Size(104, 18);
+            this.KontrolPanelLink.TabIndex = 9;
+            this.KontrolPanelLink.TabStop = true;
+            this.KontrolPanelLink.Text = "Kontrol Paneli ";
+            this.KontrolPanelLink.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.KontrolPanelLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.KontrolPanelLink_LinkClicked);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("NSimSun", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(116, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 19);
+            this.label2.TabIndex = 10;
+            this.label2.Text = ">";
+            // 
+            // PersonelListesiLink
+            // 
+            this.PersonelListesiLink.ActiveLinkColor = System.Drawing.Color.WhiteSmoke;
+            this.PersonelListesiLink.AutoSize = true;
+            this.PersonelListesiLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.PersonelListesiLink.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.PersonelListesiLink.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.PersonelListesiLink.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.PersonelListesiLink.LinkColor = System.Drawing.Color.WhiteSmoke;
+            this.PersonelListesiLink.Location = new System.Drawing.Point(142, 15);
+            this.PersonelListesiLink.Name = "PersonelListesiLink";
+            this.PersonelListesiLink.Size = new System.Drawing.Size(113, 18);
+            this.PersonelListesiLink.TabIndex = 11;
+            this.PersonelListesiLink.TabStop = true;
+            this.PersonelListesiLink.Text = "Personel Listesi";
+            this.PersonelListesiLink.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             // 
             // PersonelList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(1825, 947);
-            this.Controls.Add(this.pnlDepEkle);
-            this.Controls.Add(this.btnDepEklePnlAc);
-            this.Controls.Add(this.DropDepartmans);
+            this.ClientSize = new System.Drawing.Size(1825, 1016);
             this.Controls.Add(this.GridHugeList);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pnlTopItems);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PersonelList";
             this.Text = "PersonelList";
@@ -984,8 +1059,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.personelListGridViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERSONNELMODULEDataSet)).EndInit();
             this.pnlDepEkle.ResumeLayout(false);
+            this.pnlTopItems.ResumeLayout(false);
+            this.pnlTopItems.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1003,10 +1081,12 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDepEkle;
         private Bunifu.UI.WinForms.BunifuTextBox txtKAdi;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDepEkleIptal;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private PERSONNELMODULEDataSet pERSONNELMODULEDataSet;
         private System.Windows.Forms.BindingSource personelListGridViewBindingSource;
         private PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter personelListGridViewTableAdapter;
+        private System.Windows.Forms.Panel pnlTopItems;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn perTcknDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn perAdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn perSoyadDataGridViewTextBoxColumn;
@@ -1017,6 +1097,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn adresUlkeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresSehirDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Kartlar;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel KontrolPanelLink;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel PersonelListesiLink;
     }
 }
