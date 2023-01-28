@@ -9,38 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
+using System.Data.SqlClient;
 
 namespace PerModule.Forms.PersonelListForm
 {
     public partial class PersonelList : Form
     {
+
+         SqlConnection baglan = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\90501\Desktop\PerModule\Kaynak Kodlar\PerModule\Data\PERSONNELMODULE.mdf"";Integrated Security=True");
         public PersonelList()
         {
             InitializeComponent();
-            AddButtonCollumn();
-        }
-
-        private void AddButtonCollumn()
-        {
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-            btn.HeaderText = "Kartlar";
-            btn.Text = "Kartı Görüntüle";
-            btn.Name = "btn";
-            btn.UseColumnTextForButtonValue = true;
-            btn.Width = 200;
-            GridHugeList.Columns.Add(btn);
-        }
-
-        private void GridHugeList_CellClick(object sender, DataGridViewCellEventArgs e)//gride basıp kart açma
-        {
-            if (e.ColumnIndex == 6)
-            {
-                string pertcknid = "";
-                int secilendeger = GridHugeList.SelectedCells[0].RowIndex;
-                pertcknid = GridHugeList.Rows[secilendeger].Cells[1].Value.ToString();
-                PersonCard formPersonCard = new PersonCard();
-                formPersonCard.Show();
-            }
+            
         }
 
         private void btnExceleAl_Click(object sender, EventArgs e)
@@ -96,7 +76,19 @@ namespace PerModule.Forms.PersonelListForm
 
         private void PersonelList_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
+            
 
+        }
+
+        private void GridHugeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (GridHugeList.Columns[e.ColumnIndex].Name == "Kartlar")
+            {
+                PersonCard personCard = new PersonCard();
+                personCard.Show();
+            }
         }
     }
 }

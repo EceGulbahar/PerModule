@@ -28,24 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonelList));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges18 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.btnPerCikar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnPerEkle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.GridHugeList = new System.Windows.Forms.DataGridView();
+            this.personelListGridViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pERSONNELMODULEDataSet = new PerModule.PERSONNELMODULEDataSet();
             this.txtSearchboxPerList = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnExceleAl = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.DropDepartmans = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -55,7 +58,20 @@
             this.btnDepEkle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtKAdi = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.personelListGridViewTableAdapter = new PerModule.PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter();
+            this.perTcknDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perDogumTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depRoluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perBaslamaTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresUlkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresSehirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kartlar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GridHugeList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelListGridViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pERSONNELMODULEDataSet)).BeginInit();
             this.pnlDepEkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -79,11 +95,11 @@
             this.btnPerCikar.ColorContrastOnClick = 45;
             this.btnPerCikar.ColorContrastOnHover = 45;
             this.btnPerCikar.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges13.BottomLeft = true;
-            borderEdges13.BottomRight = true;
-            borderEdges13.TopLeft = true;
-            borderEdges13.TopRight = true;
-            this.btnPerCikar.CustomizableEdges = borderEdges13;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnPerCikar.CustomizableEdges = borderEdges1;
             this.btnPerCikar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnPerCikar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPerCikar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -168,11 +184,11 @@
             this.btnPerEkle.ColorContrastOnClick = 45;
             this.btnPerEkle.ColorContrastOnHover = 45;
             this.btnPerEkle.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges14.BottomLeft = true;
-            borderEdges14.BottomRight = true;
-            borderEdges14.TopLeft = true;
-            borderEdges14.TopRight = true;
-            this.btnPerEkle.CustomizableEdges = borderEdges14;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnPerEkle.CustomizableEdges = borderEdges2;
             this.btnPerEkle.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnPerEkle.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPerEkle.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -240,14 +256,38 @@
             // 
             // GridHugeList
             // 
+            this.GridHugeList.AutoGenerateColumns = false;
             this.GridHugeList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.GridHugeList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridHugeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridHugeList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.perTcknDataGridViewTextBoxColumn,
+            this.perAdDataGridViewTextBoxColumn,
+            this.perSoyadDataGridViewTextBoxColumn,
+            this.perDogumTarihiDataGridViewTextBoxColumn,
+            this.depAdiDataGridViewTextBoxColumn,
+            this.depRoluDataGridViewTextBoxColumn,
+            this.perBaslamaTDataGridViewTextBoxColumn,
+            this.adresUlkeDataGridViewTextBoxColumn,
+            this.adresSehirDataGridViewTextBoxColumn,
+            this.Kartlar});
+            this.GridHugeList.DataSource = this.personelListGridViewBindingSource;
             this.GridHugeList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.GridHugeList.Location = new System.Drawing.Point(57, 323);
             this.GridHugeList.Name = "GridHugeList";
             this.GridHugeList.Size = new System.Drawing.Size(1711, 599);
             this.GridHugeList.TabIndex = 3;
+            this.GridHugeList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridHugeList_CellContentClick);
+            // 
+            // personelListGridViewBindingSource
+            // 
+            this.personelListGridViewBindingSource.DataMember = "PersonelListGridView";
+            this.personelListGridViewBindingSource.DataSource = this.pERSONNELMODULEDataSet;
+            // 
+            // pERSONNELMODULEDataSet
+            // 
+            this.pERSONNELMODULEDataSet.DataSetName = "PERSONNELMODULEDataSet";
+            this.pERSONNELMODULEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtSearchboxPerList
             // 
@@ -283,26 +323,26 @@
             this.txtSearchboxPerList.Modified = false;
             this.txtSearchboxPerList.Multiline = false;
             this.txtSearchboxPerList.Name = "txtSearchboxPerList";
-            stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(59)))));
-            stateProperties17.FillColor = System.Drawing.Color.Empty;
-            stateProperties17.ForeColor = System.Drawing.Color.Empty;
-            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearchboxPerList.OnActiveState = stateProperties17;
-            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtSearchboxPerList.OnDisabledState = stateProperties18;
-            stateProperties19.BorderColor = System.Drawing.Color.White;
-            stateProperties19.FillColor = System.Drawing.Color.Empty;
-            stateProperties19.ForeColor = System.Drawing.Color.Empty;
-            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearchboxPerList.OnHoverState = stateProperties19;
-            stateProperties20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties20.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            stateProperties20.ForeColor = System.Drawing.Color.White;
-            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearchboxPerList.OnIdleState = stateProperties20;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(59)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearchboxPerList.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearchboxPerList.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.White;
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearchboxPerList.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearchboxPerList.OnIdleState = stateProperties4;
             this.txtSearchboxPerList.Padding = new System.Windows.Forms.Padding(3);
             this.txtSearchboxPerList.PasswordChar = '\0';
             this.txtSearchboxPerList.PlaceholderForeColor = System.Drawing.Color.White;
@@ -343,11 +383,11 @@
             this.btnExceleAl.ColorContrastOnClick = 45;
             this.btnExceleAl.ColorContrastOnHover = 45;
             this.btnExceleAl.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges15.BottomLeft = true;
-            borderEdges15.BottomRight = true;
-            borderEdges15.TopLeft = true;
-            borderEdges15.TopRight = true;
-            this.btnExceleAl.CustomizableEdges = borderEdges15;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnExceleAl.CustomizableEdges = borderEdges3;
             this.btnExceleAl.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnExceleAl.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExceleAl.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -476,11 +516,11 @@
             this.btnDepEklePnlAc.ColorContrastOnClick = 45;
             this.btnDepEklePnlAc.ColorContrastOnHover = 45;
             this.btnDepEklePnlAc.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges16.BottomLeft = true;
-            borderEdges16.BottomRight = true;
-            borderEdges16.TopLeft = true;
-            borderEdges16.TopRight = true;
-            this.btnDepEklePnlAc.CustomizableEdges = borderEdges16;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnDepEklePnlAc.CustomizableEdges = borderEdges4;
             this.btnDepEklePnlAc.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDepEklePnlAc.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepEklePnlAc.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -578,11 +618,11 @@
             this.btnDepEkleIptal.ColorContrastOnClick = 45;
             this.btnDepEkleIptal.ColorContrastOnHover = 45;
             this.btnDepEkleIptal.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges17.BottomLeft = true;
-            borderEdges17.BottomRight = true;
-            borderEdges17.TopLeft = true;
-            borderEdges17.TopRight = true;
-            this.btnDepEkleIptal.CustomizableEdges = borderEdges17;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnDepEkleIptal.CustomizableEdges = borderEdges5;
             this.btnDepEkleIptal.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDepEkleIptal.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepEkleIptal.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -668,11 +708,11 @@
             this.btnDepEkle.ColorContrastOnClick = 45;
             this.btnDepEkle.ColorContrastOnHover = 45;
             this.btnDepEkle.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges18.BottomLeft = true;
-            borderEdges18.BottomRight = true;
-            borderEdges18.TopLeft = true;
-            borderEdges18.TopRight = true;
-            this.btnDepEkle.CustomizableEdges = borderEdges18;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnDepEkle.CustomizableEdges = borderEdges6;
             this.btnDepEkle.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDepEkle.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepEkle.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -772,26 +812,26 @@
             this.txtKAdi.Modified = false;
             this.txtKAdi.Multiline = false;
             this.txtKAdi.Name = "txtKAdi";
-            stateProperties21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            stateProperties21.FillColor = System.Drawing.Color.Empty;
-            stateProperties21.ForeColor = System.Drawing.Color.Empty;
-            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtKAdi.OnActiveState = stateProperties21;
-            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtKAdi.OnDisabledState = stateProperties22;
-            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            stateProperties23.FillColor = System.Drawing.Color.Empty;
-            stateProperties23.ForeColor = System.Drawing.Color.Empty;
-            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtKAdi.OnHoverState = stateProperties23;
-            stateProperties24.BorderColor = System.Drawing.Color.White;
-            stateProperties24.FillColor = System.Drawing.Color.White;
-            stateProperties24.ForeColor = System.Drawing.Color.Empty;
-            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtKAdi.OnIdleState = stateProperties24;
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtKAdi.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtKAdi.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtKAdi.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.White;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtKAdi.OnIdleState = stateProperties8;
             this.txtKAdi.Padding = new System.Windows.Forms.Padding(3);
             this.txtKAdi.PasswordChar = '\0';
             this.txtKAdi.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
@@ -823,6 +863,92 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // personelListGridViewTableAdapter
+            // 
+            this.personelListGridViewTableAdapter.ClearBeforeFill = true;
+            // 
+            // perTcknDataGridViewTextBoxColumn
+            // 
+            this.perTcknDataGridViewTextBoxColumn.DataPropertyName = "PerTckn";
+            this.perTcknDataGridViewTextBoxColumn.FillWeight = 300F;
+            this.perTcknDataGridViewTextBoxColumn.HeaderText = "PerTckn";
+            this.perTcknDataGridViewTextBoxColumn.Name = "perTcknDataGridViewTextBoxColumn";
+            this.perTcknDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // perAdDataGridViewTextBoxColumn
+            // 
+            this.perAdDataGridViewTextBoxColumn.DataPropertyName = "PerAd";
+            this.perAdDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.perAdDataGridViewTextBoxColumn.HeaderText = "PerAd";
+            this.perAdDataGridViewTextBoxColumn.Name = "perAdDataGridViewTextBoxColumn";
+            this.perAdDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // perSoyadDataGridViewTextBoxColumn
+            // 
+            this.perSoyadDataGridViewTextBoxColumn.DataPropertyName = "PerSoyad";
+            this.perSoyadDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.perSoyadDataGridViewTextBoxColumn.HeaderText = "PerSoyad";
+            this.perSoyadDataGridViewTextBoxColumn.Name = "perSoyadDataGridViewTextBoxColumn";
+            this.perSoyadDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // perDogumTarihiDataGridViewTextBoxColumn
+            // 
+            this.perDogumTarihiDataGridViewTextBoxColumn.DataPropertyName = "PerDogumTarihi";
+            this.perDogumTarihiDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.perDogumTarihiDataGridViewTextBoxColumn.HeaderText = "PerDogumTarihi";
+            this.perDogumTarihiDataGridViewTextBoxColumn.Name = "perDogumTarihiDataGridViewTextBoxColumn";
+            this.perDogumTarihiDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // depAdiDataGridViewTextBoxColumn
+            // 
+            this.depAdiDataGridViewTextBoxColumn.DataPropertyName = "DepAdi";
+            this.depAdiDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.depAdiDataGridViewTextBoxColumn.HeaderText = "DepAdi";
+            this.depAdiDataGridViewTextBoxColumn.Name = "depAdiDataGridViewTextBoxColumn";
+            this.depAdiDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // depRoluDataGridViewTextBoxColumn
+            // 
+            this.depRoluDataGridViewTextBoxColumn.DataPropertyName = "DepRolu";
+            this.depRoluDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.depRoluDataGridViewTextBoxColumn.HeaderText = "DepRolu";
+            this.depRoluDataGridViewTextBoxColumn.Name = "depRoluDataGridViewTextBoxColumn";
+            this.depRoluDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // perBaslamaTDataGridViewTextBoxColumn
+            // 
+            this.perBaslamaTDataGridViewTextBoxColumn.DataPropertyName = "PerBaslamaT";
+            this.perBaslamaTDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.perBaslamaTDataGridViewTextBoxColumn.HeaderText = "PerBaslamaT";
+            this.perBaslamaTDataGridViewTextBoxColumn.Name = "perBaslamaTDataGridViewTextBoxColumn";
+            this.perBaslamaTDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // adresUlkeDataGridViewTextBoxColumn
+            // 
+            this.adresUlkeDataGridViewTextBoxColumn.DataPropertyName = "AdresUlke";
+            this.adresUlkeDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.adresUlkeDataGridViewTextBoxColumn.HeaderText = "AdresUlke";
+            this.adresUlkeDataGridViewTextBoxColumn.Name = "adresUlkeDataGridViewTextBoxColumn";
+            this.adresUlkeDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // adresSehirDataGridViewTextBoxColumn
+            // 
+            this.adresSehirDataGridViewTextBoxColumn.DataPropertyName = "AdresSehir";
+            this.adresSehirDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.adresSehirDataGridViewTextBoxColumn.HeaderText = "AdresSehir";
+            this.adresSehirDataGridViewTextBoxColumn.Name = "adresSehirDataGridViewTextBoxColumn";
+            this.adresSehirDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // Kartlar
+            // 
+            this.Kartlar.FillWeight = 169F;
+            this.Kartlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kartlar.HeaderText = "Kartlar";
+            this.Kartlar.Name = "Kartlar";
+            this.Kartlar.Text = "Kartı Görüntüle";
+            this.Kartlar.UseColumnTextForButtonValue = true;
+            this.Kartlar.Width = 169;
+            // 
             // PersonelList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -843,6 +969,8 @@
             this.Text = "PersonelList";
             this.Load += new System.EventHandler(this.PersonelList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridHugeList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelListGridViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pERSONNELMODULEDataSet)).EndInit();
             this.pnlDepEkle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -863,5 +991,18 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtKAdi;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDepEkleIptal;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private PERSONNELMODULEDataSet pERSONNELMODULEDataSet;
+        private System.Windows.Forms.BindingSource personelListGridViewBindingSource;
+        private PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter personelListGridViewTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perTcknDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perAdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perSoyadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perDogumTarihiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn depAdiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn depRoluDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perBaslamaTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresUlkeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresSehirDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Kartlar;
     }
 }

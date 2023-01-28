@@ -39,7 +39,6 @@
             this.btnPersonel = new System.Windows.Forms.Button();
             this.btnAnasayfa = new System.Windows.Forms.Button();
             this.PFormGetir = new System.Windows.Forms.Panel();
-            this.gradientPanel1 = new PerModule.Tools.GradientPanel();
             this.GPTop2 = new PerModule.Tools.GradientPanel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -47,6 +46,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gradientPanel1 = new PerModule.Tools.GradientPanel();
             this.GPTop = new PerModule.Tools.GradientPanel();
             this.btnMin = new System.Windows.Forms.Button();
             this.btnQMark = new System.Windows.Forms.Button();
@@ -236,17 +236,6 @@
             this.PFormGetir.Size = new System.Drawing.Size(1228, 655);
             this.PFormGetir.TabIndex = 7;
             // 
-            // gradientPanel1
-            // 
-            this.gradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.gradientPanel1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.gradientPanel1.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gradientPanel1.Location = new System.Drawing.Point(100, 751);
-            this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1228, 10);
-            this.gradientPanel1.TabIndex = 6;
-            // 
             // GPTop2
             // 
             this.GPTop2.BackColor = System.Drawing.Color.Transparent;
@@ -324,6 +313,17 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // gradientPanel1
+            // 
+            this.gradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gradientPanel1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.gradientPanel1.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gradientPanel1.Location = new System.Drawing.Point(100, 751);
+            this.gradientPanel1.Name = "gradientPanel1";
+            this.gradientPanel1.Size = new System.Drawing.Size(1228, 10);
+            this.gradientPanel1.TabIndex = 6;
             // 
             // GPTop
             // 
@@ -421,11 +421,6 @@
         private System.Windows.Forms.Button btnPersonel;
         private System.Windows.Forms.Button btnAnasayfa;
         private Tools.GradientPanel gradientPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel PFormGetir;
         private System.Windows.Forms.Button btnBordro;
@@ -434,6 +429,11 @@
         private System.Windows.Forms.Button BtnIzin;
         private System.Windows.Forms.Button btnPerRaport;
         private Bunifu.UI.WinForms.BunifuGradientPanel pnlHLight;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

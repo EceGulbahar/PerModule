@@ -1,4 +1,4 @@
-﻿namespace PerModule.Forms.AnasayfaForm
+﻿namespace PerModule.Forms.PersonelListForm
 {
     partial class PersonCard
     {
@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // PersonCard
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PersonCard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PersonCard";
-            this.ResumeLayout(false);
-
         }
 
         #endregion

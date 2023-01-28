@@ -101,12 +101,6 @@
     <Compile Include="Forms\DepartmanForm\Departmans.Designer.cs">
       <DependentUpon>Departmans.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCard.Designer.cs">
-      <DependentUpon>PersonCard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\BordrosForm\Bordros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +137,12 @@
     <Compile Include="Forms\PasswordForgotForm\PasswordUpdate.Designer.cs">
       <DependentUpon>PasswordUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCard.Designer.cs">
+      <DependentUpon>PersonCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PersonelListForm\PersonelList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,10 +161,10 @@
     <Compile Include="Forms\ZimmetRaporlariForm\ZimmetRaporlari.Designer.cs">
       <DependentUpon>ZimmetRaporlari.cs</DependentUpon>
     </Compile>
-    <Compile Include="PerModuleDataSet.Designer.cs">
+    <Compile Include="PERSONNELMODULEDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PerModuleDataSet.xsd</DependentUpon>
+      <DependentUpon>PERSONNELMODULEDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -176,9 +176,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DepartmanForm\Departmans.resx">
       <DependentUpon>Departmans.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PersonelListForm\PersonCard.resx">
-      <DependentUpon>PersonCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BordrosForm\Bordros.resx">
       <DependentUpon>Bordros.cs</DependentUpon>
@@ -218,16 +215,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
-    <None Include="PerModuleDataSet.xsc">
-      <DependentUpon>PerModuleDataSet.xsd</DependentUpon>
+    <None Include="PERSONNELMODULEDataSet.xsc">
+      <DependentUpon>PERSONNELMODULEDataSet.xsd</DependentUpon>
     </None>
-    <None Include="PerModuleDataSet.xsd">
+    <None Include="PERSONNELMODULEDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PerModuleDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>PERSONNELMODULEDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="PerModuleDataSet.xss">
-      <DependentUpon>PerModuleDataSet.xsd</DependentUpon>
+    <None Include="PERSONNELMODULEDataSet.xss">
+      <DependentUpon>PERSONNELMODULEDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

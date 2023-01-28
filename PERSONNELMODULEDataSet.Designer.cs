@@ -20,9 +20,11 @@ namespace PerModule {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("PerModuleDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("PERSONNELMODULEDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class PerModuleDataSet : global::System.Data.DataSet {
+    public partial class PERSONNELMODULEDataSet : global::System.Data.DataSet {
+        
+        private AdresesDataTable tableAdreses;
         
         private DepartmansDataTable tableDepartmans;
         
@@ -32,17 +34,23 @@ namespace PerModule {
         
         private PersonnelsDataTable tablePersonnels;
         
-        private global::System.Data.DataRelation relationFK_Egitims_Personnels;
+        private PersonelListGridViewDataTable tablePersonelListGridView;
         
-        private global::System.Data.DataRelation relationFK_Offdays_Personnels;
+        private global::System.Data.DataRelation relationFK_Egitims_Personnels1;
+        
+        private global::System.Data.DataRelation relationFK_Offdays_Personnels1;
+        
+        private global::System.Data.DataRelation relationFK_Personnels_Adreses;
         
         private global::System.Data.DataRelation relationFK_Personnels_Departmans;
+        
+        private global::System.Data.DataRelation relationFK_Personnels_Egitims;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public PerModuleDataSet() {
+        public PERSONNELMODULEDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -53,7 +61,7 @@ namespace PerModule {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected PerModuleDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected PERSONNELMODULEDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -66,6 +74,9 @@ namespace PerModule {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
+                if ((ds.Tables["Adreses"] != null)) {
+                    base.Tables.Add(new AdresesDataTable(ds.Tables["Adreses"]));
+                }
                 if ((ds.Tables["Departmans"] != null)) {
                     base.Tables.Add(new DepartmansDataTable(ds.Tables["Departmans"]));
                 }
@@ -77,6 +88,9 @@ namespace PerModule {
                 }
                 if ((ds.Tables["Personnels"] != null)) {
                     base.Tables.Add(new PersonnelsDataTable(ds.Tables["Personnels"]));
+                }
+                if ((ds.Tables["PersonelListGridView"] != null)) {
+                    base.Tables.Add(new PersonelListGridViewDataTable(ds.Tables["PersonelListGridView"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -94,6 +108,16 @@ namespace PerModule {
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
             base.Tables.CollectionChanged += schemaChangedHandler;
             this.Relations.CollectionChanged += schemaChangedHandler;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public AdresesDataTable Adreses {
+            get {
+                return this.tableAdreses;
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -133,6 +157,16 @@ namespace PerModule {
         public PersonnelsDataTable Personnels {
             get {
                 return this.tablePersonnels;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public PersonelListGridViewDataTable PersonelListGridView {
+            get {
+                return this.tablePersonelListGridView;
             }
         }
         
@@ -178,7 +212,7 @@ namespace PerModule {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            PerModuleDataSet cln = ((PerModuleDataSet)(base.Clone()));
+            PERSONNELMODULEDataSet cln = ((PERSONNELMODULEDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -203,6 +237,9 @@ namespace PerModule {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
+                if ((ds.Tables["Adreses"] != null)) {
+                    base.Tables.Add(new AdresesDataTable(ds.Tables["Adreses"]));
+                }
                 if ((ds.Tables["Departmans"] != null)) {
                     base.Tables.Add(new DepartmansDataTable(ds.Tables["Departmans"]));
                 }
@@ -214,6 +251,9 @@ namespace PerModule {
                 }
                 if ((ds.Tables["Personnels"] != null)) {
                     base.Tables.Add(new PersonnelsDataTable(ds.Tables["Personnels"]));
+                }
+                if ((ds.Tables["PersonelListGridView"] != null)) {
+                    base.Tables.Add(new PersonelListGridViewDataTable(ds.Tables["PersonelListGridView"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -248,6 +288,12 @@ namespace PerModule {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
+            this.tableAdreses = ((AdresesDataTable)(base.Tables["Adreses"]));
+            if ((initTable == true)) {
+                if ((this.tableAdreses != null)) {
+                    this.tableAdreses.InitVars();
+                }
+            }
             this.tableDepartmans = ((DepartmansDataTable)(base.Tables["Departmans"]));
             if ((initTable == true)) {
                 if ((this.tableDepartmans != null)) {
@@ -272,19 +318,29 @@ namespace PerModule {
                     this.tablePersonnels.InitVars();
                 }
             }
-            this.relationFK_Egitims_Personnels = this.Relations["FK_Egitims_Personnels"];
-            this.relationFK_Offdays_Personnels = this.Relations["FK_Offdays_Personnels"];
+            this.tablePersonelListGridView = ((PersonelListGridViewDataTable)(base.Tables["PersonelListGridView"]));
+            if ((initTable == true)) {
+                if ((this.tablePersonelListGridView != null)) {
+                    this.tablePersonelListGridView.InitVars();
+                }
+            }
+            this.relationFK_Egitims_Personnels1 = this.Relations["FK_Egitims_Personnels1"];
+            this.relationFK_Offdays_Personnels1 = this.Relations["FK_Offdays_Personnels1"];
+            this.relationFK_Personnels_Adreses = this.Relations["FK_Personnels_Adreses"];
             this.relationFK_Personnels_Departmans = this.Relations["FK_Personnels_Departmans"];
+            this.relationFK_Personnels_Egitims = this.Relations["FK_Personnels_Egitims"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "PerModuleDataSet";
+            this.DataSetName = "PERSONNELMODULEDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/PerModuleDataSet.xsd";
+            this.Namespace = "http://tempuri.org/PERSONNELMODULEDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tableAdreses = new AdresesDataTable();
+            base.Tables.Add(this.tableAdreses);
             this.tableDepartmans = new DepartmansDataTable();
             base.Tables.Add(this.tableDepartmans);
             this.tableEgitims = new EgitimsDataTable();
@@ -293,18 +349,34 @@ namespace PerModule {
             base.Tables.Add(this.tableOffdays);
             this.tablePersonnels = new PersonnelsDataTable();
             base.Tables.Add(this.tablePersonnels);
-            this.relationFK_Egitims_Personnels = new global::System.Data.DataRelation("FK_Egitims_Personnels", new global::System.Data.DataColumn[] {
+            this.tablePersonelListGridView = new PersonelListGridViewDataTable();
+            base.Tables.Add(this.tablePersonelListGridView);
+            this.relationFK_Egitims_Personnels1 = new global::System.Data.DataRelation("FK_Egitims_Personnels1", new global::System.Data.DataColumn[] {
                         this.tablePersonnels.idColumn}, new global::System.Data.DataColumn[] {
                         this.tableEgitims.PersonnelidColumn}, false);
-            this.Relations.Add(this.relationFK_Egitims_Personnels);
-            this.relationFK_Offdays_Personnels = new global::System.Data.DataRelation("FK_Offdays_Personnels", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK_Egitims_Personnels1);
+            this.relationFK_Offdays_Personnels1 = new global::System.Data.DataRelation("FK_Offdays_Personnels1", new global::System.Data.DataColumn[] {
                         this.tablePersonnels.idColumn}, new global::System.Data.DataColumn[] {
                         this.tableOffdays.PersonnelidColumn}, false);
-            this.Relations.Add(this.relationFK_Offdays_Personnels);
+            this.Relations.Add(this.relationFK_Offdays_Personnels1);
+            this.relationFK_Personnels_Adreses = new global::System.Data.DataRelation("FK_Personnels_Adreses", new global::System.Data.DataColumn[] {
+                        this.tableAdreses.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePersonnels.AdresidColumn}, false);
+            this.Relations.Add(this.relationFK_Personnels_Adreses);
             this.relationFK_Personnels_Departmans = new global::System.Data.DataRelation("FK_Personnels_Departmans", new global::System.Data.DataColumn[] {
                         this.tableDepartmans.idColumn}, new global::System.Data.DataColumn[] {
                         this.tablePersonnels.DepartmanidColumn}, false);
             this.Relations.Add(this.relationFK_Personnels_Departmans);
+            this.relationFK_Personnels_Egitims = new global::System.Data.DataRelation("FK_Personnels_Egitims", new global::System.Data.DataColumn[] {
+                        this.tableEgitims.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePersonnels.PerEgitimBilgileriColumn}, false);
+            this.Relations.Add(this.relationFK_Personnels_Egitims);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeAdreses() {
+            return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -333,6 +405,12 @@ namespace PerModule {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializePersonelListGridView() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -342,7 +420,7 @@ namespace PerModule {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            PerModuleDataSet ds = new PerModuleDataSet();
+            PERSONNELMODULEDataSet ds = new PERSONNELMODULEDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -387,6 +465,9 @@ namespace PerModule {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void AdresesRowChangeEventHandler(object sender, AdresesRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void DepartmansRowChangeEventHandler(object sender, DepartmansRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -397,6 +478,332 @@ namespace PerModule {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void PersonnelsRowChangeEventHandler(object sender, PersonnelsRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void PersonelListGridViewRowChangeEventHandler(object sender, PersonelListGridViewRowChangeEvent e);
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class AdresesDataTable : global::System.Data.TypedTableBase<AdresesRow> {
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columnAdresUlke;
+            
+            private global::System.Data.DataColumn columnAdresSehir;
+            
+            private global::System.Data.DataColumn columnAdresIlce;
+            
+            private global::System.Data.DataColumn columnAdresMahalleKoy;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AdresesDataTable() {
+                this.TableName = "Adreses";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal AdresesDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected AdresesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AdresUlkeColumn {
+                get {
+                    return this.columnAdresUlke;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AdresSehirColumn {
+                get {
+                    return this.columnAdresSehir;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AdresIlceColumn {
+                get {
+                    return this.columnAdresIlce;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AdresMahalleKoyColumn {
+                get {
+                    return this.columnAdresMahalleKoy;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AdresesRow this[int index] {
+                get {
+                    return ((AdresesRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event AdresesRowChangeEventHandler AdresesRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event AdresesRowChangeEventHandler AdresesRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event AdresesRowChangeEventHandler AdresesRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event AdresesRowChangeEventHandler AdresesRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddAdresesRow(AdresesRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AdresesRow AddAdresesRow(string AdresUlke, string AdresSehir, string AdresIlce, string AdresMahalleKoy) {
+                AdresesRow rowAdresesRow = ((AdresesRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        AdresUlke,
+                        AdresSehir,
+                        AdresIlce,
+                        AdresMahalleKoy};
+                rowAdresesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAdresesRow);
+                return rowAdresesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AdresesRow FindByid(int id) {
+                return ((AdresesRow)(this.Rows.Find(new object[] {
+                            id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                AdresesDataTable cln = ((AdresesDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new AdresesDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnid = base.Columns["id"];
+                this.columnAdresUlke = base.Columns["AdresUlke"];
+                this.columnAdresSehir = base.Columns["AdresSehir"];
+                this.columnAdresIlce = base.Columns["AdresIlce"];
+                this.columnAdresMahalleKoy = base.Columns["AdresMahalleKoy"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnAdresUlke = new global::System.Data.DataColumn("AdresUlke", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdresUlke);
+                this.columnAdresSehir = new global::System.Data.DataColumn("AdresSehir", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdresSehir);
+                this.columnAdresIlce = new global::System.Data.DataColumn("AdresIlce", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdresIlce);
+                this.columnAdresMahalleKoy = new global::System.Data.DataColumn("AdresMahalleKoy", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdresMahalleKoy);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid}, true));
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
+                this.columnid.AllowDBNull = false;
+                this.columnid.ReadOnly = true;
+                this.columnid.Unique = true;
+                this.columnAdresUlke.MaxLength = 50;
+                this.columnAdresSehir.MaxLength = 50;
+                this.columnAdresIlce.MaxLength = 50;
+                this.columnAdresMahalleKoy.AllowDBNull = false;
+                this.columnAdresMahalleKoy.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AdresesRow NewAdresesRow() {
+                return ((AdresesRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new AdresesRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(AdresesRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.AdresesRowChanged != null)) {
+                    this.AdresesRowChanged(this, new AdresesRowChangeEvent(((AdresesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.AdresesRowChanging != null)) {
+                    this.AdresesRowChanging(this, new AdresesRowChangeEvent(((AdresesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.AdresesRowDeleted != null)) {
+                    this.AdresesRowDeleted(this, new AdresesRowChangeEvent(((AdresesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.AdresesRowDeleting != null)) {
+                    this.AdresesRowDeleting(this, new AdresesRowChangeEvent(((AdresesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveAdresesRow(AdresesRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                PERSONNELMODULEDataSet ds = new PERSONNELMODULEDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "AdresesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -648,7 +1055,7 @@ namespace PerModule {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PerModuleDataSet ds = new PerModuleDataSet();
+                PERSONNELMODULEDataSet ds = new PERSONNELMODULEDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -735,6 +1142,8 @@ namespace PerModule {
             private global::System.Data.DataColumn columndocent;
             
             private global::System.Data.DataColumn columnprofesor;
+            
+            private global::System.Data.DataColumn columnEkbilgi;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -859,6 +1268,14 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EkbilgiColumn {
+                get {
+                    return this.columnEkbilgi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -894,7 +1311,7 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EgitimsRow AddEgitimsRow(PersonnelsRow parentPersonnelsRowByFK_Egitims_Personnels, string ilkokul, string ortaokul, string lise, string onlisans, string lisans, string yukseklisans, string doktora, string docent, string profesor) {
+            public EgitimsRow AddEgitimsRow(PersonnelsRow parentPersonnelsRowByFK_Egitims_Personnels1, string ilkokul, string ortaokul, string lise, string onlisans, string lisans, string yukseklisans, string doktora, string docent, string profesor, string Ekbilgi) {
                 EgitimsRow rowEgitimsRow = ((EgitimsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -907,9 +1324,10 @@ namespace PerModule {
                         yukseklisans,
                         doktora,
                         docent,
-                        profesor};
-                if ((parentPersonnelsRowByFK_Egitims_Personnels != null)) {
-                    columnValuesArray[1] = parentPersonnelsRowByFK_Egitims_Personnels[0];
+                        profesor,
+                        Ekbilgi};
+                if ((parentPersonnelsRowByFK_Egitims_Personnels1 != null)) {
+                    columnValuesArray[1] = parentPersonnelsRowByFK_Egitims_Personnels1[0];
                 }
                 rowEgitimsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEgitimsRow);
@@ -951,6 +1369,7 @@ namespace PerModule {
                 this.columndoktora = base.Columns["doktora"];
                 this.columndocent = base.Columns["docent"];
                 this.columnprofesor = base.Columns["profesor"];
+                this.columnEkbilgi = base.Columns["Ekbilgi"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -978,6 +1397,8 @@ namespace PerModule {
                 base.Columns.Add(this.columndocent);
                 this.columnprofesor = new global::System.Data.DataColumn("profesor", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprofesor);
+                this.columnEkbilgi = new global::System.Data.DataColumn("Ekbilgi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEkbilgi);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -996,6 +1417,7 @@ namespace PerModule {
                 this.columndoktora.MaxLength = 100;
                 this.columndocent.MaxLength = 100;
                 this.columnprofesor.MaxLength = 100;
+                this.columnEkbilgi.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1063,7 +1485,7 @@ namespace PerModule {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PerModuleDataSet ds = new PerModuleDataSet();
+                PERSONNELMODULEDataSet ds = new PERSONNELMODULEDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1229,14 +1651,14 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OffdaysRow AddOffdaysRow(PersonnelsRow parentPersonnelsRowByFK_Offdays_Personnels, System.DateTime OffdaysDate) {
+            public OffdaysRow AddOffdaysRow(PersonnelsRow parentPersonnelsRowByFK_Offdays_Personnels1, System.DateTime OffdaysDate) {
                 OffdaysRow rowOffdaysRow = ((OffdaysRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         OffdaysDate};
-                if ((parentPersonnelsRowByFK_Offdays_Personnels != null)) {
-                    columnValuesArray[1] = parentPersonnelsRowByFK_Offdays_Personnels[0];
+                if ((parentPersonnelsRowByFK_Offdays_Personnels1 != null)) {
+                    columnValuesArray[1] = parentPersonnelsRowByFK_Offdays_Personnels1[0];
                 }
                 rowOffdaysRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOffdaysRow);
@@ -1358,7 +1780,7 @@ namespace PerModule {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PerModuleDataSet ds = new PerModuleDataSet();
+                PERSONNELMODULEDataSet ds = new PERSONNELMODULEDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1450,7 +1872,7 @@ namespace PerModule {
             
             private global::System.Data.DataColumn columnPerMedeniHali;
             
-            private global::System.Data.DataColumn columnPerAdres;
+            private global::System.Data.DataColumn columnAdresid;
             
             private global::System.Data.DataColumn columnPerBaslamaT;
             
@@ -1463,6 +1885,8 @@ namespace PerModule {
             private global::System.Data.DataColumn columnPerNickName;
             
             private global::System.Data.DataColumn columnPerPassword;
+            
+            private global::System.Data.DataColumn columnPerYetki;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1603,9 +2027,9 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PerAdresColumn {
+            public global::System.Data.DataColumn AdresidColumn {
                 get {
-                    return this.columnPerAdres;
+                    return this.columnAdresid;
                 }
             }
             
@@ -1659,6 +2083,14 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PerYetkiColumn {
+                get {
+                    return this.columnPerYetki;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1704,16 +2136,17 @@ namespace PerModule {
                         string PerMail, 
                         string PerTel, 
                         string PerGorsel, 
-                        int PerEgitimBilgileri, 
+                        EgitimsRow parentEgitimsRowByFK_Personnels_Egitims, 
                         string PerKanGrubu, 
                         string PerMedeniHali, 
-                        string PerAdres, 
+                        AdresesRow parentAdresesRowByFK_Personnels_Adreses, 
                         System.DateTime PerBaslamaT, 
                         System.DateTime PerAyrilisT, 
                         string PerAyrilmaSebebi, 
                         DepartmansRow parentDepartmansRowByFK_Personnels_Departmans, 
                         string PerNickName, 
-                        string PerPassword) {
+                        string PerPassword, 
+                        int PerYetki) {
                 PersonnelsRow rowPersonnelsRow = ((PersonnelsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1726,16 +2159,23 @@ namespace PerModule {
                         PerMail,
                         PerTel,
                         PerGorsel,
-                        PerEgitimBilgileri,
+                        null,
                         PerKanGrubu,
                         PerMedeniHali,
-                        PerAdres,
+                        null,
                         PerBaslamaT,
                         PerAyrilisT,
                         PerAyrilmaSebebi,
                         null,
                         PerNickName,
-                        PerPassword};
+                        PerPassword,
+                        PerYetki};
+                if ((parentEgitimsRowByFK_Personnels_Egitims != null)) {
+                    columnValuesArray[10] = parentEgitimsRowByFK_Personnels_Egitims[0];
+                }
+                if ((parentAdresesRowByFK_Personnels_Adreses != null)) {
+                    columnValuesArray[13] = parentAdresesRowByFK_Personnels_Adreses[0];
+                }
                 if ((parentDepartmansRowByFK_Personnels_Departmans != null)) {
                     columnValuesArray[17] = parentDepartmansRowByFK_Personnels_Departmans[0];
                 }
@@ -1781,13 +2221,14 @@ namespace PerModule {
                 this.columnPerEgitimBilgileri = base.Columns["PerEgitimBilgileri"];
                 this.columnPerKanGrubu = base.Columns["PerKanGrubu"];
                 this.columnPerMedeniHali = base.Columns["PerMedeniHali"];
-                this.columnPerAdres = base.Columns["PerAdres"];
+                this.columnAdresid = base.Columns["Adresid"];
                 this.columnPerBaslamaT = base.Columns["PerBaslamaT"];
                 this.columnPerAyrilisT = base.Columns["PerAyrilisT"];
                 this.columnPerAyrilmaSebebi = base.Columns["PerAyrilmaSebebi"];
                 this.columnDepartmanid = base.Columns["Departmanid"];
                 this.columnPerNickName = base.Columns["PerNickName"];
                 this.columnPerPassword = base.Columns["PerPassword"];
+                this.columnPerYetki = base.Columns["PerYetki"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1819,8 +2260,8 @@ namespace PerModule {
                 base.Columns.Add(this.columnPerKanGrubu);
                 this.columnPerMedeniHali = new global::System.Data.DataColumn("PerMedeniHali", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPerMedeniHali);
-                this.columnPerAdres = new global::System.Data.DataColumn("PerAdres", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPerAdres);
+                this.columnAdresid = new global::System.Data.DataColumn("Adresid", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdresid);
                 this.columnPerBaslamaT = new global::System.Data.DataColumn("PerBaslamaT", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPerBaslamaT);
                 this.columnPerAyrilisT = new global::System.Data.DataColumn("PerAyrilisT", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -1833,6 +2274,8 @@ namespace PerModule {
                 base.Columns.Add(this.columnPerNickName);
                 this.columnPerPassword = new global::System.Data.DataColumn("PerPassword", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPerPassword);
+                this.columnPerYetki = new global::System.Data.DataColumn("PerYetki", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPerYetki);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -1859,8 +2302,7 @@ namespace PerModule {
                 this.columnPerKanGrubu.MaxLength = 10;
                 this.columnPerMedeniHali.AllowDBNull = false;
                 this.columnPerMedeniHali.MaxLength = 20;
-                this.columnPerAdres.AllowDBNull = false;
-                this.columnPerAdres.MaxLength = 300;
+                this.columnAdresid.AllowDBNull = false;
                 this.columnPerBaslamaT.AllowDBNull = false;
                 this.columnPerAyrilmaSebebi.MaxLength = 150;
                 this.columnDepartmanid.AllowDBNull = false;
@@ -1933,7 +2375,7 @@ namespace PerModule {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PerModuleDataSet ds = new PerModuleDataSet();
+                PERSONNELMODULEDataSet ds = new PERSONNELMODULEDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1989,6 +2431,511 @@ namespace PerModule {
                 }
                 xs.Add(dsSchema);
                 return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class PersonelListGridViewDataTable : global::System.Data.TypedTableBase<PersonelListGridViewRow> {
+            
+            private global::System.Data.DataColumn columnPerTckn;
+            
+            private global::System.Data.DataColumn columnPerAd;
+            
+            private global::System.Data.DataColumn columnPerSoyad;
+            
+            private global::System.Data.DataColumn columnPerDogumTarihi;
+            
+            private global::System.Data.DataColumn columnDepAdi;
+            
+            private global::System.Data.DataColumn columnDepRolu;
+            
+            private global::System.Data.DataColumn columnPerBaslamaT;
+            
+            private global::System.Data.DataColumn columnAdresUlke;
+            
+            private global::System.Data.DataColumn columnAdresSehir;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PersonelListGridViewDataTable() {
+                this.TableName = "PersonelListGridView";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal PersonelListGridViewDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected PersonelListGridViewDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PerTcknColumn {
+                get {
+                    return this.columnPerTckn;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PerAdColumn {
+                get {
+                    return this.columnPerAd;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PerSoyadColumn {
+                get {
+                    return this.columnPerSoyad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PerDogumTarihiColumn {
+                get {
+                    return this.columnPerDogumTarihi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DepAdiColumn {
+                get {
+                    return this.columnDepAdi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DepRoluColumn {
+                get {
+                    return this.columnDepRolu;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PerBaslamaTColumn {
+                get {
+                    return this.columnPerBaslamaT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AdresUlkeColumn {
+                get {
+                    return this.columnAdresUlke;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AdresSehirColumn {
+                get {
+                    return this.columnAdresSehir;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PersonelListGridViewRow this[int index] {
+                get {
+                    return ((PersonelListGridViewRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event PersonelListGridViewRowChangeEventHandler PersonelListGridViewRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event PersonelListGridViewRowChangeEventHandler PersonelListGridViewRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event PersonelListGridViewRowChangeEventHandler PersonelListGridViewRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event PersonelListGridViewRowChangeEventHandler PersonelListGridViewRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddPersonelListGridViewRow(PersonelListGridViewRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PersonelListGridViewRow AddPersonelListGridViewRow(string PerTckn, string PerAd, string PerSoyad, System.DateTime PerDogumTarihi, string DepAdi, string DepRolu, System.DateTime PerBaslamaT, string AdresUlke, string AdresSehir) {
+                PersonelListGridViewRow rowPersonelListGridViewRow = ((PersonelListGridViewRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        PerTckn,
+                        PerAd,
+                        PerSoyad,
+                        PerDogumTarihi,
+                        DepAdi,
+                        DepRolu,
+                        PerBaslamaT,
+                        AdresUlke,
+                        AdresSehir};
+                rowPersonelListGridViewRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPersonelListGridViewRow);
+                return rowPersonelListGridViewRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                PersonelListGridViewDataTable cln = ((PersonelListGridViewDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new PersonelListGridViewDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnPerTckn = base.Columns["PerTckn"];
+                this.columnPerAd = base.Columns["PerAd"];
+                this.columnPerSoyad = base.Columns["PerSoyad"];
+                this.columnPerDogumTarihi = base.Columns["PerDogumTarihi"];
+                this.columnDepAdi = base.Columns["DepAdi"];
+                this.columnDepRolu = base.Columns["DepRolu"];
+                this.columnPerBaslamaT = base.Columns["PerBaslamaT"];
+                this.columnAdresUlke = base.Columns["AdresUlke"];
+                this.columnAdresSehir = base.Columns["AdresSehir"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnPerTckn = new global::System.Data.DataColumn("PerTckn", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPerTckn);
+                this.columnPerAd = new global::System.Data.DataColumn("PerAd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPerAd);
+                this.columnPerSoyad = new global::System.Data.DataColumn("PerSoyad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPerSoyad);
+                this.columnPerDogumTarihi = new global::System.Data.DataColumn("PerDogumTarihi", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPerDogumTarihi);
+                this.columnDepAdi = new global::System.Data.DataColumn("DepAdi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepAdi);
+                this.columnDepRolu = new global::System.Data.DataColumn("DepRolu", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepRolu);
+                this.columnPerBaslamaT = new global::System.Data.DataColumn("PerBaslamaT", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPerBaslamaT);
+                this.columnAdresUlke = new global::System.Data.DataColumn("AdresUlke", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdresUlke);
+                this.columnAdresSehir = new global::System.Data.DataColumn("AdresSehir", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdresSehir);
+                this.columnPerTckn.AllowDBNull = false;
+                this.columnPerTckn.MaxLength = 20;
+                this.columnPerAd.AllowDBNull = false;
+                this.columnPerAd.MaxLength = 50;
+                this.columnPerSoyad.AllowDBNull = false;
+                this.columnPerSoyad.MaxLength = 50;
+                this.columnPerDogumTarihi.AllowDBNull = false;
+                this.columnDepAdi.AllowDBNull = false;
+                this.columnDepAdi.MaxLength = 50;
+                this.columnDepRolu.AllowDBNull = false;
+                this.columnDepRolu.MaxLength = 50;
+                this.columnPerBaslamaT.AllowDBNull = false;
+                this.columnAdresUlke.MaxLength = 50;
+                this.columnAdresSehir.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PersonelListGridViewRow NewPersonelListGridViewRow() {
+                return ((PersonelListGridViewRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new PersonelListGridViewRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(PersonelListGridViewRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.PersonelListGridViewRowChanged != null)) {
+                    this.PersonelListGridViewRowChanged(this, new PersonelListGridViewRowChangeEvent(((PersonelListGridViewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.PersonelListGridViewRowChanging != null)) {
+                    this.PersonelListGridViewRowChanging(this, new PersonelListGridViewRowChangeEvent(((PersonelListGridViewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.PersonelListGridViewRowDeleted != null)) {
+                    this.PersonelListGridViewRowDeleted(this, new PersonelListGridViewRowChangeEvent(((PersonelListGridViewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.PersonelListGridViewRowDeleting != null)) {
+                    this.PersonelListGridViewRowDeleting(this, new PersonelListGridViewRowChangeEvent(((PersonelListGridViewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemovePersonelListGridViewRow(PersonelListGridViewRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                PERSONNELMODULEDataSet ds = new PERSONNELMODULEDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "PersonelListGridViewDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class AdresesRow : global::System.Data.DataRow {
+            
+            private AdresesDataTable tableAdreses;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal AdresesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableAdreses = ((AdresesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id {
+                get {
+                    return ((int)(this[this.tableAdreses.idColumn]));
+                }
+                set {
+                    this[this.tableAdreses.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string AdresUlke {
+                get {
+                    try {
+                        return ((string)(this[this.tableAdreses.AdresUlkeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'Adreses\' tablosundaki \'AdresUlke\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAdreses.AdresUlkeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string AdresSehir {
+                get {
+                    try {
+                        return ((string)(this[this.tableAdreses.AdresSehirColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'Adreses\' tablosundaki \'AdresSehir\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAdreses.AdresSehirColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string AdresIlce {
+                get {
+                    try {
+                        return ((string)(this[this.tableAdreses.AdresIlceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'Adreses\' tablosundaki \'AdresIlce\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAdreses.AdresIlceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string AdresMahalleKoy {
+                get {
+                    return ((string)(this[this.tableAdreses.AdresMahalleKoyColumn]));
+                }
+                set {
+                    this[this.tableAdreses.AdresMahalleKoyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAdresUlkeNull() {
+                return this.IsNull(this.tableAdreses.AdresUlkeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAdresUlkeNull() {
+                this[this.tableAdreses.AdresUlkeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAdresSehirNull() {
+                return this.IsNull(this.tableAdreses.AdresSehirColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAdresSehirNull() {
+                this[this.tableAdreses.AdresSehirColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAdresIlceNull() {
+                return this.IsNull(this.tableAdreses.AdresIlceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAdresIlceNull() {
+                this[this.tableAdreses.AdresIlceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PersonnelsRow[] GetPersonnelsRows() {
+                if ((this.Table.ChildRelations["FK_Personnels_Adreses"] == null)) {
+                    return new PersonnelsRow[0];
+                }
+                else {
+                    return ((PersonnelsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Personnels_Adreses"])));
+                }
             }
         }
         
@@ -2244,12 +3191,28 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PersonnelsRow PersonnelsRow {
+            public string Ekbilgi {
                 get {
-                    return ((PersonnelsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Egitims_Personnels"])));
+                    try {
+                        return ((string)(this[this.tableEgitims.EkbilgiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'Egitims\' tablosundaki \'Ekbilgi\' sütunun değeri DBNull.", e);
+                    }
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Egitims_Personnels"]);
+                    this[this.tableEgitims.EkbilgiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PersonnelsRow PersonnelsRow {
+                get {
+                    return ((PersonnelsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Egitims_Personnels1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Egitims_Personnels1"]);
                 }
             }
             
@@ -2360,6 +3323,29 @@ namespace PerModule {
             public void SetprofesorNull() {
                 this[this.tableEgitims.profesorColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsEkbilgiNull() {
+                return this.IsNull(this.tableEgitims.EkbilgiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetEkbilgiNull() {
+                this[this.tableEgitims.EkbilgiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PersonnelsRow[] GetPersonnelsRows() {
+                if ((this.Table.ChildRelations["FK_Personnels_Egitims"] == null)) {
+                    return new PersonnelsRow[0];
+                }
+                else {
+                    return ((PersonnelsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Personnels_Egitims"])));
+                }
+            }
         }
         
         /// <summary>
@@ -2413,10 +3399,10 @@ namespace PerModule {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PersonnelsRow PersonnelsRow {
                 get {
-                    return ((PersonnelsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Offdays_Personnels"])));
+                    return ((PersonnelsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Offdays_Personnels1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Offdays_Personnels"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Offdays_Personnels1"]);
                 }
             }
         }
@@ -2595,12 +3581,12 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string PerAdres {
+            public int Adresid {
                 get {
-                    return ((string)(this[this.tablePersonnels.PerAdresColumn]));
+                    return ((int)(this[this.tablePersonnels.AdresidColumn]));
                 }
                 set {
-                    this[this.tablePersonnels.PerAdresColumn] = value;
+                    this[this.tablePersonnels.AdresidColumn] = value;
                 }
             }
             
@@ -2692,12 +3678,50 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int PerYetki {
+                get {
+                    try {
+                        return ((int)(this[this.tablePersonnels.PerYetkiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'Personnels\' tablosundaki \'PerYetki\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePersonnels.PerYetkiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AdresesRow AdresesRow {
+                get {
+                    return ((AdresesRow)(this.GetParentRow(this.Table.ParentRelations["FK_Personnels_Adreses"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Personnels_Adreses"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public DepartmansRow DepartmansRow {
                 get {
                     return ((DepartmansRow)(this.GetParentRow(this.Table.ParentRelations["FK_Personnels_Departmans"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Personnels_Departmans"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public EgitimsRow EgitimsRow {
+                get {
+                    return ((EgitimsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Personnels_Egitims"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Personnels_Egitims"]);
                 }
             }
             
@@ -2787,23 +3811,217 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPerYetkiNull() {
+                return this.IsNull(this.tablePersonnels.PerYetkiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPerYetkiNull() {
+                this[this.tablePersonnels.PerYetkiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public EgitimsRow[] GetEgitimsRows() {
-                if ((this.Table.ChildRelations["FK_Egitims_Personnels"] == null)) {
+                if ((this.Table.ChildRelations["FK_Egitims_Personnels1"] == null)) {
                     return new EgitimsRow[0];
                 }
                 else {
-                    return ((EgitimsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Egitims_Personnels"])));
+                    return ((EgitimsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Egitims_Personnels1"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OffdaysRow[] GetOffdaysRows() {
-                if ((this.Table.ChildRelations["FK_Offdays_Personnels"] == null)) {
+                if ((this.Table.ChildRelations["FK_Offdays_Personnels1"] == null)) {
                     return new OffdaysRow[0];
                 }
                 else {
-                    return ((OffdaysRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Offdays_Personnels"])));
+                    return ((OffdaysRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Offdays_Personnels1"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class PersonelListGridViewRow : global::System.Data.DataRow {
+            
+            private PersonelListGridViewDataTable tablePersonelListGridView;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal PersonelListGridViewRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablePersonelListGridView = ((PersonelListGridViewDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PerTckn {
+                get {
+                    return ((string)(this[this.tablePersonelListGridView.PerTcknColumn]));
+                }
+                set {
+                    this[this.tablePersonelListGridView.PerTcknColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PerAd {
+                get {
+                    return ((string)(this[this.tablePersonelListGridView.PerAdColumn]));
+                }
+                set {
+                    this[this.tablePersonelListGridView.PerAdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PerSoyad {
+                get {
+                    return ((string)(this[this.tablePersonelListGridView.PerSoyadColumn]));
+                }
+                set {
+                    this[this.tablePersonelListGridView.PerSoyadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime PerDogumTarihi {
+                get {
+                    return ((global::System.DateTime)(this[this.tablePersonelListGridView.PerDogumTarihiColumn]));
+                }
+                set {
+                    this[this.tablePersonelListGridView.PerDogumTarihiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string DepAdi {
+                get {
+                    return ((string)(this[this.tablePersonelListGridView.DepAdiColumn]));
+                }
+                set {
+                    this[this.tablePersonelListGridView.DepAdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string DepRolu {
+                get {
+                    return ((string)(this[this.tablePersonelListGridView.DepRoluColumn]));
+                }
+                set {
+                    this[this.tablePersonelListGridView.DepRoluColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime PerBaslamaT {
+                get {
+                    return ((global::System.DateTime)(this[this.tablePersonelListGridView.PerBaslamaTColumn]));
+                }
+                set {
+                    this[this.tablePersonelListGridView.PerBaslamaTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string AdresUlke {
+                get {
+                    try {
+                        return ((string)(this[this.tablePersonelListGridView.AdresUlkeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'PersonelListGridView\' tablosundaki \'AdresUlke\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePersonelListGridView.AdresUlkeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string AdresSehir {
+                get {
+                    try {
+                        return ((string)(this[this.tablePersonelListGridView.AdresSehirColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'PersonelListGridView\' tablosundaki \'AdresSehir\' sütunun değeri DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePersonelListGridView.AdresSehirColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAdresUlkeNull() {
+                return this.IsNull(this.tablePersonelListGridView.AdresUlkeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAdresUlkeNull() {
+                this[this.tablePersonelListGridView.AdresUlkeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAdresSehirNull() {
+                return this.IsNull(this.tablePersonelListGridView.AdresSehirColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAdresSehirNull() {
+                this[this.tablePersonelListGridView.AdresSehirColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class AdresesRowChangeEvent : global::System.EventArgs {
+            
+            private AdresesRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AdresesRowChangeEvent(AdresesRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AdresesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
                 }
             }
         }
@@ -2943,10 +4161,465 @@ namespace PerModule {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class PersonelListGridViewRowChangeEvent : global::System.EventArgs {
+            
+            private PersonelListGridViewRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PersonelListGridViewRowChangeEvent(PersonelListGridViewRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PersonelListGridViewRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
-namespace PerModule.PerModuleDataSetTableAdapters {
+namespace PerModule.PERSONNELMODULEDataSetTableAdapters {
     
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class AdresesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public AdresesTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Adreses";
+            tableMapping.ColumnMappings.Add("id", "id");
+            tableMapping.ColumnMappings.Add("AdresUlke", "AdresUlke");
+            tableMapping.ColumnMappings.Add("AdresSehir", "AdresSehir");
+            tableMapping.ColumnMappings.Add("AdresIlce", "AdresIlce");
+            tableMapping.ColumnMappings.Add("AdresMahalleKoy", "AdresMahalleKoy");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Adreses] WHERE (([id] = @Original_id) AND ((@IsNull_AdresUlke = 1 AND [AdresUlke] IS NULL) OR ([AdresUlke] = @Original_AdresUlke)) AND ((@IsNull_AdresSehir = 1 AND [AdresSehir] IS NULL) OR ([AdresSehir] = @Original_AdresSehir)) AND ((@IsNull_AdresIlce = 1 AND [AdresIlce] IS NULL) OR ([AdresIlce] = @Original_AdresIlce)) AND ([AdresMahalleKoy] = @Original_AdresMahalleKoy))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AdresUlke", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresUlke", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdresUlke", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresUlke", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AdresSehir", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresSehir", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdresSehir", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresSehir", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AdresIlce", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresIlce", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdresIlce", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresIlce", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdresMahalleKoy", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresMahalleKoy", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Adreses] ([AdresUlke], [AdresSehir], [AdresIlce], [AdresMahalleKoy]) VALUES (@AdresUlke, @AdresSehir, @AdresIlce, @AdresMahalleKoy);
+SELECT id, AdresUlke, AdresSehir, AdresIlce, AdresMahalleKoy FROM Adreses WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdresUlke", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresUlke", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdresSehir", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresSehir", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdresIlce", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresIlce", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdresMahalleKoy", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresMahalleKoy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Adreses] SET [AdresUlke] = @AdresUlke, [AdresSehir] = @AdresSehir, [AdresIlce] = @AdresIlce, [AdresMahalleKoy] = @AdresMahalleKoy WHERE (([id] = @Original_id) AND ((@IsNull_AdresUlke = 1 AND [AdresUlke] IS NULL) OR ([AdresUlke] = @Original_AdresUlke)) AND ((@IsNull_AdresSehir = 1 AND [AdresSehir] IS NULL) OR ([AdresSehir] = @Original_AdresSehir)) AND ((@IsNull_AdresIlce = 1 AND [AdresIlce] IS NULL) OR ([AdresIlce] = @Original_AdresIlce)) AND ([AdresMahalleKoy] = @Original_AdresMahalleKoy));
+SELECT id, AdresUlke, AdresSehir, AdresIlce, AdresMahalleKoy FROM Adreses WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdresUlke", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresUlke", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdresSehir", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresSehir", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdresIlce", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresIlce", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdresMahalleKoy", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresMahalleKoy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AdresUlke", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresUlke", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdresUlke", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresUlke", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AdresSehir", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresSehir", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdresSehir", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresSehir", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AdresIlce", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresIlce", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdresIlce", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresIlce", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdresMahalleKoy", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdresMahalleKoy", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::PerModule.Properties.Settings.Default.PerModuleCS;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT id, AdresUlke, AdresSehir, AdresIlce, AdresMahalleKoy FROM dbo.Adreses";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(PERSONNELMODULEDataSet.AdresesDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual PERSONNELMODULEDataSet.AdresesDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            PERSONNELMODULEDataSet.AdresesDataTable dataTable = new PERSONNELMODULEDataSet.AdresesDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(PERSONNELMODULEDataSet.AdresesDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(PERSONNELMODULEDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Adreses");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_id, string Original_AdresUlke, string Original_AdresSehir, string Original_AdresIlce, string Original_AdresMahalleKoy) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
+            if ((Original_AdresUlke == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_AdresUlke));
+            }
+            if ((Original_AdresSehir == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_AdresSehir));
+            }
+            if ((Original_AdresIlce == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_AdresIlce));
+            }
+            if ((Original_AdresMahalleKoy == null)) {
+                throw new global::System.ArgumentNullException("Original_AdresMahalleKoy");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_AdresMahalleKoy));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string AdresUlke, string AdresSehir, string AdresIlce, string AdresMahalleKoy) {
+            if ((AdresUlke == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(AdresUlke));
+            }
+            if ((AdresSehir == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(AdresSehir));
+            }
+            if ((AdresIlce == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(AdresIlce));
+            }
+            if ((AdresMahalleKoy == null)) {
+                throw new global::System.ArgumentNullException("AdresMahalleKoy");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(AdresMahalleKoy));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string AdresUlke, string AdresSehir, string AdresIlce, string AdresMahalleKoy, int Original_id, string Original_AdresUlke, string Original_AdresSehir, string Original_AdresIlce, string Original_AdresMahalleKoy, int id) {
+            if ((AdresUlke == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(AdresUlke));
+            }
+            if ((AdresSehir == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(AdresSehir));
+            }
+            if ((AdresIlce == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(AdresIlce));
+            }
+            if ((AdresMahalleKoy == null)) {
+                throw new global::System.ArgumentNullException("AdresMahalleKoy");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(AdresMahalleKoy));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id));
+            if ((Original_AdresUlke == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_AdresUlke));
+            }
+            if ((Original_AdresSehir == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_AdresSehir));
+            }
+            if ((Original_AdresIlce == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_AdresIlce));
+            }
+            if ((Original_AdresMahalleKoy == null)) {
+                throw new global::System.ArgumentNullException("Original_AdresMahalleKoy");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_AdresMahalleKoy));
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string AdresUlke, string AdresSehir, string AdresIlce, string AdresMahalleKoy, int Original_id, string Original_AdresUlke, string Original_AdresSehir, string Original_AdresIlce, string Original_AdresMahalleKoy) {
+            return this.Update(AdresUlke, AdresSehir, AdresIlce, AdresMahalleKoy, Original_id, Original_AdresUlke, Original_AdresSehir, Original_AdresIlce, Original_AdresMahalleKoy, Original_id);
+        }
+    }
     
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
@@ -3129,7 +4802,7 @@ SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PerModuleDataSet.DepartmansDataTable dataTable) {
+        public virtual int Fill(PERSONNELMODULEDataSet.DepartmansDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3142,9 +4815,9 @@ SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PerModuleDataSet.DepartmansDataTable GetData() {
+        public virtual PERSONNELMODULEDataSet.DepartmansDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PerModuleDataSet.DepartmansDataTable dataTable = new PerModuleDataSet.DepartmansDataTable();
+            PERSONNELMODULEDataSet.DepartmansDataTable dataTable = new PERSONNELMODULEDataSet.DepartmansDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3152,14 +4825,14 @@ SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PerModuleDataSet.DepartmansDataTable dataTable) {
+        public virtual int Update(PERSONNELMODULEDataSet.DepartmansDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PerModuleDataSet dataSet) {
+        public virtual int Update(PERSONNELMODULEDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Departmans");
         }
         
@@ -3437,10 +5110,11 @@ SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
             tableMapping.ColumnMappings.Add("doktora", "doktora");
             tableMapping.ColumnMappings.Add("docent", "docent");
             tableMapping.ColumnMappings.Add("profesor", "profesor");
+            tableMapping.ColumnMappings.Add("Ekbilgi", "Ekbilgi");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Egitims] WHERE (([id] = @Original_id) AND ([Personnelid] = @Original_Personnelid) AND ((@IsNull_ilkokul = 1 AND [ilkokul] IS NULL) OR ([ilkokul] = @Original_ilkokul)) AND ((@IsNull_ortaokul = 1 AND [ortaokul] IS NULL) OR ([ortaokul] = @Original_ortaokul)) AND ((@IsNull_lise = 1 AND [lise] IS NULL) OR ([lise] = @Original_lise)) AND ((@IsNull_onlisans = 1 AND [onlisans] IS NULL) OR ([onlisans] = @Original_onlisans)) AND ((@IsNull_lisans = 1 AND [lisans] IS NULL) OR ([lisans] = @Original_lisans)) AND ((@IsNull_yukseklisans = 1 AND [yukseklisans] IS NULL) OR ([yukseklisans] = @Original_yukseklisans)) AND ((@IsNull_doktora = 1 AND [doktora] IS NULL) OR ([doktora] = @Original_doktora)) AND ((@IsNull_docent = 1 AND [docent] IS NULL) OR ([docent] = @Original_docent)) AND ((@IsNull_profesor = 1 AND [profesor] IS NULL) OR ([profesor] = @Original_profesor)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Egitims] WHERE (([id] = @Original_id) AND ([Personnelid] = @Original_Personnelid) AND ((@IsNull_ilkokul = 1 AND [ilkokul] IS NULL) OR ([ilkokul] = @Original_ilkokul)) AND ((@IsNull_ortaokul = 1 AND [ortaokul] IS NULL) OR ([ortaokul] = @Original_ortaokul)) AND ((@IsNull_lise = 1 AND [lise] IS NULL) OR ([lise] = @Original_lise)) AND ((@IsNull_onlisans = 1 AND [onlisans] IS NULL) OR ([onlisans] = @Original_onlisans)) AND ((@IsNull_lisans = 1 AND [lisans] IS NULL) OR ([lisans] = @Original_lisans)) AND ((@IsNull_yukseklisans = 1 AND [yukseklisans] IS NULL) OR ([yukseklisans] = @Original_yukseklisans)) AND ((@IsNull_doktora = 1 AND [doktora] IS NULL) OR ([doktora] = @Original_doktora)) AND ((@IsNull_docent = 1 AND [docent] IS NULL) OR ([docent] = @Original_docent)) AND ((@IsNull_profesor = 1 AND [profesor] IS NULL) OR ([profesor] = @Original_profesor)) AND ((@IsNull_Ekbilgi = 1 AND [Ekbilgi] IS NULL) OR ([Ekbilgi] = @Original_Ekbilgi)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Personnelid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Personnelid", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3462,10 +5136,12 @@ SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_docent", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "docent", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_profesor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "profesor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_profesor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "profesor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ekbilgi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ekbilgi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ekbilgi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ekbilgi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Egitims] ([Personnelid], [ilkokul], [ortaokul], [lise], [onlisans], [lisans], [yukseklisans], [doktora], [docent], [profesor]) VALUES (@Personnelid, @ilkokul, @ortaokul, @lise, @onlisans, @lisans, @yukseklisans, @doktora, @docent, @profesor);
-SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans, doktora, docent, profesor FROM Egitims WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Egitims] ([Personnelid], [ilkokul], [ortaokul], [lise], [onlisans], [lisans], [yukseklisans], [doktora], [docent], [profesor], [Ekbilgi]) VALUES (@Personnelid, @ilkokul, @ortaokul, @lise, @onlisans, @lisans, @yukseklisans, @doktora, @docent, @profesor, @Ekbilgi);
+SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans, doktora, docent, profesor, Ekbilgi FROM Egitims WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Personnelid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Personnelid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ilkokul", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ilkokul", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3477,10 +5153,11 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@doktora", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "doktora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@docent", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "docent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@profesor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "profesor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ekbilgi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ekbilgi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Egitims] SET [Personnelid] = @Personnelid, [ilkokul] = @ilkokul, [ortaokul] = @ortaokul, [lise] = @lise, [onlisans] = @onlisans, [lisans] = @lisans, [yukseklisans] = @yukseklisans, [doktora] = @doktora, [docent] = @docent, [profesor] = @profesor WHERE (([id] = @Original_id) AND ([Personnelid] = @Original_Personnelid) AND ((@IsNull_ilkokul = 1 AND [ilkokul] IS NULL) OR ([ilkokul] = @Original_ilkokul)) AND ((@IsNull_ortaokul = 1 AND [ortaokul] IS NULL) OR ([ortaokul] = @Original_ortaokul)) AND ((@IsNull_lise = 1 AND [lise] IS NULL) OR ([lise] = @Original_lise)) AND ((@IsNull_onlisans = 1 AND [onlisans] IS NULL) OR ([onlisans] = @Original_onlisans)) AND ((@IsNull_lisans = 1 AND [lisans] IS NULL) OR ([lisans] = @Original_lisans)) AND ((@IsNull_yukseklisans = 1 AND [yukseklisans] IS NULL) OR ([yukseklisans] = @Original_yukseklisans)) AND ((@IsNull_doktora = 1 AND [doktora] IS NULL) OR ([doktora] = @Original_doktora)) AND ((@IsNull_docent = 1 AND [docent] IS NULL) OR ([docent] = @Original_docent)) AND ((@IsNull_profesor = 1 AND [profesor] IS NULL) OR ([profesor] = @Original_profesor)));
-SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans, doktora, docent, profesor FROM Egitims WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Egitims] SET [Personnelid] = @Personnelid, [ilkokul] = @ilkokul, [ortaokul] = @ortaokul, [lise] = @lise, [onlisans] = @onlisans, [lisans] = @lisans, [yukseklisans] = @yukseklisans, [doktora] = @doktora, [docent] = @docent, [profesor] = @profesor, [Ekbilgi] = @Ekbilgi WHERE (([id] = @Original_id) AND ([Personnelid] = @Original_Personnelid) AND ((@IsNull_ilkokul = 1 AND [ilkokul] IS NULL) OR ([ilkokul] = @Original_ilkokul)) AND ((@IsNull_ortaokul = 1 AND [ortaokul] IS NULL) OR ([ortaokul] = @Original_ortaokul)) AND ((@IsNull_lise = 1 AND [lise] IS NULL) OR ([lise] = @Original_lise)) AND ((@IsNull_onlisans = 1 AND [onlisans] IS NULL) OR ([onlisans] = @Original_onlisans)) AND ((@IsNull_lisans = 1 AND [lisans] IS NULL) OR ([lisans] = @Original_lisans)) AND ((@IsNull_yukseklisans = 1 AND [yukseklisans] IS NULL) OR ([yukseklisans] = @Original_yukseklisans)) AND ((@IsNull_doktora = 1 AND [doktora] IS NULL) OR ([doktora] = @Original_doktora)) AND ((@IsNull_docent = 1 AND [docent] IS NULL) OR ([docent] = @Original_docent)) AND ((@IsNull_profesor = 1 AND [profesor] IS NULL) OR ([profesor] = @Original_profesor)) AND ((@IsNull_Ekbilgi = 1 AND [Ekbilgi] IS NULL) OR ([Ekbilgi] = @Original_Ekbilgi)));
+SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans, doktora, docent, profesor, Ekbilgi FROM Egitims WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Personnelid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Personnelid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ilkokul", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ilkokul", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3492,6 +5169,7 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@doktora", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "doktora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@docent", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "docent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@profesor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "profesor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ekbilgi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ekbilgi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Personnelid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Personnelid", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ilkokul", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ilkokul", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -3512,6 +5190,8 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_docent", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "docent", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_profesor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "profesor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_profesor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "profesor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ekbilgi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ekbilgi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ekbilgi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ekbilgi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -3529,7 +5209,7 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans, " +
-                "doktora, docent, profesor FROM dbo.Egitims";
+                "doktora, docent, profesor, Ekbilgi FROM dbo.Egitims";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3537,7 +5217,7 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PerModuleDataSet.EgitimsDataTable dataTable) {
+        public virtual int Fill(PERSONNELMODULEDataSet.EgitimsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3550,9 +5230,9 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PerModuleDataSet.EgitimsDataTable GetData() {
+        public virtual PERSONNELMODULEDataSet.EgitimsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PerModuleDataSet.EgitimsDataTable dataTable = new PerModuleDataSet.EgitimsDataTable();
+            PERSONNELMODULEDataSet.EgitimsDataTable dataTable = new PERSONNELMODULEDataSet.EgitimsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3560,14 +5240,14 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PerModuleDataSet.EgitimsDataTable dataTable) {
+        public virtual int Update(PERSONNELMODULEDataSet.EgitimsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PerModuleDataSet dataSet) {
+        public virtual int Update(PERSONNELMODULEDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Egitims");
         }
         
@@ -3590,7 +5270,7 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, int Original_Personnelid, string Original_ilkokul, string Original_ortaokul, string Original_lise, string Original_onlisans, string Original_lisans, string Original_yukseklisans, string Original_doktora, string Original_docent, string Original_profesor) {
+        public virtual int Delete(int Original_id, int Original_Personnelid, string Original_ilkokul, string Original_ortaokul, string Original_lise, string Original_onlisans, string Original_lisans, string Original_yukseklisans, string Original_doktora, string Original_docent, string Original_profesor, string Original_Ekbilgi) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Personnelid));
             if ((Original_ilkokul == null)) {
@@ -3665,6 +5345,14 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
                 this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((string)(Original_profesor));
             }
+            if ((Original_Ekbilgi == null)) {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((string)(Original_Ekbilgi));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3685,7 +5373,7 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Personnelid, string ilkokul, string ortaokul, string lise, string onlisans, string lisans, string yukseklisans, string doktora, string docent, string profesor) {
+        public virtual int Insert(int Personnelid, string ilkokul, string ortaokul, string lise, string onlisans, string lisans, string yukseklisans, string doktora, string docent, string profesor, string Ekbilgi) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Personnelid));
             if ((ilkokul == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -3741,6 +5429,12 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = ((string)(profesor));
             }
+            if ((Ekbilgi == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Ekbilgi));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3772,6 +5466,7 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
                     string doktora, 
                     string docent, 
                     string profesor, 
+                    string Ekbilgi, 
                     int Original_id, 
                     int Original_Personnelid, 
                     string Original_ilkokul, 
@@ -3783,6 +5478,7 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
                     string Original_doktora, 
                     string Original_docent, 
                     string Original_profesor, 
+                    string Original_Ekbilgi, 
                     int id) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Personnelid));
             if ((ilkokul == null)) {
@@ -3839,81 +5535,95 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(profesor));
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Personnelid));
-            if ((Original_ilkokul == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            if ((Ekbilgi == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_ilkokul));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Ekbilgi));
+            }
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Personnelid));
+            if ((Original_ilkokul == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_ilkokul));
             }
             if ((Original_ortaokul == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_ortaokul));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_ortaokul));
             }
             if ((Original_lise == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_lise));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_lise));
             }
             if ((Original_onlisans == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_onlisans));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_onlisans));
             }
             if ((Original_lisans == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_lisans));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_lisans));
             }
             if ((Original_yukseklisans == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_yukseklisans));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_yukseklisans));
             }
             if ((Original_doktora == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_doktora));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_doktora));
             }
             if ((Original_docent == null)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_docent));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_docent));
             }
             if ((Original_profesor == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_profesor));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_profesor));
             }
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(id));
+            if ((Original_Ekbilgi == null)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_Ekbilgi));
+            }
+            this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3945,6 +5655,7 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
                     string doktora, 
                     string docent, 
                     string profesor, 
+                    string Ekbilgi, 
                     int Original_id, 
                     int Original_Personnelid, 
                     string Original_ilkokul, 
@@ -3955,8 +5666,9 @@ SELECT id, Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans,
                     string Original_yukseklisans, 
                     string Original_doktora, 
                     string Original_docent, 
-                    string Original_profesor) {
-            return this.Update(Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans, doktora, docent, profesor, Original_id, Original_Personnelid, Original_ilkokul, Original_ortaokul, Original_lise, Original_onlisans, Original_lisans, Original_yukseklisans, Original_doktora, Original_docent, Original_profesor, Original_id);
+                    string Original_profesor, 
+                    string Original_Ekbilgi) {
+            return this.Update(Personnelid, ilkokul, ortaokul, lise, onlisans, lisans, yukseklisans, doktora, docent, profesor, Ekbilgi, Original_id, Original_Personnelid, Original_ilkokul, Original_ortaokul, Original_lise, Original_onlisans, Original_lisans, Original_yukseklisans, Original_doktora, Original_docent, Original_profesor, Original_Ekbilgi, Original_id);
         }
     }
     
@@ -4135,7 +5847,7 @@ SELECT id, Personnelid, OffdaysDate FROM Offdays WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PerModuleDataSet.OffdaysDataTable dataTable) {
+        public virtual int Fill(PERSONNELMODULEDataSet.OffdaysDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4148,9 +5860,9 @@ SELECT id, Personnelid, OffdaysDate FROM Offdays WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PerModuleDataSet.OffdaysDataTable GetData() {
+        public virtual PERSONNELMODULEDataSet.OffdaysDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PerModuleDataSet.OffdaysDataTable dataTable = new PerModuleDataSet.OffdaysDataTable();
+            PERSONNELMODULEDataSet.OffdaysDataTable dataTable = new PERSONNELMODULEDataSet.OffdaysDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4158,14 +5870,14 @@ SELECT id, Personnelid, OffdaysDate FROM Offdays WHERE (id = @id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PerModuleDataSet.OffdaysDataTable dataTable) {
+        public virtual int Update(PERSONNELMODULEDataSet.OffdaysDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PerModuleDataSet dataSet) {
+        public virtual int Update(PERSONNELMODULEDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Offdays");
         }
         
@@ -4401,17 +6113,18 @@ SELECT id, Personnelid, OffdaysDate FROM Offdays WHERE (id = @id)";
             tableMapping.ColumnMappings.Add("PerEgitimBilgileri", "PerEgitimBilgileri");
             tableMapping.ColumnMappings.Add("PerKanGrubu", "PerKanGrubu");
             tableMapping.ColumnMappings.Add("PerMedeniHali", "PerMedeniHali");
-            tableMapping.ColumnMappings.Add("PerAdres", "PerAdres");
+            tableMapping.ColumnMappings.Add("Adresid", "Adresid");
             tableMapping.ColumnMappings.Add("PerBaslamaT", "PerBaslamaT");
             tableMapping.ColumnMappings.Add("PerAyrilisT", "PerAyrilisT");
             tableMapping.ColumnMappings.Add("PerAyrilmaSebebi", "PerAyrilmaSebebi");
             tableMapping.ColumnMappings.Add("Departmanid", "Departmanid");
             tableMapping.ColumnMappings.Add("PerNickName", "PerNickName");
             tableMapping.ColumnMappings.Add("PerPassword", "PerPassword");
+            tableMapping.ColumnMappings.Add("PerYetki", "PerYetki");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Personnels] WHERE (([id] = @Original_id) AND ([PerTckn] = @Original_PerTckn) AND ([PerAd] = @Original_PerAd) AND ([PerSoyad] = @Original_PerSoyad) AND ([PerDogumTarihi] = @Original_PerDogumTarihi) AND ([PerMaas] = @Original_PerMaas) AND ((@IsNull_PerCinsiyet = 1 AND [PerCinsiyet] IS NULL) OR ([PerCinsiyet] = @Original_PerCinsiyet)) AND ([PerMail] = @Original_PerMail) AND ([PerTel] = @Original_PerTel) AND ((@IsNull_PerGorsel = 1 AND [PerGorsel] IS NULL) OR ([PerGorsel] = @Original_PerGorsel)) AND ((@IsNull_PerEgitimBilgileri = 1 AND [PerEgitimBilgileri] IS NULL) OR ([PerEgitimBilgileri] = @Original_PerEgitimBilgileri)) AND ([PerKanGrubu] = @Original_PerKanGrubu) AND ([PerMedeniHali] = @Original_PerMedeniHali) AND ([PerAdres] = @Original_PerAdres) AND ([PerBaslamaT] = @Original_PerBaslamaT) AND ((@IsNull_PerAyrilisT = 1 AND [PerAyrilisT] IS NULL) OR ([PerAyrilisT] = @Original_PerAyrilisT)) AND ((@IsNull_PerAyrilmaSebebi = 1 AND [PerAyrilmaSebebi] IS NULL) OR ([PerAyrilmaSebebi] = @Original_PerAyrilmaSebebi)) AND ([Departmanid] = @Original_Departmanid) AND ((@IsNull_PerNickName = 1 AND [PerNickName] IS NULL) OR ([PerNickName] = @Original_PerNickName)) AND ((@IsNull_PerPassword = 1 AND [PerPassword] IS NULL) OR ([PerPassword] = @Original_PerPassword)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Personnels] WHERE (([id] = @Original_id) AND ([PerTckn] = @Original_PerTckn) AND ([PerAd] = @Original_PerAd) AND ([PerSoyad] = @Original_PerSoyad) AND ([PerDogumTarihi] = @Original_PerDogumTarihi) AND ([PerMaas] = @Original_PerMaas) AND ((@IsNull_PerCinsiyet = 1 AND [PerCinsiyet] IS NULL) OR ([PerCinsiyet] = @Original_PerCinsiyet)) AND ([PerMail] = @Original_PerMail) AND ([PerTel] = @Original_PerTel) AND ((@IsNull_PerGorsel = 1 AND [PerGorsel] IS NULL) OR ([PerGorsel] = @Original_PerGorsel)) AND ((@IsNull_PerEgitimBilgileri = 1 AND [PerEgitimBilgileri] IS NULL) OR ([PerEgitimBilgileri] = @Original_PerEgitimBilgileri)) AND ([PerKanGrubu] = @Original_PerKanGrubu) AND ([PerMedeniHali] = @Original_PerMedeniHali) AND ([Adresid] = @Original_Adresid) AND ([PerBaslamaT] = @Original_PerBaslamaT) AND ((@IsNull_PerAyrilisT = 1 AND [PerAyrilisT] IS NULL) OR ([PerAyrilisT] = @Original_PerAyrilisT)) AND ((@IsNull_PerAyrilmaSebebi = 1 AND [PerAyrilmaSebebi] IS NULL) OR ([PerAyrilmaSebebi] = @Original_PerAyrilmaSebebi)) AND ([Departmanid] = @Original_Departmanid) AND ((@IsNull_PerNickName = 1 AND [PerNickName] IS NULL) OR ([PerNickName] = @Original_PerNickName)) AND ((@IsNull_PerPassword = 1 AND [PerPassword] IS NULL) OR ([PerPassword] = @Original_PerPassword)) AND ((@IsNull_PerYetki = 1 AND [PerYetki] IS NULL) OR ([PerYetki] = @Original_PerYetki)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerTckn", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerTckn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4429,7 +6142,7 @@ SELECT id, Personnelid, OffdaysDate FROM Offdays WHERE (id = @id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerEgitimBilgileri", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerEgitimBilgileri", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerKanGrubu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerKanGrubu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerMedeniHali", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerMedeniHali", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerAdres", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAdres", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Adresid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresid", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerBaslamaT", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerBaslamaT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PerAyrilisT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAyrilisT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerAyrilisT", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAyrilisT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4440,10 +6153,12 @@ SELECT id, Personnelid, OffdaysDate FROM Offdays WHERE (id = @id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerNickName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerNickName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PerPassword", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerPassword", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerPassword", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerPassword", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PerYetki", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerYetki", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerYetki", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerYetki", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Personnels] ([PerTckn], [PerAd], [PerSoyad], [PerDogumTarihi], [PerMaas], [PerCinsiyet], [PerMail], [PerTel], [PerGorsel], [PerEgitimBilgileri], [PerKanGrubu], [PerMedeniHali], [PerAdres], [PerBaslamaT], [PerAyrilisT], [PerAyrilmaSebebi], [Departmanid], [PerNickName], [PerPassword]) VALUES (@PerTckn, @PerAd, @PerSoyad, @PerDogumTarihi, @PerMaas, @PerCinsiyet, @PerMail, @PerTel, @PerGorsel, @PerEgitimBilgileri, @PerKanGrubu, @PerMedeniHali, @PerAdres, @PerBaslamaT, @PerAyrilisT, @PerAyrilmaSebebi, @Departmanid, @PerNickName, @PerPassword);
-SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMail, PerTel, PerGorsel, PerEgitimBilgileri, PerKanGrubu, PerMedeniHali, PerAdres, PerBaslamaT, PerAyrilisT, PerAyrilmaSebebi, Departmanid, PerNickName, PerPassword FROM Personnels WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Personnels] ([PerTckn], [PerAd], [PerSoyad], [PerDogumTarihi], [PerMaas], [PerCinsiyet], [PerMail], [PerTel], [PerGorsel], [PerEgitimBilgileri], [PerKanGrubu], [PerMedeniHali], [Adresid], [PerBaslamaT], [PerAyrilisT], [PerAyrilmaSebebi], [Departmanid], [PerNickName], [PerPassword], [PerYetki]) VALUES (@PerTckn, @PerAd, @PerSoyad, @PerDogumTarihi, @PerMaas, @PerCinsiyet, @PerMail, @PerTel, @PerGorsel, @PerEgitimBilgileri, @PerKanGrubu, @PerMedeniHali, @Adresid, @PerBaslamaT, @PerAyrilisT, @PerAyrilmaSebebi, @Departmanid, @PerNickName, @PerPassword, @PerYetki);
+SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMail, PerTel, PerGorsel, PerEgitimBilgileri, PerKanGrubu, PerMedeniHali, Adresid, PerBaslamaT, PerAyrilisT, PerAyrilmaSebebi, Departmanid, PerNickName, PerPassword, PerYetki FROM Personnels WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerTckn", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerTckn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerAd", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4457,42 +6172,44 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerEgitimBilgileri", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerEgitimBilgileri", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerKanGrubu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerKanGrubu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerMedeniHali", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerMedeniHali", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerAdres", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAdres", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adresid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerBaslamaT", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerBaslamaT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerAyrilisT", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAyrilisT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerAyrilmaSebebi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAyrilmaSebebi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Departmanid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Departmanid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerNickName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerNickName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerPassword", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerPassword", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerYetki", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerYetki", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Personnels] SET [PerTckn] = @PerTckn, [PerAd] = @PerAd, [PerSoyad] " +
                 "= @PerSoyad, [PerDogumTarihi] = @PerDogumTarihi, [PerMaas] = @PerMaas, [PerCinsi" +
                 "yet] = @PerCinsiyet, [PerMail] = @PerMail, [PerTel] = @PerTel, [PerGorsel] = @Pe" +
                 "rGorsel, [PerEgitimBilgileri] = @PerEgitimBilgileri, [PerKanGrubu] = @PerKanGrub" +
-                "u, [PerMedeniHali] = @PerMedeniHali, [PerAdres] = @PerAdres, [PerBaslamaT] = @Pe" +
-                "rBaslamaT, [PerAyrilisT] = @PerAyrilisT, [PerAyrilmaSebebi] = @PerAyrilmaSebebi," +
-                " [Departmanid] = @Departmanid, [PerNickName] = @PerNickName, [PerPassword] = @Pe" +
-                "rPassword WHERE (([id] = @Original_id) AND ([PerTckn] = @Original_PerTckn) AND (" +
-                "[PerAd] = @Original_PerAd) AND ([PerSoyad] = @Original_PerSoyad) AND ([PerDogumT" +
-                "arihi] = @Original_PerDogumTarihi) AND ([PerMaas] = @Original_PerMaas) AND ((@Is" +
-                "Null_PerCinsiyet = 1 AND [PerCinsiyet] IS NULL) OR ([PerCinsiyet] = @Original_Pe" +
-                "rCinsiyet)) AND ([PerMail] = @Original_PerMail) AND ([PerTel] = @Original_PerTel" +
-                ") AND ((@IsNull_PerGorsel = 1 AND [PerGorsel] IS NULL) OR ([PerGorsel] = @Origin" +
-                "al_PerGorsel)) AND ((@IsNull_PerEgitimBilgileri = 1 AND [PerEgitimBilgileri] IS " +
-                "NULL) OR ([PerEgitimBilgileri] = @Original_PerEgitimBilgileri)) AND ([PerKanGrub" +
-                "u] = @Original_PerKanGrubu) AND ([PerMedeniHali] = @Original_PerMedeniHali) AND " +
-                "([PerAdres] = @Original_PerAdres) AND ([PerBaslamaT] = @Original_PerBaslamaT) AN" +
-                "D ((@IsNull_PerAyrilisT = 1 AND [PerAyrilisT] IS NULL) OR ([PerAyrilisT] = @Orig" +
-                "inal_PerAyrilisT)) AND ((@IsNull_PerAyrilmaSebebi = 1 AND [PerAyrilmaSebebi] IS " +
-                "NULL) OR ([PerAyrilmaSebebi] = @Original_PerAyrilmaSebebi)) AND ([Departmanid] =" +
-                " @Original_Departmanid) AND ((@IsNull_PerNickName = 1 AND [PerNickName] IS NULL)" +
-                " OR ([PerNickName] = @Original_PerNickName)) AND ((@IsNull_PerPassword = 1 AND [" +
-                "PerPassword] IS NULL) OR ([PerPassword] = @Original_PerPassword)));\r\nSELECT id, " +
-                "PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMail, PerTel," +
-                " PerGorsel, PerEgitimBilgileri, PerKanGrubu, PerMedeniHali, PerAdres, PerBaslama" +
-                "T, PerAyrilisT, PerAyrilmaSebebi, Departmanid, PerNickName, PerPassword FROM Per" +
-                "sonnels WHERE (id = @id)";
+                "u, [PerMedeniHali] = @PerMedeniHali, [Adresid] = @Adresid, [PerBaslamaT] = @PerB" +
+                "aslamaT, [PerAyrilisT] = @PerAyrilisT, [PerAyrilmaSebebi] = @PerAyrilmaSebebi, [" +
+                "Departmanid] = @Departmanid, [PerNickName] = @PerNickName, [PerPassword] = @PerP" +
+                "assword, [PerYetki] = @PerYetki WHERE (([id] = @Original_id) AND ([PerTckn] = @O" +
+                "riginal_PerTckn) AND ([PerAd] = @Original_PerAd) AND ([PerSoyad] = @Original_Per" +
+                "Soyad) AND ([PerDogumTarihi] = @Original_PerDogumTarihi) AND ([PerMaas] = @Origi" +
+                "nal_PerMaas) AND ((@IsNull_PerCinsiyet = 1 AND [PerCinsiyet] IS NULL) OR ([PerCi" +
+                "nsiyet] = @Original_PerCinsiyet)) AND ([PerMail] = @Original_PerMail) AND ([PerT" +
+                "el] = @Original_PerTel) AND ((@IsNull_PerGorsel = 1 AND [PerGorsel] IS NULL) OR " +
+                "([PerGorsel] = @Original_PerGorsel)) AND ((@IsNull_PerEgitimBilgileri = 1 AND [P" +
+                "erEgitimBilgileri] IS NULL) OR ([PerEgitimBilgileri] = @Original_PerEgitimBilgil" +
+                "eri)) AND ([PerKanGrubu] = @Original_PerKanGrubu) AND ([PerMedeniHali] = @Origin" +
+                "al_PerMedeniHali) AND ([Adresid] = @Original_Adresid) AND ([PerBaslamaT] = @Orig" +
+                "inal_PerBaslamaT) AND ((@IsNull_PerAyrilisT = 1 AND [PerAyrilisT] IS NULL) OR ([" +
+                "PerAyrilisT] = @Original_PerAyrilisT)) AND ((@IsNull_PerAyrilmaSebebi = 1 AND [P" +
+                "erAyrilmaSebebi] IS NULL) OR ([PerAyrilmaSebebi] = @Original_PerAyrilmaSebebi)) " +
+                "AND ([Departmanid] = @Original_Departmanid) AND ((@IsNull_PerNickName = 1 AND [P" +
+                "erNickName] IS NULL) OR ([PerNickName] = @Original_PerNickName)) AND ((@IsNull_P" +
+                "erPassword = 1 AND [PerPassword] IS NULL) OR ([PerPassword] = @Original_PerPassw" +
+                "ord)) AND ((@IsNull_PerYetki = 1 AND [PerYetki] IS NULL) OR ([PerYetki] = @Origi" +
+                "nal_PerYetki)));\r\nSELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, " +
+                "PerCinsiyet, PerMail, PerTel, PerGorsel, PerEgitimBilgileri, PerKanGrubu, PerMed" +
+                "eniHali, Adresid, PerBaslamaT, PerAyrilisT, PerAyrilmaSebebi, Departmanid, PerNi" +
+                "ckName, PerPassword, PerYetki FROM Personnels WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerTckn", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerTckn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerAd", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4506,13 +6223,14 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerEgitimBilgileri", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerEgitimBilgileri", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerKanGrubu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerKanGrubu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerMedeniHali", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerMedeniHali", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerAdres", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAdres", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adresid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerBaslamaT", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerBaslamaT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerAyrilisT", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAyrilisT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerAyrilmaSebebi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAyrilmaSebebi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Departmanid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Departmanid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerNickName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerNickName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerPassword", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerPassword", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PerYetki", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerYetki", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerTckn", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerTckn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerAd", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4529,7 +6247,7 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerEgitimBilgileri", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerEgitimBilgileri", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerKanGrubu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerKanGrubu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerMedeniHali", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerMedeniHali", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerAdres", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAdres", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Adresid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adresid", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerBaslamaT", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerBaslamaT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PerAyrilisT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAyrilisT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerAyrilisT", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerAyrilisT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4540,6 +6258,8 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerNickName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerNickName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PerPassword", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerPassword", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerPassword", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerPassword", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PerYetki", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerYetki", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PerYetki", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PerYetki", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -4556,7 +6276,7 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMail, PerTel, PerGorsel, PerEgitimBilgileri, PerKanGrubu, PerMedeniHali, PerAdres, PerBaslamaT, PerAyrilisT, PerAyrilmaSebebi, Departmanid, PerNickName, PerPassword FROM dbo.Personnels";
+            this._commandCollection[0].CommandText = @"SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMail, PerTel, PerGorsel, PerEgitimBilgileri, PerKanGrubu, PerMedeniHali, Adresid, PerBaslamaT, PerAyrilisT, PerAyrilmaSebebi, Departmanid, PerNickName, PerPassword, PerYetki FROM dbo.Personnels";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4564,7 +6284,7 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PerModuleDataSet.PersonnelsDataTable dataTable) {
+        public virtual int Fill(PERSONNELMODULEDataSet.PersonnelsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4577,9 +6297,9 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PerModuleDataSet.PersonnelsDataTable GetData() {
+        public virtual PERSONNELMODULEDataSet.PersonnelsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PerModuleDataSet.PersonnelsDataTable dataTable = new PerModuleDataSet.PersonnelsDataTable();
+            PERSONNELMODULEDataSet.PersonnelsDataTable dataTable = new PERSONNELMODULEDataSet.PersonnelsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4587,14 +6307,14 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PerModuleDataSet.PersonnelsDataTable dataTable) {
+        public virtual int Update(PERSONNELMODULEDataSet.PersonnelsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PerModuleDataSet dataSet) {
+        public virtual int Update(PERSONNELMODULEDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Personnels");
         }
         
@@ -4631,13 +6351,14 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
                     global::System.Nullable<int> Original_PerEgitimBilgileri, 
                     string Original_PerKanGrubu, 
                     string Original_PerMedeniHali, 
-                    string Original_PerAdres, 
+                    int Original_Adresid, 
                     System.DateTime Original_PerBaslamaT, 
                     global::System.Nullable<global::System.DateTime> Original_PerAyrilisT, 
                     string Original_PerAyrilmaSebebi, 
                     int Original_Departmanid, 
                     string Original_PerNickName, 
-                    string Original_PerPassword) {
+                    string Original_PerPassword, 
+                    global::System.Nullable<int> Original_PerYetki) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_PerTckn == null)) {
                 throw new global::System.ArgumentNullException("Original_PerTckn");
@@ -4707,12 +6428,7 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
             else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_PerMedeniHali));
             }
-            if ((Original_PerAdres == null)) {
-                throw new global::System.ArgumentNullException("Original_PerAdres");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_PerAdres));
-            }
+            this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_Adresid));
             this.Adapter.DeleteCommand.Parameters[17].Value = ((System.DateTime)(Original_PerBaslamaT));
             if ((Original_PerAyrilisT.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
@@ -4747,6 +6463,14 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_PerPassword));
             }
+            if ((Original_PerYetki.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((int)(Original_PerYetki.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4780,13 +6504,14 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
                     global::System.Nullable<int> PerEgitimBilgileri, 
                     string PerKanGrubu, 
                     string PerMedeniHali, 
-                    string PerAdres, 
+                    int Adresid, 
                     System.DateTime PerBaslamaT, 
                     global::System.Nullable<global::System.DateTime> PerAyrilisT, 
                     string PerAyrilmaSebebi, 
                     int Departmanid, 
                     string PerNickName, 
-                    string PerPassword) {
+                    string PerPassword, 
+                    global::System.Nullable<int> PerYetki) {
             if ((PerTckn == null)) {
                 throw new global::System.ArgumentNullException("PerTckn");
             }
@@ -4849,12 +6574,7 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = ((string)(PerMedeniHali));
             }
-            if ((PerAdres == null)) {
-                throw new global::System.ArgumentNullException("PerAdres");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(PerAdres));
-            }
+            this.Adapter.InsertCommand.Parameters[12].Value = ((int)(Adresid));
             this.Adapter.InsertCommand.Parameters[13].Value = ((System.DateTime)(PerBaslamaT));
             if ((PerAyrilisT.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[14].Value = ((System.DateTime)(PerAyrilisT.Value));
@@ -4880,6 +6600,12 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
             }
             else {
                 this.Adapter.InsertCommand.Parameters[18].Value = ((string)(PerPassword));
+            }
+            if ((PerYetki.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((int)(PerYetki.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4914,13 +6640,14 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
                     global::System.Nullable<int> PerEgitimBilgileri, 
                     string PerKanGrubu, 
                     string PerMedeniHali, 
-                    string PerAdres, 
+                    int Adresid, 
                     System.DateTime PerBaslamaT, 
                     global::System.Nullable<global::System.DateTime> PerAyrilisT, 
                     string PerAyrilmaSebebi, 
                     int Departmanid, 
                     string PerNickName, 
                     string PerPassword, 
+                    global::System.Nullable<int> PerYetki, 
                     int Original_id, 
                     string Original_PerTckn, 
                     string Original_PerAd, 
@@ -4934,13 +6661,14 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
                     global::System.Nullable<int> Original_PerEgitimBilgileri, 
                     string Original_PerKanGrubu, 
                     string Original_PerMedeniHali, 
-                    string Original_PerAdres, 
+                    int Original_Adresid, 
                     System.DateTime Original_PerBaslamaT, 
                     global::System.Nullable<global::System.DateTime> Original_PerAyrilisT, 
                     string Original_PerAyrilmaSebebi, 
                     int Original_Departmanid, 
                     string Original_PerNickName, 
                     string Original_PerPassword, 
+                    global::System.Nullable<int> Original_PerYetki, 
                     int id) {
             if ((PerTckn == null)) {
                 throw new global::System.ArgumentNullException("PerTckn");
@@ -5004,12 +6732,7 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(PerMedeniHali));
             }
-            if ((PerAdres == null)) {
-                throw new global::System.ArgumentNullException("PerAdres");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(PerAdres));
-            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Adresid));
             this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(PerBaslamaT));
             if ((PerAyrilisT.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(PerAyrilisT.Value));
@@ -5036,116 +6759,125 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
             else {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(PerPassword));
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_id));
+            if ((PerYetki.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(PerYetki.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_id));
             if ((Original_PerTckn == null)) {
                 throw new global::System.ArgumentNullException("Original_PerTckn");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_PerTckn));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_PerTckn));
             }
             if ((Original_PerAd == null)) {
                 throw new global::System.ArgumentNullException("Original_PerAd");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_PerAd));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_PerAd));
             }
             if ((Original_PerSoyad == null)) {
                 throw new global::System.ArgumentNullException("Original_PerSoyad");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_PerSoyad));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_PerSoyad));
             }
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((System.DateTime)(Original_PerDogumTarihi));
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((decimal)(Original_PerMaas));
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((System.DateTime)(Original_PerDogumTarihi));
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((decimal)(Original_PerMaas));
             if ((Original_PerCinsiyet == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_PerCinsiyet));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_PerCinsiyet));
             }
             if ((Original_PerMail == null)) {
                 throw new global::System.ArgumentNullException("Original_PerMail");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_PerMail));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_PerMail));
             }
             if ((Original_PerTel == null)) {
                 throw new global::System.ArgumentNullException("Original_PerTel");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_PerTel));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_PerTel));
             }
             if ((Original_PerGorsel == null)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_PerGorsel));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_PerGorsel));
             }
             if ((Original_PerEgitimBilgileri.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Original_PerEgitimBilgileri.Value));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(Original_PerEgitimBilgileri.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
             if ((Original_PerKanGrubu == null)) {
                 throw new global::System.ArgumentNullException("Original_PerKanGrubu");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_PerKanGrubu));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_PerKanGrubu));
             }
             if ((Original_PerMedeniHali == null)) {
                 throw new global::System.ArgumentNullException("Original_PerMedeniHali");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_PerMedeniHali));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_PerMedeniHali));
             }
-            if ((Original_PerAdres == null)) {
-                throw new global::System.ArgumentNullException("Original_PerAdres");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_PerAdres));
-            }
-            this.Adapter.UpdateCommand.Parameters[36].Value = ((System.DateTime)(Original_PerBaslamaT));
+            this.Adapter.UpdateCommand.Parameters[36].Value = ((int)(Original_Adresid));
+            this.Adapter.UpdateCommand.Parameters[37].Value = ((System.DateTime)(Original_PerBaslamaT));
             if ((Original_PerAyrilisT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((System.DateTime)(Original_PerAyrilisT.Value));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((System.DateTime)(Original_PerAyrilisT.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
             if ((Original_PerAyrilmaSebebi == null)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_PerAyrilmaSebebi));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_PerAyrilmaSebebi));
             }
-            this.Adapter.UpdateCommand.Parameters[41].Value = ((int)(Original_Departmanid));
+            this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_Departmanid));
             if ((Original_PerNickName == null)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_PerNickName));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_PerNickName));
             }
             if ((Original_PerPassword == null)) {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_PerPassword));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_PerPassword));
             }
-            this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(id));
+            if ((Original_PerYetki.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(Original_PerYetki.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[49].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5179,13 +6911,14 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
                     global::System.Nullable<int> PerEgitimBilgileri, 
                     string PerKanGrubu, 
                     string PerMedeniHali, 
-                    string PerAdres, 
+                    int Adresid, 
                     System.DateTime PerBaslamaT, 
                     global::System.Nullable<global::System.DateTime> PerAyrilisT, 
                     string PerAyrilmaSebebi, 
                     int Departmanid, 
                     string PerNickName, 
                     string PerPassword, 
+                    global::System.Nullable<int> PerYetki, 
                     int Original_id, 
                     string Original_PerTckn, 
                     string Original_PerAd, 
@@ -5199,14 +6932,191 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
                     global::System.Nullable<int> Original_PerEgitimBilgileri, 
                     string Original_PerKanGrubu, 
                     string Original_PerMedeniHali, 
-                    string Original_PerAdres, 
+                    int Original_Adresid, 
                     System.DateTime Original_PerBaslamaT, 
                     global::System.Nullable<global::System.DateTime> Original_PerAyrilisT, 
                     string Original_PerAyrilmaSebebi, 
                     int Original_Departmanid, 
                     string Original_PerNickName, 
-                    string Original_PerPassword) {
-            return this.Update(PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMail, PerTel, PerGorsel, PerEgitimBilgileri, PerKanGrubu, PerMedeniHali, PerAdres, PerBaslamaT, PerAyrilisT, PerAyrilmaSebebi, Departmanid, PerNickName, PerPassword, Original_id, Original_PerTckn, Original_PerAd, Original_PerSoyad, Original_PerDogumTarihi, Original_PerMaas, Original_PerCinsiyet, Original_PerMail, Original_PerTel, Original_PerGorsel, Original_PerEgitimBilgileri, Original_PerKanGrubu, Original_PerMedeniHali, Original_PerAdres, Original_PerBaslamaT, Original_PerAyrilisT, Original_PerAyrilmaSebebi, Original_Departmanid, Original_PerNickName, Original_PerPassword, Original_id);
+                    string Original_PerPassword, 
+                    global::System.Nullable<int> Original_PerYetki) {
+            return this.Update(PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMail, PerTel, PerGorsel, PerEgitimBilgileri, PerKanGrubu, PerMedeniHali, Adresid, PerBaslamaT, PerAyrilisT, PerAyrilmaSebebi, Departmanid, PerNickName, PerPassword, PerYetki, Original_id, Original_PerTckn, Original_PerAd, Original_PerSoyad, Original_PerDogumTarihi, Original_PerMaas, Original_PerCinsiyet, Original_PerMail, Original_PerTel, Original_PerGorsel, Original_PerEgitimBilgileri, Original_PerKanGrubu, Original_PerMedeniHali, Original_Adresid, Original_PerBaslamaT, Original_PerAyrilisT, Original_PerAyrilmaSebebi, Original_Departmanid, Original_PerNickName, Original_PerPassword, Original_PerYetki, Original_id);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class PersonelListGridViewTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public PersonelListGridViewTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "PersonelListGridView";
+            tableMapping.ColumnMappings.Add("PerTckn", "PerTckn");
+            tableMapping.ColumnMappings.Add("PerAd", "PerAd");
+            tableMapping.ColumnMappings.Add("PerSoyad", "PerSoyad");
+            tableMapping.ColumnMappings.Add("PerDogumTarihi", "PerDogumTarihi");
+            tableMapping.ColumnMappings.Add("DepAdi", "DepAdi");
+            tableMapping.ColumnMappings.Add("DepRolu", "DepRolu");
+            tableMapping.ColumnMappings.Add("PerBaslamaT", "PerBaslamaT");
+            tableMapping.ColumnMappings.Add("AdresUlke", "AdresUlke");
+            tableMapping.ColumnMappings.Add("AdresSehir", "AdresSehir");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::PerModule.Properties.Settings.Default.PerModuleCS;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT PerTckn, PerAd, PerSoyad, PerDogumTarihi, DepAdi, DepRolu, PerBaslamaT, Ad" +
+                "resUlke, AdresSehir FROM dbo.PersonelListGridView";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(PERSONNELMODULEDataSet.PersonelListGridViewDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual PERSONNELMODULEDataSet.PersonelListGridViewDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            PERSONNELMODULEDataSet.PersonelListGridViewDataTable dataTable = new PERSONNELMODULEDataSet.PersonelListGridViewDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
@@ -5221,6 +7131,8 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
     public partial class TableAdapterManager : global::System.ComponentModel.Component {
         
         private UpdateOrderOption _updateOrder;
+        
+        private AdresesTableAdapter _adresesTableAdapter;
         
         private DepartmansTableAdapter _departmansTableAdapter;
         
@@ -5242,6 +7154,20 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public AdresesTableAdapter AdresesTableAdapter {
+            get {
+                return this._adresesTableAdapter;
+            }
+            set {
+                this._adresesTableAdapter = value;
             }
         }
         
@@ -5320,6 +7246,10 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._adresesTableAdapter != null) 
+                            && (this._adresesTableAdapter.Connection != null))) {
+                    return this._adresesTableAdapter.Connection;
+                }
                 if (((this._departmansTableAdapter != null) 
                             && (this._departmansTableAdapter.Connection != null))) {
                     return this._departmansTableAdapter.Connection;
@@ -5349,6 +7279,9 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._adresesTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 if ((this._departmansTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -5370,8 +7303,17 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(PerModuleDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(PERSONNELMODULEDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._adresesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Adreses.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._adresesTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._departmansTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Departmans.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -5381,21 +7323,21 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._personnelsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Personnels.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._personnelsTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._egitimsTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Egitims.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._egitimsTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._personnelsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Personnels.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._personnelsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -5416,8 +7358,16 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(PerModuleDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(PERSONNELMODULEDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._adresesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Adreses.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._adresesTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._departmansTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Departmans.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -5426,19 +7376,19 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._personnelsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Personnels.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._personnelsTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._egitimsTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Egitims.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._egitimsTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._personnelsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Personnels.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._personnelsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -5458,21 +7408,13 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(PerModuleDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(PERSONNELMODULEDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._offdaysTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Offdays.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._offdaysTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._egitimsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Egitims.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._egitimsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -5484,11 +7426,27 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._egitimsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Egitims.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._egitimsTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._departmansTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Departmans.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._departmansTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._adresesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Adreses.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._adresesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -5524,12 +7482,17 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(PerModuleDataSet dataSet) {
+        public virtual int UpdateAll(PERSONNELMODULEDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
+            }
+            if (((this._adresesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._adresesTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("TableAdapterManager tarafından yönetilen tüm TableAdapter\'lar aynı bağlantı dizes" +
+                        "ini kullanmalıdır.");
             }
             if (((this._departmansTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._departmansTableAdapter.Connection) == false))) {
@@ -5583,6 +7546,15 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._adresesTableAdapter != null)) {
+                    revertConnections.Add(this._adresesTableAdapter, this._adresesTableAdapter.Connection);
+                    this._adresesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._adresesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._adresesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._adresesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._adresesTableAdapter.Adapter);
+                    }
+                }
                 if ((this._departmansTableAdapter != null)) {
                     revertConnections.Add(this._departmansTableAdapter, this._departmansTableAdapter.Connection);
                     this._departmansTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -5676,6 +7648,10 @@ SELECT id, PerTckn, PerAd, PerSoyad, PerDogumTarihi, PerMaas, PerCinsiyet, PerMa
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._adresesTableAdapter != null)) {
+                    this._adresesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._adresesTableAdapter]));
+                    this._adresesTableAdapter.Transaction = null;
                 }
                 if ((this._departmansTableAdapter != null)) {
                     this._departmansTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._departmansTableAdapter]));

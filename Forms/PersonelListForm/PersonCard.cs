@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PerModule.Forms.AnasayfaForm
+namespace PerModule.Forms.PersonelListForm
 {
     public partial class PersonCard : Form
     {
