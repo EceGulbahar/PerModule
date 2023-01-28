@@ -81,14 +81,23 @@ namespace PerModule.Forms.PersonelListForm
             
 
         }
-
-        private void GridHugeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        string tckn = "";
+        int secilendeger;
+        public void GridHugeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (GridHugeList.Columns[e.ColumnIndex].Name == "Kartlar")
             {
+                
+                secilendeger = GridHugeList.SelectedCells[0].RowIndex;
+                tckn = GridHugeList.Rows[secilendeger].Cells[0].Value.ToString(); //tckn değişkeni alıyoruz gridden
                 PersonCard personCard = new PersonCard();
                 personCard.Show();
             }
+        }
+
+        private void pnlDepEkle_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

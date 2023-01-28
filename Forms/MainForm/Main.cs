@@ -19,6 +19,8 @@ using System.Drawing.Drawing2D;
 using System.Configuration;
 using PerModule.Forms.BordrosForm;
 using PerModule.Forms.DepartmanForm;
+using Microsoft.Office.Interop.Excel;
+using Application = System.Windows.Forms.Application;
 
 namespace PerModule
 {
@@ -77,7 +79,9 @@ namespace PerModule
             //btnAnasayfa.BackColor = System.Drawing.ColorTranslator.FromHtml("#212529");
             pnlHLight.Height = btnAnasayfa.Height;
             pnlHLight.Top = btnAnasayfa.Top;
-            
+            pnlHLight1.Height = btnAnasayfa.Height;
+            pnlHLight1.Top = btnAnasayfa.Top;
+
         }
 
         private void btnPerRaport_Click_1(object sender, EventArgs e)
@@ -86,7 +90,9 @@ namespace PerModule
             FormGetir(Rapors);
             pnlHLight.Height = btnPerRaport.Height;
             pnlHLight.Top = btnPerRaport.Top;
-            
+            pnlHLight1.Height = btnPerRaport.Height;
+            pnlHLight1.Top = btnPerRaport.Top;
+
         }
 
         private void btnPersonel_Click(object sender, EventArgs e)
@@ -95,7 +101,9 @@ namespace PerModule
             FormGetir(PerList);
             pnlHLight.Height = btnPersonel.Height;
             pnlHLight.Top = btnPersonel.Top;
-            
+            pnlHLight1.Height = btnPersonel.Height;
+            pnlHLight1.Top = btnPersonel.Top;
+
         }
 
         private void BtnIzin_Click_1(object sender, EventArgs e)
@@ -104,7 +112,9 @@ namespace PerModule
             FormGetir(Izins);
             pnlHLight.Height = BtnIzin.Height;
             pnlHLight.Top = BtnIzin.Top;
-            
+            pnlHLight1.Height = BtnIzin.Height;
+            pnlHLight1.Top = BtnIzin.Top;
+
         }
 
         private void btnZimmet_Click_1(object sender, EventArgs e)
@@ -113,7 +123,9 @@ namespace PerModule
             FormGetir(Zimmets);
             pnlHLight.Height = btnZimmet.Height;
             pnlHLight.Top = btnZimmet.Top;
-            
+            pnlHLight1.Height = btnZimmet.Height;
+            pnlHLight1.Top = btnZimmet.Top;
+
         }
 
         private void btnOzlukB_Click_1(object sender, EventArgs e)
@@ -122,7 +134,9 @@ namespace PerModule
             FormGetir(OzlukD);
             pnlHLight.Height = btnOzlukB.Height;
             pnlHLight.Top = btnOzlukB.Top;
-            
+            pnlHLight1.Height = btnOzlukB.Height;
+            pnlHLight1.Top = btnOzlukB.Top;
+
         }
 
         private void btnBordro_Click_1(object sender, EventArgs e)
@@ -131,7 +145,9 @@ namespace PerModule
             FormGetir(bordros);
             pnlHLight.Height = btnBordro.Height;
             pnlHLight.Top = btnBordro.Top;
-            
+            pnlHLight1.Height = btnBordro.Height;
+            pnlHLight1.Top = btnBordro.Top;
+
         }
 
         private void btnAnasayfa_MouseEnter(object sender, EventArgs e)
@@ -204,7 +220,5 @@ namespace PerModule
         {
             btnBordro.BackColor = System.Drawing.ColorTranslator.FromHtml("#495057");
         }
-
-        
     }
 }

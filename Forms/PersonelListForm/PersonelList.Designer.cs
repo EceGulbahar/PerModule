@@ -47,6 +47,16 @@
             this.btnPerCikar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnPerEkle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.GridHugeList = new System.Windows.Forms.DataGridView();
+            this.perTcknDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perDogumTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depRoluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perBaslamaTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresUlkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresSehirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kartlar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.personelListGridViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pERSONNELMODULEDataSet = new PerModule.PERSONNELMODULEDataSet();
             this.txtSearchboxPerList = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -59,21 +69,13 @@
             this.txtKAdi = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.personelListGridViewTableAdapter = new PerModule.PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter();
-            this.perTcknDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perDogumTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depRoluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perBaslamaTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresUlkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresSehirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kartlar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.GridHugeList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personelListGridViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERSONNELMODULEDataSet)).BeginInit();
             this.pnlDepEkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPerCikar
@@ -123,7 +125,7 @@
             this.btnPerCikar.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnPerCikar.IdleIconLeftImage")));
             this.btnPerCikar.IdleIconRightImage = null;
             this.btnPerCikar.IndicateFocus = false;
-            this.btnPerCikar.Location = new System.Drawing.Point(1711, 132);
+            this.btnPerCikar.Location = new System.Drawing.Point(1647, 3);
             this.btnPerCikar.Name = "btnPerCikar";
             this.btnPerCikar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPerCikar.OnDisabledState.BorderRadius = 15;
@@ -157,7 +159,7 @@
             this.btnPerCikar.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnPerCikar.OnPressedState.IconLeftImage = null;
             this.btnPerCikar.OnPressedState.IconRightImage = null;
-            this.btnPerCikar.Size = new System.Drawing.Size(57, 61);
+            this.btnPerCikar.Size = new System.Drawing.Size(61, 42);
             this.btnPerCikar.TabIndex = 5;
             this.btnPerCikar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPerCikar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -212,7 +214,7 @@
             this.btnPerEkle.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnPerEkle.IdleIconLeftImage")));
             this.btnPerEkle.IdleIconRightImage = null;
             this.btnPerEkle.IndicateFocus = false;
-            this.btnPerEkle.Location = new System.Drawing.Point(1648, 132);
+            this.btnPerEkle.Location = new System.Drawing.Point(1580, 3);
             this.btnPerEkle.Name = "btnPerEkle";
             this.btnPerEkle.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPerEkle.OnDisabledState.BorderRadius = 15;
@@ -246,7 +248,7 @@
             this.btnPerEkle.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnPerEkle.OnPressedState.IconLeftImage = null;
             this.btnPerEkle.OnPressedState.IconRightImage = null;
-            this.btnPerEkle.Size = new System.Drawing.Size(57, 61);
+            this.btnPerEkle.Size = new System.Drawing.Size(61, 42);
             this.btnPerEkle.TabIndex = 4;
             this.btnPerEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPerEkle.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -278,6 +280,88 @@
             this.GridHugeList.Size = new System.Drawing.Size(1711, 599);
             this.GridHugeList.TabIndex = 3;
             this.GridHugeList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridHugeList_CellContentClick);
+            // 
+            // perTcknDataGridViewTextBoxColumn
+            // 
+            this.perTcknDataGridViewTextBoxColumn.DataPropertyName = "PerTckn";
+            this.perTcknDataGridViewTextBoxColumn.FillWeight = 300F;
+            this.perTcknDataGridViewTextBoxColumn.HeaderText = "PerTckn";
+            this.perTcknDataGridViewTextBoxColumn.Name = "perTcknDataGridViewTextBoxColumn";
+            this.perTcknDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // perAdDataGridViewTextBoxColumn
+            // 
+            this.perAdDataGridViewTextBoxColumn.DataPropertyName = "PerAd";
+            this.perAdDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.perAdDataGridViewTextBoxColumn.HeaderText = "PerAd";
+            this.perAdDataGridViewTextBoxColumn.Name = "perAdDataGridViewTextBoxColumn";
+            this.perAdDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // perSoyadDataGridViewTextBoxColumn
+            // 
+            this.perSoyadDataGridViewTextBoxColumn.DataPropertyName = "PerSoyad";
+            this.perSoyadDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.perSoyadDataGridViewTextBoxColumn.HeaderText = "PerSoyad";
+            this.perSoyadDataGridViewTextBoxColumn.Name = "perSoyadDataGridViewTextBoxColumn";
+            this.perSoyadDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // perDogumTarihiDataGridViewTextBoxColumn
+            // 
+            this.perDogumTarihiDataGridViewTextBoxColumn.DataPropertyName = "PerDogumTarihi";
+            this.perDogumTarihiDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.perDogumTarihiDataGridViewTextBoxColumn.HeaderText = "PerDogumTarihi";
+            this.perDogumTarihiDataGridViewTextBoxColumn.Name = "perDogumTarihiDataGridViewTextBoxColumn";
+            this.perDogumTarihiDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // depAdiDataGridViewTextBoxColumn
+            // 
+            this.depAdiDataGridViewTextBoxColumn.DataPropertyName = "DepAdi";
+            this.depAdiDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.depAdiDataGridViewTextBoxColumn.HeaderText = "DepAdi";
+            this.depAdiDataGridViewTextBoxColumn.Name = "depAdiDataGridViewTextBoxColumn";
+            this.depAdiDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // depRoluDataGridViewTextBoxColumn
+            // 
+            this.depRoluDataGridViewTextBoxColumn.DataPropertyName = "DepRolu";
+            this.depRoluDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.depRoluDataGridViewTextBoxColumn.HeaderText = "DepRolu";
+            this.depRoluDataGridViewTextBoxColumn.Name = "depRoluDataGridViewTextBoxColumn";
+            this.depRoluDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // perBaslamaTDataGridViewTextBoxColumn
+            // 
+            this.perBaslamaTDataGridViewTextBoxColumn.DataPropertyName = "PerBaslamaT";
+            this.perBaslamaTDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.perBaslamaTDataGridViewTextBoxColumn.HeaderText = "PerBaslamaT";
+            this.perBaslamaTDataGridViewTextBoxColumn.Name = "perBaslamaTDataGridViewTextBoxColumn";
+            this.perBaslamaTDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // adresUlkeDataGridViewTextBoxColumn
+            // 
+            this.adresUlkeDataGridViewTextBoxColumn.DataPropertyName = "AdresUlke";
+            this.adresUlkeDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.adresUlkeDataGridViewTextBoxColumn.HeaderText = "AdresUlke";
+            this.adresUlkeDataGridViewTextBoxColumn.Name = "adresUlkeDataGridViewTextBoxColumn";
+            this.adresUlkeDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // adresSehirDataGridViewTextBoxColumn
+            // 
+            this.adresSehirDataGridViewTextBoxColumn.DataPropertyName = "AdresSehir";
+            this.adresSehirDataGridViewTextBoxColumn.FillWeight = 150F;
+            this.adresSehirDataGridViewTextBoxColumn.HeaderText = "AdresSehir";
+            this.adresSehirDataGridViewTextBoxColumn.Name = "adresSehirDataGridViewTextBoxColumn";
+            this.adresSehirDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // Kartlar
+            // 
+            this.Kartlar.FillWeight = 169F;
+            this.Kartlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kartlar.HeaderText = "Kartlar";
+            this.Kartlar.Name = "Kartlar";
+            this.Kartlar.Text = "Kartı Görüntüle";
+            this.Kartlar.UseColumnTextForButtonValue = true;
+            this.Kartlar.Width = 169;
             // 
             // personelListGridViewBindingSource
             // 
@@ -317,7 +401,7 @@
             this.txtSearchboxPerList.IconRight = ((System.Drawing.Image)(resources.GetObject("txtSearchboxPerList.IconRight")));
             this.txtSearchboxPerList.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearchboxPerList.Lines = new string[0];
-            this.txtSearchboxPerList.Location = new System.Drawing.Point(1109, 75);
+            this.txtSearchboxPerList.Location = new System.Drawing.Point(848, 3);
             this.txtSearchboxPerList.MaxLength = 32767;
             this.txtSearchboxPerList.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSearchboxPerList.Modified = false;
@@ -353,7 +437,7 @@
             this.txtSearchboxPerList.SelectionLength = 0;
             this.txtSearchboxPerList.SelectionStart = 0;
             this.txtSearchboxPerList.ShortcutsEnabled = true;
-            this.txtSearchboxPerList.Size = new System.Drawing.Size(659, 32);
+            this.txtSearchboxPerList.Size = new System.Drawing.Size(659, 42);
             this.txtSearchboxPerList.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSearchboxPerList.TabIndex = 7;
             this.txtSearchboxPerList.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -411,7 +495,7 @@
             this.btnExceleAl.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnExceleAl.IdleIconLeftImage")));
             this.btnExceleAl.IdleIconRightImage = null;
             this.btnExceleAl.IndicateFocus = false;
-            this.btnExceleAl.Location = new System.Drawing.Point(1585, 132);
+            this.btnExceleAl.Location = new System.Drawing.Point(1513, 3);
             this.btnExceleAl.Name = "btnExceleAl";
             this.btnExceleAl.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExceleAl.OnDisabledState.BorderRadius = 15;
@@ -445,7 +529,7 @@
             this.btnExceleAl.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnExceleAl.OnPressedState.IconLeftImage = null;
             this.btnExceleAl.OnPressedState.IconRightImage = null;
-            this.btnExceleAl.Size = new System.Drawing.Size(57, 61);
+            this.btnExceleAl.Size = new System.Drawing.Size(61, 42);
             this.btnExceleAl.TabIndex = 8;
             this.btnExceleAl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnExceleAl.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -488,7 +572,7 @@
             this.DropDepartmans.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.DropDepartmans.ItemHighLightForeColor = System.Drawing.Color.White;
             this.DropDepartmans.ItemTopMargin = 3;
-            this.DropDepartmans.Location = new System.Drawing.Point(57, 75);
+            this.DropDepartmans.Location = new System.Drawing.Point(1381, 165);
             this.DropDepartmans.Name = "DropDepartmans";
             this.DropDepartmans.Size = new System.Drawing.Size(339, 32);
             this.DropDepartmans.TabIndex = 9;
@@ -544,7 +628,7 @@
             this.btnDepEklePnlAc.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDepEklePnlAc.IdleIconLeftImage")));
             this.btnDepEklePnlAc.IdleIconRightImage = null;
             this.btnDepEklePnlAc.IndicateFocus = false;
-            this.btnDepEklePnlAc.Location = new System.Drawing.Point(412, 75);
+            this.btnDepEklePnlAc.Location = new System.Drawing.Point(1733, 165);
             this.btnDepEklePnlAc.Name = "btnDepEklePnlAc";
             this.btnDepEklePnlAc.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepEklePnlAc.OnDisabledState.BorderRadius = 1;
@@ -593,11 +677,12 @@
             this.pnlDepEkle.Controls.Add(this.btnDepEkleIptal);
             this.pnlDepEkle.Controls.Add(this.btnDepEkle);
             this.pnlDepEkle.Controls.Add(this.txtKAdi);
-            this.pnlDepEkle.Location = new System.Drawing.Point(57, 139);
+            this.pnlDepEkle.Location = new System.Drawing.Point(1381, 203);
             this.pnlDepEkle.Name = "pnlDepEkle";
-            this.pnlDepEkle.Size = new System.Drawing.Size(390, 113);
+            this.pnlDepEkle.Size = new System.Drawing.Size(339, 101);
             this.pnlDepEkle.TabIndex = 11;
             this.pnlDepEkle.Visible = false;
+            this.pnlDepEkle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDepEkle_Paint);
             // 
             // btnDepEkleIptal
             // 
@@ -646,7 +731,7 @@
             this.btnDepEkleIptal.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDepEkleIptal.IdleIconLeftImage")));
             this.btnDepEkleIptal.IdleIconRightImage = null;
             this.btnDepEkleIptal.IndicateFocus = false;
-            this.btnDepEkleIptal.Location = new System.Drawing.Point(291, 69);
+            this.btnDepEkleIptal.Location = new System.Drawing.Point(255, 62);
             this.btnDepEkleIptal.Margin = new System.Windows.Forms.Padding(0);
             this.btnDepEkleIptal.Name = "btnDepEkleIptal";
             this.btnDepEkleIptal.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -736,7 +821,7 @@
             this.btnDepEkle.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDepEkle.IdleIconLeftImage")));
             this.btnDepEkle.IdleIconRightImage = null;
             this.btnDepEkle.IndicateFocus = false;
-            this.btnDepEkle.Location = new System.Drawing.Point(333, 69);
+            this.btnDepEkle.Location = new System.Drawing.Point(297, 62);
             this.btnDepEkle.Margin = new System.Windows.Forms.Padding(0);
             this.btnDepEkle.Name = "btnDepEkle";
             this.btnDepEkle.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -806,7 +891,7 @@
             this.txtKAdi.IconRight = null;
             this.txtKAdi.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKAdi.Lines = new string[0];
-            this.txtKAdi.Location = new System.Drawing.Point(21, 18);
+            this.txtKAdi.Location = new System.Drawing.Point(14, 17);
             this.txtKAdi.MaxLength = 32767;
             this.txtKAdi.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtKAdi.Modified = false;
@@ -842,7 +927,7 @@
             this.txtKAdi.SelectionLength = 0;
             this.txtKAdi.SelectionStart = 0;
             this.txtKAdi.ShortcutsEnabled = true;
-            this.txtKAdi.Size = new System.Drawing.Size(354, 36);
+            this.txtKAdi.Size = new System.Drawing.Size(312, 36);
             this.txtKAdi.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtKAdi.TabIndex = 7;
             this.txtKAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -856,9 +941,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 57);
+            this.pictureBox1.Location = new System.Drawing.Point(909, 80);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(480, 297);
+            this.pictureBox1.Size = new System.Drawing.Size(480, 301);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -867,87 +952,17 @@
             // 
             this.personelListGridViewTableAdapter.ClearBeforeFill = true;
             // 
-            // perTcknDataGridViewTextBoxColumn
+            // panel1
             // 
-            this.perTcknDataGridViewTextBoxColumn.DataPropertyName = "PerTckn";
-            this.perTcknDataGridViewTextBoxColumn.FillWeight = 300F;
-            this.perTcknDataGridViewTextBoxColumn.HeaderText = "PerTckn";
-            this.perTcknDataGridViewTextBoxColumn.Name = "perTcknDataGridViewTextBoxColumn";
-            this.perTcknDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // perAdDataGridViewTextBoxColumn
-            // 
-            this.perAdDataGridViewTextBoxColumn.DataPropertyName = "PerAd";
-            this.perAdDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.perAdDataGridViewTextBoxColumn.HeaderText = "PerAd";
-            this.perAdDataGridViewTextBoxColumn.Name = "perAdDataGridViewTextBoxColumn";
-            this.perAdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // perSoyadDataGridViewTextBoxColumn
-            // 
-            this.perSoyadDataGridViewTextBoxColumn.DataPropertyName = "PerSoyad";
-            this.perSoyadDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.perSoyadDataGridViewTextBoxColumn.HeaderText = "PerSoyad";
-            this.perSoyadDataGridViewTextBoxColumn.Name = "perSoyadDataGridViewTextBoxColumn";
-            this.perSoyadDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // perDogumTarihiDataGridViewTextBoxColumn
-            // 
-            this.perDogumTarihiDataGridViewTextBoxColumn.DataPropertyName = "PerDogumTarihi";
-            this.perDogumTarihiDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.perDogumTarihiDataGridViewTextBoxColumn.HeaderText = "PerDogumTarihi";
-            this.perDogumTarihiDataGridViewTextBoxColumn.Name = "perDogumTarihiDataGridViewTextBoxColumn";
-            this.perDogumTarihiDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // depAdiDataGridViewTextBoxColumn
-            // 
-            this.depAdiDataGridViewTextBoxColumn.DataPropertyName = "DepAdi";
-            this.depAdiDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.depAdiDataGridViewTextBoxColumn.HeaderText = "DepAdi";
-            this.depAdiDataGridViewTextBoxColumn.Name = "depAdiDataGridViewTextBoxColumn";
-            this.depAdiDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // depRoluDataGridViewTextBoxColumn
-            // 
-            this.depRoluDataGridViewTextBoxColumn.DataPropertyName = "DepRolu";
-            this.depRoluDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.depRoluDataGridViewTextBoxColumn.HeaderText = "DepRolu";
-            this.depRoluDataGridViewTextBoxColumn.Name = "depRoluDataGridViewTextBoxColumn";
-            this.depRoluDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // perBaslamaTDataGridViewTextBoxColumn
-            // 
-            this.perBaslamaTDataGridViewTextBoxColumn.DataPropertyName = "PerBaslamaT";
-            this.perBaslamaTDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.perBaslamaTDataGridViewTextBoxColumn.HeaderText = "PerBaslamaT";
-            this.perBaslamaTDataGridViewTextBoxColumn.Name = "perBaslamaTDataGridViewTextBoxColumn";
-            this.perBaslamaTDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // adresUlkeDataGridViewTextBoxColumn
-            // 
-            this.adresUlkeDataGridViewTextBoxColumn.DataPropertyName = "AdresUlke";
-            this.adresUlkeDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.adresUlkeDataGridViewTextBoxColumn.HeaderText = "AdresUlke";
-            this.adresUlkeDataGridViewTextBoxColumn.Name = "adresUlkeDataGridViewTextBoxColumn";
-            this.adresUlkeDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // adresSehirDataGridViewTextBoxColumn
-            // 
-            this.adresSehirDataGridViewTextBoxColumn.DataPropertyName = "AdresSehir";
-            this.adresSehirDataGridViewTextBoxColumn.FillWeight = 150F;
-            this.adresSehirDataGridViewTextBoxColumn.HeaderText = "AdresSehir";
-            this.adresSehirDataGridViewTextBoxColumn.Name = "adresSehirDataGridViewTextBoxColumn";
-            this.adresSehirDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // Kartlar
-            // 
-            this.Kartlar.FillWeight = 169F;
-            this.Kartlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Kartlar.HeaderText = "Kartlar";
-            this.Kartlar.Name = "Kartlar";
-            this.Kartlar.Text = "Kartı Görüntüle";
-            this.Kartlar.UseColumnTextForButtonValue = true;
-            this.Kartlar.Width = 169;
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.txtSearchboxPerList);
+            this.panel1.Controls.Add(this.btnPerEkle);
+            this.panel1.Controls.Add(this.btnPerCikar);
+            this.panel1.Controls.Add(this.btnExceleAl);
+            this.panel1.Location = new System.Drawing.Point(57, 42);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1711, 48);
+            this.panel1.TabIndex = 13;
             // 
             // PersonelList
             // 
@@ -958,11 +973,8 @@
             this.Controls.Add(this.pnlDepEkle);
             this.Controls.Add(this.btnDepEklePnlAc);
             this.Controls.Add(this.DropDepartmans);
-            this.Controls.Add(this.btnExceleAl);
-            this.Controls.Add(this.txtSearchboxPerList);
-            this.Controls.Add(this.btnPerCikar);
-            this.Controls.Add(this.btnPerEkle);
             this.Controls.Add(this.GridHugeList);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PersonelList";
@@ -973,6 +985,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pERSONNELMODULEDataSet)).EndInit();
             this.pnlDepEkle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1004,5 +1017,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn adresUlkeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresSehirDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Kartlar;
+        private System.Windows.Forms.Panel panel1;
     }
 }
