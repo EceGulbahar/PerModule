@@ -10,19 +10,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
 using System.Data.SqlClient;
+using System.Configuration;
+using PerModule.Forms.DepartmanForm;
+
 
 namespace PerModule.Forms.PersonelListForm
 {
     public partial class PersonelList : Form
     {
-
-         SqlConnection baglan = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\90501\Desktop\PerModule\Kaynak Kodlar\PerModule\Data\PERSONNELMODULE.mdf"";Integrated Security=True");
+        SqlConnection baglan = new SqlConnection(ConfigurationManager.ConnectionStrings["PerModule.Properties.Settings.PerModuleCS"].ConnectionString);
         public PersonelList()
         {
             InitializeComponent();
             
         }
 
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
         private void btnExceleAl_Click(object sender, EventArgs e)
         {
             SaveFileDialog save = new SaveFileDialog();
@@ -37,7 +44,7 @@ namespace PerModule.Forms.PersonelListForm
                 Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
                 Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
                 app.Visible = true;
-                worksheet = workbook.Sheets["PersonnelSheet1"];
+                worksheet = workbook.Sheets["Sayfa1"];
                 worksheet = workbook.ActiveSheet;
                 worksheet.Name = "Excel Dışa Aktarım";
                 for (int i = 1; i < GridHugeList.Columns.Count + 1; i++)
@@ -59,7 +66,12 @@ namespace PerModule.Forms.PersonelListForm
 
         private void DropDepartmans_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (DropDepartmans.Text == null)
+            {
+                txtDepGuncelleDepAd.Text = null;
+            }
+            else
+                txtDepGuncelleDepAd.Text = DropDepartmans.Text;
         }
 
         private void btnDepEklePnlAc_Click(object sender, EventArgs e)
@@ -67,6 +79,7 @@ namespace PerModule.Forms.PersonelListForm
             if(pnlDepEkle.Visible == false)
             {
                 pnlDepEkle.Visible = true;
+                txtDepSec.PlaceholderText = "Eklenecek departman adını giriniz.";
             }
             else
             {
@@ -74,11 +87,28 @@ namespace PerModule.Forms.PersonelListForm
             }
         }
 
+        void dropDepartmansDoldur()
+        {
+            baglan.Open();
+
+            SqlCommand doldur = new SqlCommand("SELECT DepAdi FROM Departmans", baglan);
+            SqlDataReader dr = doldur.ExecuteReader();
+            while (dr.Read())
+            {
+                DropDepartmans.Items.Add(dr[0]);
+            }
+
+
+            baglan.Close();
+        }
         private void PersonelList_Load(object sender, EventArgs e)
         {
+            
+            // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.Departmans' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.departmansTableAdapter.Fill(this.pERSONNELMODULEDataSet.Departmans);
             // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
-            
+            dropDepartmansDoldur();
 
         }
         string tckn = "";
@@ -102,9 +132,82 @@ namespace PerModule.Forms.PersonelListForm
 
         private void KontrolPanelLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Anasayfa anasayfa = new Anasayfa();
+            /*Anasayfa anasayfa = new Anasayfa();
             FormGetir(anasayfa);
-            //bu kısımda kaldık, tıklanmış gibi yapmayı deneyelim
+            //bu kısımda kaldık, tıklanmış gibi yapmayı deneyelim*/
+        }
+
+        private void btnDepGuncelle_Click(object sender, EventArgs e)
+        {
+            if (pnlDepGuncelle.Visible == false)
+            {
+                pnlDepGuncelle.Visible = true;
+                
+                
+            }
+            else
+            {
+                pnlDepGuncelle.Visible = false;
+            }
+        }
+
+        private void txtSearchboxPerList_TextChanged(object sender, EventArgs e)//Sadece isim arıyor, buraya sonra bakarım
+        {
+            if (String.IsNullOrEmpty(txtSearchboxPerList.Text))
+            {
+                this.departmansTableAdapter.Fill(this.pERSONNELMODULEDataSet.Departmans);
+                // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+                this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
+            }
+            else
+            {
+                txtSearchboxPerList.Text = txtSearchboxPerList.Text.Trim();
+                if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                }
+                SqlCommand search = new SqlCommand("SELECT * FROM dbo.PersonelListGridView where PerAd like '%" + txtSearchboxPerList.Text + "%'", baglan);
+                SqlDataAdapter da = new SqlDataAdapter(search);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                GridHugeList.DataSource = ds.Tables[0];
+                if (baglan.State == ConnectionState.Open)
+                {
+                    baglan.Close();
+                }
+            }
+        }
+
+        private void btnDepGuncelleLast_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtDepGunYeniAd.Text) || String.IsNullOrEmpty(txtDepGuncelleDepAd.Text))
+            {
+                MessageBox.Show("Tüm alanları doldurduğunuzdan emin olun!");
+            }
+            else
+            {
+                if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                }
+                SqlCommand guncelle = new SqlCommand("update Departmans set DepAdi=@YDepAdi where DepAdi=@DepAdi", baglan);
+                guncelle.Parameters.AddWithValue("@DepAdi", txtDepGuncelleDepAd.Text);
+                guncelle.Parameters.AddWithValue("@YDepAdi", txtDepGunYeniAd.Text);
+
+                guncelle.ExecuteNonQuery();
+                if (guncelle.ExecuteNonQuery() > 0)
+                //MessageBox.Show("Güncelleme işlemi başarılı.");
+                this.Alert("Güncelleme işlemi başarılı", Form_Alert.enmType.Success);
+                this.departmansTableAdapter.Fill(this.pERSONNELMODULEDataSet.Departmans);
+                // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+                this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
+                dropDepartmansDoldur();
+                if (baglan.State == ConnectionState.Open)
+                {
+                    baglan.Close();
+                }
+                
+            }
         }
     }
 }

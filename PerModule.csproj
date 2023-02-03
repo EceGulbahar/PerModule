@@ -78,6 +78,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
@@ -109,6 +110,12 @@
     </Compile>
     <Compile Include="Forms\BordrosForm\Bordros.Designer.cs">
       <DependentUpon>Bordros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Alert.Designer.cs">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\IzinRaporlariForm\IzinRaporlari.cs">
       <SubType>Form</SubType>
@@ -183,6 +190,9 @@
     <EmbeddedResource Include="Forms\BordrosForm\Bordros.resx">
       <DependentUpon>Bordros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Alert.resx">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\IzinRaporlariForm\IzinRaporlari.resx">
       <DependentUpon>IzinRaporlari.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +226,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="PERSONNELMODULEDataSet.xsc">
@@ -255,10 +266,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\PERSONNELMODULE.mdf">
+    <Content Include="Resources\error.png" />
+    <Content Include="Resources\icons8_cancel_25px.png" />
+    <Content Include="Resources\info.png" />
+    <Content Include="Resources\success.png" />
+    <Content Include="Resources\warning.png" />
+    <Content Include="PERSONNELMODULE.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\PERSONNELMODULE_log.ldf">
+    <Content Include="PERSONNELMODULE_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>PERSONNELMODULE.mdf</DependentUpon>
     </Content>
@@ -268,5 +284,6 @@
     <Content Include="img\texture.png" />
     <Content Include="img\texture2.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
