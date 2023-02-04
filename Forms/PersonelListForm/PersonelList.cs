@@ -87,19 +87,23 @@ namespace PerModule.Forms.PersonelListForm
             }
         }
 
-        void dropDepartmansDoldur()
+        void dropDepartmansDoldur()//TEMİZLEYİP YAPMALIYIZ
         {
-            baglan.Open();
-
+            
+            if (baglan.State == ConnectionState.Closed)
+            {
+                baglan.Open();
+            }
             SqlCommand doldur = new SqlCommand("SELECT DepAdi FROM Departmans", baglan);
             SqlDataReader dr = doldur.ExecuteReader();
             while (dr.Read())
             {
                 DropDepartmans.Items.Add(dr[0]);
             }
-
-
-            baglan.Close();
+            if (baglan.State == ConnectionState.Open)
+            {
+                baglan.Close();
+            }
         }
         private void PersonelList_Load(object sender, EventArgs e)
         {
@@ -190,12 +194,12 @@ namespace PerModule.Forms.PersonelListForm
                 {
                     baglan.Open();
                 }
-                SqlCommand guncelle = new SqlCommand("update Departmans set DepAdi=@YDepAdi where DepAdi=@DepAdi", baglan);
-                guncelle.Parameters.AddWithValue("@DepAdi", txtDepGuncelleDepAd.Text);
-                guncelle.Parameters.AddWithValue("@YDepAdi", txtDepGunYeniAd.Text);
+                SqlCommand depguncelle = new SqlCommand("update Departmans set DepAdi=@YDepAdi where DepAdi=@DepAdi", baglan);
+                depguncelle.Parameters.AddWithValue("@DepAdi", txtDepGuncelleDepAd.Text);
+                depguncelle.Parameters.AddWithValue("@YDepAdi", txtDepGunYeniAd.Text);
 
-                guncelle.ExecuteNonQuery();
-                if (guncelle.ExecuteNonQuery() > 0)
+                depguncelle.ExecuteNonQuery();
+                if (depguncelle.ExecuteNonQuery() > 0)
                 //MessageBox.Show("Güncelleme işlemi başarılı.");
                 this.Alert("Güncelleme işlemi başarılı", Form_Alert.enmType.Success);
                 this.departmansTableAdapter.Fill(this.pERSONNELMODULEDataSet.Departmans);
@@ -207,6 +211,70 @@ namespace PerModule.Forms.PersonelListForm
                     baglan.Close();
                 }
                 
+            }
+        }
+
+        private void btnDepGuncelIptal_Click(object sender, EventArgs e)
+        {
+            txtDepGuncelleDepAd.Text = null;
+            txtDepGunYeniAd.Text = null;
+            pnlDepGuncelle.Visible = false;
+        }
+
+        private void btnDepGuncelleDelete_Click(object sender, EventArgs e)
+        {
+            if(txtDepGuncelleDepAd != null)
+            {
+                DialogResult cevap = MessageBox.Show("Seçilen departmanı silmek istediğinizden emin misiniz?", "Departman Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (cevap == DialogResult.Yes)
+                {
+                    if (baglan.State == ConnectionState.Closed)
+                    {
+                        baglan.Open();
+                    }
+                    SqlCommand depdelete = new SqlCommand("DELETE  FROM Departmans where DepAdi=@DepAdi", baglan);
+                    depdelete.Parameters.AddWithValue("@DepAdi", txtDepGuncelleDepAd.Text);
+                    depdelete.ExecuteNonQuery();
+                    if (depdelete.ExecuteNonQuery() > 0)
+                        this.Alert("Departman silme işlemi başarılı", Form_Alert.enmType.Success);
+                    this.departmansTableAdapter.Fill(this.pERSONNELMODULEDataSet.Departmans);
+                    // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+                    this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
+                    dropDepartmansDoldur();
+                    if (baglan.State == ConnectionState.Open)
+                    {
+                        baglan.Close();
+                    }
+                }
+            }
+        }
+
+        int a = 1;
+        string personel = "PERSONEL";
+        private void btnDepEkle_Click(object sender, EventArgs e)
+        {
+            if(String.IsNullOrEmpty(txtDepSec.Text))
+            {
+                MessageBox.Show("Tüm alanları doldurduğunuzdan emin olun!");
+            }
+            else
+            {
+                if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                }
+                SqlCommand depekle = new SqlCommand("insert into Departmans(DepAdi,DepRolu,Status) values(@DepAdii, @DepRolu, @Status)", baglan);
+                depekle.Parameters.AddWithValue("@DepAdii", txtDepSec.Text);
+                depekle.Parameters.AddWithValue("@DepRolu", personel);
+                depekle.Parameters.AddWithValue("@Status", a);
+                depekle.ExecuteNonQuery();
+                if (depekle.ExecuteNonQuery() > 0)
+                    this.Alert("Departman ekleme işlemi başarılı", Form_Alert.enmType.Success);
+                this.departmansTableAdapter.Fill(this.pERSONNELMODULEDataSet.Departmans);
+                if (baglan.State == ConnectionState.Open)
+                {
+                    baglan.Close();
+                }
             }
         }
     }
