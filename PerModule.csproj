@@ -228,6 +228,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include=".editorconfig" />
     <None Include="packages.config" />
     <None Include="PERSONNELMODULEDataSet.xsc">
       <DependentUpon>PERSONNELMODULEDataSet.xsd</DependentUpon>
@@ -271,13 +272,6 @@
     <Content Include="Resources\info.png" />
     <Content Include="Resources\success.png" />
     <Content Include="Resources\warning.png" />
-    <Content Include="PERSONNELMODULE.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="PERSONNELMODULE_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>PERSONNELMODULE.mdf</DependentUpon>
-    </Content>
     <Content Include="img\logo.png" />
     <Content Include="img\opacity.png" />
     <Content Include="img\opacity2.png" />

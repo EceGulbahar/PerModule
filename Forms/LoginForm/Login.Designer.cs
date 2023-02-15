@@ -543,7 +543,7 @@
             this.lblbilgilogin.Size = new System.Drawing.Size(277, 140);
             this.lblbilgilogin.TabIndex = 9;
             this.lblbilgilogin.Text = "Birlikte çalışmak\r\nberaberinde \r\nbaşarıyı getirmektir.\r\n                         " +
-    "                \r\n                    Wyrd bizimle...";
+    "                \r\n                                         Wyrd";
             // 
             // pictureBox3
             // 

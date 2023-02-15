@@ -2,17 +2,21 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PerModule.Forms.LoginForm
 {
     public partial class Login : Form
     {
+        SqlConnection baglan = new SqlConnection(ConfigurationManager.ConnectionStrings["PerModule.Properties.Settings.PerModuleCS"].ConnectionString);
         public Login()
         {
             InitializeComponent();
@@ -23,9 +27,41 @@ namespace PerModule.Forms.LoginForm
             Application.Exit();
         }
 
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
+
         private void btnGiris_Click(object sender, EventArgs e)
         {
-
+            if (baglan.State == ConnectionState.Closed)
+            {
+                baglan.Open();
+            }
+            string sql = "SELECT * FROM Personnels where PerNickName=@PerNickName AND PerPassword=@PerPassword";
+            SqlParameter prmAd = new SqlParameter("@PerNickName", txtKAdi.Text.Trim());
+            SqlParameter prmSifre = new SqlParameter("@PerPassword", txtKSifre.Text.Trim());
+            SqlCommand giris = new SqlCommand(sql, baglan);
+            giris.Parameters.Add(prmAd);
+            giris.Parameters.Add(prmSifre);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(giris);
+            da.Fill(dt);
+            if (dt.Rows.Count > 0) //ilgili alanlar birbirini tutuyor mu?
+            {
+                Main form = new Main();
+                form.Show();
+                this.Hide();
+            }
+            else
+            {
+                this.Alert("Giriş başarısız. Tekrar deneyiniz.", Form_Alert.enmType.Warning);
+            }
+            if (baglan.State == ConnectionState.Open)
+            {
+                baglan.Close();
+            }
         }
 
         private void btnSifreGoster_Click(object sender, EventArgs e)

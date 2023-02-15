@@ -11,11 +11,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PerModule.Forms.LoginForm;
+using System.Configuration;
+using System.Runtime.InteropServices;
+using System.Data.Sql;
+
+
 
 namespace PerModule.Forms.PasswordForgotForm
 {
     public partial class PasswordUpdate : Form
     {
+        SqlConnection baglan = new SqlConnection(ConfigurationManager.ConnectionStrings["PerModule.Properties.Settings.PerModuleCS"].ConnectionString);
         public PasswordUpdate()
         {
             InitializeComponent();
@@ -25,16 +31,23 @@ namespace PerModule.Forms.PasswordForgotForm
         {
             this.Close();
         }
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
 
-        int PerID = 0;
+        int Perid = 0;
         private void btnPassUpGonder_Click(object sender, EventArgs e)
         {
-            SqlConnection baglan = new SqlConnection();
-            baglan.Open();
 
-            SqlCommand passupoku = new SqlCommand("SELECT Tbl_Personels.PerMail, Tbl_Passwords.Sifre, Tbl_Personels.ID FROM Tbl_Personels CROSS JOIN Tbl_Passwords where PerMail=@PerMail", baglan);
+            if (baglan.State == ConnectionState.Closed)
+            {
+                baglan.Open();
+            }
+            SqlCommand passupoku = new SqlCommand("SELECT PerMail,PerPassword,id FROM Personnels where PerMail=@PerMail", baglan);
             passupoku.Parameters.AddWithValue("@PerMail", txtSendMail.Text);
-            passupoku.Parameters.AddWithValue("@ID", PerID);
+            passupoku.Parameters.AddWithValue("@id", Perid);
             SqlDataReader oku = passupoku.ExecuteReader();
             if (oku.Read())
             {
@@ -47,8 +60,8 @@ namespace PerModule.Forms.PasswordForgotForm
                 string smptsrvr = "smtp.office365.com";
                 string kime = (oku["PerMail"].ToString());
                 string konu = ("Şifre Hatırlatma");
-                string yaz = ("Merhaba," + "\n" + "Wyrd Personel Modülü'nden " + tarih + "tarihinde şifre hatırlatma talebinde " +
-                    "bulundunuz." + "\n" + "Parolanız: " + oku["Sifre"].ToString() + "\nWyrd Yazılım İyi Günler Diler.");
+                string yaz = ("Merhaba," + "\n" + "Wyrd Personel Modülü'nden " + tarih + " tarihinde şifre hatırlatma talebinde " +
+                    "bulundunuz." + "\n" + "Parolanız: " + oku["PerPassword"].ToString() + "\nWyrd Yazılım iyi günler diler.");
                 smtpserver.Credentials = new NetworkCredential(mailadress, sifre);
                 smtpserver.Port = 587;
                 smtpserver.Host = smptsrvr;
@@ -58,19 +71,19 @@ namespace PerModule.Forms.PasswordForgotForm
                 mail.Subject = konu;
                 mail.Body = yaz;
                 smtpserver.Send(mail);
-                MessageBox.Show("Bilgileriniz uyuşuyor. Şifreniz mail adresinize gönderilmiştir.");
+                this.Alert("Bilgileriniz uyuşuyor. Şifreniz mail adresinize gönderilmiştir.", Form_Alert.enmType.Success);
                 Login form = new Login();
                 form.Show();
                 this.Hide();
-
-
             }
-
             else
             {
-                MessageBox.Show("Bir şeyler yanlış! Lütfen tekrar deneyin.");
+                this.Alert("Mail uyuşmadı! Tekrar deneyin.", Form_Alert.enmType.Warning);
             }
-            baglan.Close();
+            if (baglan.State == ConnectionState.Open)
+            {
+                baglan.Close();
+            }
         }
     }
 }

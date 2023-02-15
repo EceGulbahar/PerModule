@@ -37,12 +37,15 @@ namespace PerModule.Forms
 
         private int x, y;
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        
 
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            timer1.Interval = 1;
+            action = enmAction.close;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
             switch (this.action)
             {
@@ -76,12 +79,6 @@ namespace PerModule.Forms
                     }
                     break;
             }
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            timer1.Interval = 1;
-            action = enmAction.close;
         }
 
         public void showAlert(string msg, enmType type)
@@ -129,6 +126,13 @@ namespace PerModule.Forms
             }
 
 
+            
+            /*if (msg.Length >= "line limit")
+
+            {
+                string msgShort = msg.Substring(0, "line limit");
+                msg = msgShort + "...";
+            }*/
             this.lblMsg.Text = msg;
 
             this.Show();

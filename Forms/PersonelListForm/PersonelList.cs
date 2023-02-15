@@ -87,7 +87,7 @@ namespace PerModule.Forms.PersonelListForm
             }
         }
 
-        void dropDepartmansDoldur()//TEMİZLEYİP YAPMALIYIZ
+        void dropDepartmansDoldur()
         {
             
             if (baglan.State == ConnectionState.Closed)
@@ -107,11 +107,11 @@ namespace PerModule.Forms.PersonelListForm
         }
         private void PersonelList_Load(object sender, EventArgs e)
         {
-            
-            // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.Departmans' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            this.departmansTableAdapter.Fill(this.pERSONNELMODULEDataSet.Departmans);
             // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
+            // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
+            
             dropDepartmansDoldur();
 
         }
@@ -159,7 +159,8 @@ namespace PerModule.Forms.PersonelListForm
         {
             if (String.IsNullOrEmpty(txtSearchboxPerList.Text))
             {
-                this.departmansTableAdapter.Fill(this.pERSONNELMODULEDataSet.Departmans);
+                // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+                this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
                 // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
                 this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
             }
@@ -202,7 +203,8 @@ namespace PerModule.Forms.PersonelListForm
                 if (depguncelle.ExecuteNonQuery() > 0)
                 //MessageBox.Show("Güncelleme işlemi başarılı.");
                 this.Alert("Güncelleme işlemi başarılı", Form_Alert.enmType.Success);
-                this.departmansTableAdapter.Fill(this.pERSONNELMODULEDataSet.Departmans);
+                // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+                this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
                 // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
                 this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
                 dropDepartmansDoldur();
@@ -234,11 +236,13 @@ namespace PerModule.Forms.PersonelListForm
                     }
                     SqlCommand depdelete = new SqlCommand("DELETE  FROM Departmans where DepAdi=@DepAdi", baglan);
                     depdelete.Parameters.AddWithValue("@DepAdi", txtDepGuncelleDepAd.Text);
-                    depdelete.ExecuteNonQuery();
+                    
                     if (depdelete.ExecuteNonQuery() > 0)
                         this.Alert("Departman silme işlemi başarılı", Form_Alert.enmType.Success);
-                    this.departmansTableAdapter.Fill(this.pERSONNELMODULEDataSet.Departmans);
                     // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+                    this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
+                    // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+                    this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
                     this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
                     dropDepartmansDoldur();
                     if (baglan.State == ConnectionState.Open)
@@ -251,7 +255,7 @@ namespace PerModule.Forms.PersonelListForm
 
         int a = 1;
         string personel = "PERSONEL";
-        private void btnDepEkle_Click(object sender, EventArgs e)
+        public void btnDepEkle_Click(object sender, EventArgs e)
         {
             if(String.IsNullOrEmpty(txtDepSec.Text))
             {
@@ -263,19 +267,27 @@ namespace PerModule.Forms.PersonelListForm
                 {
                     baglan.Open();
                 }
-                SqlCommand depekle = new SqlCommand("insert into Departmans(DepAdi,DepRolu,Status) values(@DepAdii, @DepRolu, @Status)", baglan);
+                SqlCommand depekle = new SqlCommand("INSERT INTO Departmans(DepAdi,DepRolu,Status) VALUES(@DepAdii, @DepRolu, @Status)", baglan);
                 depekle.Parameters.AddWithValue("@DepAdii", txtDepSec.Text);
                 depekle.Parameters.AddWithValue("@DepRolu", personel);
                 depekle.Parameters.AddWithValue("@Status", a);
-                depekle.ExecuteNonQuery();
                 if (depekle.ExecuteNonQuery() > 0)
                     this.Alert("Departman ekleme işlemi başarılı", Form_Alert.enmType.Success);
-                this.departmansTableAdapter.Fill(this.pERSONNELMODULEDataSet.Departmans);
+                // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+                this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
+                // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+                this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
+                dropDepartmansDoldur();
                 if (baglan.State == ConnectionState.Open)
                 {
                     baglan.Close();
                 }
             }
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            this.Alert("Departman ekleme işlemi başarılı", Form_Alert.enmType.Success);
         }
     }
 }

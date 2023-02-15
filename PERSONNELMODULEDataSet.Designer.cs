@@ -922,7 +922,7 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DepartmansRow AddDepartmansRow(string DepAdi, string DepRolu, bool Status) {
+            public DepartmansRow AddDepartmansRow(string DepAdi, string DepRolu, int Status) {
                 DepartmansRow rowDepartmansRow = ((DepartmansRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -973,7 +973,7 @@ namespace PerModule {
                 base.Columns.Add(this.columnDepAdi);
                 this.columnDepRolu = new global::System.Data.DataColumn("DepRolu", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDepRolu);
-                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(bool), null, global::System.Data.MappingType.Element);
+                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStatus);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
@@ -985,9 +985,7 @@ namespace PerModule {
                 this.columnid.Unique = true;
                 this.columnDepAdi.AllowDBNull = false;
                 this.columnDepAdi.MaxLength = 50;
-                this.columnDepRolu.AllowDBNull = false;
                 this.columnDepRolu.MaxLength = 50;
-                this.columnStatus.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2676,7 +2674,6 @@ namespace PerModule {
                 this.columnPerDogumTarihi.AllowDBNull = false;
                 this.columnDepAdi.AllowDBNull = false;
                 this.columnDepAdi.MaxLength = 50;
-                this.columnDepRolu.AllowDBNull = false;
                 this.columnDepRolu.MaxLength = 50;
                 this.columnPerBaslamaT.AllowDBNull = false;
                 this.columnAdresUlke.MaxLength = 50;
@@ -2979,7 +2976,12 @@ namespace PerModule {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string DepRolu {
                 get {
-                    return ((string)(this[this.tableDepartmans.DepRoluColumn]));
+                    try {
+                        return ((string)(this[this.tableDepartmans.DepRoluColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'Departmans\' tablosundaki \'DepRolu\' sütunun değeri DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDepartmans.DepRoluColumn] = value;
@@ -2988,13 +2990,42 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Status {
+            public int Status {
                 get {
-                    return ((bool)(this[this.tableDepartmans.StatusColumn]));
+                    try {
+                        return ((int)(this[this.tableDepartmans.StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'Departmans\' tablosundaki \'Status\' sütunun değeri DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDepartmans.StatusColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDepRoluNull() {
+                return this.IsNull(this.tableDepartmans.DepRoluColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDepRoluNull() {
+                this[this.tableDepartmans.DepRoluColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsStatusNull() {
+                return this.IsNull(this.tableDepartmans.StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetStatusNull() {
+                this[this.tableDepartmans.StatusColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3917,7 +3948,12 @@ namespace PerModule {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string DepRolu {
                 get {
-                    return ((string)(this[this.tablePersonelListGridView.DepRoluColumn]));
+                    try {
+                        return ((string)(this[this.tablePersonelListGridView.DepRoluColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'PersonelListGridView\' tablosundaki \'DepRolu\' sütunun değeri DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablePersonelListGridView.DepRoluColumn] = value;
@@ -3965,6 +4001,18 @@ namespace PerModule {
                 set {
                     this[this.tablePersonelListGridView.AdresSehirColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDepRoluNull() {
+                return this.IsNull(this.tablePersonelListGridView.DepRoluColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDepRoluNull() {
+                this[this.tablePersonelListGridView.DepRoluColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4749,14 +4797,14 @@ SELECT id, AdresUlke, AdresSehir, AdresIlce, AdresMahalleKoy FROM Adreses WHERE 
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Departmans] WHERE (([id] = @Original_id) AND ([DepAdi] = @Orig" +
-                "inal_DepAdi) AND ([DepRolu] = @Original_DepRolu) AND ([Status] = @Original_Statu" +
-                "s))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Departmans] WHERE (([id] = @Original_id) AND ([DepAdi] = @Original_DepAdi) AND ((@IsNull_DepRolu = 1 AND [DepRolu] IS NULL) OR ([DepRolu] = @Original_DepRolu)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepAdi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepAdi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepRolu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepRolu", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepRolu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepRolu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Departmans] ([DepAdi], [DepRolu], [Status]) VALUES (@DepAdi, @" +
@@ -4765,19 +4813,21 @@ SELECT id, AdresUlke, AdresSehir, AdresIlce, AdresMahalleKoy FROM Adreses WHERE 
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepAdi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepAdi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepRolu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepRolu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Departmans] SET [DepAdi] = @DepAdi, [DepRolu] = @DepRolu, [Status] = @Status WHERE (([id] = @Original_id) AND ([DepAdi] = @Original_DepAdi) AND ([DepRolu] = @Original_DepRolu) AND ([Status] = @Original_Status));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Departmans] SET [DepAdi] = @DepAdi, [DepRolu] = @DepRolu, [Status] = @Status WHERE (([id] = @Original_id) AND ([DepAdi] = @Original_DepAdi) AND ((@IsNull_DepRolu = 1 AND [DepRolu] IS NULL) OR ([DepRolu] = @Original_DepRolu)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)));
 SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepAdi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepAdi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepRolu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepRolu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepAdi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepAdi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepRolu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepRolu", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepRolu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepRolu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -4855,7 +4905,7 @@ SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, string Original_DepAdi, string Original_DepRolu, bool Original_Status) {
+        public virtual int Delete(int Original_id, string Original_DepAdi, string Original_DepRolu, global::System.Nullable<int> Original_Status) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_DepAdi == null)) {
                 throw new global::System.ArgumentNullException("Original_DepAdi");
@@ -4864,12 +4914,21 @@ SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_DepAdi));
             }
             if ((Original_DepRolu == null)) {
-                throw new global::System.ArgumentNullException("Original_DepRolu");
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_DepRolu));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_DepRolu));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((bool)(Original_Status));
+            if ((Original_Status.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Status.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4890,7 +4949,7 @@ SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string DepAdi, string DepRolu, bool Status) {
+        public virtual int Insert(string DepAdi, string DepRolu, global::System.Nullable<int> Status) {
             if ((DepAdi == null)) {
                 throw new global::System.ArgumentNullException("DepAdi");
             }
@@ -4898,12 +4957,17 @@ SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(DepAdi));
             }
             if ((DepRolu == null)) {
-                throw new global::System.ArgumentNullException("DepRolu");
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(DepRolu));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((bool)(Status));
+            if ((Status.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Status.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4924,7 +4988,7 @@ SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string DepAdi, string DepRolu, bool Status, int Original_id, string Original_DepAdi, string Original_DepRolu, bool Original_Status, int id) {
+        public virtual int Update(string DepAdi, string DepRolu, global::System.Nullable<int> Status, int Original_id, string Original_DepAdi, string Original_DepRolu, global::System.Nullable<int> Original_Status, int id) {
             if ((DepAdi == null)) {
                 throw new global::System.ArgumentNullException("DepAdi");
             }
@@ -4932,12 +4996,17 @@ SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(DepAdi));
             }
             if ((DepRolu == null)) {
-                throw new global::System.ArgumentNullException("DepRolu");
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(DepRolu));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((bool)(Status));
+            if ((Status.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Status.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_id));
             if ((Original_DepAdi == null)) {
                 throw new global::System.ArgumentNullException("Original_DepAdi");
@@ -4946,13 +5015,22 @@ SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_DepAdi));
             }
             if ((Original_DepRolu == null)) {
-                throw new global::System.ArgumentNullException("Original_DepRolu");
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_DepRolu));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_DepRolu));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(Original_Status));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(id));
+            if ((Original_Status.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Status.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4973,7 +5051,7 @@ SELECT id, DepAdi, DepRolu, Status FROM Departmans WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string DepAdi, string DepRolu, bool Status, int Original_id, string Original_DepAdi, string Original_DepRolu, bool Original_Status) {
+        public virtual int Update(string DepAdi, string DepRolu, global::System.Nullable<int> Status, int Original_id, string Original_DepAdi, string Original_DepRolu, global::System.Nullable<int> Original_Status) {
             return this.Update(DepAdi, DepRolu, Status, Original_id, Original_DepAdi, Original_DepRolu, Original_Status, Original_id);
         }
     }
