@@ -47,7 +47,6 @@ namespace PerModule
         {
             PFormGetir.Controls.Clear();
             form.MdiParent = this;//bu formu parent olarak veriyoruz.
-            form.FormBorderStyle = FormBorderStyle.None;
             PFormGetir.Controls.Add(form);
             form.Show(); //formHome açılıyor.
         }

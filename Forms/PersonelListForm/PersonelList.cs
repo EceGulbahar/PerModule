@@ -12,6 +12,10 @@ using Microsoft.Office.Interop.Excel;
 using System.Data.SqlClient;
 using System.Configuration;
 using PerModule.Forms.DepartmanForm;
+using System.Text.RegularExpressions;
+//güvenli şifre oluşturmak için
+using System.IO;
+//klasör denetmelek input output için
 
 
 namespace PerModule.Forms.PersonelListForm
@@ -59,8 +63,8 @@ namespace PerModule.Forms.PersonelListForm
                     }
                 }
                 workbook.SaveAs(save.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-                app.Quit();
-                MessageBox.Show("Excele aktarma başarılı.");
+                //app.Quit();
+                this.Alert("Excele aktarma başarılı", Form_Alert.enmType.Success);
             }
         }
 
@@ -187,7 +191,7 @@ namespace PerModule.Forms.PersonelListForm
         {
             if (String.IsNullOrEmpty(txtDepGunYeniAd.Text) || String.IsNullOrEmpty(txtDepGuncelleDepAd.Text))
             {
-                MessageBox.Show("Tüm alanları doldurduğunuzdan emin olun!");
+                this.Alert("Tüm alanları doldurduğunuzdan emin olun!", Form_Alert.enmType.Warning);
             }
             else
             {
@@ -251,6 +255,10 @@ namespace PerModule.Forms.PersonelListForm
                     }
                 }
             }
+            else
+            {
+                this.Alert("Tüm alanları doldurduğunuzdan emin olun!", Form_Alert.enmType.Warning);
+            }
         }
 
         int a = 1;
@@ -259,7 +267,7 @@ namespace PerModule.Forms.PersonelListForm
         {
             if(String.IsNullOrEmpty(txtDepSec.Text))
             {
-                MessageBox.Show("Tüm alanları doldurduğunuzdan emin olun!");
+                this.Alert("Tüm alanları doldurduğunuzdan emin olun!", Form_Alert.enmType.Warning);
             }
             else
             {

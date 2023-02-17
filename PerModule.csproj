@@ -73,15 +73,21 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\..\..\..\..\..\..\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.2.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.2.1\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -91,6 +97,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Forms\AnasayfaForm\Anasayfa.cs">
@@ -208,6 +215,9 @@
     <EmbeddedResource Include="Forms\PasswordForgotForm\PasswordUpdate.resx">
       <DependentUpon>PasswordUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListForm\PersonCard.resx">
+      <DependentUpon>PersonCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelListForm\PersonelList.resx">
       <DependentUpon>PersonelList.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +239,11 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include=".editorconfig" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="packages.config" />
     <None Include="PERSONNELMODULEDataSet.xsc">
       <DependentUpon>PERSONNELMODULEDataSet.xsd</DependentUpon>
@@ -267,6 +282,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Resources\error.png" />
     <Content Include="Resources\icons8_cancel_25px.png" />
     <Content Include="Resources\info.png" />
