@@ -64,6 +64,12 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
       <HintPath>..\..\..\..\..\..\..\..\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox">
+      <HintPath>..\..\..\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
       <HintPath>..\..\..\BUNIFU TOOLS\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
     </Reference>
@@ -160,6 +166,72 @@
     <Compile Include="Forms\PersonelListForm\PersonCard.Designer.cs">
       <DependentUpon>PersonCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Basvurucard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Basvurucard.Designer.cs">
+      <DependentUpon>Basvurucard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Bordrocard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Bordrocard.Designer.cs">
+      <DependentUpon>Bordrocard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Hacizcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Hacizcard.Designer.cs">
+      <DependentUpon>Hacizcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Izinlercard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Izinlercard.Designer.cs">
+      <DependentUpon>Izinlercard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\KisiselBilgilercard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\KisiselBilgilercard.Designer.cs">
+      <DependentUpon>KisiselBilgilercard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Kvgmcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Kvgmcard.Designer.cs">
+      <DependentUpon>Kvgmcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\OnIzleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\OnIzleme.Designer.cs">
+      <DependentUpon>OnIzleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\OzlukBcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\OzlukBcard.Designer.cs">
+      <DependentUpon>OzlukBcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Raporlarcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Raporlarcard.Designer.cs">
+      <DependentUpon>Raporlarcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\UcretBcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\UcretBcard.Designer.cs">
+      <DependentUpon>UcretBcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Zimmetcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Zimmetcard.Designer.cs">
+      <DependentUpon>Zimmetcard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PersonelListForm\PersonelList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +289,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelListForm\PersonCard.resx">
       <DependentUpon>PersonCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Basvurucard.resx">
+      <DependentUpon>Basvurucard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Bordrocard.resx">
+      <DependentUpon>Bordrocard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Hacizcard.resx">
+      <DependentUpon>Hacizcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Izinlercard.resx">
+      <DependentUpon>Izinlercard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\KisiselBilgilercard.resx">
+      <DependentUpon>KisiselBilgilercard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Kvgmcard.resx">
+      <DependentUpon>Kvgmcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\OnIzleme.resx">
+      <DependentUpon>OnIzleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\OzlukBcard.resx">
+      <DependentUpon>OzlukBcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Raporlarcard.resx">
+      <DependentUpon>Raporlarcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\UcretBcard.resx">
+      <DependentUpon>UcretBcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Zimmetcard.resx">
+      <DependentUpon>Zimmetcard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelListForm\PersonelList.resx">
       <DependentUpon>PersonelList.cs</DependentUpon>
