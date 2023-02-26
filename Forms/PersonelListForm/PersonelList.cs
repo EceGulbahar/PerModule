@@ -16,7 +16,9 @@ using System.Text.RegularExpressions;
 //güvenli şifre oluşturmak için
 using System.IO;
 //klasör denetmelek input output için
-
+using PerModule.Forms.PersonelListForm;
+using PerModule.Forms.PersonelListForm.PersonCardDrop;
+using Point = System.Drawing.Point;
 
 namespace PerModule.Forms.PersonelListForm
 {
@@ -28,6 +30,10 @@ namespace PerModule.Forms.PersonelListForm
             InitializeComponent();
             
         }
+
+        //Formlar arası veri aktarımında kullanılacak değişkenler
+        public static string tcno, adi, soyadi, yetki, dogumtarihi, departmanı, rol, isegirist, bulke, bsehir;
+
 
         public void Alert(string msg, Form_Alert.enmType type)
         {
@@ -93,6 +99,7 @@ namespace PerModule.Forms.PersonelListForm
 
         void dropDepartmansDoldur()
         {
+            DropDepartmans.Items.Clear();
             
             if (baglan.State == ConnectionState.Closed)
             {
@@ -119,7 +126,7 @@ namespace PerModule.Forms.PersonelListForm
             dropDepartmansDoldur();
 
         }
-        string tckn = "";
+        
         int secilendeger;
         public void GridHugeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -127,7 +134,15 @@ namespace PerModule.Forms.PersonelListForm
             {
                 
                 secilendeger = GridHugeList.SelectedCells[0].RowIndex;
-                tckn = GridHugeList.Rows[secilendeger].Cells[0].Value.ToString(); //tckn değişkeni alıyoruz gridden
+                tcno = GridHugeList.Rows[secilendeger].Cells[0].Value.ToString(); //tckn değişkeni alıyoruz gridden
+                adi = GridHugeList.Rows[secilendeger].Cells[1].Value.ToString();
+                soyadi = GridHugeList.Rows[secilendeger].Cells[2].Value.ToString();
+                dogumtarihi = GridHugeList.Rows[secilendeger].Cells[3].Value.ToString();
+                departmanı = GridHugeList.Rows[secilendeger].Cells[4].Value.ToString();
+                rol = GridHugeList.Rows[secilendeger].Cells[5].Value.ToString();
+                isegirist = GridHugeList.Rows[secilendeger].Cells[6].Value.ToString();
+                bulke = GridHugeList.Rows[secilendeger].Cells[7].Value.ToString();
+                bsehir = GridHugeList.Rows[secilendeger].Cells[8].Value.ToString();
                 PersonCard personCard = new PersonCard();
                 personCard.Show();
             }
@@ -143,6 +158,17 @@ namespace PerModule.Forms.PersonelListForm
             /*Anasayfa anasayfa = new Anasayfa();
             FormGetir(anasayfa);
             //bu kısımda kaldık, tıklanmış gibi yapmayı deneyelim*/
+        }
+
+        private void btnPerEkle_Click(object sender, EventArgs e)
+        {
+            KisiselBilgilercard kisiselBilgilercard = new KisiselBilgilercard();
+            kisiselBilgilercard.Show();
+            
+            kisiselBilgilercard.Size = new Size(1396, 900);
+            kisiselBilgilercard.StartPosition = FormStartPosition.Manual;
+            kisiselBilgilercard.Location = new Point(400, 120);
+
         }
 
         private void btnDepGuncelle_Click(object sender, EventArgs e)
@@ -207,10 +233,6 @@ namespace PerModule.Forms.PersonelListForm
                 if (depguncelle.ExecuteNonQuery() > 0)
                 //MessageBox.Show("Güncelleme işlemi başarılı.");
                 this.Alert("Güncelleme işlemi başarılı", Form_Alert.enmType.Success);
-                // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-                this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
-                // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-                this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
                 dropDepartmansDoldur();
                 if (baglan.State == ConnectionState.Open)
                 {
@@ -281,8 +303,6 @@ namespace PerModule.Forms.PersonelListForm
                 depekle.Parameters.AddWithValue("@Status", a);
                 if (depekle.ExecuteNonQuery() > 0)
                     this.Alert("Departman ekleme işlemi başarılı", Form_Alert.enmType.Success);
-                // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-                this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
                 // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
                 this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
                 dropDepartmansDoldur();

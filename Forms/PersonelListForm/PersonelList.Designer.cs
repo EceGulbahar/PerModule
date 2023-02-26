@@ -285,6 +285,7 @@
             this.btnPerEkle.TextMarginLeft = 0;
             this.btnPerEkle.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnPerEkle.UseDefaultRadiusAndThickness = true;
+            this.btnPerEkle.Click += new System.EventHandler(this.btnPerEkle_Click);
             // 
             // txtSearchboxPerList
             // 

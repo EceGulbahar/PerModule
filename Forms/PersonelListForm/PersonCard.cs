@@ -34,7 +34,9 @@ namespace PerModule.Forms.PersonelListForm
 
         private void PersonCard_Load(object sender, EventArgs e)
         {
-
+            OnIzleme onizleme = new OnIzleme();
+            FormGetir(onizleme);
+            lblAdSoyad.Text = PersonelList.adi + " " + PersonelList.soyadi;
         }
         public void FormGetir(Form form)
         {
