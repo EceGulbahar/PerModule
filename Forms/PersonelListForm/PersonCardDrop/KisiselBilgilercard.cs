@@ -53,6 +53,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
         {
             btnClose.Visible = false;
         }
+
         private void KisiselBilgilercard_Load(object sender, EventArgs e)
         {
             //button.Click += new EventHandler();
@@ -137,6 +138,16 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnPersonnelCikarKB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPersonnelEkleKB_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

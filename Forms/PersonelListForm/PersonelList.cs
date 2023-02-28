@@ -19,6 +19,8 @@ using System.IO;
 using PerModule.Forms.PersonelListForm;
 using PerModule.Forms.PersonelListForm.PersonCardDrop;
 using Point = System.Drawing.Point;
+using System.IO.Ports;
+using System.Reflection;
 
 namespace PerModule.Forms.PersonelListForm
 {
@@ -160,14 +162,25 @@ namespace PerModule.Forms.PersonelListForm
             //bu kısımda kaldık, tıklanmış gibi yapmayı deneyelim*/
         }
 
+        
         private void btnPerEkle_Click(object sender, EventArgs e)
         {
+            BackModel backmodel = new BackModel();
             KisiselBilgilercard kisiselBilgilercard = new KisiselBilgilercard();
-            kisiselBilgilercard.Show();
             kisiselBilgilercard.CikarGizle();
             kisiselBilgilercard.Size = new Size(1396, 900);
             kisiselBilgilercard.StartPosition = FormStartPosition.Manual;
+            backmodel.FormBorderStyle = FormBorderStyle.None;
             kisiselBilgilercard.Location = new Point(400, 120);
+            backmodel.Opacity = .50d;
+            backmodel.BackColor = Color.Black;
+            backmodel.Size =  new Size(1920, 1059);
+            //backmodel.Location = new Point(114, 21);
+            backmodel.ShowInTaskbar = false;
+            backmodel.Show();
+            kisiselBilgilercard.Owner = backmodel;
+            kisiselBilgilercard.ShowDialog();
+            backmodel.Dispose();
 
         }
 

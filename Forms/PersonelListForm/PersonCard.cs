@@ -24,19 +24,15 @@ namespace PerModule.Forms.PersonelListForm
             this.IsMdiContainer = true; //Bu kod içinde form açılabileceği anlamına geliyor.
             Controls.OfType<MdiClient>().FirstOrDefault().BackColor = System.Drawing.ColorTranslator.FromHtml("#495057");
             pnlbuttons.BackColor = System.Drawing.ColorTranslator.FromHtml("#495057");
+            
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        
 
         private void PersonCard_Load(object sender, EventArgs e)
         {
             OnIzleme onizleme = new OnIzleme();
             FormGetir(onizleme);
             lblAdSoyad.Text = PersonelList.adi + " " + PersonelList.soyadi;
+            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#495057");
         }
         public void FormGetir(Form form)
         {
@@ -55,6 +51,7 @@ namespace PerModule.Forms.PersonelListForm
         private void btnKisiselB_Click(object sender, EventArgs e)
         {
             KisiselBilgilercard kgcard = new KisiselBilgilercard();
+            kgcard.CloseGizle();
             FormGetir(kgcard);
         }
 
@@ -110,6 +107,11 @@ namespace PerModule.Forms.PersonelListForm
         {
             Kvgmcard kvgm = new Kvgmcard();
             FormGetir(kvgm);
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

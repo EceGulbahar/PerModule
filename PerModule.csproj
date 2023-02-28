@@ -148,6 +148,12 @@
     <Compile Include="Forms\AnasayfaForm\Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BackModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BackModel.Designer.cs">
+      <DependentUpon>BackModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DepartmanForm\Departmans.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +304,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\AnasayfaForm\Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BackModel.resx">
+      <DependentUpon>BackModel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DepartmanForm\Departmans.resx">
       <DependentUpon>Departmans.cs</DependentUpon>

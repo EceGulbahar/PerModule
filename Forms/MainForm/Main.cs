@@ -62,15 +62,6 @@ namespace PerModule
 
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            DialogResult cevap = MessageBox.Show("Uygulamadan çıkmak istiyor musunuz?", "Çıkış Yap", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (cevap == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
         private void btnAnasayfa_Click(object sender, EventArgs e)
         {
             Anasayfa anasayfa = new Anasayfa();
@@ -218,6 +209,15 @@ namespace PerModule
         private void btnBordro_MouseLeave(object sender, EventArgs e)
         {
             btnBordro.BackColor = System.Drawing.ColorTranslator.FromHtml("#495057");
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            DialogResult cevap = MessageBox.Show("Uygulamadan çıkmak istiyor musunuz?", "Çıkış Yap", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (cevap == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
