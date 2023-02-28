@@ -207,6 +207,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties175 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties176 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.label16 = new System.Windows.Forms.Label();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -362,6 +363,7 @@
             this.DropKBDepDoldur = new Bunifu.UI.WinForms.BunifuDropdown();
             this.btnClose = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lblKBWhatudoing = new System.Windows.Forms.Label();
+            this.btnPersonnelCikarKB = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grupCalismaGun.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox6)).BeginInit();
@@ -1068,7 +1070,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 2375);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 2343);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(386, 77);
             this.pictureBox1.TabIndex = 37;
@@ -5383,24 +5385,24 @@
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label56.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.label56.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label56.Location = new System.Drawing.Point(28, 2360);
+            this.label56.Location = new System.Drawing.Point(921, 347);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(198, 39);
+            this.label56.Size = new System.Drawing.Size(122, 22);
             this.label56.TabIndex = 150;
-            this.label56.Text = "Departman";
+            this.label56.Text = "Departman:";
             // 
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label57.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label57.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label57.Location = new System.Drawing.Point(594, 2360);
+            this.label57.Location = new System.Drawing.Point(1001, 396);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(63, 39);
+            this.label57.Size = new System.Drawing.Size(42, 22);
             this.label57.TabIndex = 151;
-            this.label57.Text = "Rol";
+            this.label57.Text = "Rol:";
             // 
             // bunifuTextBox36
             // 
@@ -5430,7 +5432,7 @@
             this.bunifuTextBox36.IconRight = null;
             this.bunifuTextBox36.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox36.Lines = new string[0];
-            this.bunifuTextBox36.Location = new System.Drawing.Point(663, 2361);
+            this.bunifuTextBox36.Location = new System.Drawing.Point(1042, 391);
             this.bunifuTextBox36.MaxLength = 32767;
             this.bunifuTextBox36.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox36.Modified = false;
@@ -5466,7 +5468,7 @@
             this.bunifuTextBox36.SelectionLength = 0;
             this.bunifuTextBox36.SelectionStart = 0;
             this.bunifuTextBox36.ShortcutsEnabled = true;
-            this.bunifuTextBox36.Size = new System.Drawing.Size(301, 39);
+            this.bunifuTextBox36.Size = new System.Drawing.Size(307, 35);
             this.bunifuTextBox36.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox36.TabIndex = 152;
             this.bunifuTextBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -5497,7 +5499,7 @@
             this.DropKBDepDoldur.FillDropDown = true;
             this.DropKBDepDoldur.FillIndicator = false;
             this.DropKBDepDoldur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DropKBDepDoldur.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DropKBDepDoldur.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.DropKBDepDoldur.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.DropKBDepDoldur.FormattingEnabled = true;
             this.DropKBDepDoldur.Icon = null;
@@ -5507,13 +5509,13 @@
             this.DropKBDepDoldur.ItemBackColor = System.Drawing.Color.Silver;
             this.DropKBDepDoldur.ItemBorderColor = System.Drawing.Color.WhiteSmoke;
             this.DropKBDepDoldur.ItemForeColor = System.Drawing.Color.Black;
-            this.DropKBDepDoldur.ItemHeight = 32;
+            this.DropKBDepDoldur.ItemHeight = 26;
             this.DropKBDepDoldur.ItemHighLightColor = System.Drawing.Color.Goldenrod;
             this.DropKBDepDoldur.ItemHighLightForeColor = System.Drawing.Color.White;
             this.DropKBDepDoldur.ItemTopMargin = 3;
-            this.DropKBDepDoldur.Location = new System.Drawing.Point(232, 2361);
+            this.DropKBDepDoldur.Location = new System.Drawing.Point(1044, 343);
             this.DropKBDepDoldur.Name = "DropKBDepDoldur";
-            this.DropKBDepDoldur.Size = new System.Drawing.Size(340, 38);
+            this.DropKBDepDoldur.Size = new System.Drawing.Size(303, 32);
             this.DropKBDepDoldur.TabIndex = 153;
             this.DropKBDepDoldur.Text = null;
             this.DropKBDepDoldur.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -5590,7 +5592,7 @@
             this.btnClose.OnIdleState.BorderThickness = 1;
             this.btnClose.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnClose.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            this.btnClose.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.OnIdleState.IconLeftImage")));
+            this.btnClose.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnClose.OnIdleState.IconLeftImage")));
             this.btnClose.OnIdleState.IconRightImage = null;
             this.btnClose.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnClose.OnPressedState.BorderRadius = 1;
@@ -5620,6 +5622,95 @@
             this.lblKBWhatudoing.TabIndex = 155;
             this.lblKBWhatudoing.Text = "Personel Bilgileri";
             // 
+            // btnPersonnelCikarKB
+            // 
+            this.btnPersonnelCikarKB.AllowAnimations = true;
+            this.btnPersonnelCikarKB.AllowMouseEffects = true;
+            this.btnPersonnelCikarKB.AllowToggling = false;
+            this.btnPersonnelCikarKB.AnimationSpeed = 200;
+            this.btnPersonnelCikarKB.AutoGenerateColors = true;
+            this.btnPersonnelCikarKB.AutoRoundBorders = false;
+            this.btnPersonnelCikarKB.AutoSizeLeftIcon = true;
+            this.btnPersonnelCikarKB.AutoSizeRightIcon = true;
+            this.btnPersonnelCikarKB.BackColor = System.Drawing.Color.Transparent;
+            this.btnPersonnelCikarKB.BackColor1 = System.Drawing.Color.Brown;
+            this.btnPersonnelCikarKB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPersonnelCikarKB.BackgroundImage")));
+            this.btnPersonnelCikarKB.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPersonnelCikarKB.ButtonText = "PERSONELİ ÇIKAR";
+            this.btnPersonnelCikarKB.ButtonTextMarginLeft = 0;
+            this.btnPersonnelCikarKB.ColorContrastOnClick = 45;
+            this.btnPersonnelCikarKB.ColorContrastOnHover = 45;
+            this.btnPersonnelCikarKB.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnPersonnelCikarKB.CustomizableEdges = borderEdges3;
+            this.btnPersonnelCikarKB.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPersonnelCikarKB.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnPersonnelCikarKB.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnPersonnelCikarKB.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnPersonnelCikarKB.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnPersonnelCikarKB.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPersonnelCikarKB.ForeColor = System.Drawing.Color.White;
+            this.btnPersonnelCikarKB.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonnelCikarKB.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnPersonnelCikarKB.IconLeftPadding = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.btnPersonnelCikarKB.IconMarginLeft = 11;
+            this.btnPersonnelCikarKB.IconPadding = 10;
+            this.btnPersonnelCikarKB.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPersonnelCikarKB.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnPersonnelCikarKB.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnPersonnelCikarKB.IconSize = 20;
+            this.btnPersonnelCikarKB.IdleBorderColor = System.Drawing.Color.Brown;
+            this.btnPersonnelCikarKB.IdleBorderRadius = 1;
+            this.btnPersonnelCikarKB.IdleBorderThickness = 1;
+            this.btnPersonnelCikarKB.IdleFillColor = System.Drawing.Color.Brown;
+            this.btnPersonnelCikarKB.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnPersonnelCikarKB.IdleIconLeftImage")));
+            this.btnPersonnelCikarKB.IdleIconRightImage = null;
+            this.btnPersonnelCikarKB.IndicateFocus = false;
+            this.btnPersonnelCikarKB.Location = new System.Drawing.Point(661, 2355);
+            this.btnPersonnelCikarKB.Name = "btnPersonnelCikarKB";
+            this.btnPersonnelCikarKB.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnPersonnelCikarKB.OnDisabledState.BorderRadius = 1;
+            this.btnPersonnelCikarKB.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPersonnelCikarKB.OnDisabledState.BorderThickness = 1;
+            this.btnPersonnelCikarKB.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnPersonnelCikarKB.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnPersonnelCikarKB.OnDisabledState.IconLeftImage = null;
+            this.btnPersonnelCikarKB.OnDisabledState.IconRightImage = null;
+            this.btnPersonnelCikarKB.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            this.btnPersonnelCikarKB.onHoverState.BorderRadius = 1;
+            this.btnPersonnelCikarKB.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPersonnelCikarKB.onHoverState.BorderThickness = 1;
+            this.btnPersonnelCikarKB.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(137)))), ((int)(((byte)(137)))));
+            this.btnPersonnelCikarKB.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnPersonnelCikarKB.onHoverState.IconLeftImage = null;
+            this.btnPersonnelCikarKB.onHoverState.IconRightImage = null;
+            this.btnPersonnelCikarKB.OnIdleState.BorderColor = System.Drawing.Color.Brown;
+            this.btnPersonnelCikarKB.OnIdleState.BorderRadius = 1;
+            this.btnPersonnelCikarKB.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPersonnelCikarKB.OnIdleState.BorderThickness = 1;
+            this.btnPersonnelCikarKB.OnIdleState.FillColor = System.Drawing.Color.Brown;
+            this.btnPersonnelCikarKB.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnPersonnelCikarKB.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnPersonnelCikarKB.OnIdleState.IconLeftImage")));
+            this.btnPersonnelCikarKB.OnIdleState.IconRightImage = null;
+            this.btnPersonnelCikarKB.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.btnPersonnelCikarKB.OnPressedState.BorderRadius = 1;
+            this.btnPersonnelCikarKB.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPersonnelCikarKB.OnPressedState.BorderThickness = 1;
+            this.btnPersonnelCikarKB.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.btnPersonnelCikarKB.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnPersonnelCikarKB.OnPressedState.IconLeftImage = null;
+            this.btnPersonnelCikarKB.OnPressedState.IconRightImage = null;
+            this.btnPersonnelCikarKB.Size = new System.Drawing.Size(325, 44);
+            this.btnPersonnelCikarKB.TabIndex = 157;
+            this.btnPersonnelCikarKB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPersonnelCikarKB.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnPersonnelCikarKB.TextMarginLeft = 0;
+            this.btnPersonnelCikarKB.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnPersonnelCikarKB.UseDefaultRadiusAndThickness = true;
+            // 
             // KisiselBilgilercard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5627,6 +5718,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.ClientSize = new System.Drawing.Size(1396, 490);
+            this.Controls.Add(this.btnPersonnelCikarKB);
             this.Controls.Add(this.lblKBWhatudoing);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.DropKBDepDoldur);
@@ -5950,5 +6042,6 @@
         private Bunifu.UI.WinForms.BunifuDropdown DropKBDepDoldur;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnClose;
         private System.Windows.Forms.Label lblKBWhatudoing;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnPersonnelCikarKB;
     }
 }

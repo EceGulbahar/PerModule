@@ -44,6 +44,15 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 baglan.Close();
             }
         }
+
+        public void CikarGizle()
+        {
+            btnPersonnelCikarKB.Visible = false;
+        }
+        public void CloseGizle()
+        {
+            btnClose.Visible = false;
+        }
         private void KisiselBilgilercard_Load(object sender, EventArgs e)
         {
             //button.Click += new EventHandler();

@@ -164,7 +164,7 @@ namespace PerModule.Forms.PersonelListForm
         {
             KisiselBilgilercard kisiselBilgilercard = new KisiselBilgilercard();
             kisiselBilgilercard.Show();
-            
+            kisiselBilgilercard.CikarGizle();
             kisiselBilgilercard.Size = new Size(1396, 900);
             kisiselBilgilercard.StartPosition = FormStartPosition.Manual;
             kisiselBilgilercard.Location = new Point(400, 120);
