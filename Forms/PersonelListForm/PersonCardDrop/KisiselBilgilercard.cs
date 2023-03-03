@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PerModule.Forms.DepartmanForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -28,7 +29,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 
          public void dropDepartmansDoldur()
         {
-            DropKBDepDoldur.Items.Clear();
+            DropKBDepDoldurKB.Items.Clear();
             if (baglan.State == ConnectionState.Closed)
             {
                 baglan.Open();
@@ -37,7 +38,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             SqlDataReader dr = doldur.ExecuteReader();
             while (dr.Read())
             {
-                DropKBDepDoldur.Items.Add(dr[0]);
+                DropKBDepDoldurKB.Items.Add(dr[0]);
             }
             if (baglan.State == ConnectionState.Open)
             {
@@ -54,28 +55,27 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             btnClose.Visible = false;
         }
 
-        private void KisiselBilgilercard_Load(object sender, EventArgs e)
+        public void KisiselBilgilercard_Load(object sender, EventArgs e)
         {
-            //button.Click += new EventHandler();
-
             dropDepartmansDoldur();
 
-            txtKimlikNoKB.MaxLength = 11;
+            txtTcknKB.MaxLength = 11;
             txtIBANKB.MaxLength = 26;
             txtCepTelKB.MaxLength = 12;
             txtIsTelKB.MaxLength = 12;
             txtWhatsAppTelKB.MaxLength = 12;
             txtYakin1KB.MaxLength = 12;
             txtYakin2KB.MaxLength = 12;
+            
 
             DateTime dtdogumtarihi = DateTime.Now;
             int yil = int.Parse(dtdogumtarihi.ToString("yyyy"));
             int ay = int.Parse(dtdogumtarihi.ToString("MM"));
             int gun = int.Parse(dtdogumtarihi.ToString("dd"));
 
-            DTDogumTarihi.MinDate = new DateTime(1960,1,1);
-            DTDogumTarihi.MaxDate = new DateTime(yil - 18, ay, gun);
-            DTDogumTarihi.Format = DateTimePickerFormat.Short;
+            DTDogumTarihiKB.MinDate = new DateTime(1960,1,1);
+            DTDogumTarihiKB.MaxDate = new DateTime(yil - 18, ay, gun);
+            DTDogumTarihiKB.Format = DateTimePickerFormat.Short;
             DTEhliyetA.MinDate = new DateTime(1960, 1, 1);
             DTEhliyetA.MaxDate = new DateTime(yil - 18, ay, gun);
             DTEhliyetA.Format = DateTimePickerFormat.Short;
@@ -145,9 +145,86 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 
         }
 
-        private void btnPersonnelEkleKB_Click(object sender, EventArgs e)
+        
+
+
+        public void YokEkle()
         {
 
+            DateTime dtbaslangictarihi = DateTime.Now;
+            if (String.IsNullOrEmpty(txtAdKB.Text) || String.IsNullOrEmpty(txtSoyadKB.Text) || String.IsNullOrEmpty(txtDogumYeriKB.Text) || String.IsNullOrEmpty(DTDogumTarihiKB.Text) || String.IsNullOrEmpty(dropCinsiyetKB.Text) || String.IsNullOrEmpty(txtUyrukKB.Text) || String.IsNullOrEmpty(dropSEhliyetKB.Text) || String.IsNullOrEmpty(DTEhliyetA.Text) || String.IsNullOrEmpty(txtTcknKB.Text) || String.IsNullOrEmpty(dropKanGrubuKB.Text) || String.IsNullOrEmpty(dropMedeniHalKB.Text) || String.IsNullOrEmpty(dropSigaraKKB.Text) || String.IsNullOrEmpty(txtSicilNoKB.Text) || String.IsNullOrEmpty(DropKBDepDoldurKB.Text) || String.IsNullOrEmpty(txtRolKB.Text) || String.IsNullOrEmpty(txtEpostaKB.Text) || String.IsNullOrEmpty(dropAskerlikKB.Text) || String.IsNullOrEmpty(txtIBANKB.Text) || String.IsNullOrEmpty(txtCepTelKB.Text) || String.IsNullOrEmpty(txtEvAdresi.Text) || String.IsNullOrEmpty(txtUlkeKB.Text) || String.IsNullOrEmpty(txtSehirKB.Text))
+            {
+                this.Alert("Tüm alanları doldurduğunuzdan emin olun!", Form_Alert.enmType.Warning);
+            }
+            else
+            {
+                if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                }
+
+                string sqlperekle = "insert into Personnels(PerTckn,PerAd,PerSoyad,PerDogumTarihi,PerDogumYeri,PerUyruk,PerEhliyetS,PerCinsiyet,PerMail,PerTel,PerKanGrubu,PerMedeniHali,PerSicilNo,PerBaslangicT,PerDEhliyetAlis,PerSigaraK,PerAskerlik,PerIBAN) values(@PerTckn,@PerAd,@PerSoyad,@PerDogumTarihi,@PerDogumYeri,@PerUyruk,@PerEhliyetS,@PerCinsiyet,@PerMail,@PerTel,@PerKanGrubu,@PerMedeniHali,@PerSicilNo,@PerBaslangicT,@PerDEhliyetAlis,@PerSigaraK,@PerAskerlik,@PerIBAN)";
+                SqlCommand perekle = new SqlCommand(sqlperekle, baglan);
+                
+                perekle.Parameters.AddWithValue("@PerTckn", txtTcknKB.Text);
+                perekle.Parameters.AddWithValue("@PerAd", txtAdKB.Text);
+                perekle.Parameters.AddWithValue("@PerSoyad", txtSoyadKB.Text);
+                perekle.Parameters.AddWithValue("@PerDogumTarihi", DTDogumTarihiKB.Value);
+                perekle.Parameters.AddWithValue("@PerDogumYeri", txtDogumYeriKB.Text);
+                perekle.Parameters.AddWithValue("@PerUyruk", txtUyrukKB.Text);
+                perekle.Parameters.AddWithValue("@PerEhliyetS", dropSEhliyetKB.Text);
+                perekle.Parameters.AddWithValue("@PerDEhliyetAlis", DTEhliyetA.Value);
+                perekle.Parameters.AddWithValue("@PerCinsiyet", dropCinsiyetKB.Text);
+                perekle.Parameters.AddWithValue("@PerMail", txtEpostaKB.Text);
+                perekle.Parameters.AddWithValue("@PerTel", txtCepTelKB.Text);
+                perekle.Parameters.AddWithValue("@PerSicilNo", txtSicilNoKB.Text);
+                perekle.Parameters.AddWithValue("@PerSigaraK", dropSigaraKKB.Text);
+                perekle.Parameters.AddWithValue("@PerAskerlik", dropAskerlikKB.Text);
+                perekle.Parameters.AddWithValue("@PerIBAN", txtIBANKB.Text);
+                //perekle.Parameters.AddWithValue("@Departmanid", departmanid);
+                perekle.Parameters.AddWithValue("@PerKanGrubu", dropKanGrubuKB.Text);
+                perekle.Parameters.AddWithValue("@PerMedeniHali", dropMedeniHalKB.Text);
+                //perekle.Parameters.AddWithValue("@PerAdres", txtEvAdresi.Text);
+                perekle.Parameters.AddWithValue("@PerBaslangicT", dtbaslangictarihi);
+                perekle.ExecuteNonQuery();
+
+                string sqlperekledepartman = "insert into Departmans(DepAdi,DepRolu) values(@DepAdi,@DepRolu)";
+                SqlCommand perekledepartman = new SqlCommand(sqlperekledepartman, baglan);
+                perekledepartman.Parameters.AddWithValue("@DepAdi", DropKBDepDoldurKB.Text);
+                perekledepartman.Parameters.AddWithValue("@DepAdi", txtRolKB.Text);
+                perekledepartman.ExecuteNonQuery();
+
+                string sqlperekleadres = "insert into Adreses(AdresUlke,AdresSehir,AdresEv) values(@AdresUlke,@AdresSehir,@AdresEv)";
+                SqlCommand perekleadres = new SqlCommand(sqlperekleadres,baglan);
+                perekleadres.Parameters.AddWithValue("@AdresUlke", txtUlkeKB.Text);
+                perekleadres.Parameters.AddWithValue("@AdresSehir", txtSehirKB.Text);
+                perekleadres.Parameters.AddWithValue("@AdresEv", txtEvAdresi.Text);
+                perekleadres.ExecuteNonQuery();
+
+                if (baglan.State == ConnectionState.Open)
+                {
+                    baglan.Close();
+                }
+                //temizle();
+                this.Hide();
+            }
+
+           }
+
+        private void btnPersonnelGuncelleKB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPerEkleKB_Click(object sender, EventArgs e)
+        {
+            YokEkle();
+        }
+
+        public void btnguncellegizle()
+        {
+            btnPerEkleKB.Visible = true;
+            btnPersonnelGuncelleKB.Visible=false;
         }
     }
 }

@@ -168,6 +168,7 @@ namespace PerModule.Forms.PersonelListForm
             BackModel backmodel = new BackModel();
             KisiselBilgilercard kisiselBilgilercard = new KisiselBilgilercard();
             kisiselBilgilercard.CikarGizle();
+            kisiselBilgilercard.btnguncellegizle();
             kisiselBilgilercard.Size = new Size(1396, 900);
             kisiselBilgilercard.StartPosition = FormStartPosition.Manual;
             backmodel.FormBorderStyle = FormBorderStyle.None;
