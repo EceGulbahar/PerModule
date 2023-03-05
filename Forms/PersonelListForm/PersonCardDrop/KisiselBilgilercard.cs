@@ -14,7 +14,10 @@ using System.Windows.Forms;
 namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 {
     public partial class KisiselBilgilercard : Form
+
     {
+        int depid = 0;
+        int adresid = 0;
         SqlConnection baglan = new SqlConnection(ConfigurationManager.ConnectionStrings["PerModule.Properties.Settings.PerModuleCS"].ConnectionString);
         public KisiselBilgilercard()
         {
@@ -163,7 +166,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                     baglan.Open();
                 }
 
-                string sqlperekle = "insert into Personnels(PerTckn,PerAd,PerSoyad,PerDogumTarihi,PerDogumYeri,PerUyruk,PerEhliyetS,PerCinsiyet,PerMail,PerTel,PerKanGrubu,PerMedeniHali,PerSicilNo,PerBaslangicT,PerDEhliyetAlis,PerSigaraK,PerAskerlik,PerIBAN) values(@PerTckn,@PerAd,@PerSoyad,@PerDogumTarihi,@PerDogumYeri,@PerUyruk,@PerEhliyetS,@PerCinsiyet,@PerMail,@PerTel,@PerKanGrubu,@PerMedeniHali,@PerSicilNo,@PerBaslangicT,@PerDEhliyetAlis,@PerSigaraK,@PerAskerlik,@PerIBAN)";
+                string sqlperekle = "insert into Personnels(PerTckn,PerAd,PerSoyad,PerDogumTarihi,PerDogumYeri,PerUyruk,PerEhliyetS,PerCinsiyet,PerMail,PerTel,PerKanGrubu,PerMedeniHali,PerSicilNo,PerBaslamaT,PerDEhliyetAlis,PerSigaraK,PerAskerlik,PerIBAN) values(@PerTckn,@PerAd,@PerSoyad,@PerDogumTarihi,@PerDogumYeri,@PerUyruk,@PerEhliyetS,@PerCinsiyet,@PerMail,@PerTel,@PerKanGrubu,@PerMedeniHali,@PerSicilNo,@PerBaslamaT,@PerDEhliyetAlis,@PerSigaraK,@PerAskerlik,@PerIBAN)";
                 SqlCommand perekle = new SqlCommand(sqlperekle, baglan);
                 
                 perekle.Parameters.AddWithValue("@PerTckn", txtTcknKB.Text);
@@ -185,13 +188,13 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 perekle.Parameters.AddWithValue("@PerKanGrubu", dropKanGrubuKB.Text);
                 perekle.Parameters.AddWithValue("@PerMedeniHali", dropMedeniHalKB.Text);
                 //perekle.Parameters.AddWithValue("@PerAdres", txtEvAdresi.Text);
-                perekle.Parameters.AddWithValue("@PerBaslangicT", dtbaslangictarihi);
+                perekle.Parameters.AddWithValue("@PerBaslamaT", dtbaslangictarihi);
                 perekle.ExecuteNonQuery();
 
                 string sqlperekledepartman = "insert into Departmans(DepAdi,DepRolu) values(@DepAdi,@DepRolu)";
                 SqlCommand perekledepartman = new SqlCommand(sqlperekledepartman, baglan);
                 perekledepartman.Parameters.AddWithValue("@DepAdi", DropKBDepDoldurKB.Text);
-                perekledepartman.Parameters.AddWithValue("@DepAdi", txtRolKB.Text);
+                perekledepartman.Parameters.AddWithValue("@DepRolu", txtRolKB.Text);
                 perekledepartman.ExecuteNonQuery();
 
                 string sqlperekleadres = "insert into Adreses(AdresUlke,AdresSehir,AdresEv) values(@AdresUlke,@AdresSehir,@AdresEv)";
@@ -219,12 +222,56 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
         private void btnPerEkleKB_Click(object sender, EventArgs e)
         {
             YokEkle();
+            Depidcek();
+            Adresidcek();
         }
 
         public void btnguncellegizle()
         {
             btnPerEkleKB.Visible = true;
             btnPersonnelGuncelleKB.Visible=false;
+        }
+
+        public void Depidcek()
+        {
+            baglan.Open();
+            SqlCommand commanddepid = new SqlCommand("SELECT TOP 1 id FROM Departmans ORDER BY id DESC", baglan);
+            commanddepid.ExecuteScalar();
+            SqlDataReader reader = commanddepid.ExecuteReader();
+
+            // Verileri işle
+            while (reader.Read())
+            {
+                depid = reader.GetInt32(0);
+                // Verileri konsola yazdırabilirsiniz
+            }
+            // Okuyucuyu kapat
+            reader.Close();
+
+            SqlCommand commanddepidal = new SqlCommand("insert into Personnels(Departmanid) values(@Departmanid)", baglan);
+            commanddepidal.Parameters.AddWithValue("@Departmanid", depid);
+            baglan.Close();
+        }
+
+        public void Adresidcek()
+        {
+            baglan.Open();
+            SqlCommand commandadresid = new SqlCommand("SELECT TOP 1 id FROM Adreses ORDER BY id DESC", baglan);
+            commandadresid.ExecuteScalar();
+            SqlDataReader reader = commandadresid.ExecuteReader();
+
+            // Verileri işle
+            while (reader.Read())
+            {
+                adresid = reader.GetInt32(0);
+                // Verileri konsola yazdırabilirsiniz
+            }
+            // Okuyucuyu kapat
+            reader.Close();
+
+            SqlCommand commandadresidal = new SqlCommand("insert into Personnels(Adresid) values(@Adresid)", baglan);
+            commandadresidal.Parameters.AddWithValue("@Adresid", adresid);
+            baglan.Close();
         }
     }
 }

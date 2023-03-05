@@ -5860,7 +5860,7 @@
             this.btnPerEkleKB.OnIdleState.BorderThickness = 1;
             this.btnPerEkleKB.OnIdleState.FillColor = System.Drawing.Color.SeaGreen;
             this.btnPerEkleKB.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPerEkleKB.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.OnIdleState.IconLeftImage")));
+            this.btnPerEkleKB.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnPerEkleKB.OnIdleState.IconLeftImage")));
             this.btnPerEkleKB.OnIdleState.IconRightImage = null;
             this.btnPerEkleKB.OnPressedState.BorderColor = System.Drawing.Color.SeaGreen;
             this.btnPerEkleKB.OnPressedState.BorderRadius = 1;
