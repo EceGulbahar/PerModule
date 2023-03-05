@@ -16,9 +16,8 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
     public partial class KisiselBilgilercard : Form
 
     {
-        int eklemeid = 0;
-        int depid = 0;
-        int adresid = 0;
+        
+
         SqlConnection baglan = new SqlConnection(ConfigurationManager.ConnectionStrings["PerModule.Properties.Settings.PerModuleCS"].ConnectionString);
         public KisiselBilgilercard()
         {
@@ -38,7 +37,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             {
                 baglan.Open();
             }
-            SqlCommand doldur = new SqlCommand("SELECT DepAdi FROM Departmans", baglan);
+            SqlCommand doldur = new SqlCommand("SELECT Departmanlar FROM DepartmanDrop", baglan);
             SqlDataReader dr = doldur.ExecuteReader();
             while (dr.Read())
             {
@@ -70,6 +69,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             txtWhatsAppTelKB.MaxLength = 12;
             txtYakin1KB.MaxLength = 12;
             txtYakin2KB.MaxLength = 12;
+            txtSicilNoKB.MaxLength = 26;
             
 
             DateTime dtdogumtarihi = DateTime.Now;
@@ -210,7 +210,6 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                     baglan.Close();
                 }
                 //temizle();
-                this.Hide();
             }
 
            }
@@ -222,16 +221,16 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 
         private void btnPerEkleKB_Click(object sender, EventArgs e)
         {
+
             try
             {
                 YokEkle();
                 Depidcek();
-                Adresidcek();
                 this.Alert("Personel ekleme başarılı", Form_Alert.enmType.Success);
             }
             catch 
             {
-                this.Alert("Tüm alanları doldurduğunuzdan emin olun!", Form_Alert.enmType.Warning);
+                this.Alert("Bir şeyler ters gitti", Form_Alert.enmType.Error);
             }
         }
 
@@ -243,6 +242,9 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 
         public void Depidcek()
         {
+            int eklemeid = 0;
+            int depid = 0;
+            int adresid = 0;
             DateTime dtbaslangictarihi = DateTime.Now;
             if (String.IsNullOrEmpty(txtAdKB.Text) || String.IsNullOrEmpty(txtSoyadKB.Text) || String.IsNullOrEmpty(txtDogumYeriKB.Text) || String.IsNullOrEmpty(DTDogumTarihiKB.Text) || String.IsNullOrEmpty(dropCinsiyetKB.Text) || String.IsNullOrEmpty(txtUyrukKB.Text) || String.IsNullOrEmpty(dropSEhliyetKB.Text) || String.IsNullOrEmpty(DTEhliyetA.Text) || String.IsNullOrEmpty(txtTcknKB.Text) || String.IsNullOrEmpty(dropKanGrubuKB.Text) || String.IsNullOrEmpty(dropMedeniHalKB.Text) || String.IsNullOrEmpty(dropSigaraKKB.Text) || String.IsNullOrEmpty(txtSicilNoKB.Text) || String.IsNullOrEmpty(DropKBDepDoldurKB.Text) || String.IsNullOrEmpty(txtRolKB.Text) || String.IsNullOrEmpty(txtEpostaKB.Text) || String.IsNullOrEmpty(dropAskerlikKB.Text) || String.IsNullOrEmpty(txtIBANKB.Text) || String.IsNullOrEmpty(txtCepTelKB.Text) || String.IsNullOrEmpty(txtEvAdresi.Text) || String.IsNullOrEmpty(txtUlkeKB.Text) || String.IsNullOrEmpty(txtSehirKB.Text))
             {
@@ -250,6 +252,21 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             }
             else
             {
+                baglan.Open();
+                SqlCommand commandpersonnelid = new SqlCommand("SELECT TOP 1 id FROM Personnels ORDER BY id DESC", baglan);
+                commandpersonnelid.ExecuteScalar();
+                SqlDataReader reader2 = commandpersonnelid.ExecuteReader();
+
+                // Verileri işle
+                while (reader2.Read())
+                {
+                    eklemeid = reader2.GetInt32(0);
+                    // Verileri konsola yazdırabilirsiniz
+                }
+                // Okuyucuyu kapat
+                reader2.Close();
+                baglan.Close();
+
                 baglan.Open();
                 SqlCommand commanddepid = new SqlCommand("SELECT TOP 1 id FROM Departmans ORDER BY id DESC", baglan);
                 commanddepid.ExecuteScalar();
@@ -266,64 +283,30 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 
                 SqlCommand commanddepidal = new SqlCommand("update Personnels set Departmanid=@Departmanid where id=@Eklemeid", baglan);
                 commanddepidal.Parameters.AddWithValue("@Departmanid", depid);
-                commanddepidal.Parameters.AddWithValue("@Eklemeid", depid);
+                commanddepidal.Parameters.AddWithValue("@Eklemeid", eklemeid);
+                commanddepidal.ExecuteNonQuery();
                 baglan.Close();
-            }
-        }
 
-        public void Adresidcek()
-        {
-            DateTime dtbaslangictarihi = DateTime.Now;
-            if (String.IsNullOrEmpty(txtAdKB.Text) || String.IsNullOrEmpty(txtSoyadKB.Text) || String.IsNullOrEmpty(txtDogumYeriKB.Text) || String.IsNullOrEmpty(DTDogumTarihiKB.Text) || String.IsNullOrEmpty(dropCinsiyetKB.Text) || String.IsNullOrEmpty(txtUyrukKB.Text) || String.IsNullOrEmpty(dropSEhliyetKB.Text) || String.IsNullOrEmpty(DTEhliyetA.Text) || String.IsNullOrEmpty(txtTcknKB.Text) || String.IsNullOrEmpty(dropKanGrubuKB.Text) || String.IsNullOrEmpty(dropMedeniHalKB.Text) || String.IsNullOrEmpty(dropSigaraKKB.Text) || String.IsNullOrEmpty(txtSicilNoKB.Text) || String.IsNullOrEmpty(DropKBDepDoldurKB.Text) || String.IsNullOrEmpty(txtRolKB.Text) || String.IsNullOrEmpty(txtEpostaKB.Text) || String.IsNullOrEmpty(dropAskerlikKB.Text) || String.IsNullOrEmpty(txtIBANKB.Text) || String.IsNullOrEmpty(txtCepTelKB.Text) || String.IsNullOrEmpty(txtEvAdresi.Text) || String.IsNullOrEmpty(txtUlkeKB.Text) || String.IsNullOrEmpty(txtSehirKB.Text))
-            {
-                this.Alert("Tüm alanları doldurduğunuzdan emin olun!", Form_Alert.enmType.Warning);
-            }
-            else
-            {
                 baglan.Open();
                 SqlCommand commandadresid = new SqlCommand("SELECT TOP 1 id FROM Adreses ORDER BY id DESC", baglan);
                 commandadresid.ExecuteScalar();
-                SqlDataReader reader = commandadresid.ExecuteReader();
+                SqlDataReader reader1 = commandadresid.ExecuteReader();
 
                 // Verileri işle
-                while (reader.Read())
+                while (reader1.Read())
                 {
-                    adresid = reader.GetInt32(0);
+                    adresid = reader1.GetInt32(0);
                     // Verileri konsola yazdırabilirsiniz
                 }
                 // Okuyucuyu kapat
-                reader.Close();
+                reader1.Close();
 
                 SqlCommand commandadresidal = new SqlCommand("update Personnels set Adresid=@Adresid where id=@Eklemeid", baglan);
                 commandadresidal.Parameters.AddWithValue("@Adresid", adresid);
-                commandadresidal.Parameters.AddWithValue("@Eklemeid", adresid);
+                commandadresidal.Parameters.AddWithValue("@Eklemeid", eklemeid);
+                commandadresidal.ExecuteNonQuery();
                 baglan.Close();
-            }
-        }
 
-        public void Eklemeidcek()
-        {
-            DateTime dtbaslangictarihi = DateTime.Now;
-            if (String.IsNullOrEmpty(txtAdKB.Text) || String.IsNullOrEmpty(txtSoyadKB.Text) || String.IsNullOrEmpty(txtDogumYeriKB.Text) || String.IsNullOrEmpty(DTDogumTarihiKB.Text) || String.IsNullOrEmpty(dropCinsiyetKB.Text) || String.IsNullOrEmpty(txtUyrukKB.Text) || String.IsNullOrEmpty(dropSEhliyetKB.Text) || String.IsNullOrEmpty(DTEhliyetA.Text) || String.IsNullOrEmpty(txtTcknKB.Text) || String.IsNullOrEmpty(dropKanGrubuKB.Text) || String.IsNullOrEmpty(dropMedeniHalKB.Text) || String.IsNullOrEmpty(dropSigaraKKB.Text) || String.IsNullOrEmpty(txtSicilNoKB.Text) || String.IsNullOrEmpty(DropKBDepDoldurKB.Text) || String.IsNullOrEmpty(txtRolKB.Text) || String.IsNullOrEmpty(txtEpostaKB.Text) || String.IsNullOrEmpty(dropAskerlikKB.Text) || String.IsNullOrEmpty(txtIBANKB.Text) || String.IsNullOrEmpty(txtCepTelKB.Text) || String.IsNullOrEmpty(txtEvAdresi.Text) || String.IsNullOrEmpty(txtUlkeKB.Text) || String.IsNullOrEmpty(txtSehirKB.Text))
-            {
-                this.Alert("Tüm alanları doldurduğunuzdan emin olun!", Form_Alert.enmType.Warning);
-            }
-            else
-            {
-                baglan.Open();
-                SqlCommand commandpersonnelid = new SqlCommand("SELECT TOP 1 id FROM Personnels ORDER BY id DESC", baglan);
-                commandpersonnelid.ExecuteScalar();
-                SqlDataReader reader = commandpersonnelid.ExecuteReader();
-
-                // Verileri işle
-                while (reader.Read())
-                {
-                    eklemeid = reader.GetInt32(0);
-                    // Verileri konsola yazdırabilirsiniz
-                }
-                // Okuyucuyu kapat
-                reader.Close();
-                baglan.Close();
             }
         }
     }

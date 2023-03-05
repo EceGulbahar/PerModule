@@ -107,7 +107,7 @@ namespace PerModule.Forms.PersonelListForm
             {
                 baglan.Open();
             }
-            SqlCommand doldur = new SqlCommand("SELECT DepAdi FROM Departmans", baglan);
+            SqlCommand doldur = new SqlCommand("SELECT Departmanlar FROM DepartmanDrop", baglan);
             SqlDataReader dr = doldur.ExecuteReader();
             while (dr.Read())
             {
@@ -122,9 +122,6 @@ namespace PerModule.Forms.PersonelListForm
         {
             // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
-            // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
-            
             dropDepartmansDoldur();
 
         }
@@ -205,8 +202,6 @@ namespace PerModule.Forms.PersonelListForm
             {
                 // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
                 this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
-                // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-                this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
             }
             else
             {
@@ -239,8 +234,8 @@ namespace PerModule.Forms.PersonelListForm
                 {
                     baglan.Open();
                 }
-                SqlCommand depguncelle = new SqlCommand("update Departmans set DepAdi=@YDepAdi where DepAdi=@DepAdi", baglan);
-                depguncelle.Parameters.AddWithValue("@DepAdi", txtDepGuncelleDepAd.Text);
+                SqlCommand depguncelle = new SqlCommand("update DepartmanDrop set Departmanlar=@YDepAdi where Departmanlar=@Departmanlar", baglan);
+                depguncelle.Parameters.AddWithValue("@Departmanlar", txtDepGuncelleDepAd.Text);
                 depguncelle.Parameters.AddWithValue("@YDepAdi", txtDepGunYeniAd.Text);
 
                 depguncelle.ExecuteNonQuery();
@@ -274,15 +269,12 @@ namespace PerModule.Forms.PersonelListForm
                     {
                         baglan.Open();
                     }
-                    SqlCommand depdelete = new SqlCommand("DELETE  FROM Departmans where DepAdi=@DepAdi", baglan);
+                    SqlCommand depdelete = new SqlCommand("DELETE  FROM DepartmanDrop where Departmanlar=@DepAdi", baglan);
                     depdelete.Parameters.AddWithValue("@DepAdi", txtDepGuncelleDepAd.Text);
                     
                     if (depdelete.ExecuteNonQuery() > 0)
                         this.Alert("Departman silme işlemi başarılı", Form_Alert.enmType.Success);
                     // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-                    this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
-                    // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-                    this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
                     this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
                     dropDepartmansDoldur();
                     if (baglan.State == ConnectionState.Open)
@@ -297,8 +289,6 @@ namespace PerModule.Forms.PersonelListForm
             }
         }
 
-        int a = 1;
-        string personel = "PERSONEL";
         public void btnDepEkle_Click(object sender, EventArgs e)
         {
             if(String.IsNullOrEmpty(txtDepSec.Text))
@@ -311,10 +301,9 @@ namespace PerModule.Forms.PersonelListForm
                 {
                     baglan.Open();
                 }
-                SqlCommand depekle = new SqlCommand("INSERT INTO Departmans(DepAdi,DepRolu,Status) VALUES(@DepAdii, @DepRolu, @Status)", baglan);
-                depekle.Parameters.AddWithValue("@DepAdii", txtDepSec.Text);
-                depekle.Parameters.AddWithValue("@DepRolu", personel);
-                depekle.Parameters.AddWithValue("@Status", a);
+                SqlCommand depekle = new SqlCommand("INSERT INTO DepartmanDrop(Departmanlar) VALUES(@Departmanlar)", baglan);
+                depekle.Parameters.AddWithValue("@Departmanlar", txtDepSec.Text);
+                
                 if (depekle.ExecuteNonQuery() > 0)
                     this.Alert("Departman ekleme işlemi başarılı", Form_Alert.enmType.Success);
                 // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
