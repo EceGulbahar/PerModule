@@ -45,18 +45,19 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.btnPerCikar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnPerEkle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtSearchboxPerList = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -72,6 +73,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.KontrolPanelLink = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnYenile = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlDepGuncelle = new System.Windows.Forms.Panel();
             this.txtDepGunYeniAd = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -83,19 +85,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GridHugeList = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perTcknDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perDogumTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depRoluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perBaslamaTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresUlkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresSehirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kartlar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.personelListGridViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pERSONNELMODULEDataSet = new PerModule.PERSONNELMODULEDataSet();
-            this.pERSONNELMODULEDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personelListGridViewTableAdapter = new PerModule.PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter();
             this.pnlDepEkle.SuspendLayout();
             this.pnlTopItems.SuspendLayout();
@@ -105,7 +106,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.GridHugeList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personelListGridViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERSONNELMODULEDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pERSONNELMODULEDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPerCikar
@@ -315,7 +315,7 @@
             this.txtSearchboxPerList.IconRight = ((System.Drawing.Image)(resources.GetObject("txtSearchboxPerList.IconRight")));
             this.txtSearchboxPerList.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearchboxPerList.Lines = new string[0];
-            this.txtSearchboxPerList.Location = new System.Drawing.Point(848, 3);
+            this.txtSearchboxPerList.Location = new System.Drawing.Point(848, 8);
             this.txtSearchboxPerList.MaxLength = 32767;
             this.txtSearchboxPerList.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSearchboxPerList.Modified = false;
@@ -351,7 +351,7 @@
             this.txtSearchboxPerList.SelectionLength = 0;
             this.txtSearchboxPerList.SelectionStart = 0;
             this.txtSearchboxPerList.ShortcutsEnabled = true;
-            this.txtSearchboxPerList.Size = new System.Drawing.Size(659, 39);
+            this.txtSearchboxPerList.Size = new System.Drawing.Size(659, 31);
             this.txtSearchboxPerList.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSearchboxPerList.TabIndex = 7;
             this.txtSearchboxPerList.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -918,6 +918,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            this.panel2.Controls.Add(this.btnYenile);
             this.panel2.Controls.Add(this.bunifuButton1);
             this.panel2.Controls.Add(this.pnlDepGuncelle);
             this.panel2.Controls.Add(this.btnDepGuncelle);
@@ -930,6 +931,96 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1711, 870);
             this.panel2.TabIndex = 14;
+            // 
+            // btnYenile
+            // 
+            this.btnYenile.AllowAnimations = true;
+            this.btnYenile.AllowMouseEffects = true;
+            this.btnYenile.AllowToggling = false;
+            this.btnYenile.AnimationSpeed = 200;
+            this.btnYenile.AutoGenerateColors = true;
+            this.btnYenile.AutoRoundBorders = false;
+            this.btnYenile.AutoSizeLeftIcon = true;
+            this.btnYenile.AutoSizeRightIcon = true;
+            this.btnYenile.BackColor = System.Drawing.Color.Transparent;
+            this.btnYenile.BackColor1 = System.Drawing.Color.Silver;
+            this.btnYenile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnYenile.BackgroundImage")));
+            this.btnYenile.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnYenile.ButtonText = "";
+            this.btnYenile.ButtonTextMarginLeft = 0;
+            this.btnYenile.ColorContrastOnClick = 45;
+            this.btnYenile.ColorContrastOnHover = 45;
+            this.btnYenile.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btnYenile.CustomizableEdges = borderEdges7;
+            this.btnYenile.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnYenile.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnYenile.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnYenile.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnYenile.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnYenile.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnYenile.ForeColor = System.Drawing.Color.White;
+            this.btnYenile.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnYenile.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnYenile.IconLeftPadding = new System.Windows.Forms.Padding(7, 3, 3, 3);
+            this.btnYenile.IconMarginLeft = 11;
+            this.btnYenile.IconPadding = 7;
+            this.btnYenile.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnYenile.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnYenile.IconRightPadding = new System.Windows.Forms.Padding(3);
+            this.btnYenile.IconSize = 35;
+            this.btnYenile.IdleBorderColor = System.Drawing.Color.Silver;
+            this.btnYenile.IdleBorderRadius = 1;
+            this.btnYenile.IdleBorderThickness = 1;
+            this.btnYenile.IdleFillColor = System.Drawing.Color.Silver;
+            this.btnYenile.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnYenile.IdleIconLeftImage")));
+            this.btnYenile.IdleIconRightImage = null;
+            this.btnYenile.IndicateFocus = false;
+            this.btnYenile.Location = new System.Drawing.Point(1654, 163);
+            this.btnYenile.Name = "btnYenile";
+            this.btnYenile.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnYenile.OnDisabledState.BorderRadius = 1;
+            this.btnYenile.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnYenile.OnDisabledState.BorderThickness = 1;
+            this.btnYenile.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnYenile.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnYenile.OnDisabledState.IconLeftImage = null;
+            this.btnYenile.OnDisabledState.IconRightImage = null;
+            this.btnYenile.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.btnYenile.onHoverState.BorderRadius = 1;
+            this.btnYenile.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnYenile.onHoverState.BorderThickness = 1;
+            this.btnYenile.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.btnYenile.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnYenile.onHoverState.IconLeftImage = null;
+            this.btnYenile.onHoverState.IconRightImage = null;
+            this.btnYenile.OnIdleState.BorderColor = System.Drawing.Color.Silver;
+            this.btnYenile.OnIdleState.BorderRadius = 1;
+            this.btnYenile.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnYenile.OnIdleState.BorderThickness = 1;
+            this.btnYenile.OnIdleState.FillColor = System.Drawing.Color.Silver;
+            this.btnYenile.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnYenile.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnYenile.OnIdleState.IconLeftImage")));
+            this.btnYenile.OnIdleState.IconRightImage = null;
+            this.btnYenile.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.btnYenile.OnPressedState.BorderRadius = 1;
+            this.btnYenile.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnYenile.OnPressedState.BorderThickness = 1;
+            this.btnYenile.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.btnYenile.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnYenile.OnPressedState.IconLeftImage = null;
+            this.btnYenile.OnPressedState.IconRightImage = null;
+            this.btnYenile.Size = new System.Drawing.Size(35, 32);
+            this.btnYenile.TabIndex = 16;
+            this.btnYenile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnYenile.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnYenile.TextMarginLeft = 0;
+            this.btnYenile.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnYenile.UseDefaultRadiusAndThickness = true;
+            this.btnYenile.Click += new System.EventHandler(this.btnYenile_Click);
             // 
             // bunifuButton1
             // 
@@ -950,11 +1041,11 @@
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;
             this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges7;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.bunifuButton1.CustomizableEdges = borderEdges8;
             this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1129,11 +1220,11 @@
             this.btnDepGuncelleDelete.ColorContrastOnClick = 45;
             this.btnDepGuncelleDelete.ColorContrastOnHover = 45;
             this.btnDepGuncelleDelete.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.btnDepGuncelleDelete.CustomizableEdges = borderEdges8;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.btnDepGuncelleDelete.CustomizableEdges = borderEdges9;
             this.btnDepGuncelleDelete.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDepGuncelleDelete.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepGuncelleDelete.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1220,11 +1311,11 @@
             this.btnDepGuncelIptal.ColorContrastOnClick = 45;
             this.btnDepGuncelIptal.ColorContrastOnHover = 45;
             this.btnDepGuncelIptal.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.btnDepGuncelIptal.CustomizableEdges = borderEdges9;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.btnDepGuncelIptal.CustomizableEdges = borderEdges10;
             this.btnDepGuncelIptal.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDepGuncelIptal.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepGuncelIptal.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1311,11 +1402,11 @@
             this.btnDepGuncelleLast.ColorContrastOnClick = 45;
             this.btnDepGuncelleLast.ColorContrastOnHover = 45;
             this.btnDepGuncelleLast.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges10.BottomLeft = true;
-            borderEdges10.BottomRight = true;
-            borderEdges10.TopLeft = true;
-            borderEdges10.TopRight = true;
-            this.btnDepGuncelleLast.CustomizableEdges = borderEdges10;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.btnDepGuncelleLast.CustomizableEdges = borderEdges11;
             this.btnDepGuncelleLast.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDepGuncelleLast.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepGuncelleLast.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1477,11 +1568,11 @@
             this.btnDepGuncelle.ColorContrastOnClick = 45;
             this.btnDepGuncelle.ColorContrastOnHover = 45;
             this.btnDepGuncelle.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges11.BottomLeft = true;
-            borderEdges11.BottomRight = true;
-            borderEdges11.TopLeft = true;
-            borderEdges11.TopRight = true;
-            this.btnDepGuncelle.CustomizableEdges = borderEdges11;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.btnDepGuncelle.CustomizableEdges = borderEdges12;
             this.btnDepGuncelle.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDepGuncelle.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepGuncelle.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1564,10 +1655,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1263, 37);
+            this.pictureBox1.Location = new System.Drawing.Point(1266, 53);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(431, 209);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(410, 180);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
@@ -1580,96 +1671,96 @@
             this.GridHugeList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridHugeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridHugeList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
+            this.perTcknDataGridViewTextBoxColumn,
+            this.perAdDataGridViewTextBoxColumn,
+            this.perSoyadDataGridViewTextBoxColumn,
+            this.perDogumTarihiDataGridViewTextBoxColumn,
+            this.depAdiDataGridViewTextBoxColumn,
+            this.depRoluDataGridViewTextBoxColumn,
+            this.perBaslamaTDataGridViewTextBoxColumn,
+            this.adresUlkeDataGridViewTextBoxColumn,
+            this.adresSehirDataGridViewTextBoxColumn,
             this.Kartlar});
             this.GridHugeList.DataSource = this.personelListGridViewBindingSource;
             this.GridHugeList.GridColor = System.Drawing.Color.Gray;
             this.GridHugeList.Location = new System.Drawing.Point(76, 320);
             this.GridHugeList.Name = "GridHugeList";
             this.GridHugeList.ReadOnly = true;
-            this.GridHugeList.Size = new System.Drawing.Size(1671, 656);
+            this.GridHugeList.Size = new System.Drawing.Size(1670, 656);
             this.GridHugeList.TabIndex = 3;
             this.GridHugeList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridHugeList_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn1
+            // perTcknDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "PerTckn";
-            this.dataGridViewTextBoxColumn1.HeaderText = "KİMLİK NUMARASI";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
+            this.perTcknDataGridViewTextBoxColumn.DataPropertyName = "PerTckn";
+            this.perTcknDataGridViewTextBoxColumn.HeaderText = "PerTckn";
+            this.perTcknDataGridViewTextBoxColumn.Name = "perTcknDataGridViewTextBoxColumn";
+            this.perTcknDataGridViewTextBoxColumn.ReadOnly = true;
+            this.perTcknDataGridViewTextBoxColumn.Width = 175;
             // 
-            // dataGridViewTextBoxColumn2
+            // perAdDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "PerAd";
-            this.dataGridViewTextBoxColumn2.HeaderText = "PERSONEL ADI";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 150;
+            this.perAdDataGridViewTextBoxColumn.DataPropertyName = "PerAd";
+            this.perAdDataGridViewTextBoxColumn.HeaderText = "PerAd";
+            this.perAdDataGridViewTextBoxColumn.Name = "perAdDataGridViewTextBoxColumn";
+            this.perAdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.perAdDataGridViewTextBoxColumn.Width = 175;
             // 
-            // dataGridViewTextBoxColumn3
+            // perSoyadDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "PerSoyad";
-            this.dataGridViewTextBoxColumn3.HeaderText = "PERSONEL SOYADI";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 200;
+            this.perSoyadDataGridViewTextBoxColumn.DataPropertyName = "PerSoyad";
+            this.perSoyadDataGridViewTextBoxColumn.HeaderText = "PerSoyad";
+            this.perSoyadDataGridViewTextBoxColumn.Name = "perSoyadDataGridViewTextBoxColumn";
+            this.perSoyadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.perSoyadDataGridViewTextBoxColumn.Width = 175;
             // 
-            // dataGridViewTextBoxColumn4
+            // perDogumTarihiDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "PerDogumTarihi";
-            this.dataGridViewTextBoxColumn4.HeaderText = "DOĞUM TARİHİ";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 150;
+            this.perDogumTarihiDataGridViewTextBoxColumn.DataPropertyName = "PerDogumTarihi";
+            this.perDogumTarihiDataGridViewTextBoxColumn.HeaderText = "PerDogumTarihi";
+            this.perDogumTarihiDataGridViewTextBoxColumn.Name = "perDogumTarihiDataGridViewTextBoxColumn";
+            this.perDogumTarihiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.perDogumTarihiDataGridViewTextBoxColumn.Width = 150;
             // 
-            // dataGridViewTextBoxColumn5
+            // depAdiDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "DepAdi";
-            this.dataGridViewTextBoxColumn5.HeaderText = "DEPARTMAN";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 200;
+            this.depAdiDataGridViewTextBoxColumn.DataPropertyName = "DepAdi";
+            this.depAdiDataGridViewTextBoxColumn.HeaderText = "DepAdi";
+            this.depAdiDataGridViewTextBoxColumn.Name = "depAdiDataGridViewTextBoxColumn";
+            this.depAdiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.depAdiDataGridViewTextBoxColumn.Width = 175;
             // 
-            // dataGridViewTextBoxColumn6
+            // depRoluDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "DepRolu";
-            this.dataGridViewTextBoxColumn6.HeaderText = "ROL";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 150;
+            this.depRoluDataGridViewTextBoxColumn.DataPropertyName = "DepRolu";
+            this.depRoluDataGridViewTextBoxColumn.HeaderText = "DepRolu";
+            this.depRoluDataGridViewTextBoxColumn.Name = "depRoluDataGridViewTextBoxColumn";
+            this.depRoluDataGridViewTextBoxColumn.ReadOnly = true;
+            this.depRoluDataGridViewTextBoxColumn.Width = 175;
             // 
-            // dataGridViewTextBoxColumn7
+            // perBaslamaTDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "PerBaslamaT";
-            this.dataGridViewTextBoxColumn7.HeaderText = "İŞE GİRİŞ TARİHİ";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 150;
+            this.perBaslamaTDataGridViewTextBoxColumn.DataPropertyName = "PerBaslamaT";
+            this.perBaslamaTDataGridViewTextBoxColumn.HeaderText = "PerBaslamaT";
+            this.perBaslamaTDataGridViewTextBoxColumn.Name = "perBaslamaTDataGridViewTextBoxColumn";
+            this.perBaslamaTDataGridViewTextBoxColumn.ReadOnly = true;
+            this.perBaslamaTDataGridViewTextBoxColumn.Width = 150;
             // 
-            // dataGridViewTextBoxColumn8
+            // adresUlkeDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "AdresUlke";
-            this.dataGridViewTextBoxColumn8.HeaderText = "BULUNDUĞU ÜLKE";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 150;
+            this.adresUlkeDataGridViewTextBoxColumn.DataPropertyName = "AdresUlke";
+            this.adresUlkeDataGridViewTextBoxColumn.HeaderText = "AdresUlke";
+            this.adresUlkeDataGridViewTextBoxColumn.Name = "adresUlkeDataGridViewTextBoxColumn";
+            this.adresUlkeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adresUlkeDataGridViewTextBoxColumn.Width = 150;
             // 
-            // dataGridViewTextBoxColumn9
+            // adresSehirDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "AdresSehir";
-            this.dataGridViewTextBoxColumn9.HeaderText = "BULUNDUĞU ŞEHİR";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 150;
+            this.adresSehirDataGridViewTextBoxColumn.DataPropertyName = "AdresSehir";
+            this.adresSehirDataGridViewTextBoxColumn.HeaderText = "AdresSehir";
+            this.adresSehirDataGridViewTextBoxColumn.Name = "adresSehirDataGridViewTextBoxColumn";
+            this.adresSehirDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adresSehirDataGridViewTextBoxColumn.Width = 150;
             // 
             // Kartlar
             // 
@@ -1690,11 +1781,6 @@
             // 
             this.pERSONNELMODULEDataSet.DataSetName = "PERSONNELMODULEDataSet";
             this.pERSONNELMODULEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pERSONNELMODULEDataSetBindingSource
-            // 
-            this.pERSONNELMODULEDataSetBindingSource.DataSource = this.pERSONNELMODULEDataSet;
-            this.pERSONNELMODULEDataSetBindingSource.Position = 0;
             // 
             // personelListGridViewTableAdapter
             // 
@@ -1723,7 +1809,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.GridHugeList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personelListGridViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERSONNELMODULEDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pERSONNELMODULEDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1740,7 +1825,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDepEkle;
         private Bunifu.UI.WinForms.BunifuTextBox txtDepSec;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDepEkleIptal;
-        private PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter personelListGridViewTableAdapter;
         private System.Windows.Forms.Panel pnlTopItems;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
@@ -1766,19 +1850,20 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDepGuncelleLast;
         private Bunifu.UI.WinForms.BunifuTextBox txtDepGuncelleDepAd;
         private System.Windows.Forms.DataGridView GridHugeList;
-        private System.Windows.Forms.BindingSource pERSONNELMODULEDataSetBindingSource;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private PERSONNELMODULEDataSet pERSONNELMODULEDataSet;
         private System.Windows.Forms.BindingSource personelListGridViewBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter personelListGridViewTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perTcknDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perAdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perSoyadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perDogumTarihiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn depAdiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn depRoluDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perBaslamaTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresUlkeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresSehirDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Kartlar;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnYenile;
     }
 }

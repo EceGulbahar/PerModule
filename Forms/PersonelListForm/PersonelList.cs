@@ -21,12 +21,15 @@ using PerModule.Forms.PersonelListForm.PersonCardDrop;
 using Point = System.Drawing.Point;
 using System.IO.Ports;
 using System.Reflection;
+using DataTable = System.Data.DataTable;
 
 namespace PerModule.Forms.PersonelListForm
 {
     public partial class PersonelList : Form
     {
         SqlConnection baglan = new SqlConnection(ConfigurationManager.ConnectionStrings["PerModule.Properties.Settings.PerModuleCS"].ConnectionString);
+
+        
         public PersonelList()
         {
             InitializeComponent();
@@ -182,6 +185,11 @@ namespace PerModule.Forms.PersonelListForm
 
         }
 
+        private void btnYenile_Click(object sender, EventArgs e)
+        {
+            searchyenile();
+        }
+
         private void btnDepGuncelle_Click(object sender, EventArgs e)
         {
             if (pnlDepGuncelle.Visible == false)
@@ -196,15 +204,36 @@ namespace PerModule.Forms.PersonelListForm
             }
         }
 
+        DataTable dt = new DataTable("GridHugeList");
+
+        public void searchyenile()
+        {
+            dt.Clear();
+            txtSearchboxPerList.Text = txtSearchboxPerList.Text.Trim();
+            if (baglan.State == ConnectionState.Closed)
+            {
+                baglan.Open();
+            }
+            using (SqlDataAdapter dasearch = new SqlDataAdapter("select * from personelListGridView", baglan))
+            {
+                dasearch.Fill(dt);
+                GridHugeList.DataSource = dt;
+            }
+            if (baglan.State == ConnectionState.Open)
+            {
+                baglan.Close();
+            }
+            txtSearchboxPerList.Clear();
+        }
         private void txtSearchboxPerList_TextChanged(object sender, EventArgs e)//Sadece isim arıyor, buraya sonra bakarım
         {
             if (String.IsNullOrEmpty(txtSearchboxPerList.Text))
             {
-                // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-                this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
+                searchyenile();
             }
             else
             {
+                dt.Clear();
                 txtSearchboxPerList.Text = txtSearchboxPerList.Text.Trim();
                 if (baglan.State == ConnectionState.Closed)
                 {
@@ -319,6 +348,7 @@ namespace PerModule.Forms.PersonelListForm
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             this.Alert("Departman ekleme işlemi başarılı", Form_Alert.enmType.Success);
+            searchyenile();
         }
     }
 }

@@ -85,10 +85,14 @@ namespace PerModule
 
         }
 
-        private void btnPersonel_Click(object sender, EventArgs e)
+        public void perlistcagir()
         {
             PersonelList PerList = new PersonelList();
             FormGetir(PerList);
+        }
+        private void btnPersonel_Click(object sender, EventArgs e)
+        {
+            perlistcagir();
             pnlHLight.Height = btnPersonel.Height;
             pnlHLight.Top = btnPersonel.Top;
             pnlHLight1.Height = btnPersonel.Height;

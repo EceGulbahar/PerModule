@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PerModule.Forms.PersonelListForm;
 
 namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 {
@@ -144,13 +145,36 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             this.Close();
         }
 
-        private void btnPersonnelCikarKB_Click(object sender, EventArgs e)
-        {
-
-        }
-
         
+        private void btnPersonnelCikarKB_Click(object sender, EventArgs e)//silme Çalışmıyor
+        {
+            string tckn = PersonelList.tcno;
+            try
+            {
+                if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                }
+                SqlCommand persil = new SqlCommand("DELETE FROM Personnels where PerTckn=@tckn", baglan);
+                persil.Parameters.AddWithValue("@tckn", tckn);
+                persil.ExecuteNonQuery();
+                if (baglan.State == ConnectionState.Open)
+                {
+                    baglan.Close();
+                }
+                this.Alert("Personel çıkarma başarılı!", Form_Alert.enmType.Success);
+                //ayrılma sebebi aç.
+                PersonCard personCard = new PersonCard();
+                personCard.Close();
+                PersonelList perlist = new PersonelList();
+                perlist.searchyenile();
 
+            }
+            catch 
+            {
+                this.Alert("Bir şeyler ters gitti!", Form_Alert.enmType.Error);
+            }
+        }
 
         public void YokEkle()
         {
@@ -210,6 +234,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                     baglan.Close();
                 }
                 //temizle();
+                
             }
 
            }
@@ -227,6 +252,10 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 YokEkle();
                 Depidcek();
                 this.Alert("Personel ekleme başarılı", Form_Alert.enmType.Success);
+                this.Close();
+                PersonelList perlist = new PersonelList();
+                perlist.searchyenile();
+
             }
             catch 
             {
