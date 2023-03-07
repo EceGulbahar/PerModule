@@ -244,9 +244,13 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 
         }
 
-        private void btnPerEkleKB_Click(object sender, EventArgs e)
+        public void varguncelle()
         {
 
+        }
+
+        private void btnPerEkleKB_Click(object sender, EventArgs e)
+        {
             try
             {
                 YokEkle();

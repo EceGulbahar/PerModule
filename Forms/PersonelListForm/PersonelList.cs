@@ -205,7 +205,6 @@ namespace PerModule.Forms.PersonelListForm
         }
 
         DataTable dt = new DataTable("GridHugeList");
-
         public void searchyenile()
         {
             dt.Clear();
@@ -266,12 +265,16 @@ namespace PerModule.Forms.PersonelListForm
                 SqlCommand depguncelle = new SqlCommand("update DepartmanDrop set Departmanlar=@YDepAdi where Departmanlar=@Departmanlar", baglan);
                 depguncelle.Parameters.AddWithValue("@Departmanlar", txtDepGuncelleDepAd.Text);
                 depguncelle.Parameters.AddWithValue("@YDepAdi", txtDepGunYeniAd.Text);
-
                 depguncelle.ExecuteNonQuery();
-                if (depguncelle.ExecuteNonQuery() > 0)
-                //MessageBox.Show("Güncelleme işlemi başarılı.");
+                SqlCommand depguncelledata = new SqlCommand("update Departmans set DepAdi=@YDepAdi1 where DepAdi=@DepAdi", baglan);
+                depguncelledata.Parameters.AddWithValue("@DepAdi", txtDepGuncelleDepAd.Text);
+                depguncelledata.Parameters.AddWithValue("@YDepAdi1", txtDepGunYeniAd.Text);
+                depguncelledata.ExecuteNonQuery();
                 this.Alert("Güncelleme işlemi başarılı", Form_Alert.enmType.Success);
                 dropDepartmansDoldur();
+                txtDepGunYeniAd.Clear();
+                searchyenile();
+                pnlDepGuncelle.Visible = false;
                 if (baglan.State == ConnectionState.Open)
                 {
                     baglan.Close();
@@ -334,9 +337,9 @@ namespace PerModule.Forms.PersonelListForm
                 depekle.Parameters.AddWithValue("@Departmanlar", txtDepSec.Text);
                 
                 if (depekle.ExecuteNonQuery() > 0)
+                {
                     this.Alert("Departman ekleme işlemi başarılı", Form_Alert.enmType.Success);
-                // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-                this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
+                }
                 dropDepartmansDoldur();
                 if (baglan.State == ConnectionState.Open)
                 {

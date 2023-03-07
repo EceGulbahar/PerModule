@@ -367,6 +367,8 @@
             this.txtAdKB = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPerEkleKB = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.label58 = new System.Windows.Forms.Label();
+            this.dropModulRol = new Bunifu.UI.WinForms.BunifuDropdown();
             this.grupCalismaGun.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox3)).BeginInit();
@@ -5877,7 +5879,65 @@
             this.btnPerEkleKB.TextMarginLeft = 0;
             this.btnPerEkleKB.TextPadding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnPerEkleKB.UseDefaultRadiusAndThickness = true;
+            this.btnPerEkleKB.Visible = false;
             this.btnPerEkleKB.Click += new System.EventHandler(this.btnPerEkleKB_Click);
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label58.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label58.Location = new System.Drawing.Point(909, 570);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(132, 21);
+            this.label58.TabIndex = 161;
+            this.label58.Text = "Modüldeki Rolü:";
+            // 
+            // dropModulRol
+            // 
+            this.dropModulRol.BackColor = System.Drawing.Color.Transparent;
+            this.dropModulRol.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            this.dropModulRol.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.dropModulRol.BorderRadius = 5;
+            this.dropModulRol.Color = System.Drawing.Color.WhiteSmoke;
+            this.dropModulRol.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.dropModulRol.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dropModulRol.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dropModulRol.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dropModulRol.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.dropModulRol.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.dropModulRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.dropModulRol.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.dropModulRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropModulRol.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.dropModulRol.FillDropDown = true;
+            this.dropModulRol.FillIndicator = false;
+            this.dropModulRol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dropModulRol.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.dropModulRol.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dropModulRol.FormattingEnabled = true;
+            this.dropModulRol.Icon = null;
+            this.dropModulRol.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.dropModulRol.IndicatorColor = System.Drawing.Color.WhiteSmoke;
+            this.dropModulRol.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.dropModulRol.ItemBackColor = System.Drawing.Color.Silver;
+            this.dropModulRol.ItemBorderColor = System.Drawing.Color.WhiteSmoke;
+            this.dropModulRol.ItemForeColor = System.Drawing.Color.Black;
+            this.dropModulRol.ItemHeight = 26;
+            this.dropModulRol.ItemHighLightColor = System.Drawing.Color.Goldenrod;
+            this.dropModulRol.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.dropModulRol.Items.AddRange(new object[] {
+            "Kurucu",
+            "Yetkili",
+            "Personel"});
+            this.dropModulRol.ItemTopMargin = 3;
+            this.dropModulRol.Location = new System.Drawing.Point(1044, 565);
+            this.dropModulRol.Name = "dropModulRol";
+            this.dropModulRol.Size = new System.Drawing.Size(303, 32);
+            this.dropModulRol.TabIndex = 162;
+            this.dropModulRol.Text = null;
+            this.dropModulRol.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.dropModulRol.TextLeftMargin = 5;
             // 
             // KisiselBilgilercard
             // 
@@ -5887,6 +5947,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.ClientSize = new System.Drawing.Size(1396, 490);
+            this.Controls.Add(this.dropModulRol);
+            this.Controls.Add(this.label58);
             this.Controls.Add(this.btnPerEkleKB);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.btnPersonnelCikarKB);
@@ -6216,5 +6278,7 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnPersonnelCikarKB;
         private System.Windows.Forms.Panel panel10;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnPerEkleKB;
+        private System.Windows.Forms.Label label58;
+        private Bunifu.UI.WinForms.BunifuDropdown dropModulRol;
     }
 }
