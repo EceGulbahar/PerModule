@@ -26,6 +26,9 @@ namespace PerModule
 {
     public partial class Main : Form
     {
+
+        
+
         public Main()
         {
             InitializeComponent();
@@ -42,6 +45,9 @@ namespace PerModule
         public static extern bool ReleaseCapture();
         [DllImport("User32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);*/
+
+
+
 
         public void FormGetir(Form form)
         {
