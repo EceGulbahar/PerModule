@@ -127,8 +127,6 @@ namespace PerModule.Forms.PersonelListForm
             this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
             dropDepartmansDoldur();
             txtTcnoAra.MaxLength = 11;
-            txtTcnoAra.Clear();
-
         }
         
         int secilendeger;
@@ -192,14 +190,6 @@ namespace PerModule.Forms.PersonelListForm
             searchyenile();
         }
 
-        private void txtTcnoAra_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (((int)e.KeyChar >= 48 && (int)e.KeyChar <= 57) || (int)e.KeyChar == 8)
-                e.Handled = false;
-            else
-                e.Handled = true;
-        }
-
         private void btnTcnoAra_Click(object sender, EventArgs e)//tcno arama
         {
             
@@ -229,7 +219,6 @@ namespace PerModule.Forms.PersonelListForm
             else
             {
                 this.Alert("Kimlik Numarası 11 Haneli Olmalı!", Form_Alert.enmType.Warning);
-                txtTcnoAra.Clear();
                 searchyenile();
             }
             
@@ -247,6 +236,14 @@ namespace PerModule.Forms.PersonelListForm
             DataSet dstno = new DataSet();
             datno.Fill(dstno);
             GridHugeList.DataSource = dstno.Tables[0];
+        }
+
+        private void txtTcnoAra_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (((int)e.KeyChar >= 48 && (int)e.KeyChar <= 57) || (int)e.KeyChar == 8)
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
 
         private void btnDepGuncelle_Click(object sender, EventArgs e)

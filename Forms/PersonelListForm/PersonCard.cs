@@ -53,6 +53,7 @@ namespace PerModule.Forms.PersonelListForm
             KisiselBilgilercard kgcard = new KisiselBilgilercard();
             kgcard.CloseGizle();
             FormGetir(kgcard);
+            kgcard.kbdoldur();
         }
 
         private void btnBasvuru_Click(object sender, EventArgs e)

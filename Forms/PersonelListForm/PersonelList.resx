@@ -432,21 +432,22 @@
         N4BF5/wBUbwUgTh9Z9kAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnTcnoAra.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAANcAAAAgCAYAAACB6u0UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACFSURBVHhe7dOhEYAwAARB+q8qfVBGCgBiGVw4t2LNv75j
-        jHE+LuBX54rr6wA2iQsi4oKIuCAiLoiICyLigoi4ICIuiIgLIuKCiLggIi6IiAsi4oKIuCAiLoiICyLi
-        goi4ICIuiIgLIuKCiLggIi6IiAsi4oKIuCAiLoiICyIrrvkegV1j3vYEQdpGITSnAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="txtTcnoAra.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIAAAAAgCAYAAADaInAlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACNSURBVHhe7dKxDQIxEEVBN0RERP9l0MGR+eQYZMkJNbxZ
-        aZJN/xvOjev6vNdaXzr25mf+Mfbj8XwRsjc/8wugSABxAogTQJwA4gQQJ4A4AcQJIE4AcQKIE0CcAOIE
-        ECeAOAHECSBOAHECiBNAnADiBBAngDgBxAkgTgBxAoj7C2DOee8HHXvzM7/r3hg/Ad9FbdT7tAcAAAAA
-        SUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAK0AAAAiCAYAAAAtSVlOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACWSURBVHhe7dKxCQMxAARB9V+VHpXhMlyAH4ESd6CFGbjk
+        4h2QtNb6zDl/Zjdvd3qSHWMfcLvd6UlWtDSIlhzRkiNackRLjmjJES05oiVHtOSIlhzRkiNackRLjmjJ
+        ES05oiVHtOSIlhzRkiNackRLjmjJES05oiVHtOSIlhzRkiNackRLzl+0z/N892F283anJ1koGeMFPj8G
+        W8z0uSMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnTcnoAra.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAKoAAAAgCAYAAACCXeM8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACGSURBVHhe7dKhDYAwAADBzgX7WxiAMfCF4Bmgn5w49fbH
+        PPfrOfcHVvU9Ov4CrMaoJBiVBKOSYFQSjEqCUUkwKglGJcGoJBiVBKOSYFQSjEqCUUkwKglGJcGoJBiV
+        BKOSYFQSjEqCUUkwKglGJcGoJBiVBKOSYFQSjErCmMd2/wVYxTy2+wVmIm1ZiyLC9QAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <data name="btnYenile.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

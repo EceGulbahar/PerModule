@@ -369,6 +369,8 @@
             this.btnPerEkleKB = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label58 = new System.Windows.Forms.Label();
             this.dropYetki = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.DTisegirist = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.grupCalismaGun.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox3)).BeginInit();
@@ -5939,6 +5941,42 @@
             this.dropYetki.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.dropYetki.TextLeftMargin = 5;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label7.Location = new System.Drawing.Point(930, 692);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 21);
+            this.label7.TabIndex = 163;
+            this.label7.Text = "İşe Giriş Tarihi:";
+            // 
+            // DTisegirist
+            // 
+            this.DTisegirist.BackColor = System.Drawing.Color.Transparent;
+            this.DTisegirist.BorderRadius = 5;
+            this.DTisegirist.Color = System.Drawing.Color.Silver;
+            this.DTisegirist.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.DTisegirist.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.DTisegirist.DisabledColor = System.Drawing.Color.Gray;
+            this.DTisegirist.DisplayWeekNumbers = false;
+            this.DTisegirist.DPHeight = 0;
+            this.DTisegirist.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DTisegirist.FillDatePicker = false;
+            this.DTisegirist.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.DTisegirist.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.DTisegirist.Icon = ((System.Drawing.Image)(resources.GetObject("DTisegirist.Icon")));
+            this.DTisegirist.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.DTisegirist.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.DTisegirist.LeftTextMargin = 5;
+            this.DTisegirist.Location = new System.Drawing.Point(1049, 688);
+            this.DTisegirist.MinimumSize = new System.Drawing.Size(4, 32);
+            this.DTisegirist.Name = "DTisegirist";
+            this.DTisegirist.Size = new System.Drawing.Size(296, 32);
+            this.DTisegirist.TabIndex = 164;
+            this.DTisegirist.Value = new System.DateTime(2023, 2, 20, 11, 28, 0, 0);
+            // 
             // KisiselBilgilercard
             // 
             this.AcceptButton = this.btnPersonnelGuncelleKB;
@@ -5947,6 +5985,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.ClientSize = new System.Drawing.Size(1396, 490);
+            this.Controls.Add(this.DTisegirist);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.dropYetki);
             this.Controls.Add(this.label58);
             this.Controls.Add(this.btnPerEkleKB);
@@ -6280,5 +6320,7 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnPerEkleKB;
         private System.Windows.Forms.Label label58;
         private Bunifu.UI.WinForms.BunifuDropdown dropYetki;
+        private System.Windows.Forms.Label label7;
+        private Bunifu.UI.WinForms.BunifuDatePicker DTisegirist;
     }
 }

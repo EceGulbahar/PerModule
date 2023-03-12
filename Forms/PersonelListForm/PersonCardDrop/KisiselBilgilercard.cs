@@ -102,8 +102,46 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             DTSertifikaT1.MaxDate = new DateTime(yil - 18, ay, gun);
             DTSertifikaT1.Format = DateTimePickerFormat.Short;
 
-        }
+            
 
+        }
+        public void kbdoldur()//eksik
+        {
+            if (baglan.State == ConnectionState.Closed)
+            {
+                baglan.Open();
+            }
+            SqlCommand tcnilekb = new SqlCommand("select * from Personnels where PerTckn=@tcno", baglan);
+            tcnilekb.Parameters.AddWithValue("@tcno", PersonelList.tcno);
+            SqlDataReader tcnokbokuma = tcnilekb.ExecuteReader();
+            while (tcnokbokuma.Read())
+            {
+                txtTcknKB.Text = tcnokbokuma.GetValue(1).ToString();
+                txtAdKB.Text = tcnokbokuma.GetValue(2).ToString();
+                txtSoyadKB.Text = tcnokbokuma.GetValue(3).ToString();
+                DTDogumTarihiKB.Text = tcnokbokuma.GetValue(4).ToString();
+                dropCinsiyetKB.Text = tcnokbokuma.GetValue(6).ToString();
+                txtEpostaKB.Text = tcnokbokuma.GetValue(7).ToString();
+                txtCepTelKB.Text = tcnokbokuma.GetValue(8).ToString();
+                dropKanGrubuKB.Text = tcnokbokuma.GetValue(11).ToString();
+                dropMedeniHalKB.Text = tcnokbokuma.GetValue(12).ToString();
+                DTisegirist.Text = tcnokbokuma.GetValue(14).ToString();
+                dropYetki.Text = tcnokbokuma.GetValue(20).ToString();
+                txtDogumYeriKB.Text = tcnokbokuma.GetValue(21).ToString();
+                txtUyrukKB.Text = tcnokbokuma.GetValue(22).ToString();
+                dropSEhliyetKB.Text = tcnokbokuma.GetValue(23).ToString();
+                txtSicilNoKB.Text = tcnokbokuma.GetValue(24).ToString();
+                DTEhliyetA.Text = tcnokbokuma.GetValue(25).ToString();
+                dropSigaraKKB.Text = tcnokbokuma.GetValue(26).ToString();
+                dropAskerlikKB.Text = tcnokbokuma.GetValue(27).ToString();
+                txtIBANKB.Text = tcnokbokuma.GetValue(28).ToString();
+
+            }
+            if (baglan.State == ConnectionState.Open)
+            {
+                baglan.Close();
+            }
+        }
         public void kbvericek()
         {
             PersonelList.tcno = txtAdKB.Text;
@@ -200,7 +238,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
         int cmt = 0;
         int pzr = 0;
         //0 yok 1 var
-        int yetkikb;
+        string yetkikb;
         // yetki--> 2 kurucu
         //          1 yetkili
         //          0 personel
@@ -208,6 +246,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
         {
             
             DateTime dtbaslangictarihi = DateTime.Now;
+            
             if (String.IsNullOrEmpty(txtAdKB.Text) || String.IsNullOrEmpty(txtSoyadKB.Text) || String.IsNullOrEmpty(txtDogumYeriKB.Text) || String.IsNullOrEmpty(DTDogumTarihiKB.Text) || String.IsNullOrEmpty(dropCinsiyetKB.Text) || String.IsNullOrEmpty(txtUyrukKB.Text) || String.IsNullOrEmpty(dropSEhliyetKB.Text) || String.IsNullOrEmpty(DTEhliyetA.Text) || String.IsNullOrEmpty(txtTcknKB.Text) || String.IsNullOrEmpty(dropKanGrubuKB.Text) || String.IsNullOrEmpty(dropMedeniHalKB.Text) || String.IsNullOrEmpty(dropSigaraKKB.Text) || String.IsNullOrEmpty(txtSicilNoKB.Text) || String.IsNullOrEmpty(DropKBDepDoldurKB.Text) || String.IsNullOrEmpty(txtRolKB.Text) || String.IsNullOrEmpty(txtEpostaKB.Text) || String.IsNullOrEmpty(dropAskerlikKB.Text) || String.IsNullOrEmpty(txtIBANKB.Text) || String.IsNullOrEmpty(txtCepTelKB.Text) || String.IsNullOrEmpty(txtEvAdresi.Text) || String.IsNullOrEmpty(txtUlkeKB.Text) || String.IsNullOrEmpty(txtSehirKB.Text))
             {
                 this.Alert("Tüm alanları doldurduğunuzdan emin olun!", Form_Alert.enmType.Warning);
@@ -259,15 +298,15 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 
                 if (dropYetki.Text== "Kurucu")
                 {
-                    yetkikb = 2;
+                    yetkikb = "Kurucu";
                 }
                 else if (dropYetki.Text == "Yetkili")
                 {
-                    yetkikb = 1;
+                    yetkikb = "Yetkili";
                 }
                 if (dropYetki.Text == "Personel")
                 {
-                    yetkikb = 0;
+                    yetkikb = "Personel";
                 }
                 perekle.Parameters.AddWithValue("@PerYetki", yetkikb);
                 //mesai takvimi
