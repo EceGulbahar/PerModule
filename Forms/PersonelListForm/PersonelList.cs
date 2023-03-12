@@ -28,8 +28,8 @@ namespace PerModule.Forms.PersonelListForm
     public partial class PersonelList : Form
     {
         SqlConnection baglan = new SqlConnection(ConfigurationManager.ConnectionStrings["PerModule.Properties.Settings.PerModuleCS"].ConnectionString);
+        bool kayitaramadurumu = false;
 
-        
         public PersonelList()
         {
             InitializeComponent();
@@ -126,6 +126,8 @@ namespace PerModule.Forms.PersonelListForm
             // TODO: Bu kod satırı 'pERSONNELMODULEDataSet.PersonelListGridView' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             this.personelListGridViewTableAdapter.Fill(this.pERSONNELMODULEDataSet.PersonelListGridView);
             dropDepartmansDoldur();
+            txtTcnoAra.MaxLength = 11;
+            txtTcnoAra.Clear();
 
         }
         
@@ -188,6 +190,63 @@ namespace PerModule.Forms.PersonelListForm
         private void btnYenile_Click(object sender, EventArgs e)
         {
             searchyenile();
+        }
+
+        private void txtTcnoAra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((int)e.KeyChar >= 48 && (int)e.KeyChar <= 57) || (int)e.KeyChar == 8)
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void btnTcnoAra_Click(object sender, EventArgs e)//tcno arama
+        {
+            
+            if(txtTcnoAra.Text.Length==11)
+            {
+                if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                }
+                SqlCommand tcnosorgu = new SqlCommand("select PerTckn from Personnels where PerTckn=@tcno", baglan);
+                tcnosorgu.Parameters.AddWithValue("@tcno", txtTcnoAra.Text);
+                SqlDataReader tcnosorguokuma = tcnosorgu.ExecuteReader();
+                while(tcnosorguokuma.Read())
+                {
+                    kayitaramadurumu=true;
+                    tcnosorgulama();
+                }
+                if(kayitaramadurumu==false)
+                {
+                    this.Alert("Kimlik Numarası Kayıtlı Değil!", Form_Alert.enmType.Info);
+                }
+                if (baglan.State == ConnectionState.Open)
+                {
+                    baglan.Close();
+                }
+            }
+            else
+            {
+                this.Alert("Kimlik Numarası 11 Haneli Olmalı!", Form_Alert.enmType.Warning);
+                txtTcnoAra.Clear();
+                searchyenile();
+            }
+            
+        }
+
+        public void tcnosorgulama()
+        {
+            if (baglan.State == ConnectionState.Closed)
+            {
+                baglan.Open();
+            }
+            dt.Clear();
+            SqlCommand tcnogrid = new SqlCommand("SELECT * FROM dbo.PersonelListGridView where PerTckn like '%" + txtTcnoAra.Text + "%'", baglan);
+            SqlDataAdapter datno = new SqlDataAdapter(tcnogrid);
+            DataSet dstno = new DataSet();
+            datno.Fill(dstno);
+            GridHugeList.DataSource = dstno.Tables[0];
         }
 
         private void btnDepGuncelle_Click(object sender, EventArgs e)

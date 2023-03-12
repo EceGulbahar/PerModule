@@ -185,12 +185,12 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 personCard.Close();
                 PersonelList perlist = new PersonelList();
                 perlist.searchyenile();
-
             }
             catch 
             {
                 this.Alert("Bir şeyler ters gitti!", Form_Alert.enmType.Error);
             }
+            
         }
         int pzt = 0;
         int sali = 0;
@@ -470,5 +470,6 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 
             }
         }
+
     }
 }
