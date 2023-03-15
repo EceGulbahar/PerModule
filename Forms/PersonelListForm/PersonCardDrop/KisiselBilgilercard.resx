@@ -562,7 +562,7 @@
         QmCC
 </value>
   </data>
-  <data name="DTSertifikaT1.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="DTSertifikaT2.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGASURBVFhH7ZZNTsMwEIWDuAGNkLgAS5asOQCH4Qb0BIg2
@@ -575,7 +575,7 @@
         AAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuTextBox20.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtSertverenkurum2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAioAAAAgCAYAAAA8NFP8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIFSURBVHhe7ds/S1VhAMfxMzr6EhxbgqCWO9lgLkngErk4
@@ -590,7 +590,7 @@
         eUnyG85oSiZb7Q0sAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuTextBox17.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtSertifika2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAcEAAAAgCAYAAABq1MN7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHwSURBVHhe7do/a9RgAMfxjB37Ejq6CIIuN9WhdvEQuohd
@@ -605,7 +605,7 @@
         QmCC
 </value>
   </data>
-  <data name="bunifuTextBox16.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtSertverenkurum1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAioAAAAgCAYAAAA8NFP8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIFSURBVHhe7ds/S1VhAMfxMzr6EhxbgqCWO9lgLkngErk4
@@ -620,7 +620,7 @@
         eUnyG85oSiZb7Q0sAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuTextBox13.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtSertifika1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAcEAAAAgCAYAAABq1MN7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHwSURBVHhe7do/a9RgAMfxjB37Ejq6CIIuN9WhdvEQuohd
@@ -635,7 +635,7 @@
         QmCC
 </value>
   </data>
-  <data name="DTSertifikaT.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="DTSertifikaT1.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGASURBVFhH7ZZNTsMwEIWDuAGNkLgAS5asOQCH4Qb0BIg2

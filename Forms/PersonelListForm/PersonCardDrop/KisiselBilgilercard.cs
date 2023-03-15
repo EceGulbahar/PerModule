@@ -95,14 +95,14 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             DTEhliyetA.MinDate = new DateTime(1960, 1, 1);
             DTEhliyetA.MaxDate = new DateTime(yil - 18, ay, gun);
             DTEhliyetA.Format = DateTimePickerFormat.Short;
-            DTSertifikaT.MinDate = new DateTime(1960, 1, 1);
-            DTSertifikaT.MaxDate = new DateTime(yil - 18, ay, gun);
-            DTSertifikaT.Format = DateTimePickerFormat.Short;
             DTSertifikaT1.MinDate = new DateTime(1960, 1, 1);
             DTSertifikaT1.MaxDate = new DateTime(yil - 18, ay, gun);
             DTSertifikaT1.Format = DateTimePickerFormat.Short;
-
-            
+            DTSertifikaT2.MinDate = new DateTime(1960, 1, 1);
+            DTSertifikaT2.MaxDate = new DateTime(yil - 18, ay, gun);
+            DTSertifikaT2.Format = DateTimePickerFormat.Short;
+            DTSertifikaT1.Format = DateTimePickerFormat.Short;
+            DTSertifikaT2.Format = DateTimePickerFormat.Short;
 
         }
         public void kbdoldur()//eksik
@@ -258,7 +258,8 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                     baglan.Open();
                 }
 
-                string sqlperekle = "insert into Personnels(PerTckn,PerAd,PerSoyad,PerDogumTarihi,PerDogumYeri,PerUyruk,PerEhliyetS,PerCinsiyet,PerMail,PerTel,PerKanGrubu,PerMedeniHali,PerSicilNo,PerBaslamaT,PerDEhliyetAlis,PerSigaraK,PerAskerlik,PerIBAN,PerYetki) values(@PerTckn,@PerAd,@PerSoyad,@PerDogumTarihi,@PerDogumYeri,@PerUyruk,@PerEhliyetS,@PerCinsiyet,@PerMail,@PerTel,@PerKanGrubu,@PerMedeniHali,@PerSicilNo,@PerBaslamaT,@PerDEhliyetAlis,@PerSigaraK,@PerAskerlik,@PerIBAN,@PerYetki)";
+                string sqlperekle = "insert into Personnels(PerTckn,PerAd,PerSoyad,PerDogumTarihi,PerDogumYeri,PerUyruk,PerEhliyetS,PerCinsiyet,PerMail,PerTel,PerKanGrubu,PerMedeniHali,PerSicilNo,PerBaslamaT,PerDEhliyetAlis,PerSigaraK,PerAskerlik,PerIBAN,PerYetki,PerIsTel,PerWpTel,Yakini1AdSoyad,Yakini1Tel,Yakini1Derece,Yakini2AdSoyad,Yakini2Tel,Yakini2Derece,SertifikaLisans1Ad,SertifikaLisans1VerenKurum,SertifikaLisans1Tarihi,SertifikaLisans2Ad,SertifikaLisans2VerenKurum,SertifikaLisans2Tarihi) " +
+                    "values(@PerTckn,@PerAd,@PerSoyad,@PerDogumTarihi,@PerDogumYeri,@PerUyruk,@PerEhliyetS,@PerCinsiyet,@PerMail,@PerTel,@PerKanGrubu,@PerMedeniHali,@PerSicilNo,@PerBaslamaT,@PerDEhliyetAlis,@PerSigaraK,@PerAskerlik,@PerIBAN,@PerYetki,@PerIsTel,@PerWpTel,@Yakini1AdSoyad,@Yakini1Tel,@Yakini1Derece,@Yakini2AdSoyad,@Yakini2Tel,@Yakini2Derece,@SertifikaLisans1Ad,@SertifikaLisans1VerenKurum,@SertifikaLisans1Tarihi,@SertifikaLisans2Ad,@SertifikaLisans2VerenKurum,@SertifikaLisans2Tarihi)";
                 SqlCommand perekle = new SqlCommand(sqlperekle, baglan);
                 
                 perekle.Parameters.AddWithValue("@PerTckn", txtTcknKB.Text);
@@ -279,8 +280,26 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 //perekle.Parameters.AddWithValue("@Departmanid", departmanid);
                 perekle.Parameters.AddWithValue("@PerKanGrubu", dropKanGrubuKB.Text);
                 perekle.Parameters.AddWithValue("@PerMedeniHali", dropMedeniHalKB.Text);
-                //perekle.Parameters.AddWithValue("@PerAdres", txtEvAdresi.Text);
+                perekle.Parameters.AddWithValue("@PerIsTel", txtIsTelKB.Text);
+                perekle.Parameters.AddWithValue("@PerWpTel", txtWhatsAppTelKB.Text);
                 perekle.Parameters.AddWithValue("@PerBaslamaT", dtbaslangictarihi);
+
+                perekle.Parameters.AddWithValue("@Yakini1AdSoyad", txtYakiniadsoyad1.Text);
+                perekle.Parameters.AddWithValue("@Yakini1Tel", txtYakin1KB.Text);
+                perekle.Parameters.AddWithValue("@Yakini1Derece", txtYakinderece1.Text);
+                perekle.Parameters.AddWithValue("@Yakini2AdSoyad", txtYakiniadsoyad2.Text);
+                perekle.Parameters.AddWithValue("@Yakini2Tel", txtYakin2KB.Text);
+                perekle.Parameters.AddWithValue("@Yakini2Derece", txtYakinderece2.Text);
+                perekle.Parameters.AddWithValue("@SertifikaLisans1Ad", txtSertifika1.Text);
+                perekle.Parameters.AddWithValue("@SertifikaLisans1VerenKurum", txtSertverenkurum1.Text);
+                perekle.Parameters.AddWithValue("@SertifikaLisans1Tarihi", DTSertifikaT1.Text);
+                perekle.Parameters.AddWithValue("@SertifikaLisans2Ad", txtSertifika2.Text);
+                perekle.Parameters.AddWithValue("@SertifikaLisans2VerenKurum", txtSertverenkurum2.Text);
+                perekle.Parameters.AddWithValue("@SertifikaLisans2Tarihi", DTSertifikaT2.Text);
+                perekle.Parameters.AddWithValue("@PerBaslamaT", dtbaslangictarihi);
+                perekle.Parameters.AddWithValue("@PerBaslamaT", dtbaslangictarihi);
+                perekle.Parameters.AddWithValue("@PerBaslamaT", dtbaslangictarihi);
+
                 perekle.ExecuteNonQuery();
 
                 string sqlperekledepartman = "insert into Departmans(DepAdi,DepRolu) values(@DepAdi,@DepRolu)";
