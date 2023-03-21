@@ -155,39 +155,43 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 string yakini2adsoyadi = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini2AdSoyad")) ? null : (string)readercmd["Yakini2AdSoyad"];
                 string yakini2teli = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini2Tel")) ? null : (string)readercmd["Yakini2Tel"];
                 string yakini2derecesi = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini2Derece")) ? null : (string)readercmd["Yakini2Derece"];
-                string sertifikasi1adi = (string)readercmd["SertifikaLisans1Ad"];
-                string sertifikasi1kurum = (string)readercmd["SertifikaLisans1VerenKurum"];
-                DateTime sertifikasi1tarihi = (DateTime)readercmd["SertifikaLisans1Tarihi"];
-                string sertifikasi2adi = (string)readercmd["SertifikaLisans2Ad"];
-                string sertifikasi2kurum = (string)readercmd["SertifikaLisans2VerenKurum"];
-                DateTime sertifikasi2tarihi = (DateTime)readercmd["SertifikaLisans2Tarihi"];
+                string sertifikasi1adi = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans1Ad")) ? null : (string)readercmd["SertifikaLisans1Ad"];
+                string sertifikasi1kurum = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans1VerenKurum")) ? null : (string)readercmd["SertifikaLisans1VerenKurum"];
+                DateTime? sertifikasi1tarihi = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans1Tarihi")) ? (DateTime?)null : (DateTime)readercmd["SertifikaLisans1Tarihi"];
+                string sertifikasi2adi = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans2Ad")) ? null : (string)readercmd["SertifikaLisans2Ad"];
+                string sertifikasi2kurum = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans2VerenKurum")) ? null : (string)readercmd["SertifikaLisans2VerenKurum"];
+                DateTime? sertifikasi2tarihi = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans2Tarihi")) ? (DateTime?)null : (DateTime)readercmd["SertifikaLisans2Tarihi"];
                 //dil bilmeyebilir burası düzeltilecek
                 string yabanciDil1 = (string)readercmd["YabanciDil1"];
                 string yabanciDil1Düzey = (string)readercmd["YabanciDil1Düzey"];
-                string yabanciDil2 = (string)readercmd["YabanciDil2"];
-                string yabanciDil2Düzey = (string)readercmd["YabanciDil2Düzey"];
-                string yabanciDil3 = (string)readercmd["YabanciDil3"];
-                string yabanciDil3Düzey = (string)readercmd["YabanciDil3Düzey"];
-                string IsYeri1 = (string)readercmd["IsYeri1"];
-                string IsUnvan1 = (string)readercmd["IsUnvan1"];
-                DateTime IseGirisD1 = (DateTime)readercmd["IseGirisD1"];
-                DateTime IstenCikis1 = (DateTime)readercmd["IstenCikis1"];
-                string IstenAyrilis1 = (string)readercmd["IstenAyrilis1"];
-                string IsYeri2 = (string)readercmd["IsYeri2"];
-                string IsUnvan2 = (string)readercmd["IsUnvan2"];
-                DateTime IseGirisD2 = (DateTime)readercmd["IseGirisD2"];
-                DateTime IstenCikis2 = (DateTime)readercmd["IstenCikis2"];
-                string IstenAyrilis2 = (string)readercmd["IstenAyrilis2"];
-                string IsYeri3 = (string)readercmd["IsYeri3"];
-                string IsUnvan3 = (string)readercmd["IsUnvan3"];
-                DateTime IseGirisD3 = (DateTime)readercmd["IseGirisD3"];
-                DateTime IstenCikis3 = (DateTime)readercmd["IstenCikis3"];
-                string IstenAyrilis3 = (string)readercmd["IstenAyrilis3"];
-                string IsYeri4 = (string)readercmd["IsYeri4"];
-                string IsUnvan4 = (string)readercmd["IsUnvan4"];
-                DateTime IseGirisD4 = (DateTime)readercmd["IseGirisD4"];
-                DateTime IstenCikis4 = (DateTime)readercmd["IstenCikis4"];
-                string IstenAyrilis4 = (string)readercmd["IstenAyrilis4"];
+                string yabanciDil2 = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil2")) ? null : (string)readercmd["YabanciDil2"];
+                string yabanciDil2Düzey = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil2Düzey")) ? null : (string)readercmd["YabanciDil2Düzey"];
+                string yabanciDil3 = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil3")) ? null : (string)readercmd["YabanciDil3"];
+                string yabanciDil3Düzey = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil3Düzey")) ? null : (string)readercmd["YabanciDil3Düzey"];
+                //is yeri
+                string IsYeri1 = readercmd.IsDBNull(readercmd.GetOrdinal("IsYeri1")) ? null : (string)readercmd["IsYeri1"];
+                string IsUnvan1 = readercmd.IsDBNull(readercmd.GetOrdinal("IsUnvan1")) ? null : (string)readercmd["IsUnvan1"];
+                DateTime? IseGirisD1 = readercmd.IsDBNull(readercmd.GetOrdinal("IseGirisD1")) ? (DateTime?)null : (DateTime)readercmd["IseGirisD1"];
+                DateTime? IstenCikis1 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenCikis1")) ? (DateTime?)null : (DateTime)readercmd["IstenCikis1"];
+                string IstenAyrilis1 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenAyrilis1")) ? null : (string)readercmd["IstenAyrilis1"];
+
+                string IsYeri2 = readercmd.IsDBNull(readercmd.GetOrdinal("IsYeri2")) ? null : (string)readercmd["IsYeri2"];
+                string IsUnvan2 = readercmd.IsDBNull(readercmd.GetOrdinal("IsUnvan2")) ? null : (string)readercmd["IsUnvan2"];
+                DateTime? IseGirisD2 = readercmd.IsDBNull(readercmd.GetOrdinal("IseGirisD2")) ? (DateTime?)null : (DateTime)readercmd["IseGirisD2"];
+                DateTime? IstenCikis2 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenCikis2")) ? (DateTime?)null : (DateTime)readercmd["IstenCikis2"];
+                string IstenAyrilis2 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenAyrilis2")) ? null : (string)readercmd["IstenAyrilis2"];
+
+                string IsYeri3 = readercmd.IsDBNull(readercmd.GetOrdinal("IsYeri3")) ? null : (string)readercmd["IsYeri3"];
+                string IsUnvan3 = readercmd.IsDBNull(readercmd.GetOrdinal("IsUnvan3")) ? null : (string)readercmd["IsUnvan3"];
+                DateTime? IseGirisD3 = readercmd.IsDBNull(readercmd.GetOrdinal("IseGirisD3")) ? (DateTime?)null : (DateTime)readercmd["IseGirisD3"];
+                DateTime? IstenCikis3 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenCikis3")) ? (DateTime?)null : (DateTime)readercmd["IstenCikis3"];
+                string IstenAyrilis3 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenAyrilis3")) ? null : (string)readercmd["IstenAyrilis3"];
+
+                string IsYeri4 = readercmd.IsDBNull(readercmd.GetOrdinal("IsYeri4")) ? null : (string)readercmd["IsYeri4"];
+                string IsUnvan4 = readercmd.IsDBNull(readercmd.GetOrdinal("IsUnvan4")) ? null : (string)readercmd["IsUnvan4"];
+                DateTime? IseGirisD4 = readercmd.IsDBNull(readercmd.GetOrdinal("IseGirisD4")) ? (DateTime?)null : (DateTime)readercmd["IseGirisD4"];
+                DateTime? IstenCikis4 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenCikis4")) ? (DateTime?)null : (DateTime)readercmd["IstenCikis4"];
+                string IstenAyrilis4 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenAyrilis4")) ? null : (string)readercmd["IstenAyrilis4"];
                 // değişkenlerle yapılacak işlemler
 
             }
