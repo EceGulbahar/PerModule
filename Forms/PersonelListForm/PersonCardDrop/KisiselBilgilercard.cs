@@ -21,6 +21,84 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
         bool kayitkontrol = false;
         //kayıt var mı yok mu?
 
+        int personid;
+        string pertckn;
+        string adi;
+        string soyadi;
+        DateTime dogumtarihi;
+        int maasid;
+        string cinsiyeti;
+        string maili;
+        string teli;
+        string gorseli;
+        //boşsa null atadık yukarıda
+        int egitimbilgileriid;
+        string kangrubu;
+        string medenihali;
+        int adresiid;
+        DateTime isegirist;
+        DateTime? istenayrilist;
+        string ayrilmasebebi;
+        int depiid;
+        string nicki;
+        string sifresi;
+        string yetkisi;
+        string dogumyeri;
+        string uyrugu;
+        string ehliyetseviyesi;
+        string sicilnosu;
+        DateTime? ehliyetalist;
+        string sigarasi;
+        string askerligi;
+        string ibani;
+        int mesaisiid;
+        string isteli;
+        string wpteli;
+        string yakini1adsoyadi;
+        string yakini1teli;
+        string yakini1derecesi;
+        string yakini2adsoyadi;
+        string yakini2teli;
+        string yakini2derecesi;
+        string sertifikasi1adi;
+        string sertifikasi1kurum;
+        DateTime? sertifikasi1tarihi;
+        string sertifikasi2adi;
+        string sertifikasi2kurum;
+        DateTime? sertifikasi2tarihi;
+
+        string yabanciDil1;
+        string yabanciDil1Düzey;
+        string yabanciDil2;
+        string yabanciDil2Düzey;
+        string yabanciDil3;
+        string yabanciDil3Düzey;
+        //is yeri
+        string IsYeri1;
+        string IsUnvan1;
+        DateTime? IseGirisD1;
+        DateTime? IstenCikis1;
+        string IstenAyrilis1;
+
+        string IsYeri2;
+        string IsUnvan2;
+        DateTime? IseGirisD2;
+        DateTime? IstenCikis2;
+        string IstenAyrilis2;
+
+        string IsYeri3;
+        string IsUnvan3;
+        DateTime? IseGirisD3;
+        DateTime? IstenCikis3;
+        string IstenAyrilis3;
+
+        string IsYeri4;
+        string IsUnvan4;
+        DateTime? IseGirisD4;
+        DateTime? IstenCikis4;
+        string IstenAyrilis4; 
+
+
         SqlConnection baglan = new SqlConnection(ConfigurationManager.ConnectionStrings["PerModule.Properties.Settings.PerModuleCS"].ConnectionString);
         public KisiselBilgilercard()
         {
@@ -82,7 +160,8 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             txtYakin1KB.MaxLength = 12;
             txtYakin2KB.MaxLength = 12;
             txtSicilNoKB.MaxLength = 26;
-            
+            txtBaslamaYiliKB.MaxLength = 10;
+            txtBitirmeYiliKB.MaxLength = 10;
 
             DateTime dtdogumtarihi = DateTime.Now;
             int yil = int.Parse(dtdogumtarihi.ToString("yyyy"));
@@ -92,8 +171,8 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             DTDogumTarihiKB.MinDate = new DateTime(1960,1,1);
             DTDogumTarihiKB.MaxDate = new DateTime(yil - 18, ay, gun);
             DTDogumTarihiKB.Format = DateTimePickerFormat.Short;
-            DTEhliyetA.MinDate = new DateTime(1960, 1, 1);
-            DTEhliyetA.MaxDate = new DateTime(yil - 18, ay, gun);
+            //DTEhliyetA.MinDate = new DateTime(1960, 1, 1);
+            //DTEhliyetA.MaxDate = new DateTime(yil - 18, ay, gun);
             DTEhliyetA.Format = DateTimePickerFormat.Short;
             DTSertifikaT1.MinDate = new DateTime(1960, 1, 1);
             DTSertifikaT1.MaxDate = new DateTime(yil - 18, ay, gun);
@@ -116,82 +195,82 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             // satırları oku ve değişkenlere ata
             while (readercmd.Read())
             {
-                int personid = (int)readercmd["id"];
-                string pertckn = (string)readercmd["PerTckn"];
-                string adi = (string)readercmd["PerAd"];
-                string soyadi = (string)readercmd["PerSoyad"];
-                DateTime dogumtarihi = (DateTime)readercmd["PerDogumTarihi"];
-                int maasid = (int)readercmd["PerMaas"];
-                string cinsiyeti = (string)readercmd["PerCinsiyet"];
-                string maili = (string)readercmd["PerMail"];
-                string teli = (string)readercmd["PerTel"];
-                string gorseli = readercmd.IsDBNull(readercmd.GetOrdinal("PerGorsel")) ? null : (string)readercmd["PerGorsel"];
+                personid = (int)readercmd["id"];
+                pertckn = (string)readercmd["PerTckn"];
+                adi = (string)readercmd["PerAd"];
+                soyadi = (string)readercmd["PerSoyad"];
+                dogumtarihi = (DateTime)readercmd["PerDogumTarihi"];
+                maasid = (int)readercmd["PerMaas"];
+                cinsiyeti = (string)readercmd["PerCinsiyet"];
+                maili = (string)readercmd["PerMail"];
+                teli = (string)readercmd["PerTel"];
+                gorseli = readercmd.IsDBNull(readercmd.GetOrdinal("PerGorsel")) ? null : (string)readercmd["PerGorsel"];
                 //boşsa null atadık yukarıda
-                int egitimbilgileriid = (int)readercmd["PerEgitimBilgileri"];
-                string kangrubu = (string)readercmd["PerKanGrubu"];
-                string medenihali = (string)readercmd["PerMedeniHali"];
-                int adresiid = (int)readercmd["Adresid"];
-                DateTime isegirist = (DateTime)readercmd["PerBaslamaT"];
-                DateTime? istenayrilist = readercmd.IsDBNull(readercmd.GetOrdinal("PerAyrilisT")) ? (DateTime?)null : (DateTime)readercmd["PerAyrilisT"];
-                string ayrilmasebebi = readercmd.IsDBNull(readercmd.GetOrdinal("PerAyrilmaSebebi")) ? null : (string)readercmd["PerAyrilmaSebebi"];
-                int depiid = (int)readercmd["Departmanid"];
-                string nicki = (string)readercmd["PerNickName"];
-                string sifresi = (string)readercmd["PerPassword"];
-                string yetkisi = (string)readercmd["PerYetki"];
-                string dogumyeri = (string)readercmd["PerDogumYeri"];
-                string uyrugu = (string)readercmd["PerUyruk"];
-                string ehliyetseviyesi = (string)readercmd["PerEhliyetS"];
-                string sicilnosu = (string)readercmd["PerSicilNo"];
-                DateTime? ehliyetalist = readercmd.IsDBNull(readercmd.GetOrdinal("PerDEhliyetAlis")) ? (DateTime?)null : (DateTime)readercmd["PerDEhliyetAlis"];
-                string sigarasi = (string)readercmd["PerSigaraK"];
-                string askerligi = (string)readercmd["PerAskerlik"];
-                string ibani = (string)readercmd["PerIBAN"];
-                int mesaisiid = (int)readercmd["Mesaiid"];
-                string isteli = (string)readercmd["PerIsTel"];
-                string wpteli = (string)readercmd["PerWpTel"];
-                string yakini1adsoyadi = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini1AdSoyad")) ? null : (string)readercmd["Yakini1AdSoyad"];
-                string yakini1teli = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini1Tel")) ? null : (string)readercmd["Yakini1Tel"];
-                string yakini1derecesi = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini1Derece")) ? null : (string)readercmd["Yakini1Derece"];
-                string yakini2adsoyadi = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini2AdSoyad")) ? null : (string)readercmd["Yakini2AdSoyad"];
-                string yakini2teli = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini2Tel")) ? null : (string)readercmd["Yakini2Tel"];
-                string yakini2derecesi = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini2Derece")) ? null : (string)readercmd["Yakini2Derece"];
-                string sertifikasi1adi = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans1Ad")) ? null : (string)readercmd["SertifikaLisans1Ad"];
-                string sertifikasi1kurum = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans1VerenKurum")) ? null : (string)readercmd["SertifikaLisans1VerenKurum"];
-                DateTime? sertifikasi1tarihi = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans1Tarihi")) ? (DateTime?)null : (DateTime)readercmd["SertifikaLisans1Tarihi"];
-                string sertifikasi2adi = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans2Ad")) ? null : (string)readercmd["SertifikaLisans2Ad"];
-                string sertifikasi2kurum = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans2VerenKurum")) ? null : (string)readercmd["SertifikaLisans2VerenKurum"];
-                DateTime? sertifikasi2tarihi = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans2Tarihi")) ? (DateTime?)null : (DateTime)readercmd["SertifikaLisans2Tarihi"];
+                egitimbilgileriid = (int)readercmd["PerEgitimBilgileri"];
+                kangrubu = (string)readercmd["PerKanGrubu"];
+                medenihali = (string)readercmd["PerMedeniHali"];
+                adresiid = (int)readercmd["Adresid"];
+                isegirist = (DateTime)readercmd["PerBaslamaT"];
+                istenayrilist = readercmd.IsDBNull(readercmd.GetOrdinal("PerAyrilisT")) ? (DateTime?)null : (DateTime)readercmd["PerAyrilisT"];
+                ayrilmasebebi = readercmd.IsDBNull(readercmd.GetOrdinal("PerAyrilmaSebebi")) ? null : (string)readercmd["PerAyrilmaSebebi"];
+                depiid = (int)readercmd["Departmanid"];
+                nicki = (string)readercmd["PerNickName"];
+                sifresi = (string)readercmd["PerPassword"];
+                yetkisi = (string)readercmd["PerYetki"];
+                dogumyeri = (string)readercmd["PerDogumYeri"];
+                uyrugu = (string)readercmd["PerUyruk"];
+                ehliyetseviyesi = (string)readercmd["PerEhliyetS"];
+                sicilnosu = (string)readercmd["PerSicilNo"];
+                ehliyetalist = readercmd.IsDBNull(readercmd.GetOrdinal("PerDEhliyetAlis")) ? (DateTime?)null : (DateTime)readercmd["PerDEhliyetAlis"];
+                sigarasi = (string)readercmd["PerSigaraK"];
+                askerligi = (string)readercmd["PerAskerlik"];
+                ibani = (string)readercmd["PerIBAN"];
+                mesaisiid = (int)readercmd["Mesaiid"];
+                isteli = (string)readercmd["PerIsTel"];
+                wpteli = (string)readercmd["PerWpTel"];
+                yakini1adsoyadi = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini1AdSoyad")) ? null : (string)readercmd["Yakini1AdSoyad"];
+                yakini1teli = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini1Tel")) ? null : (string)readercmd["Yakini1Tel"];
+                yakini1derecesi = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini1Derece")) ? null : (string)readercmd["Yakini1Derece"];
+                yakini2adsoyadi = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini2AdSoyad")) ? null : (string)readercmd["Yakini2AdSoyad"];
+                yakini2teli = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini2Tel")) ? null : (string)readercmd["Yakini2Tel"];
+                yakini2derecesi = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini2Derece")) ? null : (string)readercmd["Yakini2Derece"];
+                sertifikasi1adi = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans1Ad")) ? null : (string)readercmd["SertifikaLisans1Ad"];
+                sertifikasi1kurum = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans1VerenKurum")) ? null : (string)readercmd["SertifikaLisans1VerenKurum"];
+                sertifikasi1tarihi = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans1Tarihi")) ? (DateTime?)null : (DateTime)readercmd["SertifikaLisans1Tarihi"];
+                sertifikasi2adi = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans2Ad")) ? null : (string)readercmd["SertifikaLisans2Ad"];
+                sertifikasi2kurum = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans2VerenKurum")) ? null : (string)readercmd["SertifikaLisans2VerenKurum"];
+                sertifikasi2tarihi = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans2Tarihi")) ? (DateTime?)null : (DateTime)readercmd["SertifikaLisans2Tarihi"];
                 //dil bilmeyebilir burası düzeltilecek
-                string yabanciDil1 = (string)readercmd["YabanciDil1"];
-                string yabanciDil1Düzey = (string)readercmd["YabanciDil1Düzey"];
-                string yabanciDil2 = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil2")) ? null : (string)readercmd["YabanciDil2"];
-                string yabanciDil2Düzey = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil2Düzey")) ? null : (string)readercmd["YabanciDil2Düzey"];
-                string yabanciDil3 = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil3")) ? null : (string)readercmd["YabanciDil3"];
-                string yabanciDil3Düzey = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil3Düzey")) ? null : (string)readercmd["YabanciDil3Düzey"];
+                yabanciDil1 = (string)readercmd["YabanciDil1"];
+                yabanciDil1Düzey = (string)readercmd["YabanciDil1Düzey"];
+                yabanciDil2 = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil2")) ? null : (string)readercmd["YabanciDil2"];
+                yabanciDil2Düzey = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil2Düzey")) ? null : (string)readercmd["YabanciDil2Düzey"];
+                yabanciDil3 = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil3")) ? null : (string)readercmd["YabanciDil3"];
+                yabanciDil3Düzey = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil3Düzey")) ? null : (string)readercmd["YabanciDil3Düzey"];
                 //is yeri
-                string IsYeri1 = readercmd.IsDBNull(readercmd.GetOrdinal("IsYeri1")) ? null : (string)readercmd["IsYeri1"];
-                string IsUnvan1 = readercmd.IsDBNull(readercmd.GetOrdinal("IsUnvan1")) ? null : (string)readercmd["IsUnvan1"];
-                DateTime? IseGirisD1 = readercmd.IsDBNull(readercmd.GetOrdinal("IseGirisD1")) ? (DateTime?)null : (DateTime)readercmd["IseGirisD1"];
-                DateTime? IstenCikis1 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenCikis1")) ? (DateTime?)null : (DateTime)readercmd["IstenCikis1"];
-                string IstenAyrilis1 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenAyrilis1")) ? null : (string)readercmd["IstenAyrilis1"];
+                IsYeri1 = readercmd.IsDBNull(readercmd.GetOrdinal("IsYeri1")) ? null : (string)readercmd["IsYeri1"];
+                IsUnvan1 = readercmd.IsDBNull(readercmd.GetOrdinal("IsUnvan1")) ? null : (string)readercmd["IsUnvan1"];
+                IseGirisD1 = readercmd.IsDBNull(readercmd.GetOrdinal("IseGirisD1")) ? (DateTime?)null : (DateTime)readercmd["IseGirisD1"];
+                IstenCikis1 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenCikis1")) ? (DateTime?)null : (DateTime)readercmd["IstenCikis1"];
+                IstenAyrilis1 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenAyrilis1")) ? null : (string)readercmd["IstenAyrilis1"];
 
-                string IsYeri2 = readercmd.IsDBNull(readercmd.GetOrdinal("IsYeri2")) ? null : (string)readercmd["IsYeri2"];
-                string IsUnvan2 = readercmd.IsDBNull(readercmd.GetOrdinal("IsUnvan2")) ? null : (string)readercmd["IsUnvan2"];
-                DateTime? IseGirisD2 = readercmd.IsDBNull(readercmd.GetOrdinal("IseGirisD2")) ? (DateTime?)null : (DateTime)readercmd["IseGirisD2"];
-                DateTime? IstenCikis2 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenCikis2")) ? (DateTime?)null : (DateTime)readercmd["IstenCikis2"];
-                string IstenAyrilis2 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenAyrilis2")) ? null : (string)readercmd["IstenAyrilis2"];
+                IsYeri2 = readercmd.IsDBNull(readercmd.GetOrdinal("IsYeri2")) ? null : (string)readercmd["IsYeri2"];
+                IsUnvan2 = readercmd.IsDBNull(readercmd.GetOrdinal("IsUnvan2")) ? null : (string)readercmd["IsUnvan2"];
+                IseGirisD2 = readercmd.IsDBNull(readercmd.GetOrdinal("IseGirisD2")) ? (DateTime?)null : (DateTime)readercmd["IseGirisD2"];
+                IstenCikis2 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenCikis2")) ? (DateTime?)null : (DateTime)readercmd["IstenCikis2"];
+                IstenAyrilis2 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenAyrilis2")) ? null : (string)readercmd["IstenAyrilis2"];
 
-                string IsYeri3 = readercmd.IsDBNull(readercmd.GetOrdinal("IsYeri3")) ? null : (string)readercmd["IsYeri3"];
-                string IsUnvan3 = readercmd.IsDBNull(readercmd.GetOrdinal("IsUnvan3")) ? null : (string)readercmd["IsUnvan3"];
-                DateTime? IseGirisD3 = readercmd.IsDBNull(readercmd.GetOrdinal("IseGirisD3")) ? (DateTime?)null : (DateTime)readercmd["IseGirisD3"];
-                DateTime? IstenCikis3 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenCikis3")) ? (DateTime?)null : (DateTime)readercmd["IstenCikis3"];
-                string IstenAyrilis3 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenAyrilis3")) ? null : (string)readercmd["IstenAyrilis3"];
+                IsYeri3 = readercmd.IsDBNull(readercmd.GetOrdinal("IsYeri3")) ? null : (string)readercmd["IsYeri3"];
+                IsUnvan3 = readercmd.IsDBNull(readercmd.GetOrdinal("IsUnvan3")) ? null : (string)readercmd["IsUnvan3"];
+                IseGirisD3 = readercmd.IsDBNull(readercmd.GetOrdinal("IseGirisD3")) ? (DateTime?)null : (DateTime)readercmd["IseGirisD3"];
+                IstenCikis3 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenCikis3")) ? (DateTime?)null : (DateTime)readercmd["IstenCikis3"];
+                IstenAyrilis3 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenAyrilis3")) ? null : (string)readercmd["IstenAyrilis3"];
 
-                string IsYeri4 = readercmd.IsDBNull(readercmd.GetOrdinal("IsYeri4")) ? null : (string)readercmd["IsYeri4"];
-                string IsUnvan4 = readercmd.IsDBNull(readercmd.GetOrdinal("IsUnvan4")) ? null : (string)readercmd["IsUnvan4"];
-                DateTime? IseGirisD4 = readercmd.IsDBNull(readercmd.GetOrdinal("IseGirisD4")) ? (DateTime?)null : (DateTime)readercmd["IseGirisD4"];
-                DateTime? IstenCikis4 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenCikis4")) ? (DateTime?)null : (DateTime)readercmd["IstenCikis4"];
-                string IstenAyrilis4 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenAyrilis4")) ? null : (string)readercmd["IstenAyrilis4"];
+                IsYeri4 = readercmd.IsDBNull(readercmd.GetOrdinal("IsYeri4")) ? null : (string)readercmd["IsYeri4"];
+                IsUnvan4 = readercmd.IsDBNull(readercmd.GetOrdinal("IsUnvan4")) ? null : (string)readercmd["IsUnvan4"];
+                IseGirisD4 = readercmd.IsDBNull(readercmd.GetOrdinal("IseGirisD4")) ? (DateTime?)null : (DateTime)readercmd["IseGirisD4"];
+                IstenCikis4 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenCikis4")) ? (DateTime?)null : (DateTime)readercmd["IstenCikis4"];
+                IstenAyrilis4 = readercmd.IsDBNull(readercmd.GetOrdinal("IstenAyrilis4")) ? null : (string)readercmd["IstenAyrilis4"];
                 // değişkenlerle yapılacak işlemler
 
             }
@@ -202,7 +281,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             }
 
         }
-        public void kbdoldur()//eksik
+        public void kbdoldur()//eksik BİLGİLERİ YERİNE KOYMA
         {
             if (baglan.State == ConnectionState.Closed)
             {
@@ -217,12 +296,21 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 txtAdKB.Text = tcnokbokuma.GetValue(2).ToString();
                 txtSoyadKB.Text = tcnokbokuma.GetValue(3).ToString();
                 DTDogumTarihiKB.Text = tcnokbokuma.GetValue(4).ToString();
+                //maas
                 dropCinsiyetKB.Text = tcnokbokuma.GetValue(6).ToString();
                 txtEpostaKB.Text = tcnokbokuma.GetValue(7).ToString();
                 txtCepTelKB.Text = tcnokbokuma.GetValue(8).ToString();
+                //gorsel
+                //egitim
                 dropKanGrubuKB.Text = tcnokbokuma.GetValue(11).ToString();
                 dropMedeniHalKB.Text = tcnokbokuma.GetValue(12).ToString();
+                //adres
                 DTisegirist.Text = tcnokbokuma.GetValue(14).ToString();
+                //ayrılıst
+                //ayrılma sebebi
+                //departnanid
+                //nick
+                //password
                 dropYetki.Text = tcnokbokuma.GetValue(20).ToString();
                 txtDogumYeriKB.Text = tcnokbokuma.GetValue(21).ToString();
                 txtUyrukKB.Text = tcnokbokuma.GetValue(22).ToString();
@@ -232,17 +320,96 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 dropSigaraKKB.Text = tcnokbokuma.GetValue(26).ToString();
                 dropAskerlikKB.Text = tcnokbokuma.GetValue(27).ToString();
                 txtIBANKB.Text = tcnokbokuma.GetValue(28).ToString();
-
+                //mesai
+                txtIsTelKB.Text = isteli;
+                txtWhatsAppTelKB.Text = wpteli;
+                txtYakiniadsoyad1.Text = yakini1adsoyadi;
+                txtYakin1KB.Text = yakini1teli;
+                txtYakinderece1.Text = yakini1derecesi;
+                txtYakiniadsoyad2.Text = yakini2adsoyadi;
+                txtYakin2KB.Text = yakini2teli;
+                txtYakinderece2.Text = yakini2derecesi;
+                txtSertifika1.Text = sertifikasi1adi;
+                txtSertverenkurum1.Text = sertifikasi1kurum;
+                DTSertifikaT1.Text = tcnokbokuma.GetValue(40).ToString();
+                txtSertifika2.Text = sertifikasi2adi;
+                txtSertverenkurum2.Text = sertifikasi2kurum;
+                DTSertifikaT2.Text = tcnokbokuma.GetValue(43).ToString();
+                txtYabanciDil1.Text = yabanciDil1;
+                dropYabanciDilDuzey1.Text = yabanciDil1Düzey;
+                txtYabanciDil2.Text = yabanciDil2;
+                dropYabanciDilDuzey2.Text = yabanciDil2Düzey;
+                txtYabanciDil3.Text = yabanciDil3;
+                dropYabanciDilDuzey3.Text = yabanciDil3Düzey;
+                txtIsYeri1.Text = IsYeri1;
+                txtIsUnvan1.Text = IsUnvan1;
+                dtIseGiris1.Text = tcnokbokuma.GetValue(52).ToString();
+                dtIstenCikis1.Text = tcnokbokuma.GetValue(53).ToString();
+                txtIsAyrilis1.Text = IstenAyrilis1;
+                txtIsYeri2.Text = IsYeri2;
+                txtIsUnvan2.Text = IsUnvan2;
+                dtIseGiris2.Text = tcnokbokuma.GetValue(57).ToString();
+                dtIstenCikis2.Text = tcnokbokuma.GetValue(58).ToString();
+                txtIsAyrilis2.Text = IstenAyrilis2;
+                txtIsYeri3.Text = IsYeri3;
+                txtIsUnvan3.Text = IsUnvan3;
+                dtIseGiris3.Text = tcnokbokuma.GetValue(62).ToString();
+                dtIstenCikis3.Text = tcnokbokuma.GetValue(63).ToString();
+                txtIsAyrilis3.Text = IstenAyrilis3;
+                txtIsYeri4.Text = IsYeri4;
+                txtIsUnvan4.Text = IsUnvan4;
+                dtIseGiris4.Text = tcnokbokuma.GetValue(67).ToString();
+                dtIstenCikis4.Text = tcnokbokuma.GetValue(68).ToString();
+                txtIsAyrilis4.Text = IstenAyrilis4;
             }
+
+            SqlCommand kbdolduradres = new SqlCommand("select * from Adreses where id=@adresiid", baglan);
+            kbdolduradres.Parameters.AddWithValue("@adresiid", adresiid);
+            SqlDataReader adresokuma = kbdolduradres.ExecuteReader();
+            while (adresokuma.Read())
+            {
+                txtUlkeKB.Text=adresokuma.GetValue(1).ToString();
+                txtSehirKB.Text = adresokuma.GetValue(2).ToString();
+                txtEvAdresi.Text = adresokuma.GetValue(3).ToString();
+            }
+
+            SqlCommand kbdolduregitim = new SqlCommand("select * from Egitims where id=@egitim", baglan);
+            kbdolduregitim.Parameters.AddWithValue("@egitim", egitimbilgileriid);
+            SqlDataReader egitimokuma = kbdolduregitim.ExecuteReader();
+            while (egitimokuma.Read())
+            {
+                int sonemi = Convert.ToInt32(egitimokuma.GetValue(1).ToString());
+                if (sonemi == 1)
+                {
+                    checkSonEgitimmi.Checked = true;
+                }
+                else
+                {
+                    checkSonEgitimmi.Checked = false;
+                }
+                dropEgitimDurumu.Text = egitimokuma.GetValue(2).ToString();
+                txtMezunOlunanOkul.Text = egitimokuma.GetValue(3).ToString();
+                txtBolumKB.Text = egitimokuma.GetValue(4).ToString();
+                txtBaslamaYiliKB.Text = egitimokuma.GetValue(5).ToString();
+                txtBitirmeYiliKB.Text = egitimokuma.GetValue(6).ToString();
+            }
+
+            SqlCommand kbdoldurdepartmans = new SqlCommand("select * from Departmans where id=@departmaniid", baglan);
+            kbdoldurdepartmans.Parameters.AddWithValue("@departmaniid", depiid);
+            SqlDataReader depokuma = kbdoldurdepartmans.ExecuteReader();
+            while (depokuma.Read())
+            {
+                DropKBDepDoldurKB.Text = depokuma.GetValue(1).ToString();
+                txtRolKB.Text = depokuma.GetValue(2).ToString();
+            }
+
             if (baglan.State == ConnectionState.Open)
             {
                 baglan.Close();
             }
+            
         }
-        public void kbvericek()
-        {
-            PersonelList.tcno = txtAdKB.Text;
-        }
+        
 
         private void txtKimlikNoKB_TextChanged(object sender, EventArgs e)
         {
@@ -297,8 +464,11 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             this.Close();
         }
 
-        
-        private void btnPersonnelCikarKB_Click(object sender, EventArgs e)//silme Çalışmıyor
+        int egitimdid;
+        int adresbid;
+        int departmanibid;
+        int mesaibid;
+        private void btnPersonnelCikarKB_Click(object sender, EventArgs e)
         {
             string tckn = PersonelList.tcno;
             try
@@ -307,13 +477,44 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 {
                     baglan.Open();
                 }
+                //personelden silme
                 SqlCommand persil = new SqlCommand("DELETE FROM Personnels where PerTckn=@tckn", baglan);
                 persil.Parameters.AddWithValue("@tckn", tckn);
                 persil.ExecuteNonQuery();
+                //personelin adresini,mesaisini,egitimini,departmansını çekme
+                SqlCommand persilcek = new SqlCommand("SELECT PerEgitimBilgileri,Adresid,Departmanid,Mesaiid FROM Personnels where PerTckn=@tckn", baglan);
+                persilcek.Parameters.AddWithValue("@tckn", tckn);
+                SqlDataReader readercmda = persilcek.ExecuteReader();
+                // satırları oku ve değişkenlere ata
+                while (readercmda.Read())
+                {
+                    egitimdid = (int)readercmda["PerEgitimBilgileri"];
+                    adresbid = (int)readercmda["Adresid"];
+                    departmanibid = (int)readercmda["Departmanid"];
+                    mesaibid = (int)readercmda["Mesaiid"];
+                   
+                }
+                SqlCommand persilegitim = new SqlCommand("DELETE FROM Egitims where id=@eid", baglan);
+                persilegitim.Parameters.AddWithValue("@eid", egitimdid);
+                persilegitim.ExecuteNonQuery();
+
+                SqlCommand persiladres = new SqlCommand("DELETE FROM Adreses where id=@aid", baglan);
+                persiladres.Parameters.AddWithValue("@aid", adresbid);
+                persiladres.ExecuteNonQuery();
+
+                SqlCommand persildepartmans = new SqlCommand("DELETE FROM Departmans where id=@did", baglan);
+                persildepartmans.Parameters.AddWithValue("@did", departmanibid);
+                persildepartmans.ExecuteNonQuery();
+
+                SqlCommand persilmesaisi = new SqlCommand("DELETE FROM MesaiTakvimi where id=@mid", baglan);
+                persilmesaisi.Parameters.AddWithValue("@mid", mesaibid);
+                persilmesaisi.ExecuteNonQuery();
+
                 if (baglan.State == ConnectionState.Open)
                 {
                     baglan.Close();
                 }
+
                 this.Alert("Personel çıkarma başarılı!", Form_Alert.enmType.Success);
                 //ayrılma sebebi aç.
                 PersonCard personCard = new PersonCard();
@@ -502,10 +703,11 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 
         private void btnPersonnelGuncelleKB_Click(object sender, EventArgs e)
         {
-
+            varguncelle();
         }
 
         public void varguncelle()
+            //EKSİK
         {
             try
             {

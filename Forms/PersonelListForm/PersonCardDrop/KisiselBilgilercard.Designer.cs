@@ -1336,9 +1336,9 @@
             this.label41.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label41.Location = new System.Drawing.Point(912, 1331);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(103, 19);
+            this.label41.Size = new System.Drawing.Size(122, 19);
             this.label41.TabIndex = 92;
-            this.label41.Text = "Başlama Yılı";
+            this.label41.Text = "Başlama Tarihi";
             // 
             // label42
             // 
@@ -1347,9 +1347,9 @@
             this.label42.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label42.Location = new System.Drawing.Point(1133, 1331);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(87, 19);
+            this.label42.Size = new System.Drawing.Size(106, 19);
             this.label42.TabIndex = 93;
-            this.label42.Text = "Bitirme Yılı";
+            this.label42.Text = "Bitirme Tarihi";
             // 
             // checkSonEgitimmi
             // 
