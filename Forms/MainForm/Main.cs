@@ -153,7 +153,7 @@ namespace PerModule
         private void btnAnasayfa_MouseEnter(object sender, EventArgs e)
         {
             
-           btnAnasayfa.BackColor = System.Drawing.ColorTranslator.FromHtml("#343A40");
+           btnAnasayfa.BackColor = System.Drawing.ColorTranslator.FromHtml("#636970");
         }
 
         private void btnAnasayfa_MouseLeave(object sender, EventArgs e)
@@ -163,7 +163,7 @@ namespace PerModule
 
         private void btnPersonel_MouseEnter(object sender, EventArgs e)
         {
-            btnPersonel.BackColor = System.Drawing.ColorTranslator.FromHtml("#343A40");
+            btnPersonel.BackColor = System.Drawing.ColorTranslator.FromHtml("#636970");
         }
 
         private void btnPersonel_MouseLeave(object sender, EventArgs e)
@@ -173,7 +173,7 @@ namespace PerModule
 
         private void btnPerRaport_MouseEnter(object sender, EventArgs e)
         {
-            btnPerRaport.BackColor = System.Drawing.ColorTranslator.FromHtml("#343A40");
+            btnPerRaport.BackColor = System.Drawing.ColorTranslator.FromHtml("#636970");
         }
 
         private void btnPerRaport_MouseLeave(object sender, EventArgs e)
@@ -183,7 +183,7 @@ namespace PerModule
 
         private void BtnIzin_MouseEnter(object sender, EventArgs e)
         {
-            BtnIzin.BackColor = System.Drawing.ColorTranslator.FromHtml("#343A40");
+            BtnIzin.BackColor = System.Drawing.ColorTranslator.FromHtml("#636970");
         }
 
         private void BtnIzin_MouseLeave(object sender, EventArgs e)
@@ -193,7 +193,7 @@ namespace PerModule
 
         private void btnZimmet_MouseEnter(object sender, EventArgs e)
         {
-            btnZimmet.BackColor = System.Drawing.ColorTranslator.FromHtml("#343A40");
+            btnZimmet.BackColor = System.Drawing.ColorTranslator.FromHtml("#636970");
         }
 
         private void btnZimmet_MouseLeave(object sender, EventArgs e)
@@ -203,7 +203,7 @@ namespace PerModule
 
         private void btnOzlukB_MouseEnter(object sender, EventArgs e)
         {
-            btnOzlukB.BackColor = System.Drawing.ColorTranslator.FromHtml("#343A40");
+            btnOzlukB.BackColor = System.Drawing.ColorTranslator.FromHtml("#636970");
         }
 
         private void btnOzlukB_MouseLeave(object sender, EventArgs e)
@@ -213,7 +213,7 @@ namespace PerModule
 
         private void btnBordro_MouseEnter(object sender, EventArgs e)
         {
-            btnBordro.BackColor = System.Drawing.ColorTranslator.FromHtml("#343A40");
+            btnBordro.BackColor = System.Drawing.ColorTranslator.FromHtml("#636970");
         }
 
         private void btnBordro_MouseLeave(object sender, EventArgs e)

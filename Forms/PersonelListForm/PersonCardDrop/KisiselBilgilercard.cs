@@ -168,7 +168,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             int ay = int.Parse(dtdogumtarihi.ToString("MM"));
             int gun = int.Parse(dtdogumtarihi.ToString("dd"));
 
-            DTDogumTarihiKB.MinDate = new DateTime(1960,1,1);
+            DTDogumTarihiKB.MinDate = new DateTime(1960, 1, 1);
             DTDogumTarihiKB.MaxDate = new DateTime(yil - 18, ay, gun);
             DTDogumTarihiKB.Format = DateTimePickerFormat.Short;
             //DTEhliyetA.MinDate = new DateTime(1960, 1, 1);
@@ -183,13 +183,17 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             DTSertifikaT1.Format = DateTimePickerFormat.Short;
             DTSertifikaT2.Format = DateTimePickerFormat.Short;
 
+        }
+
+        public void kbdegisken()
+        {
             if (baglan.State == ConnectionState.Closed)
             {
                 baglan.Open();
             }
             // tüm satırları seç
             SqlCommand cmd = new SqlCommand("SELECT * FROM Personnels where PerTckn=@tckn", baglan);
-            cmd.Parameters.AddWithValue("@tckn",tckn);
+            cmd.Parameters.AddWithValue("@tckn", tckn);
             SqlDataReader readercmd = cmd.ExecuteReader();
 
             // satırları oku ve değişkenlere ata
@@ -281,6 +285,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             }
 
         }
+    
         public void kbdoldur()//eksik BİLGİLERİ YERİNE KOYMA
         {
             if (baglan.State == ConnectionState.Closed)
