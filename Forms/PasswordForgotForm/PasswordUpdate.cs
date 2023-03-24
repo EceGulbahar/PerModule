@@ -27,10 +27,7 @@ namespace PerModule.Forms.PasswordForgotForm
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
         public void Alert(string msg, Form_Alert.enmType type)
         {
             Form_Alert frm = new Form_Alert();
@@ -84,6 +81,11 @@ namespace PerModule.Forms.PasswordForgotForm
             {
                 baglan.Close();
             }
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

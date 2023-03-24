@@ -87,5 +87,7 @@ namespace PerModule.Forms.LoginForm
             PasswordUpdate form = new PasswordUpdate();
             form.Show();
         }
+
+       
     }
 }

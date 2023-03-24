@@ -40,7 +40,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGiris = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCikis = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtKAdi = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -51,29 +50,23 @@
             this.linklblSifre = new System.Windows.Forms.LinkLabel();
             this.txtKSifre = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pictureBoxLoginLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlGrad = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.lblbilgilogin = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoginLogo)).BeginInit();
-            this.pnlGrad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(761, 681);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // btnGiris
             // 
@@ -86,7 +79,7 @@
             this.btnGiris.AutoSizeLeftIcon = true;
             this.btnGiris.AutoSizeRightIcon = true;
             this.btnGiris.BackColor = System.Drawing.Color.Transparent;
-            this.btnGiris.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(0)))));
+            this.btnGiris.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(125)))), ((int)(((byte)(109)))));
             this.btnGiris.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGiris.BackgroundImage")));
             this.btnGiris.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnGiris.ButtonText = "Giriş Yap";
@@ -115,10 +108,10 @@
             this.btnGiris.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnGiris.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnGiris.IconSize = 25;
-            this.btnGiris.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(0)))));
+            this.btnGiris.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(125)))), ((int)(((byte)(109)))));
             this.btnGiris.IdleBorderRadius = 15;
             this.btnGiris.IdleBorderThickness = 1;
-            this.btnGiris.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(0)))));
+            this.btnGiris.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(125)))), ((int)(((byte)(109)))));
             this.btnGiris.IdleIconLeftImage = null;
             this.btnGiris.IdleIconRightImage = null;
             this.btnGiris.IndicateFocus = false;
@@ -132,28 +125,28 @@
             this.btnGiris.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnGiris.OnDisabledState.IconLeftImage = null;
             this.btnGiris.OnDisabledState.IconRightImage = null;
-            this.btnGiris.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(0)))));
+            this.btnGiris.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(68)))), ((int)(((byte)(59)))));
             this.btnGiris.onHoverState.BorderRadius = 15;
             this.btnGiris.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnGiris.onHoverState.BorderThickness = 1;
-            this.btnGiris.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(0)))));
+            this.btnGiris.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(68)))), ((int)(((byte)(59)))));
             this.btnGiris.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnGiris.onHoverState.IconLeftImage = null;
             this.btnGiris.onHoverState.IconRightImage = null;
-            this.btnGiris.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(0)))));
+            this.btnGiris.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(125)))), ((int)(((byte)(109)))));
             this.btnGiris.OnIdleState.BorderRadius = 15;
             this.btnGiris.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnGiris.OnIdleState.BorderThickness = 1;
-            this.btnGiris.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(0)))));
+            this.btnGiris.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(125)))), ((int)(((byte)(109)))));
             this.btnGiris.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnGiris.OnIdleState.IconLeftImage = null;
             this.btnGiris.OnIdleState.IconRightImage = null;
-            this.btnGiris.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(59)))));
+            this.btnGiris.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(125)))), ((int)(((byte)(109)))));
             this.btnGiris.OnPressedState.BorderRadius = 15;
             this.btnGiris.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnGiris.OnPressedState.BorderThickness = 1;
-            this.btnGiris.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(59)))));
-            this.btnGiris.OnPressedState.ForeColor = System.Drawing.Color.Black;
+            this.btnGiris.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(125)))), ((int)(((byte)(109)))));
+            this.btnGiris.OnPressedState.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnGiris.OnPressedState.IconLeftImage = null;
             this.btnGiris.OnPressedState.IconRightImage = null;
             this.btnGiris.Size = new System.Drawing.Size(163, 46);
@@ -503,13 +496,24 @@
             this.pictureBoxLoginLogo.TabIndex = 10;
             this.pictureBoxLoginLogo.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(153)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(381, 236);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(272, 158);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
             // pnlGrad
             // 
             this.pnlGrad.BackColor = System.Drawing.Color.Transparent;
-            this.pnlGrad.Controls.Add(this.pictureBox4);
-            this.pnlGrad.Location = new System.Drawing.Point(0, 0);
+            this.pnlGrad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGrad.Location = new System.Drawing.Point(26, 0);
             this.pnlGrad.Name = "pnlGrad";
-            this.pnlGrad.Size = new System.Drawing.Size(1283, 39);
+            this.pnlGrad.Size = new System.Drawing.Size(1217, 39);
             this.pnlGrad.TabIndex = 8;
             // 
             // pictureBox4
@@ -517,7 +521,7 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1124, -47);
+            this.pictureBox4.Location = new System.Drawing.Point(1066, -17);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(137, 86);
@@ -532,30 +536,69 @@
             this.bunifuDragControl1.TargetControl = this.pnlGrad;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // lblbilgilogin
-            // 
-            this.lblbilgilogin.AutoSize = true;
-            this.lblbilgilogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(153)))));
-            this.lblbilgilogin.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblbilgilogin.ForeColor = System.Drawing.Color.Gray;
-            this.lblbilgilogin.Location = new System.Drawing.Point(370, 228);
-            this.lblbilgilogin.Name = "lblbilgilogin";
-            this.lblbilgilogin.Size = new System.Drawing.Size(277, 140);
-            this.lblbilgilogin.TabIndex = 9;
-            this.lblbilgilogin.Text = "Birlikte çalışmak\r\nberaberinde \r\nbaşarıyı getirmektir.\r\n                         " +
-    "                \r\n                                         Wyrd";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(-21, 576);
+            this.pictureBox3.Location = new System.Drawing.Point(26, 586);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(157, 105);
+            this.pictureBox3.Size = new System.Drawing.Size(154, 95);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.bunifuGradientPanel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(26, 681);
+            this.panel1.TabIndex = 12;
+            // 
+            // bunifuGradientPanel2
+            // 
+            this.bunifuGradientPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
+            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.BorderRadius = 1;
+            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(143)))), ((int)(((byte)(151)))));
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(143)))), ((int)(((byte)(151)))));
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(-38, -4);
+            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
+            this.bunifuGradientPanel2.Quality = 10;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(64, 692);
+            this.bunifuGradientPanel2.TabIndex = 16;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(26, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(739, 642);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(143)))), ((int)(((byte)(151)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(143)))), ((int)(((byte)(151)))));
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(1208, 0);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(59, 692);
+            this.bunifuGradientPanel1.TabIndex = 15;
             // 
             // Login
             // 
@@ -563,30 +606,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
             this.ClientSize = new System.Drawing.Size(1243, 681);
+            this.Controls.Add(this.bunifuGradientPanel1);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.lblbilgilogin);
-            this.Controls.Add(this.pnlGrad);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pnlGrad);
             this.Controls.Add(this.bunifuShadowPanel1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuShadowPanel1.ResumeLayout(false);
             this.bunifuShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoginLogo)).EndInit();
-            this.pnlGrad.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnGiris;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCikis;
         private Bunifu.UI.WinForms.BunifuTextBox txtKAdi;
@@ -595,12 +639,16 @@
         private System.Windows.Forms.LinkLabel linklblSifre;
         private System.Windows.Forms.Panel pnlGrad;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private System.Windows.Forms.Label lblbilgilogin;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBoxLoginLogo;
         private System.Windows.Forms.Button btnSifreGoster;
         private System.Windows.Forms.Button btnSifreGizle;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
+        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
     }
 }
