@@ -202,6 +202,7 @@
             this.btnPerCikar.TextMarginLeft = 0;
             this.btnPerCikar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnPerCikar.UseDefaultRadiusAndThickness = true;
+            this.btnPerCikar.Click += new System.EventHandler(this.btnPerCikar_Click);
             // 
             // btnPerEkle
             // 
@@ -1071,11 +1072,11 @@
             this.btnTcnoAra.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnTcnoAra.OnDisabledState.IconLeftImage = null;
             this.btnTcnoAra.OnDisabledState.IconRightImage = null;
-            this.btnTcnoAra.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(180)))), ((int)(((byte)(23)))));
+            this.btnTcnoAra.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(147)))));
             this.btnTcnoAra.onHoverState.BorderRadius = 1;
             this.btnTcnoAra.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnTcnoAra.onHoverState.BorderThickness = 1;
-            this.btnTcnoAra.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(180)))), ((int)(((byte)(23)))));
+            this.btnTcnoAra.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(147)))));
             this.btnTcnoAra.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnTcnoAra.onHoverState.IconLeftImage = null;
             this.btnTcnoAra.onHoverState.IconRightImage = null;
@@ -1814,9 +1815,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1279, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(1449, 78);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(410, 136);
+            this.pictureBox1.Size = new System.Drawing.Size(229, 101);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;

@@ -246,6 +246,24 @@ namespace PerModule.Forms.PersonelListForm
                 e.Handled = true;
         }
 
+        private void btnPerCikar_Click(object sender, EventArgs e)
+        {
+            BackModel backmodel = new BackModel();
+            PerCikarma percikarcard = new PerCikarma();
+            percikarcard.StartPosition = FormStartPosition.Manual;
+            backmodel.FormBorderStyle = FormBorderStyle.None;
+            percikarcard.Location = new Point(400, 120);
+            backmodel.Opacity = .50d;
+            backmodel.BackColor = Color.Black;
+            backmodel.Size = new Size(1920, 1059);
+            //backmodel.Location = new Point(114, 21);
+            backmodel.ShowInTaskbar = false;
+            backmodel.Show();
+            percikarcard.Owner = backmodel;
+            percikarcard.ShowDialog();
+            backmodel.Dispose();
+        }
+
         private void btnDepGuncelle_Click(object sender, EventArgs e)
         {
             if (pnlDepGuncelle.Visible == false)

@@ -171,9 +171,8 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             DTDogumTarihiKB.MinDate = new DateTime(1960, 1, 1);
             DTDogumTarihiKB.MaxDate = new DateTime(yil - 18, ay, gun);
             DTDogumTarihiKB.Format = DateTimePickerFormat.Short;
-            //DTEhliyetA.MinDate = new DateTime(1960, 1, 1);
-            //DTEhliyetA.MaxDate = new DateTime(yil - 18, ay, gun);
             DTEhliyetA.Format = DateTimePickerFormat.Short;
+            DTEhliyetA.MinDate= new DateTime(1938, 11, 10);
             DTSertifikaT1.MinDate = new DateTime(1960, 1, 1);
             DTSertifikaT1.MaxDate = new DateTime(yil - 18, ay, gun);
             DTSertifikaT1.Format = DateTimePickerFormat.Short;
@@ -935,6 +934,15 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 
             }
         }
-
+        
+        
+        private void dropSEhliyetKB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(dropSEhliyetKB.Text == "Yok")
+            {
+                DTEhliyetA.Enabled = false;
+                DTEhliyetA.Value = DTEhliyetA.MinDate;
+            }
+        }
     }
 }

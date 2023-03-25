@@ -202,6 +202,12 @@
     <Compile Include="Forms\PasswordForgotForm\PasswordUpdate.Designer.cs">
       <DependentUpon>PasswordUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PersonelListForm\PerCikarma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonelListForm\PerCikarma.Designer.cs">
+      <DependentUpon>PerCikarma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PersonelListForm\PersonCard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PasswordForgotForm\PasswordUpdate.resx">
       <DependentUpon>PasswordUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PersonelListForm\PerCikarma.resx">
+      <DependentUpon>PerCikarma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelListForm\PersonCard.resx">
       <DependentUpon>PersonCard.cs</DependentUpon>
