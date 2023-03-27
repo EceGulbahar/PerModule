@@ -144,12 +144,10 @@ namespace PerModule.Forms.PersonelListForm
                     {
                         baglan.Close();
                     }
-
                     PerCikarma percikar = new PerCikarma();
                     percikar.Close();
-                    PersonelList perlist = new PersonelList();
-                    perlist.searchyenile();
                     this.Alert("Personel çıkarma başarılı!", Form_Alert.enmType.Success);
+                    searchyenile();
 
                 }
                 catch
@@ -171,6 +169,8 @@ namespace PerModule.Forms.PersonelListForm
             isegirist = GridCikar.Rows[secilendeger].Cells[6].Value.ToString();
             bulke = GridCikar.Rows[secilendeger].Cells[7].Value.ToString();
             bsehir = GridCikar.Rows[secilendeger].Cells[8].Value.ToString();
+
+            lblAdiSoyadi.Text = adi + " " + soyadi;
         }
     }
 }
