@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OnIzleme));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.PerGorseli = new System.Windows.Forms.PictureBox();
             this.btnResimYukle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.grupAd = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.lblRol = new System.Windows.Forms.Label();
             this.ıconPictureBox8 = new FontAwesome.Sharp.IconPictureBox();
             this.ıconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
             this.ıconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
             this.ıconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.ıconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            this.ıconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.ıconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.ıconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.lblEngel = new System.Windows.Forms.Label();
@@ -53,9 +53,10 @@
             this.lblUlke = new System.Windows.Forms.Label();
             this.lblDepartman = new System.Windows.Forms.Label();
             this.lblYetki = new System.Windows.Forms.Label();
-            this.lblRol = new System.Windows.Forms.Label();
-            this.lblIsegirist = new System.Windows.Forms.Label();
             this.lblCalismaDurum = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ıconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.lblIsegirist = new System.Windows.Forms.Label();
             this.grupKisiselB = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.lblSurucuEh = new System.Windows.Forms.Label();
             this.lblMedeniHal = new System.Windows.Forms.Label();
@@ -101,7 +102,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.PerGorseli)).BeginInit();
             this.grupAd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox8)).BeginInit();
@@ -109,15 +111,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox3)).BeginInit();
             this.grupKisiselB.SuspendLayout();
             this.grupIletisimb.SuspendLayout();
             this.grupAcilDurumb.SuspendLayout();
             this.grupNotlar.SuspendLayout();
             this.grupOgrenimDurumu.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PerGorseli
@@ -149,11 +151,11 @@
             this.btnResimYukle.ColorContrastOnClick = 45;
             this.btnResimYukle.ColorContrastOnHover = 45;
             this.btnResimYukle.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.btnResimYukle.CustomizableEdges = borderEdges9;
+            borderEdges13.BottomLeft = true;
+            borderEdges13.BottomRight = true;
+            borderEdges13.TopLeft = true;
+            borderEdges13.TopRight = true;
+            this.btnResimYukle.CustomizableEdges = borderEdges13;
             this.btnResimYukle.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnResimYukle.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnResimYukle.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -218,6 +220,7 @@
             this.btnResimYukle.TextMarginLeft = 0;
             this.btnResimYukle.TextPadding = new System.Windows.Forms.Padding(14, 0, 0, 0);
             this.btnResimYukle.UseDefaultRadiusAndThickness = true;
+            this.btnResimYukle.Click += new System.EventHandler(this.btnResimYukle_Click);
             // 
             // grupAd
             // 
@@ -251,6 +254,16 @@
             this.grupAd.TabIndex = 2;
             this.grupAd.TabStop = false;
             this.grupAd.Text = "Adı Soyadı";
+            // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblRol.Location = new System.Drawing.Point(262, 30);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(86, 17);
+            this.lblRol.TabIndex = 2;
+            this.lblRol.Text = "Belirtilmemiş";
             // 
             // ıconPictureBox8
             // 
@@ -321,20 +334,6 @@
             this.ıconPictureBox4.Size = new System.Drawing.Size(15, 17);
             this.ıconPictureBox4.TabIndex = 11;
             this.ıconPictureBox4.TabStop = false;
-            // 
-            // ıconPictureBox3
-            // 
-            this.ıconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            this.ıconPictureBox3.ForeColor = System.Drawing.Color.Goldenrod;
-            this.ıconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Briefcase;
-            this.ıconPictureBox3.IconColor = System.Drawing.Color.Goldenrod;
-            this.ıconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconPictureBox3.IconSize = 15;
-            this.ıconPictureBox3.Location = new System.Drawing.Point(18, 10);
-            this.ıconPictureBox3.Name = "ıconPictureBox3";
-            this.ıconPictureBox3.Size = new System.Drawing.Size(15, 27);
-            this.ıconPictureBox3.TabIndex = 10;
-            this.ıconPictureBox3.TabStop = false;
             // 
             // ıconPictureBox2
             // 
@@ -414,15 +413,37 @@
             this.lblYetki.TabIndex = 3;
             this.lblYetki.Text = "Belirtilmemiş";
             // 
-            // lblRol
+            // lblCalismaDurum
             // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblRol.Location = new System.Drawing.Point(262, 30);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(86, 17);
-            this.lblRol.TabIndex = 2;
-            this.lblRol.Text = "Belirtilmemiş";
+            this.lblCalismaDurum.AutoSize = true;
+            this.lblCalismaDurum.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCalismaDurum.Location = new System.Drawing.Point(38, 29);
+            this.lblCalismaDurum.Name = "lblCalismaDurum";
+            this.lblCalismaDurum.Size = new System.Drawing.Size(86, 17);
+            this.lblCalismaDurum.TabIndex = 0;
+            this.lblCalismaDurum.Text = "Belirtilmemiş";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.ıconPictureBox3);
+            this.panel1.Location = new System.Drawing.Point(223, 20);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(107, 27);
+            this.panel1.TabIndex = 19;
+            // 
+            // ıconPictureBox3
+            // 
+            this.ıconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            this.ıconPictureBox3.ForeColor = System.Drawing.Color.Goldenrod;
+            this.ıconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Briefcase;
+            this.ıconPictureBox3.IconColor = System.Drawing.Color.Goldenrod;
+            this.ıconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconPictureBox3.IconSize = 15;
+            this.ıconPictureBox3.Location = new System.Drawing.Point(18, 10);
+            this.ıconPictureBox3.Name = "ıconPictureBox3";
+            this.ıconPictureBox3.Size = new System.Drawing.Size(15, 27);
+            this.ıconPictureBox3.TabIndex = 10;
+            this.ıconPictureBox3.TabStop = false;
             // 
             // lblIsegirist
             // 
@@ -433,16 +454,6 @@
             this.lblIsegirist.Size = new System.Drawing.Size(86, 17);
             this.lblIsegirist.TabIndex = 1;
             this.lblIsegirist.Text = "Belirtilmemiş";
-            // 
-            // lblCalismaDurum
-            // 
-            this.lblCalismaDurum.AutoSize = true;
-            this.lblCalismaDurum.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCalismaDurum.Location = new System.Drawing.Point(38, 29);
-            this.lblCalismaDurum.Name = "lblCalismaDurum";
-            this.lblCalismaDurum.Size = new System.Drawing.Size(86, 17);
-            this.lblCalismaDurum.TabIndex = 0;
-            this.lblCalismaDurum.Text = "Belirtilmemiş";
             // 
             // grupKisiselB
             // 
@@ -865,11 +876,11 @@
             this.btnNotlarDuzenle.ColorContrastOnClick = 45;
             this.btnNotlarDuzenle.ColorContrastOnHover = 45;
             this.btnNotlarDuzenle.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges10.BottomLeft = true;
-            borderEdges10.BottomRight = true;
-            borderEdges10.TopLeft = true;
-            borderEdges10.TopRight = true;
-            this.btnNotlarDuzenle.CustomizableEdges = borderEdges10;
+            borderEdges14.BottomLeft = true;
+            borderEdges14.BottomRight = true;
+            borderEdges14.TopLeft = true;
+            borderEdges14.TopRight = true;
+            this.btnNotlarDuzenle.CustomizableEdges = borderEdges14;
             this.btnNotlarDuzenle.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnNotlarDuzenle.DisabledBorderColor = System.Drawing.Color.Transparent;
             this.btnNotlarDuzenle.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -956,11 +967,11 @@
             this.btnNotIptal.ColorContrastOnClick = 45;
             this.btnNotIptal.ColorContrastOnHover = 45;
             this.btnNotIptal.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges11.BottomLeft = true;
-            borderEdges11.BottomRight = true;
-            borderEdges11.TopLeft = true;
-            borderEdges11.TopRight = true;
-            this.btnNotIptal.CustomizableEdges = borderEdges11;
+            borderEdges15.BottomLeft = true;
+            borderEdges15.BottomRight = true;
+            borderEdges15.TopLeft = true;
+            borderEdges15.TopRight = true;
+            this.btnNotIptal.CustomizableEdges = borderEdges15;
             this.btnNotIptal.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnNotIptal.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnNotIptal.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1048,11 +1059,11 @@
             this.btnNotEkleLast.ColorContrastOnClick = 45;
             this.btnNotEkleLast.ColorContrastOnHover = 45;
             this.btnNotEkleLast.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges12.BottomLeft = true;
-            borderEdges12.BottomRight = true;
-            borderEdges12.TopLeft = true;
-            borderEdges12.TopRight = true;
-            this.btnNotEkleLast.CustomizableEdges = borderEdges12;
+            borderEdges16.BottomLeft = true;
+            borderEdges16.BottomRight = true;
+            borderEdges16.TopLeft = true;
+            borderEdges16.TopRight = true;
+            this.btnNotEkleLast.CustomizableEdges = borderEdges16;
             this.btnNotEkleLast.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnNotEkleLast.DisabledBorderColor = System.Drawing.Color.Transparent;
             this.btnNotEkleLast.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1156,26 +1167,26 @@
             this.txtNotlar.Modified = false;
             this.txtNotlar.Multiline = true;
             this.txtNotlar.Name = "txtNotlar";
-            stateProperties9.BorderColor = System.Drawing.Color.Gainsboro;
-            stateProperties9.FillColor = System.Drawing.Color.Gainsboro;
-            stateProperties9.ForeColor = System.Drawing.Color.Black;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNotlar.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties10.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNotlar.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.Gainsboro;
-            stateProperties11.FillColor = System.Drawing.Color.Gainsboro;
-            stateProperties11.ForeColor = System.Drawing.Color.Black;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNotlar.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNotlar.OnIdleState = stateProperties12;
+            stateProperties13.BorderColor = System.Drawing.Color.Gainsboro;
+            stateProperties13.FillColor = System.Drawing.Color.Gainsboro;
+            stateProperties13.ForeColor = System.Drawing.Color.Black;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNotlar.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties14.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNotlar.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.Gainsboro;
+            stateProperties15.FillColor = System.Drawing.Color.Gainsboro;
+            stateProperties15.ForeColor = System.Drawing.Color.Black;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNotlar.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties16.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNotlar.OnIdleState = stateProperties16;
             this.txtNotlar.Padding = new System.Windows.Forms.Padding(3);
             this.txtNotlar.PasswordChar = '\0';
             this.txtNotlar.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke;
@@ -1280,13 +1291,9 @@
             this.label10.TabIndex = 10;
             this.label10.Text = "Eğitim Durumu:";
             // 
-            // panel1
+            // openFileDialog1
             // 
-            this.panel1.Controls.Add(this.ıconPictureBox3);
-            this.panel1.Location = new System.Drawing.Point(223, 20);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(107, 27);
-            this.panel1.TabIndex = 19;
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // OnIzleme
             // 
@@ -1314,9 +1321,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox3)).EndInit();
             this.grupKisiselB.ResumeLayout(false);
             this.grupKisiselB.PerformLayout();
             this.grupIletisimb.ResumeLayout(false);
@@ -1326,7 +1334,6 @@
             this.grupNotlar.ResumeLayout(false);
             this.grupOgrenimDurumu.ResumeLayout(false);
             this.grupOgrenimDurumu.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1398,5 +1405,7 @@
         private System.Windows.Forms.Label lblYakiniAdSoyad;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

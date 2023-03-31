@@ -30,28 +30,37 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerCikarma));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges56 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties41 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties42 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties43 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties44 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges57 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties45 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties46 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties47 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties48 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges58 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges59 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges60 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges61 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges62 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges63 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges64 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges65 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges66 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.btnClose = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtSearchboxPerList = new Bunifu.UI.WinForms.BunifuTextBox();
             this.GridCikar = new System.Windows.Forms.DataGridView();
+            this.perTcknDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perDogumTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depRoluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perBaslamaTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresUlkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresSehirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personelListGridViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pERSONNELMODULEDataSet = new PerModule.PERSONNELMODULEDataSet();
             this.personelListGridViewTableAdapter = new PerModule.PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter();
@@ -70,15 +79,6 @@
             this.bunifuButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.perTcknDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perDogumTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depRoluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perBaslamaTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresUlkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresSehirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GridCikar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personelListGridViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERSONNELMODULEDataSet)).BeginInit();
@@ -104,11 +104,11 @@
             this.btnClose.ColorContrastOnClick = 45;
             this.btnClose.ColorContrastOnHover = 45;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges56.BottomLeft = true;
-            borderEdges56.BottomRight = true;
-            borderEdges56.TopLeft = true;
-            borderEdges56.TopRight = true;
-            this.btnClose.CustomizableEdges = borderEdges56;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnClose.CustomizableEdges = borderEdges1;
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnClose.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnClose.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
@@ -209,26 +209,26 @@
             this.txtSearchboxPerList.Modified = false;
             this.txtSearchboxPerList.Multiline = false;
             this.txtSearchboxPerList.Name = "txtSearchboxPerList";
-            stateProperties41.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            stateProperties41.FillColor = System.Drawing.Color.Empty;
-            stateProperties41.ForeColor = System.Drawing.Color.Empty;
-            stateProperties41.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearchboxPerList.OnActiveState = stateProperties41;
-            stateProperties42.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            stateProperties42.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties42.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtSearchboxPerList.OnDisabledState = stateProperties42;
-            stateProperties43.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            stateProperties43.FillColor = System.Drawing.Color.Empty;
-            stateProperties43.ForeColor = System.Drawing.Color.Empty;
-            stateProperties43.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearchboxPerList.OnHoverState = stateProperties43;
-            stateProperties44.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            stateProperties44.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            stateProperties44.ForeColor = System.Drawing.Color.White;
-            stateProperties44.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearchboxPerList.OnIdleState = stateProperties44;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearchboxPerList.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearchboxPerList.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearchboxPerList.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearchboxPerList.OnIdleState = stateProperties4;
             this.txtSearchboxPerList.Padding = new System.Windows.Forms.Padding(2);
             this.txtSearchboxPerList.PasswordChar = '\0';
             this.txtSearchboxPerList.PlaceholderForeColor = System.Drawing.Color.White;
@@ -256,7 +256,7 @@
             this.GridCikar.AllowUserToAddRows = false;
             this.GridCikar.AllowUserToDeleteRows = false;
             this.GridCikar.AutoGenerateColumns = false;
-            this.GridCikar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.GridCikar.BackgroundColor = System.Drawing.Color.Silver;
             this.GridCikar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridCikar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.perTcknDataGridViewTextBoxColumn,
@@ -276,6 +276,73 @@
             this.GridCikar.Size = new System.Drawing.Size(1022, 192);
             this.GridCikar.TabIndex = 157;
             this.GridCikar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCikar_CellContentClick);
+            // 
+            // perTcknDataGridViewTextBoxColumn
+            // 
+            this.perTcknDataGridViewTextBoxColumn.DataPropertyName = "PerTckn";
+            this.perTcknDataGridViewTextBoxColumn.HeaderText = "PerTckn";
+            this.perTcknDataGridViewTextBoxColumn.Name = "perTcknDataGridViewTextBoxColumn";
+            this.perTcknDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // perAdDataGridViewTextBoxColumn
+            // 
+            this.perAdDataGridViewTextBoxColumn.DataPropertyName = "PerAd";
+            this.perAdDataGridViewTextBoxColumn.HeaderText = "PerAd";
+            this.perAdDataGridViewTextBoxColumn.Name = "perAdDataGridViewTextBoxColumn";
+            this.perAdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // perSoyadDataGridViewTextBoxColumn
+            // 
+            this.perSoyadDataGridViewTextBoxColumn.DataPropertyName = "PerSoyad";
+            this.perSoyadDataGridViewTextBoxColumn.HeaderText = "PerSoyad";
+            this.perSoyadDataGridViewTextBoxColumn.Name = "perSoyadDataGridViewTextBoxColumn";
+            this.perSoyadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // perDogumTarihiDataGridViewTextBoxColumn
+            // 
+            this.perDogumTarihiDataGridViewTextBoxColumn.DataPropertyName = "PerDogumTarihi";
+            this.perDogumTarihiDataGridViewTextBoxColumn.HeaderText = "PerDogumTarihi";
+            this.perDogumTarihiDataGridViewTextBoxColumn.Name = "perDogumTarihiDataGridViewTextBoxColumn";
+            this.perDogumTarihiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // depAdiDataGridViewTextBoxColumn
+            // 
+            this.depAdiDataGridViewTextBoxColumn.DataPropertyName = "DepAdi";
+            this.depAdiDataGridViewTextBoxColumn.HeaderText = "DepAdi";
+            this.depAdiDataGridViewTextBoxColumn.Name = "depAdiDataGridViewTextBoxColumn";
+            this.depAdiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // depRoluDataGridViewTextBoxColumn
+            // 
+            this.depRoluDataGridViewTextBoxColumn.DataPropertyName = "DepRolu";
+            this.depRoluDataGridViewTextBoxColumn.FillWeight = 175F;
+            this.depRoluDataGridViewTextBoxColumn.HeaderText = "DepRolu";
+            this.depRoluDataGridViewTextBoxColumn.Name = "depRoluDataGridViewTextBoxColumn";
+            this.depRoluDataGridViewTextBoxColumn.ReadOnly = true;
+            this.depRoluDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // perBaslamaTDataGridViewTextBoxColumn
+            // 
+            this.perBaslamaTDataGridViewTextBoxColumn.DataPropertyName = "PerBaslamaT";
+            this.perBaslamaTDataGridViewTextBoxColumn.HeaderText = "PerBaslamaT";
+            this.perBaslamaTDataGridViewTextBoxColumn.Name = "perBaslamaTDataGridViewTextBoxColumn";
+            this.perBaslamaTDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adresUlkeDataGridViewTextBoxColumn
+            // 
+            this.adresUlkeDataGridViewTextBoxColumn.DataPropertyName = "AdresUlke";
+            this.adresUlkeDataGridViewTextBoxColumn.HeaderText = "AdresUlke";
+            this.adresUlkeDataGridViewTextBoxColumn.Name = "adresUlkeDataGridViewTextBoxColumn";
+            this.adresUlkeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adresSehirDataGridViewTextBoxColumn
+            // 
+            this.adresSehirDataGridViewTextBoxColumn.DataPropertyName = "AdresSehir";
+            this.adresSehirDataGridViewTextBoxColumn.FillWeight = 104F;
+            this.adresSehirDataGridViewTextBoxColumn.HeaderText = "AdresSehir";
+            this.adresSehirDataGridViewTextBoxColumn.Name = "adresSehirDataGridViewTextBoxColumn";
+            this.adresSehirDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adresSehirDataGridViewTextBoxColumn.Width = 104;
             // 
             // personelListGridViewBindingSource
             // 
@@ -310,11 +377,11 @@
             this.btnPersonnelCikar.ColorContrastOnClick = 45;
             this.btnPersonnelCikar.ColorContrastOnHover = 45;
             this.btnPersonnelCikar.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges57.BottomLeft = true;
-            borderEdges57.BottomRight = true;
-            borderEdges57.TopLeft = true;
-            borderEdges57.TopRight = true;
-            this.btnPersonnelCikar.CustomizableEdges = borderEdges57;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnPersonnelCikar.CustomizableEdges = borderEdges2;
             this.btnPersonnelCikar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnPersonnelCikar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPersonnelCikar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -415,26 +482,26 @@
             this.txtAyrilisNedeni.Modified = false;
             this.txtAyrilisNedeni.Multiline = false;
             this.txtAyrilisNedeni.Name = "txtAyrilisNedeni";
-            stateProperties45.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            stateProperties45.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            stateProperties45.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties45.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtAyrilisNedeni.OnActiveState = stateProperties45;
-            stateProperties46.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            stateProperties46.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            stateProperties46.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties46.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtAyrilisNedeni.OnDisabledState = stateProperties46;
-            stateProperties47.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            stateProperties47.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            stateProperties47.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties47.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtAyrilisNedeni.OnHoverState = stateProperties47;
-            stateProperties48.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            stateProperties48.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            stateProperties48.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtAyrilisNedeni.OnIdleState = stateProperties48;
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            stateProperties5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtAyrilisNedeni.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            stateProperties6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtAyrilisNedeni.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            stateProperties7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            stateProperties7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtAyrilisNedeni.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            stateProperties8.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtAyrilisNedeni.OnIdleState = stateProperties8;
             this.txtAyrilisNedeni.Padding = new System.Windows.Forms.Padding(1);
             this.txtAyrilisNedeni.PasswordChar = '\0';
             this.txtAyrilisNedeni.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -504,14 +571,14 @@
             this.pnlBaslik.Controls.Add(this.bunifuButton4);
             this.pnlBaslik.Controls.Add(this.bunifuButton3);
             this.pnlBaslik.Controls.Add(this.bunifuButton2);
-            this.pnlBaslik.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(78)))), ((int)(((byte)(167)))));
-            this.pnlBaslik.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(180)))), ((int)(((byte)(23)))));
-            this.pnlBaslik.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(78)))), ((int)(((byte)(167)))));
-            this.pnlBaslik.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(59)))));
+            this.pnlBaslik.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.pnlBaslik.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.pnlBaslik.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.pnlBaslik.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.pnlBaslik.Location = new System.Drawing.Point(44, 146);
             this.pnlBaslik.Name = "pnlBaslik";
             this.pnlBaslik.Quality = 10;
-            this.pnlBaslik.Size = new System.Drawing.Size(1021, 30);
+            this.pnlBaslik.Size = new System.Drawing.Size(1022, 30);
             this.pnlBaslik.TabIndex = 163;
             // 
             // bunifuButton10
@@ -533,11 +600,11 @@
             this.bunifuButton10.ColorContrastOnClick = 45;
             this.bunifuButton10.ColorContrastOnHover = 45;
             this.bunifuButton10.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges58.BottomLeft = true;
-            borderEdges58.BottomRight = true;
-            borderEdges58.TopLeft = true;
-            borderEdges58.TopRight = true;
-            this.bunifuButton10.CustomizableEdges = borderEdges58;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.bunifuButton10.CustomizableEdges = borderEdges3;
             this.bunifuButton10.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton10.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton10.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -598,10 +665,10 @@
             this.bunifuButton10.OnPressedState.IconRightImage = null;
             this.bunifuButton10.Size = new System.Drawing.Size(106, 30);
             this.bunifuButton10.TabIndex = 8;
-            this.bunifuButton10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton10.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuButton10.TextMarginLeft = 0;
-            this.bunifuButton10.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuButton10.TextPadding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.bunifuButton10.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuButton9
@@ -623,11 +690,11 @@
             this.bunifuButton9.ColorContrastOnClick = 45;
             this.bunifuButton9.ColorContrastOnHover = 45;
             this.bunifuButton9.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges59.BottomLeft = true;
-            borderEdges59.BottomRight = true;
-            borderEdges59.TopLeft = true;
-            borderEdges59.TopRight = true;
-            this.bunifuButton9.CustomizableEdges = borderEdges59;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.bunifuButton9.CustomizableEdges = borderEdges4;
             this.bunifuButton9.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton9.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton9.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -688,10 +755,10 @@
             this.bunifuButton9.OnPressedState.IconRightImage = null;
             this.bunifuButton9.Size = new System.Drawing.Size(95, 30);
             this.bunifuButton9.TabIndex = 7;
-            this.bunifuButton9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton9.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuButton9.TextMarginLeft = 0;
-            this.bunifuButton9.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuButton9.TextPadding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.bunifuButton9.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuButton8
@@ -713,11 +780,11 @@
             this.bunifuButton8.ColorContrastOnClick = 45;
             this.bunifuButton8.ColorContrastOnHover = 45;
             this.bunifuButton8.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges60.BottomLeft = true;
-            borderEdges60.BottomRight = true;
-            borderEdges60.TopLeft = true;
-            borderEdges60.TopRight = true;
-            this.bunifuButton8.CustomizableEdges = borderEdges60;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.bunifuButton8.CustomizableEdges = borderEdges5;
             this.bunifuButton8.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton8.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton8.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -778,10 +845,10 @@
             this.bunifuButton8.OnPressedState.IconRightImage = null;
             this.bunifuButton8.Size = new System.Drawing.Size(100, 30);
             this.bunifuButton8.TabIndex = 6;
-            this.bunifuButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton8.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuButton8.TextMarginLeft = 0;
-            this.bunifuButton8.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuButton8.TextPadding = new System.Windows.Forms.Padding(2, 0, 0, 0);
             this.bunifuButton8.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuButton7
@@ -803,11 +870,11 @@
             this.bunifuButton7.ColorContrastOnClick = 45;
             this.bunifuButton7.ColorContrastOnHover = 45;
             this.bunifuButton7.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges61.BottomLeft = true;
-            borderEdges61.BottomRight = true;
-            borderEdges61.TopLeft = true;
-            borderEdges61.TopRight = true;
-            this.bunifuButton7.CustomizableEdges = borderEdges61;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.bunifuButton7.CustomizableEdges = borderEdges6;
             this.bunifuButton7.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton7.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton7.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -868,10 +935,10 @@
             this.bunifuButton7.OnPressedState.IconRightImage = null;
             this.bunifuButton7.Size = new System.Drawing.Size(175, 30);
             this.bunifuButton7.TabIndex = 5;
-            this.bunifuButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton7.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuButton7.TextMarginLeft = 0;
-            this.bunifuButton7.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuButton7.TextPadding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.bunifuButton7.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuButton6
@@ -893,11 +960,11 @@
             this.bunifuButton6.ColorContrastOnClick = 45;
             this.bunifuButton6.ColorContrastOnHover = 45;
             this.bunifuButton6.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges62.BottomLeft = true;
-            borderEdges62.BottomRight = true;
-            borderEdges62.TopLeft = true;
-            borderEdges62.TopRight = true;
-            this.bunifuButton6.CustomizableEdges = borderEdges62;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.bunifuButton6.CustomizableEdges = borderEdges7;
             this.bunifuButton6.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton6.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton6.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -958,10 +1025,10 @@
             this.bunifuButton6.OnPressedState.IconRightImage = null;
             this.bunifuButton6.Size = new System.Drawing.Size(101, 30);
             this.bunifuButton6.TabIndex = 4;
-            this.bunifuButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton6.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuButton6.TextMarginLeft = 0;
-            this.bunifuButton6.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuButton6.TextPadding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.bunifuButton6.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuButton5
@@ -983,11 +1050,11 @@
             this.bunifuButton5.ColorContrastOnClick = 45;
             this.bunifuButton5.ColorContrastOnHover = 45;
             this.bunifuButton5.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges63.BottomLeft = true;
-            borderEdges63.BottomRight = true;
-            borderEdges63.TopLeft = true;
-            borderEdges63.TopRight = true;
-            this.bunifuButton5.CustomizableEdges = borderEdges63;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.bunifuButton5.CustomizableEdges = borderEdges8;
             this.bunifuButton5.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton5.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1048,10 +1115,10 @@
             this.bunifuButton5.OnPressedState.IconRightImage = null;
             this.bunifuButton5.Size = new System.Drawing.Size(102, 30);
             this.bunifuButton5.TabIndex = 3;
-            this.bunifuButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton5.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuButton5.TextMarginLeft = 0;
-            this.bunifuButton5.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuButton5.TextPadding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.bunifuButton5.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuButton4
@@ -1073,11 +1140,11 @@
             this.bunifuButton4.ColorContrastOnClick = 45;
             this.bunifuButton4.ColorContrastOnHover = 45;
             this.bunifuButton4.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges64.BottomLeft = true;
-            borderEdges64.BottomRight = true;
-            borderEdges64.TopLeft = true;
-            borderEdges64.TopRight = true;
-            this.bunifuButton4.CustomizableEdges = borderEdges64;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.bunifuButton4.CustomizableEdges = borderEdges9;
             this.bunifuButton4.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton4.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1138,10 +1205,10 @@
             this.bunifuButton4.OnPressedState.IconRightImage = null;
             this.bunifuButton4.Size = new System.Drawing.Size(97, 30);
             this.bunifuButton4.TabIndex = 2;
-            this.bunifuButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton4.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuButton4.TextMarginLeft = 0;
-            this.bunifuButton4.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuButton4.TextPadding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.bunifuButton4.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuButton3
@@ -1163,11 +1230,11 @@
             this.bunifuButton3.ColorContrastOnClick = 45;
             this.bunifuButton3.ColorContrastOnHover = 45;
             this.bunifuButton3.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges65.BottomLeft = true;
-            borderEdges65.BottomRight = true;
-            borderEdges65.TopLeft = true;
-            borderEdges65.TopRight = true;
-            this.bunifuButton3.CustomizableEdges = borderEdges65;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.bunifuButton3.CustomizableEdges = borderEdges10;
             this.bunifuButton3.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton3.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1228,10 +1295,10 @@
             this.bunifuButton3.OnPressedState.IconRightImage = null;
             this.bunifuButton3.Size = new System.Drawing.Size(100, 30);
             this.bunifuButton3.TabIndex = 1;
-            this.bunifuButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton3.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuButton3.TextMarginLeft = 0;
-            this.bunifuButton3.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuButton3.TextPadding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.bunifuButton3.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuButton2
@@ -1253,11 +1320,11 @@
             this.bunifuButton2.ColorContrastOnClick = 45;
             this.bunifuButton2.ColorContrastOnHover = 45;
             this.bunifuButton2.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges66.BottomLeft = true;
-            borderEdges66.BottomRight = true;
-            borderEdges66.TopLeft = true;
-            borderEdges66.TopRight = true;
-            this.bunifuButton2.CustomizableEdges = borderEdges66;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.bunifuButton2.CustomizableEdges = borderEdges11;
             this.bunifuButton2.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton2.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1318,78 +1385,11 @@
             this.bunifuButton2.OnPressedState.IconRightImage = null;
             this.bunifuButton2.Size = new System.Drawing.Size(143, 30);
             this.bunifuButton2.TabIndex = 0;
-            this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuButton2.TextMarginLeft = 0;
-            this.bunifuButton2.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuButton2.TextPadding = new System.Windows.Forms.Padding(39, 0, 0, 0);
             this.bunifuButton2.UseDefaultRadiusAndThickness = true;
-            // 
-            // perTcknDataGridViewTextBoxColumn
-            // 
-            this.perTcknDataGridViewTextBoxColumn.DataPropertyName = "PerTckn";
-            this.perTcknDataGridViewTextBoxColumn.HeaderText = "PerTckn";
-            this.perTcknDataGridViewTextBoxColumn.Name = "perTcknDataGridViewTextBoxColumn";
-            this.perTcknDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // perAdDataGridViewTextBoxColumn
-            // 
-            this.perAdDataGridViewTextBoxColumn.DataPropertyName = "PerAd";
-            this.perAdDataGridViewTextBoxColumn.HeaderText = "PerAd";
-            this.perAdDataGridViewTextBoxColumn.Name = "perAdDataGridViewTextBoxColumn";
-            this.perAdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // perSoyadDataGridViewTextBoxColumn
-            // 
-            this.perSoyadDataGridViewTextBoxColumn.DataPropertyName = "PerSoyad";
-            this.perSoyadDataGridViewTextBoxColumn.HeaderText = "PerSoyad";
-            this.perSoyadDataGridViewTextBoxColumn.Name = "perSoyadDataGridViewTextBoxColumn";
-            this.perSoyadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // perDogumTarihiDataGridViewTextBoxColumn
-            // 
-            this.perDogumTarihiDataGridViewTextBoxColumn.DataPropertyName = "PerDogumTarihi";
-            this.perDogumTarihiDataGridViewTextBoxColumn.HeaderText = "PerDogumTarihi";
-            this.perDogumTarihiDataGridViewTextBoxColumn.Name = "perDogumTarihiDataGridViewTextBoxColumn";
-            this.perDogumTarihiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // depAdiDataGridViewTextBoxColumn
-            // 
-            this.depAdiDataGridViewTextBoxColumn.DataPropertyName = "DepAdi";
-            this.depAdiDataGridViewTextBoxColumn.HeaderText = "DepAdi";
-            this.depAdiDataGridViewTextBoxColumn.Name = "depAdiDataGridViewTextBoxColumn";
-            this.depAdiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // depRoluDataGridViewTextBoxColumn
-            // 
-            this.depRoluDataGridViewTextBoxColumn.DataPropertyName = "DepRolu";
-            this.depRoluDataGridViewTextBoxColumn.FillWeight = 175F;
-            this.depRoluDataGridViewTextBoxColumn.HeaderText = "DepRolu";
-            this.depRoluDataGridViewTextBoxColumn.Name = "depRoluDataGridViewTextBoxColumn";
-            this.depRoluDataGridViewTextBoxColumn.ReadOnly = true;
-            this.depRoluDataGridViewTextBoxColumn.Width = 175;
-            // 
-            // perBaslamaTDataGridViewTextBoxColumn
-            // 
-            this.perBaslamaTDataGridViewTextBoxColumn.DataPropertyName = "PerBaslamaT";
-            this.perBaslamaTDataGridViewTextBoxColumn.HeaderText = "PerBaslamaT";
-            this.perBaslamaTDataGridViewTextBoxColumn.Name = "perBaslamaTDataGridViewTextBoxColumn";
-            this.perBaslamaTDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adresUlkeDataGridViewTextBoxColumn
-            // 
-            this.adresUlkeDataGridViewTextBoxColumn.DataPropertyName = "AdresUlke";
-            this.adresUlkeDataGridViewTextBoxColumn.HeaderText = "AdresUlke";
-            this.adresUlkeDataGridViewTextBoxColumn.Name = "adresUlkeDataGridViewTextBoxColumn";
-            this.adresUlkeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adresSehirDataGridViewTextBoxColumn
-            // 
-            this.adresSehirDataGridViewTextBoxColumn.DataPropertyName = "AdresSehir";
-            this.adresSehirDataGridViewTextBoxColumn.FillWeight = 104F;
-            this.adresSehirDataGridViewTextBoxColumn.HeaderText = "AdresSehir";
-            this.adresSehirDataGridViewTextBoxColumn.Name = "adresSehirDataGridViewTextBoxColumn";
-            this.adresSehirDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adresSehirDataGridViewTextBoxColumn.Width = 104;
             // 
             // PerCikarma
             // 

@@ -264,6 +264,11 @@ namespace PerModule.Forms.PersonelListForm
             backmodel.Dispose();
         }
 
+        private void txtTcnoAra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnDepGuncelle_Click(object sender, EventArgs e)
         {
             if (pnlDepGuncelle.Visible == false)

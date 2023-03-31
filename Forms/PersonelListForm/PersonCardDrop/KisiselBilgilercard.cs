@@ -1018,5 +1018,93 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 DTEhliyetA.Enabled = true;
             }
         }
+
+        private void txtIsYeri1_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtIsYeri1.Text))
+            {
+                txtIsUnvan1.Enabled = false;
+                dtIseGiris1.Enabled = false;
+                dtIstenCikis1.Enabled = false;
+                txtIsAyrilis1.Enabled = false;
+                dtIseGiris1.Value = DTEhliyetA.MinDate;
+                dtIstenCikis1.Value = DTEhliyetA.MinDate;
+            }
+            else
+            {
+                txtIsUnvan1.Enabled = true;
+                dtIseGiris1.Enabled = true;
+                dtIstenCikis1.Enabled = true;
+                txtIsAyrilis1.Enabled = true;
+                dtIseGiris1.Value = DateTime.Now;
+                dtIstenCikis1.Value = DateTime.Now;
+            }
+        }
+
+        private void txtIsYeri2_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtIsYeri2.Text))
+            {
+                txtIsUnvan2.Enabled = false;
+                dtIseGiris2.Enabled = false;
+                dtIstenCikis2.Enabled = false;
+                txtIsAyrilis2.Enabled = false;
+                dtIseGiris2.Value = DTEhliyetA.MinDate;
+                dtIstenCikis2.Value = DTEhliyetA.MinDate;
+            }
+            else
+            {
+                txtIsUnvan2.Enabled = true;
+                dtIseGiris2.Enabled = true;
+                dtIstenCikis2.Enabled = true;
+                txtIsAyrilis2.Enabled = true;
+                dtIseGiris2.Value = DateTime.Now;
+                dtIstenCikis2.Value = DateTime.Now;
+            }
+        }
+
+        private void txtIsYeri3_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtIsYeri3.Text))
+            {
+                txtIsUnvan3.Enabled = false;
+                dtIseGiris3.Enabled = false;
+                dtIstenCikis3.Enabled = false;
+                txtIsAyrilis3.Enabled = false;
+                dtIseGiris3.Value = DTEhliyetA.MinDate;
+                dtIstenCikis3.Value = DTEhliyetA.MinDate;
+            }
+            else
+            {
+                txtIsUnvan3.Enabled = true;
+                dtIseGiris3.Enabled = true;
+                dtIstenCikis3.Enabled = true;
+                txtIsAyrilis3.Enabled = true;
+                dtIseGiris3.Value = DateTime.Now;
+                dtIstenCikis3.Value = DateTime.Now;
+            }
+        }
+
+        private void txtIsYeri4_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtIsYeri4.Text))
+            {
+                txtIsUnvan4.Enabled = false;
+                dtIseGiris4.Enabled = false;
+                dtIstenCikis4.Enabled = false;
+                txtIsAyrilis4.Enabled = false;
+                dtIseGiris4.Value = DTEhliyetA.MinDate;
+                dtIstenCikis4.Value = DTEhliyetA.MinDate;
+            }
+            else
+            {
+                txtIsUnvan4.Enabled = true;
+                dtIseGiris4.Enabled = true;
+                dtIstenCikis4.Enabled = true;
+                txtIsAyrilis4.Enabled = true;
+                dtIseGiris4.Value = DateTime.Now;
+                dtIstenCikis4.Value = DateTime.Now;
+            }
+        }
     }
 }

@@ -1,10 +1,13 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +23,11 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             InitializeComponent();
         }
 
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
 
         private void btnNotlarDuzenle_Click(object sender, EventArgs e)
         {
@@ -49,16 +57,8 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 
         private void OnIzleme_Load(object sender, EventArgs e)
         {
-            
-            try
-            {
-                PerGorseli.Image = Image.FromFile(Application.StartupPath + "\\kullaniciresimler\\"+PersonelList.tcno+".jpg");
-            }
-            catch 
-            {
-                PerGorseli.Image = Image.FromFile(Application.StartupPath + "\\kullaniciresimler\\resimyok.jpg");
 
-            }
+            gorselcek();
             grupAd.Text = PersonelList.adi + " " + PersonelList.soyadi;
 
             if (baglan.State == ConnectionState.Closed)
@@ -83,13 +83,73 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 
                 lblSurucuEh.Text = tcnokbokuma.GetValue(23).ToString();
                 lblSicilNo.Text = tcnokbokuma.GetValue(24).ToString();
-                
-
-
             }
+
+
             if (baglan.State == ConnectionState.Open)
             {
                 baglan.Close();
+            }
+        }
+
+        string tcno = PersonelList.tcno;
+        private void btnResimYukle_Click(object sender, EventArgs e)
+        {
+            if (!Directory.Exists(Application.StartupPath + "\\kullaniciresimler"))
+            {
+                Directory.CreateDirectory(Application.StartupPath + "\\kullaniciresimler");
+            }
+
+            // Resim dosyasını yükle
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Resim Dosyaları (*.jpg;*.jpeg;*.gif;*.bmp)|*.jpg;*.jpeg;*.gif;*.bmp";
+            openFileDialog1.Title = "Resim Seç";
+            //openFileDialog1.InitialDirectory = @"C:\";
+            openFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            PerGorseli.Image = Image.FromFile(Application.StartupPath + "\\kullaniciresimler\\resimyok.jpg");
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                // Seçilen dosyayı yükle
+                string filePath = openFileDialog1.FileName;
+                PerGorseli.ImageLocation = openFileDialog1.FileName;
+
+                // Resim dosyasını kaydetmek için kaydetme yeri seçin
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.Filter = "Resim Dosyaları (*.jpg;*.jpeg;*.gif;*.bmp)|*.jpg;*.jpeg;*.gif;*.bmp";
+                saveFileDialog1.Title = "Kaydet";
+                saveFileDialog1.FileName = tcno + ".jpg";
+                saveFileDialog1.InitialDirectory = Application.StartupPath + "\\kullaniciresimler\\";
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    // Resim dosyasının yeni adını ve kaydedileceği konumu seçin
+                    string newFilePath = saveFileDialog1.FileName;
+
+                    // Resmi yeni adı ve konumuyla kaydet
+                    File.Copy(filePath, newFilePath, true);
+                    PerGorseli.SizeMode = PictureBoxSizeMode.StretchImage;
+                    gorselcek();
+                    MessageBox.Show("Resim kaydedildi.");
+                }
+                else
+                    gorselcek();
+            }
+            else
+                gorselcek();
+
+        }
+
+        public void gorselcek()
+        {
+            try
+            {
+                PerGorseli.Image = Image.FromFile(Application.StartupPath + "\\kullaniciresimler\\" + PersonelList.tcno + ".jpg");
+                PerGorseli.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            catch
+            {
+                PerGorseli.Image = Image.FromFile(Application.StartupPath + "\\kullaniciresimler\\resimyok.jpg");
+                PerGorseli.SizeMode = PictureBoxSizeMode.StretchImage;
+
             }
         }
     }
