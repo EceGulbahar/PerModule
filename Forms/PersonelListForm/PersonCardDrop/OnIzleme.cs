@@ -17,6 +17,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 {
     public partial class OnIzleme : Form
     {
+        bool kayitkontrol = false;
         SqlConnection baglan = new SqlConnection(ConfigurationManager.ConnectionStrings["PerModule.Properties.Settings.PerModuleCS"].ConnectionString);
         public OnIzleme()
         {
@@ -47,17 +48,55 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 
         private void btnNotIptal_Click(object sender, EventArgs e)
         {
-            
+            txtNotlar.Enabled = false;
+            btnNotEkleLast.Visible = false;
+            btnNotIptal.Visible = false;
         }
 
-        private void btnNotEkleLast_Click(object sender, EventArgs e)
+        private void btnNotEkleLast_Click(object sender, EventArgs e)//kayitkontrol ekle
         {
+            if (baglan.State == ConnectionState.Closed)
+            {
+                baglan.Open();
+            }
+            SqlCommand sqlkayitk = new SqlCommand("select * from Nots where Personnelid=@Personnelid", baglan);
+            sqlkayitk.Parameters.AddWithValue("@Personnelid", personnelid);
+            SqlDataReader kayitokuma = sqlkayitk.ExecuteReader();
+            while (kayitokuma.Read())
+            {
+                kayitkontrol = true;
+                break;
+            }
+            if (kayitkontrol == false)
+            {
+                SqlCommand innotekle = new SqlCommand("insert into Nots(Personnelid,Notu) values(@perid,@Notu)", baglan);
+                innotekle.Parameters.AddWithValue("@perid", personnelid);
+                innotekle.Parameters.AddWithValue("@Notu", txtNotlar.Text);
+                innotekle.ExecuteNonQuery();
+                this.Alert("Personel Notu Kaydedildi", Form_Alert.enmType.Success);
+                txtNotlar.Enabled = false;
+                btnNotEkleLast.Visible = false;
+                btnNotIptal.Visible = false;
+            }
+            else if (kayitkontrol == true)
+            {
+                SqlCommand notekle = new SqlCommand("update Nots set Notu=@Notu where Personnelid=@perid", baglan);
+                notekle.Parameters.AddWithValue("@perid", personnelid);
+                notekle.Parameters.AddWithValue("@Notu", txtNotlar.Text);
+                notekle.ExecuteNonQuery();
+                txtNotlar.Enabled = false;
+                btnNotEkleLast.Visible = false;
+                btnNotIptal.Visible = false;
+                this.Alert("Personel Notu Kaydedildi", Form_Alert.enmType.Success);
 
+            }
         }
 
-        private void OnIzleme_Load(object sender, EventArgs e)
+        string notlartext = "";
+        int personnelid;
+        public void OnIzleme_Load(object sender, EventArgs e)
         {
-
+            btnNotEkleLast.Enabled = true;
             gorselcek();
             grupAd.Text = PersonelList.adi + " " + PersonelList.soyadi;
 
@@ -70,6 +109,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             SqlDataReader tcnokbokuma = tcnilekb.ExecuteReader();
             while (tcnokbokuma.Read())
             {
+                personnelid = Convert.ToInt32(tcnokbokuma.GetValue(0).ToString());
                 lblKimlikNo.Text = tcnokbokuma.GetValue(1).ToString();
                 grupAd.Text = tcnokbokuma.GetValue(2).ToString() + tcnokbokuma.GetValue(3).ToString();
                 lblDogumT.Text = tcnokbokuma.GetValue(4).ToString().TrimEnd('0',':');
@@ -85,6 +125,14 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 lblSicilNo.Text = tcnokbokuma.GetValue(24).ToString();
             }
 
+            SqlCommand notscmd = new SqlCommand("select * from Nots where Personnelid=@perid", baglan);
+            notscmd.Parameters.AddWithValue("@perid", personnelid);
+            SqlDataReader notsokuma = notscmd.ExecuteReader();
+            while (notsokuma.Read())
+            {
+                notlartext = notsokuma.GetValue(2).ToString();
+                txtNotlar.Text = notlartext;
+            }
 
             if (baglan.State == ConnectionState.Open)
             {
