@@ -157,8 +157,6 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             txtCepTelKB.MaxLength = 12;
             txtIsTelKB.MaxLength = 12;
             txtWhatsAppTelKB.MaxLength = 12;
-            txtYakin1KB.MaxLength = 12;
-            txtYakin2KB.MaxLength = 12;
             txtSicilNoKB.MaxLength = 26;
             txtBaslamaYiliKB.MaxLength = 4;
             txtBitirmeYiliKB.MaxLength = 4;
