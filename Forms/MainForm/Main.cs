@@ -36,9 +36,9 @@ namespace PerModule
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
             this.IsMdiContainer = true; //Bu kod içinde form açılabileceği anlamına geliyor.
-            
+            lblbugun.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
-
+        
         /*public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HTCAPTION = 0x2;
         [DllImport("User32.dll")]

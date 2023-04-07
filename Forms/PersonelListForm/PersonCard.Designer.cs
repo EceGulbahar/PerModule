@@ -59,10 +59,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnltop = new System.Windows.Forms.Panel();
+            this.btnClose = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lblAdSoyad = new System.Windows.Forms.Label();
             this.PFormGetir = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.btnClose = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlbuttons.SuspendLayout();
             this.pnltop.SuspendLayout();
             this.SuspendLayout();
@@ -1196,39 +1196,13 @@
             // 
             // pnltop
             // 
-            this.pnltop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(80)))), ((int)(((byte)(87)))));
+            this.pnltop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(13)))), ((int)(((byte)(14)))));
             this.pnltop.Controls.Add(this.btnClose);
             this.pnltop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnltop.Location = new System.Drawing.Point(0, 0);
             this.pnltop.Name = "pnltop";
             this.pnltop.Size = new System.Drawing.Size(1433, 22);
             this.pnltop.TabIndex = 21;
-            // 
-            // lblAdSoyad
-            // 
-            this.lblAdSoyad.AutoSize = true;
-            this.lblAdSoyad.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdSoyad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.lblAdSoyad.Location = new System.Drawing.Point(12, 25);
-            this.lblAdSoyad.Name = "lblAdSoyad";
-            this.lblAdSoyad.Size = new System.Drawing.Size(164, 36);
-            this.lblAdSoyad.TabIndex = 22;
-            this.lblAdSoyad.Text = "Adı Soyadı";
-            // 
-            // PFormGetir
-            // 
-            this.PFormGetir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            this.PFormGetir.Location = new System.Drawing.Point(18, 151);
-            this.PFormGetir.Name = "PFormGetir";
-            this.PFormGetir.Size = new System.Drawing.Size(1396, 490);
-            this.PFormGetir.TabIndex = 23;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.pnltop;
-            this.bunifuDragControl1.Vertical = true;
             // 
             // btnClose
             // 
@@ -1302,7 +1276,7 @@
             this.btnClose.OnIdleState.BorderThickness = 1;
             this.btnClose.OnIdleState.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            this.btnClose.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.OnIdleState.IconLeftImage")));
+            this.btnClose.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnClose.OnIdleState.IconLeftImage")));
             this.btnClose.OnIdleState.IconRightImage = null;
             this.btnClose.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.btnClose.OnPressedState.BorderRadius = 1;
@@ -1320,6 +1294,32 @@
             this.btnClose.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnClose.UseDefaultRadiusAndThickness = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
+            // 
+            // lblAdSoyad
+            // 
+            this.lblAdSoyad.AutoSize = true;
+            this.lblAdSoyad.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAdSoyad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.lblAdSoyad.Location = new System.Drawing.Point(12, 25);
+            this.lblAdSoyad.Name = "lblAdSoyad";
+            this.lblAdSoyad.Size = new System.Drawing.Size(164, 36);
+            this.lblAdSoyad.TabIndex = 22;
+            this.lblAdSoyad.Text = "Adı Soyadı";
+            // 
+            // PFormGetir
+            // 
+            this.PFormGetir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            this.PFormGetir.Location = new System.Drawing.Point(18, 151);
+            this.PFormGetir.Name = "PFormGetir";
+            this.PFormGetir.Size = new System.Drawing.Size(1396, 490);
+            this.PFormGetir.TabIndex = 23;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.pnltop;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // PersonCard
             // 
