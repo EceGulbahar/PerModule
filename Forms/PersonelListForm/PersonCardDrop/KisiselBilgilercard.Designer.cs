@@ -1400,9 +1400,10 @@
             this.dropEgitimDurumu.ItemHighLightColor = System.Drawing.Color.Goldenrod;
             this.dropEgitimDurumu.ItemHighLightForeColor = System.Drawing.Color.White;
             this.dropEgitimDurumu.Items.AddRange(new object[] {
+            "OKUMAMIŞ",
             "İLKÖĞRETİM",
             "ORTAÖĞRETİM",
-            "ÖN LİSANS",
+            "ÖNLİSANS",
             "LİSANS",
             "LİSANS ÜSTÜ"});
             this.dropEgitimDurumu.ItemTopMargin = 3;

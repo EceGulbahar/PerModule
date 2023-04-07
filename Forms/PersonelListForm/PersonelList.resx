@@ -307,9 +307,9 @@
   <data name="btnDepEklePnlAc.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAgCAYAAACYTcH3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABQSURBVFhH7c6hGQAQFABhc7F/ZQBj6I9PdxXhwp+uXIpW
-        +mxlvrY/0im84gxxhjhDnCHOEGeIM8QZ4gxxhjhDnCHOEGfIXzNR8ziF26LmsQCS90NcRDnapgAAAABJ
-        RU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABPSURBVFhH7c4hFQAgEARRWlz/DNAGRQYCAJrH6EOM+GbX
+        TBk1+mix0p2O8jySGEOMIcYQY4gxxBhiDDGGGEOMIcYQY4gxxBjyXcy8xxwxN3tGrGQ1tHUHAAAAAElF
+        TkSuQmCC
 </value>
   </data>
   <data name="btnDepEklePnlAc.IdleIconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -446,10 +446,10 @@
   <data name="btnTcnoAra.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKoAAAAgCAYAAACCXeM8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACGSURBVHhe7dKhDYAwAADBzgX7WxiAMfCF4Bmgn5w49fbH
-        PPfrOfcHVvU9Ov4CrMaoJBiVBKOSYFQSjEqCUUkwKglGJcGoJBiVBKOSYFQSjEqCUUkwKglGJcGoJBiV
-        BKOSYFQSjEqCUUkwKglGJcGoJBiVBKOSYFQSjErCmMd2/wVYxTy2+wVmIm1ZiyLC9QAAAABJRU5ErkJg
-        gg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACHSURBVHhe7dI5EYBAAARBXJx/DeCGCA0I4EkpBNxUddDJ
+        bjrLsY792MYF03oaXX4PmIxQSRAqCUIlQagkCJUEoZIgVBKESoJQSRAqCUIlQagkCJUEoZIgVBKESoJQ
+        SRAqCUIlQagkCJUEoZIgVBKESoJQSRAqCUIlQagkCJWEN9TzO8JcxnkDq5u0p3hU05wAAAAASUVORK5C
+        YII=
 </value>
   </data>
   <data name="btnYenile.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -721,9 +721,9 @@
   <data name="btnDepGuncelle.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAgCAYAAACYTcH3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABQSURBVFhH7c6hGQAQFABhc7F/ZQBj6I9PdxXhwp+uXIpW
-        +mxlvrY/0im84gxxhjhDnCHOEGeIM8QZ4gxxhjhDnCHOEGfIXzNR8ziF26LmsQCS90NcRDnapgAAAABJ
-        RU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABPSURBVFhH7c4hFQAgEARRWlz/DNAGRQYCAJrH6EOM+GbX
+        TBk1+mix0p2O8jySGEOMIcYQY4gxxBhiDDGGGEOMIcYQY4gxxBjyXcy8xxwxN3tGrGQ1tHUHAAAAAElF
+        TkSuQmCC
 </value>
   </data>
   <data name="btnDepGuncelle.IdleIconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1467,15 +1467,6 @@
   </metadata>
   <metadata name="personelListGridViewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>228, 17</value>
-  </metadata>
-  <metadata name="Kartlar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="personelListGridViewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>228, 17</value>
-  </metadata>
-  <metadata name="pERSONNELMODULEDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
   </metadata>
   <metadata name="pERSONNELMODULEDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PersonnelRapor" targetNamespace="http://tempuri.org/PersonnelRapor.xsd" xmlns:mstns="http://tempuri.org/PersonnelRapor.xsd" xmlns="http://tempuri.org/PersonnelRapor.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PerModuleCS" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerModuleCS (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PerModule.Properties.Settings.GlobalReference.Default.PerModuleCS" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PersonnelRaporTableAdapter" GeneratorDataComponentClassName="PersonnelRaporTableAdapter" Name="PersonnelRapor" UserDataComponentName="PersonnelRaporTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PerModuleCS (Settings)" DbObjectName="PERSONNELMODULE.dbo.PersonnelRapor" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PerAd, PerSoyad, DepAdi, DepRolu, PerYetki FROM dbo.PersonnelRapor</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PerAd" DataSetColumn="PerAd" />
+              <Mapping SourceColumn="PerSoyad" DataSetColumn="PerSoyad" />
+              <Mapping SourceColumn="DepAdi" DataSetColumn="DepAdi" />
+              <Mapping SourceColumn="DepRolu" DataSetColumn="DepRolu" />
+              <Mapping SourceColumn="PerYetki" DataSetColumn="PerYetki" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PersonnelRapor" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="PersonnelRapor" msprop:Generator_DataSetName="PersonnelRapor">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PersonnelRapor" msprop:Generator_RowEvHandlerName="PersonnelRaporRowChangeEventHandler" msprop:Generator_RowDeletedName="PersonnelRaporRowDeleted" msprop:Generator_RowDeletingName="PersonnelRaporRowDeleting" msprop:Generator_RowEvArgName="PersonnelRaporRowChangeEvent" msprop:Generator_TablePropName="_PersonnelRapor" msprop:Generator_RowChangedName="PersonnelRaporRowChanged" msprop:Generator_RowChangingName="PersonnelRaporRowChanging" msprop:Generator_TableClassName="PersonnelRaporDataTable" msprop:Generator_RowClassName="PersonnelRaporRow" msprop:Generator_TableVarName="tablePersonnelRapor" msprop:Generator_UserTableName="PersonnelRapor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PerAd" msprop:Generator_ColumnPropNameInRow="PerAd" msprop:Generator_ColumnPropNameInTable="PerAdColumn" msprop:Generator_ColumnVarNameInTable="columnPerAd" msprop:Generator_UserColumnName="PerAd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PerSoyad" msprop:Generator_ColumnPropNameInRow="PerSoyad" msprop:Generator_ColumnPropNameInTable="PerSoyadColumn" msprop:Generator_ColumnVarNameInTable="columnPerSoyad" msprop:Generator_UserColumnName="PerSoyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepAdi" msprop:Generator_ColumnPropNameInRow="DepAdi" msprop:Generator_ColumnPropNameInTable="DepAdiColumn" msprop:Generator_ColumnVarNameInTable="columnDepAdi" msprop:Generator_UserColumnName="DepAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepRolu" msprop:Generator_ColumnPropNameInRow="DepRolu" msprop:Generator_ColumnPropNameInTable="DepRoluColumn" msprop:Generator_ColumnVarNameInTable="columnDepRolu" msprop:Generator_UserColumnName="DepRolu" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PerYetki" msprop:Generator_ColumnPropNameInRow="PerYetki" msprop:Generator_ColumnPropNameInTable="PerYetkiColumn" msprop:Generator_ColumnVarNameInTable="columnPerYetki" msprop:Generator_UserColumnName="PerYetki" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

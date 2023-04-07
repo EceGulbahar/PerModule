@@ -79,6 +79,8 @@
             this.bunifuButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.DTEIstenCikis = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridCikar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personelListGridViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERSONNELMODULEDataSet)).BeginInit();
@@ -273,7 +275,7 @@
             this.GridCikar.Location = new System.Drawing.Point(44, 154);
             this.GridCikar.Name = "GridCikar";
             this.GridCikar.ReadOnly = true;
-            this.GridCikar.Size = new System.Drawing.Size(1022, 192);
+            this.GridCikar.Size = new System.Drawing.Size(1022, 201);
             this.GridCikar.TabIndex = 157;
             this.GridCikar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCikar_CellContentClick);
             // 
@@ -405,7 +407,7 @@
             this.btnPersonnelCikar.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnPersonnelCikar.IdleIconLeftImage")));
             this.btnPersonnelCikar.IdleIconRightImage = null;
             this.btnPersonnelCikar.IndicateFocus = false;
-            this.btnPersonnelCikar.Location = new System.Drawing.Point(741, 379);
+            this.btnPersonnelCikar.Location = new System.Drawing.Point(741, 385);
             this.btnPersonnelCikar.Name = "btnPersonnelCikar";
             this.btnPersonnelCikar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPersonnelCikar.OnDisabledState.BorderRadius = 1;
@@ -476,7 +478,7 @@
             this.txtAyrilisNedeni.IconRight = null;
             this.txtAyrilisNedeni.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAyrilisNedeni.Lines = new string[0];
-            this.txtAyrilisNedeni.Location = new System.Drawing.Point(44, 379);
+            this.txtAyrilisNedeni.Location = new System.Drawing.Point(44, 385);
             this.txtAyrilisNedeni.MaxLength = 32767;
             this.txtAyrilisNedeni.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAyrilisNedeni.Modified = false;
@@ -512,7 +514,7 @@
             this.txtAyrilisNedeni.SelectionLength = 0;
             this.txtAyrilisNedeni.SelectionStart = 0;
             this.txtAyrilisNedeni.ShortcutsEnabled = true;
-            this.txtAyrilisNedeni.Size = new System.Drawing.Size(666, 44);
+            this.txtAyrilisNedeni.Size = new System.Drawing.Size(387, 44);
             this.txtAyrilisNedeni.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAyrilisNedeni.TabIndex = 159;
             this.txtAyrilisNedeni.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1391,12 +1393,53 @@
             this.bunifuButton2.TextPadding = new System.Windows.Forms.Padding(39, 0, 0, 0);
             this.bunifuButton2.UseDefaultRadiusAndThickness = true;
             // 
+            // DTEIstenCikis
+            // 
+            this.DTEIstenCikis.BackColor = System.Drawing.Color.Transparent;
+            this.DTEIstenCikis.BorderRadius = 0;
+            this.DTEIstenCikis.CalendarFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DTEIstenCikis.Color = System.Drawing.Color.Silver;
+            this.DTEIstenCikis.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.DTEIstenCikis.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.DTEIstenCikis.DisabledColor = System.Drawing.Color.Gray;
+            this.DTEIstenCikis.DisplayWeekNumbers = false;
+            this.DTEIstenCikis.DPHeight = 0;
+            this.DTEIstenCikis.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DTEIstenCikis.FillDatePicker = false;
+            this.DTEIstenCikis.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DTEIstenCikis.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.DTEIstenCikis.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DTEIstenCikis.Icon = ((System.Drawing.Image)(resources.GetObject("DTEIstenCikis.Icon")));
+            this.DTEIstenCikis.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.DTEIstenCikis.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.DTEIstenCikis.LeftTextMargin = 5;
+            this.DTEIstenCikis.Location = new System.Drawing.Point(460, 397);
+            this.DTEIstenCikis.Margin = new System.Windows.Forms.Padding(5);
+            this.DTEIstenCikis.MinimumSize = new System.Drawing.Size(4, 32);
+            this.DTEIstenCikis.Name = "DTEIstenCikis";
+            this.DTEIstenCikis.Size = new System.Drawing.Size(257, 32);
+            this.DTEIstenCikis.TabIndex = 164;
+            this.DTEIstenCikis.Value = new System.DateTime(2023, 2, 20, 11, 28, 0, 0);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(456, 372);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 20);
+            this.label3.TabIndex = 165;
+            this.label3.Text = "Çıkış Tarihi:";
+            // 
             // PerCikarma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
             this.ClientSize = new System.Drawing.Size(1120, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.DTEIstenCikis);
             this.Controls.Add(this.pnlBaslik);
             this.Controls.Add(this.lblAdiSoyadi);
             this.Controls.Add(this.label2);
@@ -1452,5 +1495,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn perBaslamaTDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresUlkeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresSehirDataGridViewTextBoxColumn;
+        private Bunifu.UI.WinForms.BunifuDatePicker DTEIstenCikis;
+        private System.Windows.Forms.Label label3;
     }
 }

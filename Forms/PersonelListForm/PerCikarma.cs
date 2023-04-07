@@ -88,12 +88,12 @@ namespace PerModule.Forms.PersonelListForm
         }
 
         int secilendeger;
-        string tcno, adi, soyadi, yetki, dogumtarihi, departmanı, rol, isegirist, bulke, bsehir;
+        public string tcno, adi, soyadi, yetki, dogumtarihi, departmanı, rol, isegirist, bulke, bsehir;
         int egitimdid;
         int adresbid;
         int departmanibid;
         int mesaibid;
-        private void btnPersonnelCikar_Click(object sender, EventArgs e)
+        public void btnPersonnelCikar_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(txtAyrilisNedeni.Text))
             {
@@ -108,38 +108,11 @@ namespace PerModule.Forms.PersonelListForm
                         baglan.Open();
                     }
                     //personelden silme
-                    SqlCommand persil = new SqlCommand("DELETE FROM Personnels where PerTckn=@tckn", baglan);
+                    SqlCommand persil = new SqlCommand("update Personnels set Durum=@Durum, PerAyrilisT=@PerAyrilisT where PerTckn=@tckn", baglan);
                     persil.Parameters.AddWithValue("@tckn", tcno);
+                    persil.Parameters.AddWithValue("@Durum", 0);
+                    persil.Parameters.AddWithValue("@PerAyrilisT", DTEIstenCikis.Value);
                     persil.ExecuteNonQuery();
-                    //personelin adresini,mesaisini,egitimini,departmansını çekme
-                    SqlCommand persilcek = new SqlCommand("SELECT PerEgitimBilgileri,Adresid,Departmanid,Mesaiid FROM Personnels where PerTckn=@tckn", baglan);
-                    persilcek.Parameters.AddWithValue("@tckn", tcno);
-                    SqlDataReader readercmda = persilcek.ExecuteReader();
-                    // satırları oku ve değişkenlere ata
-                    while (readercmda.Read())
-                    {
-                        egitimdid = (int)readercmda["PerEgitimBilgileri"];
-                        adresbid = (int)readercmda["Adresid"];
-                        departmanibid = (int)readercmda["Departmanid"];
-                        mesaibid = (int)readercmda["Mesaiid"];
-
-                    }
-                    SqlCommand persilegitim = new SqlCommand("DELETE FROM Egitims where id=@eid", baglan);
-                    persilegitim.Parameters.AddWithValue("@eid", egitimdid);
-                    persilegitim.ExecuteNonQuery();
-
-                    SqlCommand persiladres = new SqlCommand("DELETE FROM Adreses where id=@aid", baglan);
-                    persiladres.Parameters.AddWithValue("@aid", adresbid);
-                    persiladres.ExecuteNonQuery();
-
-                    SqlCommand persildepartmans = new SqlCommand("DELETE FROM Departmans where id=@did", baglan);
-                    persildepartmans.Parameters.AddWithValue("@did", departmanibid);
-                    persildepartmans.ExecuteNonQuery();
-
-                    SqlCommand persilmesaisi = new SqlCommand("DELETE FROM MesaiTakvimi where id=@mid", baglan);
-                    persilmesaisi.Parameters.AddWithValue("@mid", mesaibid);
-                    persilmesaisi.ExecuteNonQuery();
-
                     if (baglan.State == ConnectionState.Open)
                     {
                         baglan.Close();
@@ -147,8 +120,10 @@ namespace PerModule.Forms.PersonelListForm
                     PerCikarma percikar = new PerCikarma();
                     percikar.Close();
                     this.Alert("Personel çıkarma başarılı!", Form_Alert.enmType.Success);
-                    searchyenile();
-
+                    PersonCard personCard = new PersonCard();
+                    personCard.Close();
+                    PersonelList perlist = new PersonelList();
+                    perlist.searchyenile();
                 }
                 catch
                 {

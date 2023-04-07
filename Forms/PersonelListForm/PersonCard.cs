@@ -44,12 +44,15 @@ namespace PerModule.Forms.PersonelListForm
 
         private void btnOnIzleme_Click(object sender, EventArgs e)
         {
+            PFormGetir.Controls.Clear();
+            PFormGetir.Controls.Clear();
             OnIzleme onizleme = new OnIzleme();
             FormGetir(onizleme);
         }
 
         private void btnKisiselB_Click(object sender, EventArgs e)
         {
+            PFormGetir.Controls.Clear();
             KisiselBilgilercard kgcard = new KisiselBilgilercard();
             kgcard.CloseGizle();
             FormGetir(kgcard);
@@ -60,54 +63,63 @@ namespace PerModule.Forms.PersonelListForm
 
         private void btnBasvuru_Click(object sender, EventArgs e)
         {
+            PFormGetir.Controls.Clear();
             Basvurucard basvurucard = new Basvurucard();
             FormGetir(basvurucard);
         }
 
         private void btnZimmet_Click(object sender, EventArgs e)
         {
+            PFormGetir.Controls.Clear();
             Zimmetcard zimmetcard = new Zimmetcard();
             FormGetir(zimmetcard);
         }
 
         private void btnOzlukB_Click(object sender, EventArgs e)
         {
+            PFormGetir.Controls.Clear();
             OzlukBcard ozlukBcard = new OzlukBcard();
             FormGetir(ozlukBcard);
         }
 
         private void btnUcretP_Click(object sender, EventArgs e)
         {
+            PFormGetir.Controls.Clear();
             UcretBcard ucretBcard = new UcretBcard();
             FormGetir(ucretBcard);
         }
 
         private void btnBordro_Click(object sender, EventArgs e)
         {
+            PFormGetir.Controls.Clear();
             Bordrocard bordrocard = new Bordrocard();
             FormGetir(bordrocard);
         }
 
         private void btnIzinler_Click(object sender, EventArgs e)
         {
+            PFormGetir.Controls.Clear();
             Izinlercard izinlercard = new Izinlercard();
             FormGetir(izinlercard);
         }
 
         private void btnRaporlar_Click(object sender, EventArgs e)
         {
+            PFormGetir.Controls.Clear();
             Raporlarcard raporlarcard = new Raporlarcard();
             FormGetir(raporlarcard);
         }
 
         private void btnHaciz_Click(object sender, EventArgs e)
         {
+            PFormGetir.Controls.Clear();
             Hacizcard hacizcard = new Hacizcard();
             FormGetir(hacizcard);
         }
 
         private void btnKVGM_Click(object sender, EventArgs e)
         {
+            PFormGetir.Controls.Clear();
             Kvgmcard kvgm = new Kvgmcard();
             FormGetir(kvgm);
         }

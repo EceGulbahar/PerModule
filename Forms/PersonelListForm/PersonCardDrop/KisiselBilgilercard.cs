@@ -235,8 +235,8 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 istenayrilist = readercmd.IsDBNull(readercmd.GetOrdinal("PerAyrilisT")) ? (DateTime?)null : (DateTime)readercmd["PerAyrilisT"];
                 ayrilmasebebi = readercmd.IsDBNull(readercmd.GetOrdinal("PerAyrilmaSebebi")) ? null : (string)readercmd["PerAyrilmaSebebi"];
                 depiid = (int)readercmd["Departmanid"];
-                nicki = (string)readercmd["PerNickName"];
-                sifresi = (string)readercmd["PerPassword"];
+                nicki = readercmd.IsDBNull(readercmd.GetOrdinal("PerNickName")) ? null : (string)readercmd["PerNickName"];
+                sifresi = readercmd.IsDBNull(readercmd.GetOrdinal("PerPassword")) ? null : (string)readercmd["PerPassword"];
                 yetkisi = (string)readercmd["PerYetki"];
                 dogumyeri = (string)readercmd["PerDogumYeri"];
                 uyrugu = (string)readercmd["PerUyruk"];
@@ -246,9 +246,9 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 sigarasi = (string)readercmd["PerSigaraK"];
                 askerligi = (string)readercmd["PerAskerlik"];
                 ibani = (string)readercmd["PerIBAN"];
-                mesaisiid = (int)readercmd["Mesaiid"];
-                isteli = (string)readercmd["PerIsTel"];
-                wpteli = (string)readercmd["PerWpTel"];
+                mesaisiid = (int)readercmd["Mesaiid"]; 
+                isteli =readercmd.IsDBNull(readercmd.GetOrdinal("PerIsTel")) ? null : (string)readercmd["PerIsTel"];
+                wpteli =readercmd.IsDBNull(readercmd.GetOrdinal("PerWpTel")) ? null : (string)readercmd["PerWpTel"];
                 yakini1adsoyadi = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini1AdSoyad")) ? null : (string)readercmd["Yakini1AdSoyad"];
                 yakini1teli = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini1Tel")) ? null : (string)readercmd["Yakini1Tel"];
                 yakini1derecesi = readercmd.IsDBNull(readercmd.GetOrdinal("Yakini1Derece")) ? null : (string)readercmd["Yakini1Derece"];
@@ -262,8 +262,8 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 sertifikasi2kurum = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans2VerenKurum")) ? null : (string)readercmd["SertifikaLisans2VerenKurum"];
                 sertifikasi2tarihi = readercmd.IsDBNull(readercmd.GetOrdinal("SertifikaLisans2Tarihi")) ? (DateTime?)null : (DateTime)readercmd["SertifikaLisans2Tarihi"];
                 //dil bilmeyebilir burası düzeltilecek
-                yabanciDil1 = (string)readercmd["YabanciDil1"];
-                yabanciDil1Düzey = (string)readercmd["YabanciDil1Düzey"];
+                yabanciDil1 = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil1")) ? null : (string)readercmd["YabanciDil1"];
+                yabanciDil1Düzey = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil1Düzey")) ? null : (string)readercmd["YabanciDil1Düzey"];
                 yabanciDil2 = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil2")) ? null : (string)readercmd["YabanciDil2"];
                 yabanciDil2Düzey = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil2Düzey")) ? null : (string)readercmd["YabanciDil2Düzey"];
                 yabanciDil3 = readercmd.IsDBNull(readercmd.GetOrdinal("YabanciDil3")) ? null : (string)readercmd["YabanciDil3"];
@@ -495,54 +495,20 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             string tckn = PersonelList.tcno;
             try
             {
-                if (baglan.State == ConnectionState.Closed)
-                {
-                    baglan.Open();
-                }
-                //personelden silme
-                SqlCommand persil = new SqlCommand("DELETE FROM Personnels where PerTckn=@tckn", baglan);
-                persil.Parameters.AddWithValue("@tckn", tckn);
-                persil.ExecuteNonQuery();
-                //personelin adresini,mesaisini,egitimini,departmansını çekme
-                SqlCommand persilcek = new SqlCommand("SELECT PerEgitimBilgileri,Adresid,Departmanid,Mesaiid FROM Personnels where PerTckn=@tckn", baglan);
-                persilcek.Parameters.AddWithValue("@tckn", tckn);
-                SqlDataReader readercmda = persilcek.ExecuteReader();
-                // satırları oku ve değişkenlere ata
-                while (readercmda.Read())
-                {
-                    egitimdid = (int)readercmda["PerEgitimBilgileri"];
-                    adresbid = (int)readercmda["Adresid"];
-                    departmanibid = (int)readercmda["Departmanid"];
-                    mesaibid = (int)readercmda["Mesaiid"];
-                   
-                }
-                SqlCommand persilegitim = new SqlCommand("DELETE FROM Egitims where id=@eid", baglan);
-                persilegitim.Parameters.AddWithValue("@eid", egitimdid);
-                persilegitim.ExecuteNonQuery();
-
-                SqlCommand persiladres = new SqlCommand("DELETE FROM Adreses where id=@aid", baglan);
-                persiladres.Parameters.AddWithValue("@aid", adresbid);
-                persiladres.ExecuteNonQuery();
-
-                SqlCommand persildepartmans = new SqlCommand("DELETE FROM Departmans where id=@did", baglan);
-                persildepartmans.Parameters.AddWithValue("@did", departmanibid);
-                persildepartmans.ExecuteNonQuery();
-
-                SqlCommand persilmesaisi = new SqlCommand("DELETE FROM MesaiTakvimi where id=@mid", baglan);
-                persilmesaisi.Parameters.AddWithValue("@mid", mesaibid);
-                persilmesaisi.ExecuteNonQuery();
-
-                if (baglan.State == ConnectionState.Open)
-                {
-                    baglan.Close();
-                }
-
-                this.Alert("Personel çıkarma başarılı!", Form_Alert.enmType.Success);
-                //ayrılma sebebi aç.
-                PersonCard personCard = new PersonCard();
-                personCard.Close();
-                PersonelList perlist = new PersonelList();
-                perlist.searchyenile();
+                BackModel backmodel = new BackModel();
+                PerCikarma percikarcard = new PerCikarma();
+                percikarcard.StartPosition = FormStartPosition.Manual;
+                backmodel.FormBorderStyle = FormBorderStyle.None;
+                percikarcard.Location = new Point(400, 120);
+                backmodel.Opacity = .50d;
+                backmodel.BackColor = Color.Black;
+                backmodel.Size = new Size(1920, 1059);
+                //backmodel.Location = new Point(114, 21);
+                backmodel.ShowInTaskbar = false;
+                backmodel.Show();
+                percikarcard.Owner = backmodel;
+                percikarcard.ShowDialog();
+                backmodel.Dispose();
             }
             catch 
             {
@@ -577,7 +543,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                     baglan.Open();
                 }
 
-                string sqlperekle = "insert into Personnels(PerTckn,PerAd,PerSoyad,PerDogumTarihi,PerDogumYeri,PerUyruk,PerEhliyetS,PerCinsiyet,PerMail,PerTel,PerKanGrubu,PerMedeniHali,PerSicilNo,PerBaslamaT,PerDEhliyetAlis,PerSigaraK,PerAskerlik,PerIBAN,PerYetki,PerIsTel,PerWpTel,Yakini1AdSoyad,Yakini1Tel,Yakini1Derece,Yakini2AdSoyad,Yakini2Tel,Yakini2Derece,SertifikaLisans1Ad,SertifikaLisans1VerenKurum,SertifikaLisans1Tarihi,SertifikaLisans2Ad,SertifikaLisans2VerenKurum,SertifikaLisans2Tarihi,YabanciDil1,YabanciDil1Düzey,YabanciDil2,YabanciDil2Düzey,YabanciDil3,YabanciDil3Düzey,IsYeri1,IsUnvan1,IseGirisD1,IstenCikis1,IstenAyrilis1,IsYeri2,IsUnvan2,IseGirisD2,IstenCikis2,IstenAyrilis2,IsYeri3,IsUnvan3,IseGirisD3,IstenCikis3,IstenAyrilis3,IsYeri4,IsUnvan4,IseGirisD4,IstenCikis4,IstenAyrilis4) values(@PerTckn,@PerAd,@PerSoyad,@PerDogumTarihi,@PerDogumYeri,@PerUyruk,@PerEhliyetS,@PerCinsiyet,@PerMail,@PerTel,@PerKanGrubu,@PerMedeniHali,@PerSicilNo,@PerBaslamaT,@PerDEhliyetAlis,@PerSigaraK,@PerAskerlik,@PerIBAN,@PerYetki,@PerIsTel,@PerWpTel,@Yakini1AdSoyad,@Yakini1Tel,@Yakini1Derece,@Yakini2AdSoyad,@Yakini2Tel,@Yakini2Derece,@SertifikaLisans1Ad,@SertifikaLisans1VerenKurum,@SertifikaLisans1Tarihi,@SertifikaLisans2Ad,@SertifikaLisans2VerenKurum,@SertifikaLisans2Tarihi,@YabanciDil1,@YabanciDil1Düzey,@YabanciDil2,@YabanciDil2Düzey,@YabanciDil3,@YabanciDil3Düzey,@IsYeri1,@IsUnvan1,@IseGirisD1,@IstenCikis1,@IstenAyrilis1,@IsYeri2,@IsUnvan2,@IseGirisD2,@IstenCikis2,@IstenAyrilis2,@IsYeri3,@IsUnvan3,@IseGirisD3,@IstenCikis3,@IstenAyrilis3,@IsYeri4,@IsUnvan4,@IseGirisD4,@IstenCikis4,@IstenAyrilis4)";
+                string sqlperekle = "insert into Personnels(PerTckn,PerAd,PerSoyad,PerDogumTarihi,PerDogumYeri,PerUyruk,PerEhliyetS,PerCinsiyet,PerMail,PerTel,PerKanGrubu,PerMedeniHali,PerSicilNo,PerBaslamaT,PerDEhliyetAlis,PerSigaraK,PerAskerlik,PerIBAN,PerYetki,PerIsTel,PerWpTel,Yakini1AdSoyad,Yakini1Tel,Yakini1Derece,Yakini2AdSoyad,Yakini2Tel,Yakini2Derece,SertifikaLisans1Ad,SertifikaLisans1VerenKurum,SertifikaLisans1Tarihi,SertifikaLisans2Ad,SertifikaLisans2VerenKurum,SertifikaLisans2Tarihi,YabanciDil1,YabanciDil1Düzey,YabanciDil2,YabanciDil2Düzey,YabanciDil3,YabanciDil3Düzey,IsYeri1,IsUnvan1,IseGirisD1,IstenCikis1,IstenAyrilis1,IsYeri2,IsUnvan2,IseGirisD2,IstenCikis2,IstenAyrilis2,IsYeri3,IsUnvan3,IseGirisD3,IstenCikis3,IstenAyrilis3,IsYeri4,IsUnvan4,IseGirisD4,IstenCikis4,IstenAyrilis4,Durum) values(@PerTckn,@PerAd,@PerSoyad,@PerDogumTarihi,@PerDogumYeri,@PerUyruk,@PerEhliyetS,@PerCinsiyet,@PerMail,@PerTel,@PerKanGrubu,@PerMedeniHali,@PerSicilNo,@PerBaslamaT,@PerDEhliyetAlis,@PerSigaraK,@PerAskerlik,@PerIBAN,@PerYetki,@PerIsTel,@PerWpTel,@Yakini1AdSoyad,@Yakini1Tel,@Yakini1Derece,@Yakini2AdSoyad,@Yakini2Tel,@Yakini2Derece,@SertifikaLisans1Ad,@SertifikaLisans1VerenKurum,@SertifikaLisans1Tarihi,@SertifikaLisans2Ad,@SertifikaLisans2VerenKurum,@SertifikaLisans2Tarihi,@YabanciDil1,@YabanciDil1Düzey,@YabanciDil2,@YabanciDil2Düzey,@YabanciDil3,@YabanciDil3Düzey,@IsYeri1,@IsUnvan1,@IseGirisD1,@IstenCikis1,@IstenAyrilis1,@IsYeri2,@IsUnvan2,@IseGirisD2,@IstenCikis2,@IstenAyrilis2,@IsYeri3,@IsUnvan3,@IseGirisD3,@IstenCikis3,@IstenAyrilis3,@IsYeri4,@IsUnvan4,@IseGirisD4,@IstenCikis4,@IstenAyrilis4,@Durum)";
                 SqlCommand perekle = new SqlCommand(sqlperekle, baglan);
                 
                 perekle.Parameters.AddWithValue("@PerTckn", txtTcknKB.Text);
@@ -615,11 +581,11 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 perekle.Parameters.AddWithValue("@SertifikaLisans2VerenKurum", txtSertverenkurum2.Text ?? (object)DBNull.Value);
                 perekle.Parameters.AddWithValue("@SertifikaLisans2Tarihi", DTSertifikaT2.Value);
                 perekle.Parameters.AddWithValue("@YabanciDil1", txtYabanciDil1.Text ?? (object)DBNull.Value);
-                perekle.Parameters.AddWithValue("@YabanciDil1Düzey", dropYabanciDilDuzey1.Text);
+                perekle.Parameters.AddWithValue("@YabanciDil1Düzey", dropYabanciDilDuzey1.Text ?? (object)DBNull.Value);
                 perekle.Parameters.AddWithValue("@YabanciDil2", txtYabanciDil2.Text ?? (object)DBNull.Value);
-                perekle.Parameters.AddWithValue("@YabanciDil2Düzey", dropYabanciDilDuzey2.Text);
+                perekle.Parameters.AddWithValue("@YabanciDil2Düzey", dropYabanciDilDuzey2.Text ?? (object)DBNull.Value);
                 perekle.Parameters.AddWithValue("@YabanciDil3", txtYabanciDil3.Text ?? (object)DBNull.Value);
-                perekle.Parameters.AddWithValue("@YabanciDil3Düzey", dropYabanciDilDuzey3.Text);
+                perekle.Parameters.AddWithValue("@YabanciDil3Düzey", dropYabanciDilDuzey3.Text ?? (object)DBNull.Value);
                 perekle.Parameters.AddWithValue("@IsYeri1", txtIsYeri1.Text ?? (object)DBNull.Value);
                 perekle.Parameters.AddWithValue("@IsUnvan1", txtIsUnvan1.Text ?? (object)DBNull.Value);
                 perekle.Parameters.AddWithValue("@IseGirisD1", dtIseGiris1.Value);
@@ -643,6 +609,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 perekle.Parameters.AddWithValue("@IseGirisD4", dtIseGiris4.Value);
                 perekle.Parameters.AddWithValue("@IstenCikis4", dtIstenCikis4.Value);
                 perekle.Parameters.AddWithValue("@IstenAyrilis4", txtIsAyrilis4.Text ?? (object)DBNull.Value);
+                perekle.Parameters.AddWithValue("@Durum", 1);
 
                 if (dropYetki.Text== "Kurucu")
                 {

@@ -96,6 +96,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
         int personnelid;
         public void OnIzleme_Load(object sender, EventArgs e)
         {
+            
             btnNotEkleLast.Enabled = true;
             gorselcek();
             grupAd.Text = PersonelList.adi + " " + PersonelList.soyadi;
