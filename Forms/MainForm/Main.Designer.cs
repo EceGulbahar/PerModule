@@ -37,7 +37,7 @@
             this.btnPerRaport = new System.Windows.Forms.Button();
             this.BtnIzin = new System.Windows.Forms.Button();
             this.btnZimmet = new System.Windows.Forms.Button();
-            this.btnOzlukB = new System.Windows.Forms.Button();
+            this.btnMesai = new System.Windows.Forms.Button();
             this.btnBordro = new System.Windows.Forms.Button();
             this.Pmenu = new System.Windows.Forms.Panel();
             this.lblbugun = new System.Windows.Forms.Label();
@@ -157,24 +157,24 @@
             this.btnZimmet.MouseEnter += new System.EventHandler(this.btnZimmet_MouseEnter);
             this.btnZimmet.MouseLeave += new System.EventHandler(this.btnZimmet_MouseLeave);
             // 
-            // btnOzlukB
+            // btnMesai
             // 
-            this.btnOzlukB.BackColor = System.Drawing.Color.Transparent;
-            this.btnOzlukB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnOzlukB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOzlukB.FlatAppearance.BorderSize = 0;
-            this.btnOzlukB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOzlukB.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnOzlukB.Image = ((System.Drawing.Image)(resources.GetObject("btnOzlukB.Image")));
-            this.btnOzlukB.Location = new System.Drawing.Point(0, 375);
-            this.btnOzlukB.Margin = new System.Windows.Forms.Padding(2);
-            this.btnOzlukB.Name = "btnOzlukB";
-            this.btnOzlukB.Size = new System.Drawing.Size(72, 75);
-            this.btnOzlukB.TabIndex = 13;
-            this.btnOzlukB.UseVisualStyleBackColor = false;
-            this.btnOzlukB.Click += new System.EventHandler(this.btnOzlukB_Click_1);
-            this.btnOzlukB.MouseEnter += new System.EventHandler(this.btnOzlukB_MouseEnter);
-            this.btnOzlukB.MouseLeave += new System.EventHandler(this.btnOzlukB_MouseLeave);
+            this.btnMesai.BackColor = System.Drawing.Color.Transparent;
+            this.btnMesai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnMesai.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMesai.FlatAppearance.BorderSize = 0;
+            this.btnMesai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMesai.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMesai.Image = ((System.Drawing.Image)(resources.GetObject("btnMesai.Image")));
+            this.btnMesai.Location = new System.Drawing.Point(0, 375);
+            this.btnMesai.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMesai.Name = "btnMesai";
+            this.btnMesai.Size = new System.Drawing.Size(72, 75);
+            this.btnMesai.TabIndex = 13;
+            this.btnMesai.UseVisualStyleBackColor = false;
+            this.btnMesai.Click += new System.EventHandler(this.btnOzlukB_Click_1);
+            this.btnMesai.MouseEnter += new System.EventHandler(this.btnOzlukB_MouseEnter);
+            this.btnMesai.MouseLeave += new System.EventHandler(this.btnOzlukB_MouseLeave);
             // 
             // btnBordro
             // 
@@ -202,7 +202,7 @@
             this.Pmenu.Controls.Add(this.pnlHLight1);
             this.Pmenu.Controls.Add(this.pnlHLight);
             this.Pmenu.Controls.Add(this.btnBordro);
-            this.Pmenu.Controls.Add(this.btnOzlukB);
+            this.Pmenu.Controls.Add(this.btnMesai);
             this.Pmenu.Controls.Add(this.btnZimmet);
             this.Pmenu.Controls.Add(this.BtnIzin);
             this.Pmenu.Controls.Add(this.btnPerRaport);
@@ -666,7 +666,7 @@
         private System.Windows.Forms.Button btnPerRaport;
         private System.Windows.Forms.Button BtnIzin;
         private System.Windows.Forms.Button btnZimmet;
-        private System.Windows.Forms.Button btnOzlukB;
+        private System.Windows.Forms.Button btnMesai;
         private System.Windows.Forms.Button btnBordro;
         private System.Windows.Forms.Panel Pmenu;
         private System.Windows.Forms.Panel panel1;

@@ -130,12 +130,12 @@ namespace PerModule
 
         private void btnOzlukB_Click_1(object sender, EventArgs e)
         {
-            OzlukDosyasiRaporlari OzlukD = new OzlukDosyasiRaporlari();
+            Mesai OzlukD = new Mesai();
             FormGetir(OzlukD);
-            pnlHLight.Height = btnOzlukB.Height;
-            pnlHLight.Top = btnOzlukB.Top;
-            pnlHLight1.Height = btnOzlukB.Height;
-            pnlHLight1.Top = btnOzlukB.Top;
+            pnlHLight.Height = btnMesai.Height;
+            pnlHLight.Top = btnMesai.Top;
+            pnlHLight1.Height = btnMesai.Height;
+            pnlHLight1.Top = btnMesai.Top;
 
         }
 
@@ -203,12 +203,12 @@ namespace PerModule
 
         private void btnOzlukB_MouseEnter(object sender, EventArgs e)
         {
-            btnOzlukB.BackColor = System.Drawing.ColorTranslator.FromHtml("#636970");
+            btnMesai.BackColor = System.Drawing.ColorTranslator.FromHtml("#636970");
         }
 
         private void btnOzlukB_MouseLeave(object sender, EventArgs e)
         {
-            btnOzlukB.BackColor = System.Drawing.ColorTranslator.FromHtml("#6C757D");
+            btnMesai.BackColor = System.Drawing.ColorTranslator.FromHtml("#6C757D");
         }
 
         private void btnBordro_MouseEnter(object sender, EventArgs e)

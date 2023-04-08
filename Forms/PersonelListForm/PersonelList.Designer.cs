@@ -96,16 +96,16 @@
             this.personelListGridViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pERSONNELMODULEDataSet = new PerModule.PERSONNELMODULEDataSet();
             this.personelListGridViewTableAdapter = new PerModule.PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter();
-            this.Kartlar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.adresSehirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresUlkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perBaslamaTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depRoluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perDogumTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.perTcknDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perDogumTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depRoluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perBaslamaTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresUlkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresSehirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kartlar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pnlDepEkle.SuspendLayout();
             this.pnlTopItems.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -949,12 +949,12 @@
             this.txtTcnoAra.AnimationSpeed = 200;
             this.txtTcnoAra.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtTcnoAra.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtTcnoAra.BackColor = System.Drawing.Color.Transparent;
+            this.txtTcnoAra.BackColor = System.Drawing.Color.White;
             this.txtTcnoAra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtTcnoAra.BackgroundImage")));
             this.txtTcnoAra.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(180)))), ((int)(((byte)(23)))));
             this.txtTcnoAra.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtTcnoAra.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(180)))), ((int)(((byte)(23)))));
-            this.txtTcnoAra.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtTcnoAra.BorderColorIdle = System.Drawing.Color.WhiteSmoke;
             this.txtTcnoAra.BorderRadius = 1;
             this.txtTcnoAra.BorderThickness = 1;
             this.txtTcnoAra.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -990,7 +990,7 @@
             stateProperties11.ForeColor = System.Drawing.Color.Empty;
             stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtTcnoAra.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Silver;
+            stateProperties12.BorderColor = System.Drawing.Color.WhiteSmoke;
             stateProperties12.FillColor = System.Drawing.Color.White;
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -998,7 +998,7 @@
             this.txtTcnoAra.Padding = new System.Windows.Forms.Padding(1);
             this.txtTcnoAra.PasswordChar = '\0';
             this.txtTcnoAra.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtTcnoAra.PlaceholderText = "Örn: 16756063069";
+            this.txtTcnoAra.PlaceholderText = "16756063069";
             this.txtTcnoAra.ReadOnly = false;
             this.txtTcnoAra.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtTcnoAra.SelectedText = "";
@@ -1006,13 +1006,13 @@
             this.txtTcnoAra.SelectionStart = 0;
             this.txtTcnoAra.ShortcutsEnabled = true;
             this.txtTcnoAra.Size = new System.Drawing.Size(173, 34);
-            this.txtTcnoAra.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtTcnoAra.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.txtTcnoAra.TabIndex = 18;
             this.txtTcnoAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTcnoAra.TextMarginBottom = 0;
             this.txtTcnoAra.TextMarginLeft = 3;
             this.txtTcnoAra.TextMarginTop = 0;
-            this.txtTcnoAra.TextPlaceholder = "Örn: 16756063069";
+            this.txtTcnoAra.TextPlaceholder = "16756063069";
             this.txtTcnoAra.UseSystemPasswordChar = false;
             this.txtTcnoAra.WordWrap = true;
             this.txtTcnoAra.TextChanged += new System.EventHandler(this.txtTcnoAra_TextChanged);
@@ -1893,77 +1893,77 @@
             // 
             this.personelListGridViewTableAdapter.ClearBeforeFill = true;
             // 
-            // Kartlar
+            // perTcknDataGridViewTextBoxColumn
             // 
-            this.Kartlar.FillWeight = 195F;
-            this.Kartlar.HeaderText = "KARTLAR";
-            this.Kartlar.Name = "Kartlar";
-            this.Kartlar.ReadOnly = true;
-            this.Kartlar.Text = "Kartı Görüntüle";
-            this.Kartlar.UseColumnTextForButtonValue = true;
-            // 
-            // adresSehirDataGridViewTextBoxColumn
-            // 
-            this.adresSehirDataGridViewTextBoxColumn.DataPropertyName = "AdresSehir";
-            this.adresSehirDataGridViewTextBoxColumn.HeaderText = "AdresSehir";
-            this.adresSehirDataGridViewTextBoxColumn.Name = "adresSehirDataGridViewTextBoxColumn";
-            this.adresSehirDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adresUlkeDataGridViewTextBoxColumn
-            // 
-            this.adresUlkeDataGridViewTextBoxColumn.DataPropertyName = "AdresUlke";
-            this.adresUlkeDataGridViewTextBoxColumn.HeaderText = "AdresUlke";
-            this.adresUlkeDataGridViewTextBoxColumn.Name = "adresUlkeDataGridViewTextBoxColumn";
-            this.adresUlkeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // perBaslamaTDataGridViewTextBoxColumn
-            // 
-            this.perBaslamaTDataGridViewTextBoxColumn.DataPropertyName = "PerBaslamaT";
-            this.perBaslamaTDataGridViewTextBoxColumn.HeaderText = "PerBaslamaT";
-            this.perBaslamaTDataGridViewTextBoxColumn.Name = "perBaslamaTDataGridViewTextBoxColumn";
-            this.perBaslamaTDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // depRoluDataGridViewTextBoxColumn
-            // 
-            this.depRoluDataGridViewTextBoxColumn.DataPropertyName = "DepRolu";
-            this.depRoluDataGridViewTextBoxColumn.HeaderText = "DepRolu";
-            this.depRoluDataGridViewTextBoxColumn.Name = "depRoluDataGridViewTextBoxColumn";
-            this.depRoluDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // depAdiDataGridViewTextBoxColumn
-            // 
-            this.depAdiDataGridViewTextBoxColumn.DataPropertyName = "DepAdi";
-            this.depAdiDataGridViewTextBoxColumn.HeaderText = "DepAdi";
-            this.depAdiDataGridViewTextBoxColumn.Name = "depAdiDataGridViewTextBoxColumn";
-            this.depAdiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // perDogumTarihiDataGridViewTextBoxColumn
-            // 
-            this.perDogumTarihiDataGridViewTextBoxColumn.DataPropertyName = "PerDogumTarihi";
-            this.perDogumTarihiDataGridViewTextBoxColumn.HeaderText = "PerDogumTarihi";
-            this.perDogumTarihiDataGridViewTextBoxColumn.Name = "perDogumTarihiDataGridViewTextBoxColumn";
-            this.perDogumTarihiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // perSoyadDataGridViewTextBoxColumn
-            // 
-            this.perSoyadDataGridViewTextBoxColumn.DataPropertyName = "PerSoyad";
-            this.perSoyadDataGridViewTextBoxColumn.HeaderText = "PerSoyad";
-            this.perSoyadDataGridViewTextBoxColumn.Name = "perSoyadDataGridViewTextBoxColumn";
-            this.perSoyadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.perTcknDataGridViewTextBoxColumn.DataPropertyName = "PerTckn";
+            this.perTcknDataGridViewTextBoxColumn.HeaderText = "Kimlik Numarası";
+            this.perTcknDataGridViewTextBoxColumn.Name = "perTcknDataGridViewTextBoxColumn";
+            this.perTcknDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // perAdDataGridViewTextBoxColumn
             // 
             this.perAdDataGridViewTextBoxColumn.DataPropertyName = "PerAd";
-            this.perAdDataGridViewTextBoxColumn.HeaderText = "PerAd";
+            this.perAdDataGridViewTextBoxColumn.HeaderText = "Adı";
             this.perAdDataGridViewTextBoxColumn.Name = "perAdDataGridViewTextBoxColumn";
             this.perAdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // perTcknDataGridViewTextBoxColumn
+            // perSoyadDataGridViewTextBoxColumn
             // 
-            this.perTcknDataGridViewTextBoxColumn.DataPropertyName = "PerTckn";
-            this.perTcknDataGridViewTextBoxColumn.HeaderText = "PerTckn";
-            this.perTcknDataGridViewTextBoxColumn.Name = "perTcknDataGridViewTextBoxColumn";
-            this.perTcknDataGridViewTextBoxColumn.ReadOnly = true;
+            this.perSoyadDataGridViewTextBoxColumn.DataPropertyName = "PerSoyad";
+            this.perSoyadDataGridViewTextBoxColumn.HeaderText = "Soyadı";
+            this.perSoyadDataGridViewTextBoxColumn.Name = "perSoyadDataGridViewTextBoxColumn";
+            this.perSoyadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // perDogumTarihiDataGridViewTextBoxColumn
+            // 
+            this.perDogumTarihiDataGridViewTextBoxColumn.DataPropertyName = "PerDogumTarihi";
+            this.perDogumTarihiDataGridViewTextBoxColumn.HeaderText = "Doğum Tarihi";
+            this.perDogumTarihiDataGridViewTextBoxColumn.Name = "perDogumTarihiDataGridViewTextBoxColumn";
+            this.perDogumTarihiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // depAdiDataGridViewTextBoxColumn
+            // 
+            this.depAdiDataGridViewTextBoxColumn.DataPropertyName = "DepAdi";
+            this.depAdiDataGridViewTextBoxColumn.HeaderText = "Departmanı";
+            this.depAdiDataGridViewTextBoxColumn.Name = "depAdiDataGridViewTextBoxColumn";
+            this.depAdiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // depRoluDataGridViewTextBoxColumn
+            // 
+            this.depRoluDataGridViewTextBoxColumn.DataPropertyName = "DepRolu";
+            this.depRoluDataGridViewTextBoxColumn.HeaderText = "Unvan/Rol";
+            this.depRoluDataGridViewTextBoxColumn.Name = "depRoluDataGridViewTextBoxColumn";
+            this.depRoluDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // perBaslamaTDataGridViewTextBoxColumn
+            // 
+            this.perBaslamaTDataGridViewTextBoxColumn.DataPropertyName = "PerBaslamaT";
+            this.perBaslamaTDataGridViewTextBoxColumn.HeaderText = "İşe Giriş Tarihi";
+            this.perBaslamaTDataGridViewTextBoxColumn.Name = "perBaslamaTDataGridViewTextBoxColumn";
+            this.perBaslamaTDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adresUlkeDataGridViewTextBoxColumn
+            // 
+            this.adresUlkeDataGridViewTextBoxColumn.DataPropertyName = "AdresUlke";
+            this.adresUlkeDataGridViewTextBoxColumn.HeaderText = "Bulunduğu Ülke";
+            this.adresUlkeDataGridViewTextBoxColumn.Name = "adresUlkeDataGridViewTextBoxColumn";
+            this.adresUlkeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adresSehirDataGridViewTextBoxColumn
+            // 
+            this.adresSehirDataGridViewTextBoxColumn.DataPropertyName = "AdresSehir";
+            this.adresSehirDataGridViewTextBoxColumn.HeaderText = "Bulunduğu Şehir";
+            this.adresSehirDataGridViewTextBoxColumn.Name = "adresSehirDataGridViewTextBoxColumn";
+            this.adresSehirDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Kartlar
+            // 
+            this.Kartlar.FillWeight = 195F;
+            this.Kartlar.HeaderText = "Kartlar";
+            this.Kartlar.Name = "Kartlar";
+            this.Kartlar.ReadOnly = true;
+            this.Kartlar.Text = "Kartı Görüntüle";
+            this.Kartlar.UseColumnTextForButtonValue = true;
             // 
             // PersonelList
             // 

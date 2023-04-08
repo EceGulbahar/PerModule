@@ -175,6 +175,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Mesailer.cs" />
     <Compile Include="Forms\AnasayfaForm\Anasayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,11 +224,11 @@
     <Compile Include="Forms\MainForm\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OzlukDosyasiRaporlariForm\OzlukDosyasiRaporlari.cs">
+    <Compile Include="Forms\MesaiForm\Mesai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\OzlukDosyasiRaporlariForm\OzlukDosyasiRaporlari.Designer.cs">
-      <DependentUpon>OzlukDosyasiRaporlari.cs</DependentUpon>
+    <Compile Include="Forms\MesaiForm\Mesai.Designer.cs">
+      <DependentUpon>Mesai.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PasswordForgotForm\PasswordUpdate.cs">
       <SubType>Form</SubType>
@@ -370,8 +371,8 @@
     <EmbeddedResource Include="Forms\MainForm\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OzlukDosyasiRaporlariForm\OzlukDosyasiRaporlari.resx">
-      <DependentUpon>OzlukDosyasiRaporlari.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MesaiForm\Mesai.resx">
+      <DependentUpon>Mesai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PasswordForgotForm\PasswordUpdate.resx">
       <DependentUpon>PasswordUpdate.cs</DependentUpon>
