@@ -226,15 +226,7 @@
             this.dropMedeniHalKB = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label11 = new System.Windows.Forms.Label();
             this.dropSigaraKKB = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.label12 = new System.Windows.Forms.Label();
-            this.radioHomeOffice = new Bunifu.UI.WinForms.BunifuRadioButton();
-            this.radioYariZaman = new Bunifu.UI.WinForms.BunifuRadioButton();
-            this.radioTamZaman = new Bunifu.UI.WinForms.BunifuRadioButton();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.grupCalismaSekli = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.grupCalismaGun = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.checkPzr = new System.Windows.Forms.CheckBox();
             this.checkCumartesi = new System.Windows.Forms.CheckBox();
@@ -754,107 +746,6 @@
             this.dropSigaraKKB.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.dropSigaraKKB.TextLeftMargin = 5;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label12.Location = new System.Drawing.Point(44, 452);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(166, 21);
-            this.label12.TabIndex = 38;
-            this.label12.Text = "Uygun Çalışma Şekli:";
-            // 
-            // radioHomeOffice
-            // 
-            this.radioHomeOffice.AllowBindingControlLocation = false;
-            this.radioHomeOffice.BackColor = System.Drawing.Color.Transparent;
-            this.radioHomeOffice.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
-            this.radioHomeOffice.BorderThickness = 1;
-            this.radioHomeOffice.Checked = true;
-            this.radioHomeOffice.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioHomeOffice.Location = new System.Drawing.Point(216, 506);
-            this.radioHomeOffice.Name = "radioHomeOffice";
-            this.radioHomeOffice.OutlineColor = System.Drawing.Color.WhiteSmoke;
-            this.radioHomeOffice.OutlineColorTabFocused = System.Drawing.Color.Goldenrod;
-            this.radioHomeOffice.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
-            this.radioHomeOffice.RadioColor = System.Drawing.Color.Goldenrod;
-            this.radioHomeOffice.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.radioHomeOffice.Size = new System.Drawing.Size(21, 21);
-            this.radioHomeOffice.TabIndex = 39;
-            this.radioHomeOffice.Text = null;
-            // 
-            // radioYariZaman
-            // 
-            this.radioYariZaman.AllowBindingControlLocation = false;
-            this.radioYariZaman.BackColor = System.Drawing.Color.Transparent;
-            this.radioYariZaman.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
-            this.radioYariZaman.BorderThickness = 1;
-            this.radioYariZaman.Checked = false;
-            this.radioYariZaman.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioYariZaman.Location = new System.Drawing.Point(216, 479);
-            this.radioYariZaman.Name = "radioYariZaman";
-            this.radioYariZaman.OutlineColor = System.Drawing.Color.WhiteSmoke;
-            this.radioYariZaman.OutlineColorTabFocused = System.Drawing.Color.Goldenrod;
-            this.radioYariZaman.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
-            this.radioYariZaman.RadioColor = System.Drawing.Color.Goldenrod;
-            this.radioYariZaman.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.radioYariZaman.Size = new System.Drawing.Size(21, 21);
-            this.radioYariZaman.TabIndex = 40;
-            this.radioYariZaman.Text = null;
-            // 
-            // radioTamZaman
-            // 
-            this.radioTamZaman.AllowBindingControlLocation = false;
-            this.radioTamZaman.BackColor = System.Drawing.Color.Transparent;
-            this.radioTamZaman.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
-            this.radioTamZaman.BorderThickness = 1;
-            this.radioTamZaman.Checked = false;
-            this.radioTamZaman.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioTamZaman.Location = new System.Drawing.Point(216, 452);
-            this.radioTamZaman.Name = "radioTamZaman";
-            this.radioTamZaman.OutlineColor = System.Drawing.Color.WhiteSmoke;
-            this.radioTamZaman.OutlineColorTabFocused = System.Drawing.Color.Goldenrod;
-            this.radioTamZaman.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
-            this.radioTamZaman.RadioColor = System.Drawing.Color.Goldenrod;
-            this.radioTamZaman.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.radioTamZaman.Size = new System.Drawing.Size(21, 21);
-            this.radioTamZaman.TabIndex = 41;
-            this.radioTamZaman.Text = null;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label13.Location = new System.Drawing.Point(243, 452);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 21);
-            this.label13.TabIndex = 42;
-            this.label13.Text = "Tam Zamanlı";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label14.Location = new System.Drawing.Point(243, 506);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(107, 21);
-            this.label14.TabIndex = 43;
-            this.label14.Text = "Home Office";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label15.Location = new System.Drawing.Point(243, 479);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(105, 21);
-            this.label15.TabIndex = 44;
-            this.label15.Text = "Yarı Zamanlı";
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -865,21 +756,6 @@
             this.label17.Size = new System.Drawing.Size(178, 21);
             this.label17.TabIndex = 45;
             this.label17.Text = "Çalışabileceği Günler:";
-            // 
-            // grupCalismaSekli
-            // 
-            this.grupCalismaSekli.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            this.grupCalismaSekli.BorderRadius = 1;
-            this.grupCalismaSekli.BorderThickness = 1;
-            this.grupCalismaSekli.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.grupCalismaSekli.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.grupCalismaSekli.LabelIndent = 10;
-            this.grupCalismaSekli.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.grupCalismaSekli.Location = new System.Drawing.Point(38, 444);
-            this.grupCalismaSekli.Name = "grupCalismaSekli";
-            this.grupCalismaSekli.Size = new System.Drawing.Size(325, 90);
-            this.grupCalismaSekli.TabIndex = 46;
-            this.grupCalismaSekli.TabStop = false;
             // 
             // grupCalismaGun
             // 
@@ -6107,13 +5983,6 @@
             this.Controls.Add(this.txtEpostaKB);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.radioTamZaman);
-            this.Controls.Add(this.radioYariZaman);
-            this.Controls.Add(this.radioHomeOffice);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.dropSigaraKKB);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dropMedeniHalKB);
@@ -6137,7 +6006,6 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.grupCalismaSekli);
             this.Controls.Add(this.grupCalismaGun);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label36);
@@ -6186,15 +6054,7 @@
         private System.Windows.Forms.Label label11;
         private Bunifu.UI.WinForms.BunifuDropdown dropSigaraKKB;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label12;
-        private Bunifu.UI.WinForms.BunifuRadioButton radioHomeOffice;
-        private Bunifu.UI.WinForms.BunifuRadioButton radioYariZaman;
-        private Bunifu.UI.WinForms.BunifuRadioButton radioTamZaman;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
-        private Bunifu.UI.WinForms.BunifuGroupBox grupCalismaSekli;
         private Bunifu.UI.WinForms.BunifuGroupBox grupCalismaGun;
         private System.Windows.Forms.CheckBox checkPzt;
         private System.Windows.Forms.CheckBox checkPzr;

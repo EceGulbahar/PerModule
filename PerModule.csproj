@@ -175,7 +175,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Mesailer.cs" />
     <Compile Include="Forms\AnasayfaForm\Anasayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -505,6 +504,8 @@
     <Content Include="img\texture.png" />
     <Content Include="img\texture2.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Classes\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

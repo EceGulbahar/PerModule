@@ -32,8 +32,9 @@ namespace PerModule.Forms.LoginForm
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
         }
-
-        private void btnGiris_Click(object sender, EventArgs e)
+        public static int kullanici;
+        public string kullaniciadi;
+        public void btnGiris_Click(object sender, EventArgs e)
         {
             if (baglan.State == ConnectionState.Closed)
             {
@@ -50,6 +51,19 @@ namespace PerModule.Forms.LoginForm
             da.Fill(dt);
             if (dt.Rows.Count > 0) //ilgili alanlar birbirini tutuyor mu?
             {
+                kullaniciadi=txtKAdi.Text;
+                SqlCommand logincmbdd = new SqlCommand("SELECT id FROM Personnels where PerNickName=@PerNickName", baglan);
+                logincmbdd.Parameters.AddWithValue("@PerNickName",txtKAdi.Text);
+                logincmbdd.ExecuteScalar();
+                SqlDataReader reader1 = logincmbdd.ExecuteReader();
+                // Verileri işle
+                while (reader1.Read())
+                {
+                    kullanici = reader1.GetInt32(0);
+                    // Verileri konsola yazdırabilirsiniz
+                }
+                // Okuyucuyu kapat
+                reader1.Close();
                 Main form = new Main();
                 form.Show();
                 this.Hide();

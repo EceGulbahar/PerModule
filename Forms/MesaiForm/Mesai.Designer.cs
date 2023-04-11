@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mesai));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties33 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties34 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties35 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties36 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.pnlTopItems = new System.Windows.Forms.Panel();
             this.PersonelListesiLink = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,6 +50,8 @@
             this.KontrolPanelLink = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DTSaatBitis = new System.Windows.Forms.MaskedTextBox();
+            this.DTSaatBaslangic = new System.Windows.Forms.MaskedTextBox();
             this.btnMesaiekle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnMesaisil = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtAciklama = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -69,8 +71,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dropPersonnel = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label7 = new System.Windows.Forms.Label();
-            this.DTSaatBaslangic = new System.Windows.Forms.MaskedTextBox();
-            this.DTSaatBitis = new System.Windows.Forms.MaskedTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dropMesaiTuru = new Bunifu.UI.WinForms.BunifuDropdown();
             this.pnlTopItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -154,6 +157,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.dropMesaiTuru);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.DTSaatBitis);
             this.panel1.Controls.Add(this.DTSaatBaslangic);
             this.panel1.Controls.Add(this.btnMesaiekle);
@@ -180,6 +186,32 @@
             this.panel1.Size = new System.Drawing.Size(395, 666);
             this.panel1.TabIndex = 17;
             // 
+            // DTSaatBitis
+            // 
+            this.DTSaatBitis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.DTSaatBitis.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DTSaatBitis.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.DTSaatBitis.Location = new System.Drawing.Point(217, 198);
+            this.DTSaatBitis.Mask = "90:00";
+            this.DTSaatBitis.Name = "DTSaatBitis";
+            this.DTSaatBitis.Size = new System.Drawing.Size(137, 31);
+            this.DTSaatBitis.TabIndex = 163;
+            this.DTSaatBitis.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.DTSaatBitis.ValidatingType = typeof(System.DateTime);
+            // 
+            // DTSaatBaslangic
+            // 
+            this.DTSaatBaslangic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.DTSaatBaslangic.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DTSaatBaslangic.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.DTSaatBaslangic.Location = new System.Drawing.Point(217, 124);
+            this.DTSaatBaslangic.Mask = "90:00";
+            this.DTSaatBaslangic.Name = "DTSaatBaslangic";
+            this.DTSaatBaslangic.Size = new System.Drawing.Size(137, 31);
+            this.DTSaatBaslangic.TabIndex = 162;
+            this.DTSaatBaslangic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.DTSaatBaslangic.ValidatingType = typeof(System.DateTime);
+            // 
             // btnMesaiekle
             // 
             this.btnMesaiekle.AllowAnimations = true;
@@ -199,11 +231,11 @@
             this.btnMesaiekle.ColorContrastOnClick = 45;
             this.btnMesaiekle.ColorContrastOnHover = 45;
             this.btnMesaiekle.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnMesaiekle.CustomizableEdges = borderEdges1;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnMesaiekle.CustomizableEdges = borderEdges5;
             this.btnMesaiekle.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnMesaiekle.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnMesaiekle.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -268,6 +300,7 @@
             this.btnMesaiekle.TextMarginLeft = 0;
             this.btnMesaiekle.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnMesaiekle.UseDefaultRadiusAndThickness = true;
+            this.btnMesaiekle.Click += new System.EventHandler(this.btnMesaiekle_Click);
             // 
             // btnMesaisil
             // 
@@ -288,11 +321,11 @@
             this.btnMesaisil.ColorContrastOnClick = 45;
             this.btnMesaisil.ColorContrastOnHover = 45;
             this.btnMesaisil.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnMesaisil.CustomizableEdges = borderEdges2;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnMesaisil.CustomizableEdges = borderEdges6;
             this.btnMesaisil.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnMesaisil.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnMesaisil.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -387,32 +420,32 @@
             this.txtAciklama.IconRight = null;
             this.txtAciklama.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAciklama.Lines = new string[0];
-            this.txtAciklama.Location = new System.Drawing.Point(35, 450);
+            this.txtAciklama.Location = new System.Drawing.Point(35, 486);
             this.txtAciklama.MaxLength = 32767;
             this.txtAciklama.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtAciklama.Modified = false;
-            this.txtAciklama.Multiline = false;
+            this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
-            stateProperties1.BorderColor = System.Drawing.Color.Goldenrod;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtAciklama.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtAciklama.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtAciklama.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtAciklama.OnIdleState = stateProperties4;
+            stateProperties25.BorderColor = System.Drawing.Color.Goldenrod;
+            stateProperties25.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties25.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtAciklama.OnActiveState = stateProperties25;
+            stateProperties26.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties26.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties26.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtAciklama.OnDisabledState = stateProperties26;
+            stateProperties27.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties27.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties27.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtAciklama.OnHoverState = stateProperties27;
+            stateProperties28.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties28.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties28.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtAciklama.OnIdleState = stateProperties28;
             this.txtAciklama.Padding = new System.Windows.Forms.Padding(1);
             this.txtAciklama.PasswordChar = '\0';
             this.txtAciklama.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -423,7 +456,7 @@
             this.txtAciklama.SelectionLength = 0;
             this.txtAciklama.SelectionStart = 0;
             this.txtAciklama.ShortcutsEnabled = true;
-            this.txtAciklama.Size = new System.Drawing.Size(323, 125);
+            this.txtAciklama.Size = new System.Drawing.Size(323, 97);
             this.txtAciklama.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAciklama.TabIndex = 58;
             this.txtAciklama.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -439,7 +472,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label10.Location = new System.Drawing.Point(31, 425);
+            this.label10.Location = new System.Drawing.Point(31, 461);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 22);
             this.label10.TabIndex = 57;
@@ -598,26 +631,26 @@
             this.txtTutar.Modified = false;
             this.txtTutar.Multiline = false;
             this.txtTutar.Name = "txtTutar";
-            stateProperties5.BorderColor = System.Drawing.Color.Goldenrod;
-            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtTutar.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtTutar.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtTutar.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtTutar.OnIdleState = stateProperties8;
+            stateProperties29.BorderColor = System.Drawing.Color.Goldenrod;
+            stateProperties29.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties29.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTutar.OnActiveState = stateProperties29;
+            stateProperties30.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties30.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtTutar.OnDisabledState = stateProperties30;
+            stateProperties31.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties31.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties31.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTutar.OnHoverState = stateProperties31;
+            stateProperties32.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties32.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties32.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtTutar.OnIdleState = stateProperties32;
             this.txtTutar.Padding = new System.Windows.Forms.Padding(1);
             this.txtTutar.PasswordChar = '\0';
             this.txtTutar.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -631,13 +664,14 @@
             this.txtTutar.Size = new System.Drawing.Size(137, 32);
             this.txtTutar.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtTutar.TabIndex = 52;
-            this.txtTutar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTutar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTutar.TextMarginBottom = 0;
             this.txtTutar.TextMarginLeft = 3;
             this.txtTutar.TextMarginTop = 0;
             this.txtTutar.TextPlaceholder = "";
             this.txtTutar.UseSystemPasswordChar = false;
             this.txtTutar.WordWrap = true;
+            this.txtTutar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTutar_KeyPress);
             // 
             // label6
             // 
@@ -684,26 +718,26 @@
             this.txtSaatlik.Modified = false;
             this.txtSaatlik.Multiline = false;
             this.txtSaatlik.Name = "txtSaatlik";
-            stateProperties9.BorderColor = System.Drawing.Color.Goldenrod;
-            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSaatlik.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties10.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtSaatlik.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties11.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSaatlik.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            stateProperties12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSaatlik.OnIdleState = stateProperties12;
+            stateProperties33.BorderColor = System.Drawing.Color.Goldenrod;
+            stateProperties33.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties33.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties33.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSaatlik.OnActiveState = stateProperties33;
+            stateProperties34.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties34.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties34.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties34.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSaatlik.OnDisabledState = stateProperties34;
+            stateProperties35.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties35.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties35.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSaatlik.OnHoverState = stateProperties35;
+            stateProperties36.BorderColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties36.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            stateProperties36.ForeColor = System.Drawing.Color.WhiteSmoke;
+            stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSaatlik.OnIdleState = stateProperties36;
             this.txtSaatlik.Padding = new System.Windows.Forms.Padding(1);
             this.txtSaatlik.PasswordChar = '\0';
             this.txtSaatlik.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -717,13 +751,15 @@
             this.txtSaatlik.Size = new System.Drawing.Size(137, 32);
             this.txtSaatlik.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSaatlik.TabIndex = 50;
-            this.txtSaatlik.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSaatlik.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSaatlik.TextMarginBottom = 0;
             this.txtSaatlik.TextMarginLeft = 3;
             this.txtSaatlik.TextMarginTop = 0;
             this.txtSaatlik.TextPlaceholder = "";
             this.txtSaatlik.UseSystemPasswordChar = false;
             this.txtSaatlik.WordWrap = true;
+            this.txtSaatlik.TextChanged += new System.EventHandler(this.txtSaatlik_TextChanged);
+            this.txtSaatlik.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaatlik_KeyPress);
             // 
             // label4
             // 
@@ -875,29 +911,76 @@
             this.label7.TabIndex = 40;
             this.label7.Text = "Personel Adı Soyadı:";
             // 
-            // DTSaatBaslangic
+            // label11
             // 
-            this.DTSaatBaslangic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.DTSaatBaslangic.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.DTSaatBaslangic.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.DTSaatBaslangic.Location = new System.Drawing.Point(217, 124);
-            this.DTSaatBaslangic.Mask = "90:00";
-            this.DTSaatBaslangic.Name = "DTSaatBaslangic";
-            this.DTSaatBaslangic.Size = new System.Drawing.Size(137, 31);
-            this.DTSaatBaslangic.TabIndex = 162;
-            this.DTSaatBaslangic.ValidatingType = typeof(System.DateTime);
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(300, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 18);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "label11";
             // 
-            // DTSaatBitis
+            // label12
             // 
-            this.DTSaatBitis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.DTSaatBitis.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.DTSaatBitis.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.DTSaatBitis.Location = new System.Drawing.Point(217, 198);
-            this.DTSaatBitis.Mask = "90:00";
-            this.DTSaatBitis.Name = "DTSaatBitis";
-            this.DTSaatBitis.Size = new System.Drawing.Size(137, 31);
-            this.DTSaatBitis.TabIndex = 163;
-            this.DTSaatBitis.ValidatingType = typeof(System.DateTime);
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label12.Location = new System.Drawing.Point(31, 427);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(110, 22);
+            this.label12.TabIndex = 164;
+            this.label12.Text = "Mesai Türü:";
+            // 
+            // dropMesaiTuru
+            // 
+            this.dropMesaiTuru.BackColor = System.Drawing.Color.Transparent;
+            this.dropMesaiTuru.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
+            this.dropMesaiTuru.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.dropMesaiTuru.BorderRadius = 1;
+            this.dropMesaiTuru.Color = System.Drawing.Color.WhiteSmoke;
+            this.dropMesaiTuru.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.dropMesaiTuru.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dropMesaiTuru.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dropMesaiTuru.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dropMesaiTuru.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.dropMesaiTuru.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.dropMesaiTuru.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.dropMesaiTuru.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.dropMesaiTuru.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropMesaiTuru.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.dropMesaiTuru.FillDropDown = true;
+            this.dropMesaiTuru.FillIndicator = false;
+            this.dropMesaiTuru.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dropMesaiTuru.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.dropMesaiTuru.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dropMesaiTuru.FormattingEnabled = true;
+            this.dropMesaiTuru.Icon = null;
+            this.dropMesaiTuru.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.dropMesaiTuru.IndicatorColor = System.Drawing.Color.WhiteSmoke;
+            this.dropMesaiTuru.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.dropMesaiTuru.ItemBackColor = System.Drawing.Color.Silver;
+            this.dropMesaiTuru.ItemBorderColor = System.Drawing.Color.WhiteSmoke;
+            this.dropMesaiTuru.ItemForeColor = System.Drawing.Color.Black;
+            this.dropMesaiTuru.ItemHeight = 26;
+            this.dropMesaiTuru.ItemHighLightColor = System.Drawing.Color.Goldenrod;
+            this.dropMesaiTuru.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.dropMesaiTuru.Items.AddRange(new object[] {
+            "Sabit Mesai",
+            "Vardiya Mesai",
+            "Esnek Mesai",
+            "Uzaktan Çalışma",
+            "Part-time Mesai",
+            "Gece Mesai"});
+            this.dropMesaiTuru.ItemTopMargin = 3;
+            this.dropMesaiTuru.Location = new System.Drawing.Point(147, 425);
+            this.dropMesaiTuru.Name = "dropMesaiTuru";
+            this.dropMesaiTuru.Size = new System.Drawing.Size(207, 32);
+            this.dropMesaiTuru.TabIndex = 165;
+            this.dropMesaiTuru.Text = null;
+            this.dropMesaiTuru.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.dropMesaiTuru.TextLeftMargin = 5;
             // 
             // Mesai
             // 
@@ -951,5 +1034,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox DTSaatBaslangic;
         private System.Windows.Forms.MaskedTextBox DTSaatBitis;
+        private System.Windows.Forms.Label label11;
+        private Bunifu.UI.WinForms.BunifuDropdown dropMesaiTuru;
+        private System.Windows.Forms.Label label12;
     }
 }
