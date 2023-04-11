@@ -22,7 +22,7 @@ namespace PerModule.Forms.OzlukDosyasiRaporlariForm
         public DateTime?  Tarih;
         public int isiyapankullanici, DonemAy, DonemYil;
         public decimal MesaiSaatUcreti, Tutar;
-        public string OdenmeDurumu, Aciklama,  BaslangicSaati, BitisSaati;
+        public string OdenmeDurumu, Aciklama,  BaslangicSaati, BitisSaati, MesaiTuru;
 
         public void Alert(string msg, Form_Alert.enmType type)
         {
@@ -51,7 +51,7 @@ namespace PerModule.Forms.OzlukDosyasiRaporlariForm
                     }
                     //Numeric
                     
-                    SqlCommand mesaiekle = new SqlCommand("insert into Mesai(KullaniciID,Personnelid,BaslangicSaati,BitisSaati,MesaiSaatUcreti,Tutar,DonemAy,DonemYil,OdenmeDurumu,Aciklama,Tarih) values(@KullaniciID,@Personnelid,@BaslangicSaati,@BitisSaati,@MesaiSaatUcreti,@Tutar,@DonemAy,@DonemYil,@OdenmeDurumu,@Aciklama,@Tarih)", baglan);
+                    SqlCommand mesaiekle = new SqlCommand("insert into Mesai(KullaniciID,Personnelid,BaslangicSaati,BitisSaati,MesaiSaatUcreti,Tutar,DonemAy,DonemYil,OdenmeDurumu,Aciklama,Tarih,MesaiTuru) values(@KullaniciID,@Personnelid,@BaslangicSaati,@BitisSaati,@MesaiSaatUcreti,@Tutar,@DonemAy,@DonemYil,@OdenmeDurumu,@Aciklama,@Tarih,@MesaiTuru)", baglan);
                     mesaiekle.Parameters.AddWithValue("@KullaniciID", Login.kullanici);
                     mesaiekle.Parameters.AddWithValue("@Personnelid", personid);
                     mesaiekle.Parameters.AddWithValue("@BaslangicSaati", hbaslangic);
@@ -63,6 +63,7 @@ namespace PerModule.Forms.OzlukDosyasiRaporlariForm
                     mesaiekle.Parameters.AddWithValue("@OdenmeDurumu", "mesai eklendi,ödenmedi");
                     mesaiekle.Parameters.AddWithValue("@Aciklama", txtAciklama.Text);
                     mesaiekle.Parameters.AddWithValue("@Tarih", DateTime.Now);
+                    mesaiekle.Parameters.AddWithValue("@MesaiTuru", dropMesaiTuru.Text);
                     mesaiekle.ExecuteNonQuery();
                     this.Alert("Mesai Ekleme Başarılı", Form_Alert.enmType.Success);
                     if (baglan.State == ConnectionState.Open)
@@ -190,6 +191,7 @@ namespace PerModule.Forms.OzlukDosyasiRaporlariForm
         //MESAİ TÜRÜ EKLENECEK
         private void dropPersonnel_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dropMesaiTuru.Text = " ";
             txtSaatlik.Text = " ";
             txtTutar.Text = " ";
             dropDonemAy.Text = " ";
@@ -255,8 +257,10 @@ namespace PerModule.Forms.OzlukDosyasiRaporlariForm
                     OdenmeDurumu = (string)readercmd["OdenmeDurumu"];
                     Aciklama = readercmd.IsDBNull(readercmd.GetOrdinal("Aciklama")) ? null : (string)readercmd["Aciklama"];
                     Tarih = readercmd.IsDBNull(readercmd.GetOrdinal("Tarih")) ? (DateTime?)null : (DateTime)readercmd["Tarih"];
+                    MesaiTuru = readercmd.IsDBNull(readercmd.GetOrdinal("MesaiTuru")) ? null : (string)readercmd["MesaiTuru"];
                 }
                 txtSaatlik.Text = MesaiSaatUcreti.ToString();
+                dropMesaiTuru.Text = MesaiTuru;
                 txtTutar.Text = Tutar.ToString();
                 dropDonemAy.Text = DonemAy.ToString();
                 dropDonemYil.Text = DonemYil.ToString();
@@ -281,6 +285,7 @@ namespace PerModule.Forms.OzlukDosyasiRaporlariForm
                 DTSaatBaslangic.Text = null;
                 DTBitisTarihi.Value = DateTime.Now;
                 DTSaatBitis.Text = null;
+                dropMesaiTuru.Text = " ";
             }
             
         }
