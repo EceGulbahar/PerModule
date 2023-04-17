@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ViewMesaiDS" targetNamespace="http://tempuri.org/ViewMesaiDS.xsd" xmlns:mstns="http://tempuri.org/ViewMesaiDS.xsd" xmlns="http://tempuri.org/ViewMesaiDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PerModuleCS" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerModuleCS (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PerModule.Properties.Settings.GlobalReference.Default.PerModuleCS" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewMesaiTableAdapter" GeneratorDataComponentClassName="ViewMesaiTableAdapter" Name="ViewMesai" UserDataComponentName="ViewMesaiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PerModuleCS (Settings)" DbObjectName="PERSONNELMODULE.dbo.ViewMesai" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PerTckn, PerAd, PerSoyad, BaslangicSaati, BitisSaati, MesaiSaatUcreti, Tutar, DonemAy, DonemYil, OdenmeDurumu, Aciklama, MesaiTuru, Mesaiid FROM dbo.ViewMesai</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PerTckn" DataSetColumn="PerTckn" />
+              <Mapping SourceColumn="PerAd" DataSetColumn="PerAd" />
+              <Mapping SourceColumn="PerSoyad" DataSetColumn="PerSoyad" />
+              <Mapping SourceColumn="BaslangicSaati" DataSetColumn="BaslangicSaati" />
+              <Mapping SourceColumn="BitisSaati" DataSetColumn="BitisSaati" />
+              <Mapping SourceColumn="MesaiSaatUcreti" DataSetColumn="MesaiSaatUcreti" />
+              <Mapping SourceColumn="Tutar" DataSetColumn="Tutar" />
+              <Mapping SourceColumn="DonemAy" DataSetColumn="DonemAy" />
+              <Mapping SourceColumn="DonemYil" DataSetColumn="DonemYil" />
+              <Mapping SourceColumn="OdenmeDurumu" DataSetColumn="OdenmeDurumu" />
+              <Mapping SourceColumn="Aciklama" DataSetColumn="Aciklama" />
+              <Mapping SourceColumn="MesaiTuru" DataSetColumn="MesaiTuru" />
+              <Mapping SourceColumn="Mesaiid" DataSetColumn="Mesaiid" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ViewMesaiDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="ViewMesaiDS" msprop:Generator_DataSetName="ViewMesaiDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ViewMesai" msprop:Generator_RowEvHandlerName="ViewMesaiRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewMesaiRowDeleted" msprop:Generator_RowDeletingName="ViewMesaiRowDeleting" msprop:Generator_RowEvArgName="ViewMesaiRowChangeEvent" msprop:Generator_TablePropName="ViewMesai" msprop:Generator_RowChangedName="ViewMesaiRowChanged" msprop:Generator_RowChangingName="ViewMesaiRowChanging" msprop:Generator_TableClassName="ViewMesaiDataTable" msprop:Generator_RowClassName="ViewMesaiRow" msprop:Generator_TableVarName="tableViewMesai" msprop:Generator_UserTableName="ViewMesai">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PerTckn" msprop:Generator_ColumnPropNameInRow="PerTckn" msprop:Generator_ColumnPropNameInTable="PerTcknColumn" msprop:Generator_ColumnVarNameInTable="columnPerTckn" msprop:Generator_UserColumnName="PerTckn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PerAd" msprop:Generator_ColumnPropNameInRow="PerAd" msprop:Generator_ColumnPropNameInTable="PerAdColumn" msprop:Generator_ColumnVarNameInTable="columnPerAd" msprop:Generator_UserColumnName="PerAd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PerSoyad" msprop:Generator_ColumnPropNameInRow="PerSoyad" msprop:Generator_ColumnPropNameInTable="PerSoyadColumn" msprop:Generator_ColumnVarNameInTable="columnPerSoyad" msprop:Generator_UserColumnName="PerSoyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BaslangicSaati" msprop:Generator_ColumnPropNameInRow="BaslangicSaati" msprop:Generator_ColumnPropNameInTable="BaslangicSaatiColumn" msprop:Generator_ColumnVarNameInTable="columnBaslangicSaati" msprop:Generator_UserColumnName="BaslangicSaati">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BitisSaati" msprop:Generator_ColumnPropNameInRow="BitisSaati" msprop:Generator_ColumnPropNameInTable="BitisSaatiColumn" msprop:Generator_ColumnVarNameInTable="columnBitisSaati" msprop:Generator_UserColumnName="BitisSaati">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MesaiSaatUcreti" msprop:Generator_ColumnPropNameInRow="MesaiSaatUcreti" msprop:Generator_ColumnPropNameInTable="MesaiSaatUcretiColumn" msprop:Generator_ColumnVarNameInTable="columnMesaiSaatUcreti" msprop:Generator_UserColumnName="MesaiSaatUcreti" type="xs:decimal" />
+              <xs:element name="Tutar" msprop:Generator_ColumnPropNameInRow="Tutar" msprop:Generator_ColumnPropNameInTable="TutarColumn" msprop:Generator_ColumnVarNameInTable="columnTutar" msprop:Generator_UserColumnName="Tutar" type="xs:decimal" />
+              <xs:element name="DonemAy" msprop:Generator_ColumnPropNameInRow="DonemAy" msprop:Generator_ColumnPropNameInTable="DonemAyColumn" msprop:Generator_ColumnVarNameInTable="columnDonemAy" msprop:Generator_UserColumnName="DonemAy" type="xs:int" />
+              <xs:element name="DonemYil" msprop:Generator_ColumnPropNameInRow="DonemYil" msprop:Generator_ColumnPropNameInTable="DonemYilColumn" msprop:Generator_ColumnVarNameInTable="columnDonemYil" msprop:Generator_UserColumnName="DonemYil" type="xs:int" minOccurs="0" />
+              <xs:element name="OdenmeDurumu" msprop:Generator_ColumnPropNameInRow="OdenmeDurumu" msprop:Generator_ColumnPropNameInTable="OdenmeDurumuColumn" msprop:Generator_ColumnVarNameInTable="columnOdenmeDurumu" msprop:Generator_UserColumnName="OdenmeDurumu" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Aciklama" msprop:Generator_ColumnPropNameInRow="Aciklama" msprop:Generator_ColumnPropNameInTable="AciklamaColumn" msprop:Generator_ColumnVarNameInTable="columnAciklama" msprop:Generator_UserColumnName="Aciklama">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="850" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MesaiTuru" msprop:Generator_ColumnPropNameInRow="MesaiTuru" msprop:Generator_ColumnPropNameInTable="MesaiTuruColumn" msprop:Generator_ColumnVarNameInTable="columnMesaiTuru" msprop:Generator_UserColumnName="MesaiTuru" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mesaiid" msprop:Generator_ColumnPropNameInRow="Mesaiid" msprop:Generator_ColumnPropNameInTable="MesaiidColumn" msprop:Generator_ColumnVarNameInTable="columnMesaiid" msprop:Generator_UserColumnName="Mesaiid" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewMesai" />
+      <xs:field xpath="mstns:Mesaiid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

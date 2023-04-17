@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ViewIzinDS" targetNamespace="http://tempuri.org/ViewIzinDS.xsd" xmlns:mstns="http://tempuri.org/ViewIzinDS.xsd" xmlns="http://tempuri.org/ViewIzinDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PerModuleCS" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerModuleCS (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PerModule.Properties.Settings.GlobalReference.Default.PerModuleCS" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewIzinTableAdapter" GeneratorDataComponentClassName="ViewIzinTableAdapter" Name="ViewIzin" UserDataComponentName="ViewIzinTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PerModuleCS (Settings)" DbObjectName="PERSONNELMODULE.dbo.ViewIzin" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PerTckn, PerAd, PerSoyad, IzinTuru, IzinBaslangic, IzinBitis, izinid FROM dbo.ViewIzin</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PerTckn" DataSetColumn="PerTckn" />
+              <Mapping SourceColumn="PerAd" DataSetColumn="PerAd" />
+              <Mapping SourceColumn="PerSoyad" DataSetColumn="PerSoyad" />
+              <Mapping SourceColumn="IzinTuru" DataSetColumn="IzinTuru" />
+              <Mapping SourceColumn="IzinBaslangic" DataSetColumn="IzinBaslangic" />
+              <Mapping SourceColumn="IzinBitis" DataSetColumn="IzinBitis" />
+              <Mapping SourceColumn="izinid" DataSetColumn="izinid" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ViewIzinDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="ViewIzinDS" msprop:Generator_DataSetName="ViewIzinDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ViewIzin" msprop:Generator_RowEvHandlerName="ViewIzinRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewIzinRowDeleted" msprop:Generator_RowDeletingName="ViewIzinRowDeleting" msprop:Generator_RowEvArgName="ViewIzinRowChangeEvent" msprop:Generator_TablePropName="ViewIzin" msprop:Generator_RowChangedName="ViewIzinRowChanged" msprop:Generator_RowChangingName="ViewIzinRowChanging" msprop:Generator_TableClassName="ViewIzinDataTable" msprop:Generator_RowClassName="ViewIzinRow" msprop:Generator_TableVarName="tableViewIzin" msprop:Generator_UserTableName="ViewIzin">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PerTckn" msprop:Generator_ColumnPropNameInRow="PerTckn" msprop:Generator_ColumnPropNameInTable="PerTcknColumn" msprop:Generator_ColumnVarNameInTable="columnPerTckn" msprop:Generator_UserColumnName="PerTckn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PerAd" msprop:Generator_ColumnPropNameInRow="PerAd" msprop:Generator_ColumnPropNameInTable="PerAdColumn" msprop:Generator_ColumnVarNameInTable="columnPerAd" msprop:Generator_UserColumnName="PerAd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PerSoyad" msprop:Generator_ColumnPropNameInRow="PerSoyad" msprop:Generator_ColumnPropNameInTable="PerSoyadColumn" msprop:Generator_ColumnVarNameInTable="columnPerSoyad" msprop:Generator_UserColumnName="PerSoyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IzinTuru" msprop:Generator_ColumnPropNameInRow="IzinTuru" msprop:Generator_ColumnPropNameInTable="IzinTuruColumn" msprop:Generator_ColumnVarNameInTable="columnIzinTuru" msprop:Generator_UserColumnName="IzinTuru">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IzinBaslangic" msprop:Generator_ColumnPropNameInRow="IzinBaslangic" msprop:Generator_ColumnPropNameInTable="IzinBaslangicColumn" msprop:Generator_ColumnVarNameInTable="columnIzinBaslangic" msprop:Generator_UserColumnName="IzinBaslangic" type="xs:dateTime" />
+              <xs:element name="IzinBitis" msprop:Generator_ColumnPropNameInRow="IzinBitis" msprop:Generator_ColumnPropNameInTable="IzinBitisColumn" msprop:Generator_ColumnVarNameInTable="columnIzinBitis" msprop:Generator_UserColumnName="IzinBitis" type="xs:dateTime" />
+              <xs:element name="izinid" msprop:Generator_ColumnPropNameInRow="izinid" msprop:Generator_ColumnPropNameInTable="izinidColumn" msprop:Generator_ColumnVarNameInTable="columnizinid" msprop:Generator_UserColumnName="izinid" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewIzin" />
+      <xs:field xpath="mstns:izinid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

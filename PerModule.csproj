@@ -346,6 +346,16 @@
     <Compile Include="Tools\GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ViewIzinDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewIzinDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMesaiDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewMesaiDS.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\AnasayfaForm\Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
@@ -473,6 +483,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ViewIzinDS.xsc">
+      <DependentUpon>ViewIzinDS.xsd</DependentUpon>
+    </None>
+    <None Include="ViewIzinDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ViewIzinDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ViewIzinDS.xss">
+      <DependentUpon>ViewIzinDS.xsd</DependentUpon>
+    </None>
+    <None Include="ViewMesaiDS.xsc">
+      <DependentUpon>ViewMesaiDS.xsd</DependentUpon>
+    </None>
+    <None Include="ViewMesaiDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ViewMesaiDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ViewMesaiDS.xss">
+      <DependentUpon>ViewMesaiDS.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
