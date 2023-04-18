@@ -293,6 +293,8 @@ namespace PerModule {
             
             private global::System.Data.DataColumn columnizinid;
             
+            private global::System.Data.DataColumn columnAciklama;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ViewIzinDataTable() {
@@ -384,6 +386,14 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AciklamaColumn {
+                get {
+                    return this.columnAciklama;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -419,7 +429,7 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ViewIzinRow AddViewIzinRow(string PerTckn, string PerAd, string PerSoyad, string IzinTuru, System.DateTime IzinBaslangic, System.DateTime IzinBitis, int izinid) {
+            public ViewIzinRow AddViewIzinRow(string PerTckn, string PerAd, string PerSoyad, string IzinTuru, System.DateTime IzinBaslangic, System.DateTime IzinBitis, int izinid, string Aciklama) {
                 ViewIzinRow rowViewIzinRow = ((ViewIzinRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PerTckn,
@@ -428,7 +438,8 @@ namespace PerModule {
                         IzinTuru,
                         IzinBaslangic,
                         IzinBitis,
-                        izinid};
+                        izinid,
+                        Aciklama};
                 rowViewIzinRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowViewIzinRow);
                 return rowViewIzinRow;
@@ -465,6 +476,7 @@ namespace PerModule {
                 this.columnIzinBaslangic = base.Columns["IzinBaslangic"];
                 this.columnIzinBitis = base.Columns["IzinBitis"];
                 this.columnizinid = base.Columns["izinid"];
+                this.columnAciklama = base.Columns["Aciklama"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -484,6 +496,8 @@ namespace PerModule {
                 base.Columns.Add(this.columnIzinBitis);
                 this.columnizinid = new global::System.Data.DataColumn("izinid", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnizinid);
+                this.columnAciklama = new global::System.Data.DataColumn("Aciklama", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAciklama);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnizinid}, true));
                 this.columnPerTckn.AllowDBNull = false;
@@ -498,6 +512,8 @@ namespace PerModule {
                 this.columnIzinBitis.AllowDBNull = false;
                 this.columnizinid.AllowDBNull = false;
                 this.columnizinid.Unique = true;
+                this.columnAciklama.AllowDBNull = false;
+                this.columnAciklama.MaxLength = 850;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -714,6 +730,17 @@ namespace PerModule {
                     this[this.tableViewIzin.izinidColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Aciklama {
+                get {
+                    return ((string)(this[this.tableViewIzin.AciklamaColumn]));
+                }
+                set {
+                    this[this.tableViewIzin.AciklamaColumn] = value;
+                }
+            }
         }
         
         /// <summary>
@@ -882,6 +909,7 @@ namespace PerModule.ViewIzinDSTableAdapters {
             tableMapping.ColumnMappings.Add("IzinBaslangic", "IzinBaslangic");
             tableMapping.ColumnMappings.Add("IzinBitis", "IzinBitis");
             tableMapping.ColumnMappings.Add("izinid", "izinid");
+            tableMapping.ColumnMappings.Add("Aciklama", "Aciklama");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -898,8 +926,8 @@ namespace PerModule.ViewIzinDSTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT PerTckn, PerAd, PerSoyad, IzinTuru, IzinBaslangic, IzinBitis, izinid FROM " +
-                "dbo.ViewIzin";
+            this._commandCollection[0].CommandText = "SELECT PerTckn, PerAd, PerSoyad, IzinTuru, IzinBaslangic, IzinBitis, izinid, Acik" +
+                "lama FROM dbo.ViewIzin";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
