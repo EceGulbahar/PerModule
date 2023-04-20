@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -113,6 +114,12 @@ namespace PerModule.Forms.IzinRaporlariForm
 
         private void btnTemizle_Click(object sender, EventArgs e)
         {
+            temizleizin();
+        }
+
+        public void temizleizin()
+        {
+            dropPersonnel.Text = " ";
             dropIzinTuru.Text = " ";
             dropIzinTuru.Text = " ";
             txtAciklama.Text = " ";
@@ -126,7 +133,8 @@ namespace PerModule.Forms.IzinRaporlariForm
 
         private void btnIzinsil_Click(object sender, EventArgs e)
         {
-            if (dropPersonnel.Text != null)
+            //izni bulunmayabilir.
+            if (dropPersonnel.Text != null )
             {
                 string bol = dropPersonnel.Text;
                 int bolsayi = bol.IndexOf(" ");
@@ -152,10 +160,138 @@ namespace PerModule.Forms.IzinRaporlariForm
                     baglan.Close();
                 }
             }
+            if (dropPersonnel.Text == null || dropIzinTuru.Text == null || txtAciklama.Text == null)
+            {
+                this.Alert("Gerekli bilgileri doldurunuz.", Form_Alert.enmType.Warning);
+            }
+            else
+            {
+                if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                }
+                if(izinid ==0)
+                {
+                    this.Alert("Personele kayıtlı izin bulunmuyor", Form_Alert.enmType.Warning);
+                }
+                else
+                {
+                    SqlCommand deleteizin = new SqlCommand("DELETE FROM Izin where izinid=@izinid", baglan);
+                    deleteizin.Parameters.AddWithValue("@izinid", izinid);
+                    deleteizin.ExecuteNonQuery();
+                    this.Alert("İzin Silme Başarılı", Form_Alert.enmType.Success);
+                    searchyenile();
+                    temizleizin();
+                }
+                
+                if (baglan.State == ConnectionState.Open)
+                {
+                    baglan.Close();
+                }
+
+            }
         }
         bool kayitaramadurumu = false;
         int secilendeger, izinidgrid;
         public string tcno, adi, soyadi, izinbitgrid, izinturugrid, aciklamagrid, izinbasgrid;
+
+
+        public void tarihara()
+        {
+            dt1.Clear();
+            DateTime startDate = bunifuDatePicker1.Value;
+            DateTime endDate = bunifuDatePicker2.Value;
+
+            if (baglan.State == ConnectionState.Closed)
+            {
+                baglan.Open();
+            }
+
+            string query = "SELECT * FROM ViewIzin WHERE IzinBaslangic BETWEEN @startDate AND @endDate";
+            SqlCommand command = new SqlCommand(query, baglan);
+            command.Parameters.AddWithValue("@startDate", startDate);
+            command.Parameters.AddWithValue("@endDate", endDate);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+
+            IzinGridList.DataSource = dataTable;
+
+            if (baglan.State == ConnectionState.Open)
+            {
+                baglan.Close();
+            }
+        }
+
+        private void btnTarihAra_Click(object sender, EventArgs e)
+        {
+            tarihara();
+        }
+
+        private void DTBaslangicTarihiIzin_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime donemaysecim = DTBaslangicTarihiIzin.Value;
+            int selectedMonth = donemaysecim.Month; // Seçilen tarihin ayını al
+            switch (selectedMonth)
+            {
+                case 1:
+                    donemaysecilen = 1;
+                    // yapılacak işlemler
+                    break;
+                case 2:
+                    donemaysecilen = 1;
+                    // yapılacak işlemler
+                    break;
+                case 3:
+                    donemaysecilen = 1;
+                    // yapılacak işlemler
+                    break;
+                case 4:
+                    donemaysecilen = 1;
+                    // yapılacak işlemler
+                    break;
+                case 5:
+                    donemaysecilen = 1;
+                    // yapılacak işlemler
+                    break;
+                case 6:
+                    donemaysecilen = 1;
+                    // yapılacak işlemler
+                    break;
+                case 7:
+                    donemaysecilen = 1;
+                    // yapılacak işlemler
+                    break;
+                case 8:
+                    donemaysecilen = 1;
+                    // yapılacak işlemler
+                    break;
+                case 9:
+                    donemaysecilen = 1;
+                    // yapılacak işlemler
+                    break;
+                case 10:
+                    donemaysecilen = 1;
+                    // yapılacak işlemler
+                    break;
+                case 11:
+                    donemaysecilen = 1;
+                    // yapılacak işlemler
+                    break;
+                case 12:
+                    donemaysecilen = 1;
+                    // yapılacak işlemler
+                    break;
+                default:
+                    // Hata işlemleri
+                    break;
+            }
+        }
+
+        private void btnYenile_Click(object sender, EventArgs e)
+        {
+            searchyenile();
+        }
 
         private void btnIzinGuncelle_Click(object sender, EventArgs e)
         {
@@ -176,7 +312,7 @@ namespace PerModule.Forms.IzinRaporlariForm
                     {
                         baglan.Open();
                     }
-                    SqlCommand izinguncelle = new SqlCommand("UPDATE Izin SET KullaniciID=@KullaniciID,IzinBaslangic=@IzinBaslangic,IzinBitis=@IzinBitis,IzinTuru=@IzinTuru,Aciklama=@Aciklama,Islem=@Islem,Tarih=@Tarih,Saat=@Saat where izinid=@izinid", baglan);
+                    SqlCommand izinguncelle = new SqlCommand("UPDATE Izin SET KullaniciID=@KullaniciID,IzinBaslangic=@IzinBaslangic,IzinBitis=@IzinBitis,IzinTuru=@IzinTuru,Aciklama=@Aciklama,Islem=@Islem,Tarih=@Tarih,Saat=@Saat, DonemAy=DonemAy, DonemYil=@DonemYil where izinid=@izinid", baglan);
                     izinguncelle.Parameters.AddWithValue("@KullaniciID", Login.kullanici);
                     izinguncelle.Parameters.AddWithValue("@izinid", izinidgrid);
                     //izinidaldık
@@ -187,8 +323,11 @@ namespace PerModule.Forms.IzinRaporlariForm
                     izinguncelle.Parameters.AddWithValue("@Islem", dropPersonnel.Text + " için " + dropIzinTuru.Text + " oluşturuldu.");
                     izinguncelle.Parameters.AddWithValue("@Tarih", DateTime.Now);
                     izinguncelle.Parameters.AddWithValue("@Saat", DateTime.Now);
-                    this.Alert("Mesai Güncelleme Başarılı", Form_Alert.enmType.Success);
+                    izinguncelle.Parameters.AddWithValue("@DonemAy", donemaysecilen);
+                    izinguncelle.Parameters.AddWithValue("@DonemYil", year);
+                    this.Alert("İzin Güncelleme Başarılı", Form_Alert.enmType.Success);
                     searchyenile();
+                    temizleizin();
                     if (baglan.State == ConnectionState.Open)
                     {
                         baglan.Close();
@@ -218,14 +357,11 @@ namespace PerModule.Forms.IzinRaporlariForm
             txtAciklama.Text = aciklamagrid;
         }
 
+        DateTime donemaysecim, donemyilsecim;
+        int donemaysecilen, donemyilsecilen;
+        int year;
         private void btnIzinekle_Click(object sender, EventArgs e)
         {
-            /*izinbas = IzinBaslangic.IndexOf(" ");
-            DTBaslangicTarihiIzin.Text = IzinBaslangic.Substring(0, 10);
-            izinbasbos = IzinBaslangic.Substring(say + 1);
-            say1 = IzinBitis.IndexOf(" ");
-            DTBitisTarihiIzin.Text = IzinBitis.Substring(0, 10);
-            izinbitbos = IzinBitis.Substring(say1 + 1);*/
             if (dropPersonnel.Text == null)
             {
                 this.Alert("Personel Seçiniz", Form_Alert.enmType.Warning);
@@ -237,9 +373,12 @@ namespace PerModule.Forms.IzinRaporlariForm
                 {
                     baglan.Open();
                 }
-                //Numeric
+                
 
-                SqlCommand izinekle = new SqlCommand("insert into Izin(KullaniciID,Personnelid,IzinTuru,IzinBaslangic,IzinBitis,Islem,Aciklama,Tarih,Saat) values(@KullaniciID,@Personnelid,@IzinTuru,@IzinBaslangic,@IzinBitis,@Islem,@Aciklama,@Tarih,@Saat)", baglan);
+                DateTime selectedDate = DTBaslangicTarihiIzin.Value;
+                year = selectedDate.Year;
+
+                SqlCommand izinekle = new SqlCommand("insert into Izin(KullaniciID,Personnelid,IzinTuru,IzinBaslangic,IzinBitis,Islem,Aciklama,Tarih,Saat,DonemAy,DonemYil) values(@KullaniciID,@Personnelid,@IzinTuru,@IzinBaslangic,@IzinBitis,@Islem,@Aciklama,@Tarih,@Saat,@DonemAy,@DonemYil)", baglan);
                 izinekle.Parameters.AddWithValue("@KullaniciID", Login.kullanici);
                 izinekle.Parameters.AddWithValue("@Personnelid", personid);
                 izinekle.Parameters.AddWithValue("@IzinBaslangic", DTBaslangicTarihiIzin.Value);
@@ -249,9 +388,12 @@ namespace PerModule.Forms.IzinRaporlariForm
                 izinekle.Parameters.AddWithValue("@Islem", dropPersonnel.Text + " için " + dropIzinTuru.Text + " oluşturuldu.");
                 izinekle.Parameters.AddWithValue("@Tarih", DateTime.Now);
                 izinekle.Parameters.AddWithValue("@Saat", DateTime.Now);
+                izinekle.Parameters.AddWithValue("@DonemAy", donemaysecilen);
+                izinekle.Parameters.AddWithValue("@DonemYil", year);
                 izinekle.ExecuteNonQuery();
                 this.Alert("Izin Ekleme Başarılı", Form_Alert.enmType.Success);
                 searchyenile();
+                temizleizin();
                 if (baglan.State == ConnectionState.Open)
                 {
                     baglan.Close();
@@ -341,7 +483,7 @@ namespace PerModule.Forms.IzinRaporlariForm
                     Islem = (string)readercmd["Islem"];
                     Aciklama = readercmd.IsDBNull(readercmd.GetOrdinal("Aciklama")) ? null : (string)readercmd["Aciklama"];
                     Tarih = readercmd.IsDBNull(readercmd.GetOrdinal("Tarih")) ? (DateTime?)null : (DateTime)readercmd["Tarih"];
-                    IzinTuru = readercmd.IsDBNull(readercmd.GetOrdinal("MesaiTuru")) ? null : (string)readercmd["IzinTuru"];
+                    IzinTuru = readercmd.IsDBNull(readercmd.GetOrdinal("IzinTuru")) ? null : (string)readercmd["IzinTuru"];
                 }
             }
             if (baglan.State == ConnectionState.Open)

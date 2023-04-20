@@ -44,12 +44,24 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pnlTopItems = new System.Windows.Forms.Panel();
             this.PersonelListesiLink = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.KontrolPanelLink = new System.Windows.Forms.LinkLabel();
             this.txtSearchboxPerList = new Bunifu.UI.WinForms.BunifuTextBox();
             this.IzinGridList = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aciklamaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewIzinBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.viewIzinDS = new PerModule.ViewIzinDS();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnIzinGuncelle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnIzinTemizle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -67,22 +79,19 @@
             this.dropPersonnel = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label7 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.viewIzinDS = new PerModule.ViewIzinDS();
-            this.viewIzinBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.viewIzinTableAdapter = new PerModule.ViewIzinDSTableAdapters.ViewIzinTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aciklamaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnYenile = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.bunifuDatePicker2 = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.btnTarihAra = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlTopItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IzinGridList)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.viewIzinDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewIzinBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewIzinDS)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTopItems
@@ -260,15 +269,82 @@
             this.IzinGridList.DefaultCellStyle = dataGridViewCellStyle2;
             this.IzinGridList.EnableHeadersVisualStyles = false;
             this.IzinGridList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.IzinGridList.Location = new System.Drawing.Point(57, 150);
+            this.IzinGridList.Location = new System.Drawing.Point(57, 200);
             this.IzinGridList.Name = "IzinGridList";
             this.IzinGridList.ReadOnly = true;
             this.IzinGridList.RowHeadersVisible = false;
             this.IzinGridList.RowTemplate.Height = 30;
             this.IzinGridList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.IzinGridList.Size = new System.Drawing.Size(1267, 797);
+            this.IzinGridList.Size = new System.Drawing.Size(1267, 747);
             this.IzinGridList.TabIndex = 15;
             this.IzinGridList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.IzinGridList_CellDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PerTckn";
+            this.dataGridViewTextBoxColumn1.HeaderText = "PerTckn";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "PerAd";
+            this.dataGridViewTextBoxColumn2.HeaderText = "PerAd";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "PerSoyad";
+            this.dataGridViewTextBoxColumn3.HeaderText = "PerSoyad";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "IzinTuru";
+            this.dataGridViewTextBoxColumn4.HeaderText = "IzinTuru";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "IzinBaslangic";
+            this.dataGridViewTextBoxColumn5.HeaderText = "IzinBaslangic";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "IzinBitis";
+            this.dataGridViewTextBoxColumn6.HeaderText = "IzinBitis";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "izinid";
+            this.dataGridViewTextBoxColumn7.HeaderText = "izinid";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // aciklamaDataGridViewTextBoxColumn
+            // 
+            this.aciklamaDataGridViewTextBoxColumn.DataPropertyName = "Aciklama";
+            this.aciklamaDataGridViewTextBoxColumn.HeaderText = "Aciklama";
+            this.aciklamaDataGridViewTextBoxColumn.Name = "aciklamaDataGridViewTextBoxColumn";
+            this.aciklamaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // viewIzinBindingSource
+            // 
+            this.viewIzinBindingSource.DataMember = "ViewIzin";
+            this.viewIzinBindingSource.DataSource = this.viewIzinDS;
+            // 
+            // viewIzinDS
+            // 
+            this.viewIzinDS.DataSetName = "ViewIzinDS";
+            this.viewIzinDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -876,6 +952,7 @@
             this.DTBaslangicTarihiIzin.Size = new System.Drawing.Size(323, 32);
             this.DTBaslangicTarihiIzin.TabIndex = 43;
             this.DTBaslangicTarihiIzin.Value = new System.DateTime(2023, 4, 8, 0, 0, 0, 0);
+            this.DTBaslangicTarihiIzin.ValueChanged += new System.EventHandler(this.DTBaslangicTarihiIzin_ValueChanged);
             // 
             // label1
             // 
@@ -954,76 +1031,261 @@
             this.label13.Text = "label13";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // viewIzinDS
-            // 
-            this.viewIzinDS.DataSetName = "ViewIzinDS";
-            this.viewIzinDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // viewIzinBindingSource
-            // 
-            this.viewIzinBindingSource.DataMember = "ViewIzin";
-            this.viewIzinBindingSource.DataSource = this.viewIzinDS;
-            // 
             // viewIzinTableAdapter
             // 
             this.viewIzinTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // btnYenile
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "PerTckn";
-            this.dataGridViewTextBoxColumn1.HeaderText = "PerTckn";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.btnYenile.AllowAnimations = true;
+            this.btnYenile.AllowMouseEffects = true;
+            this.btnYenile.AllowToggling = false;
+            this.btnYenile.AnimationSpeed = 200;
+            this.btnYenile.AutoGenerateColors = true;
+            this.btnYenile.AutoRoundBorders = false;
+            this.btnYenile.AutoSizeLeftIcon = true;
+            this.btnYenile.AutoSizeRightIcon = true;
+            this.btnYenile.BackColor = System.Drawing.Color.Transparent;
+            this.btnYenile.BackColor1 = System.Drawing.Color.Silver;
+            this.btnYenile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnYenile.BackgroundImage")));
+            this.btnYenile.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnYenile.ButtonText = "";
+            this.btnYenile.ButtonTextMarginLeft = 0;
+            this.btnYenile.ColorContrastOnClick = 45;
+            this.btnYenile.ColorContrastOnHover = 45;
+            this.btnYenile.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnYenile.CustomizableEdges = borderEdges5;
+            this.btnYenile.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnYenile.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnYenile.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnYenile.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnYenile.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnYenile.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnYenile.ForeColor = System.Drawing.Color.White;
+            this.btnYenile.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnYenile.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnYenile.IconLeftPadding = new System.Windows.Forms.Padding(7, 3, 3, 3);
+            this.btnYenile.IconMarginLeft = 11;
+            this.btnYenile.IconPadding = 7;
+            this.btnYenile.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnYenile.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnYenile.IconRightPadding = new System.Windows.Forms.Padding(3);
+            this.btnYenile.IconSize = 35;
+            this.btnYenile.IdleBorderColor = System.Drawing.Color.Silver;
+            this.btnYenile.IdleBorderRadius = 1;
+            this.btnYenile.IdleBorderThickness = 1;
+            this.btnYenile.IdleFillColor = System.Drawing.Color.Silver;
+            this.btnYenile.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnYenile.IdleIconLeftImage")));
+            this.btnYenile.IdleIconRightImage = null;
+            this.btnYenile.IndicateFocus = false;
+            this.btnYenile.Location = new System.Drawing.Point(1289, 150);
+            this.btnYenile.Name = "btnYenile";
+            this.btnYenile.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnYenile.OnDisabledState.BorderRadius = 1;
+            this.btnYenile.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnYenile.OnDisabledState.BorderThickness = 1;
+            this.btnYenile.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnYenile.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnYenile.OnDisabledState.IconLeftImage = null;
+            this.btnYenile.OnDisabledState.IconRightImage = null;
+            this.btnYenile.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.btnYenile.onHoverState.BorderRadius = 1;
+            this.btnYenile.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnYenile.onHoverState.BorderThickness = 1;
+            this.btnYenile.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.btnYenile.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnYenile.onHoverState.IconLeftImage = null;
+            this.btnYenile.onHoverState.IconRightImage = null;
+            this.btnYenile.OnIdleState.BorderColor = System.Drawing.Color.Silver;
+            this.btnYenile.OnIdleState.BorderRadius = 1;
+            this.btnYenile.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnYenile.OnIdleState.BorderThickness = 1;
+            this.btnYenile.OnIdleState.FillColor = System.Drawing.Color.Silver;
+            this.btnYenile.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnYenile.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnYenile.OnIdleState.IconLeftImage")));
+            this.btnYenile.OnIdleState.IconRightImage = null;
+            this.btnYenile.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.btnYenile.OnPressedState.BorderRadius = 1;
+            this.btnYenile.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnYenile.OnPressedState.BorderThickness = 1;
+            this.btnYenile.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.btnYenile.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnYenile.OnPressedState.IconLeftImage = null;
+            this.btnYenile.OnPressedState.IconRightImage = null;
+            this.btnYenile.Size = new System.Drawing.Size(35, 32);
+            this.btnYenile.TabIndex = 164;
+            this.btnYenile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnYenile.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnYenile.TextMarginLeft = 0;
+            this.btnYenile.TextPadding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnYenile.UseDefaultRadiusAndThickness = true;
+            this.btnYenile.Click += new System.EventHandler(this.btnYenile_Click);
             // 
-            // dataGridViewTextBoxColumn2
+            // bunifuDatePicker1
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "PerAd";
-            this.dataGridViewTextBoxColumn2.HeaderText = "PerAd";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.bunifuDatePicker1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatePicker1.BorderRadius = 1;
+            this.bunifuDatePicker1.Color = System.Drawing.Color.Silver;
+            this.bunifuDatePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.bunifuDatePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuDatePicker1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker1.DisplayWeekNumbers = false;
+            this.bunifuDatePicker1.DPHeight = 0;
+            this.bunifuDatePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.bunifuDatePicker1.FillDatePicker = false;
+            this.bunifuDatePicker1.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.bunifuDatePicker1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuDatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.bunifuDatePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker1.Icon")));
+            this.bunifuDatePicker1.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.bunifuDatePicker1.LeftTextMargin = 5;
+            this.bunifuDatePicker1.Location = new System.Drawing.Point(851, 150);
+            this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(4, 32);
+            this.bunifuDatePicker1.Name = "bunifuDatePicker1";
+            this.bunifuDatePicker1.Size = new System.Drawing.Size(146, 32);
+            this.bunifuDatePicker1.TabIndex = 165;
+            this.bunifuDatePicker1.Value = new System.DateTime(2023, 4, 8, 0, 0, 0, 0);
             // 
-            // dataGridViewTextBoxColumn3
+            // bunifuDatePicker2
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "PerSoyad";
-            this.dataGridViewTextBoxColumn3.HeaderText = "PerSoyad";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.bunifuDatePicker2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatePicker2.BorderRadius = 1;
+            this.bunifuDatePicker2.Color = System.Drawing.Color.Silver;
+            this.bunifuDatePicker2.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.bunifuDatePicker2.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuDatePicker2.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker2.DisplayWeekNumbers = false;
+            this.bunifuDatePicker2.DPHeight = 0;
+            this.bunifuDatePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.bunifuDatePicker2.FillDatePicker = false;
+            this.bunifuDatePicker2.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.bunifuDatePicker2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuDatePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.bunifuDatePicker2.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker2.Icon")));
+            this.bunifuDatePicker2.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuDatePicker2.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.bunifuDatePicker2.LeftTextMargin = 5;
+            this.bunifuDatePicker2.Location = new System.Drawing.Point(1016, 150);
+            this.bunifuDatePicker2.MinimumSize = new System.Drawing.Size(4, 32);
+            this.bunifuDatePicker2.Name = "bunifuDatePicker2";
+            this.bunifuDatePicker2.Size = new System.Drawing.Size(146, 32);
+            this.bunifuDatePicker2.TabIndex = 166;
+            this.bunifuDatePicker2.Value = new System.DateTime(2023, 4, 8, 0, 0, 0, 0);
             // 
-            // dataGridViewTextBoxColumn4
+            // btnTarihAra
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "IzinTuru";
-            this.dataGridViewTextBoxColumn4.HeaderText = "IzinTuru";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.btnTarihAra.AllowAnimations = true;
+            this.btnTarihAra.AllowMouseEffects = true;
+            this.btnTarihAra.AllowToggling = false;
+            this.btnTarihAra.AnimationSpeed = 200;
+            this.btnTarihAra.AutoGenerateColors = false;
+            this.btnTarihAra.AutoRoundBorders = false;
+            this.btnTarihAra.AutoSizeLeftIcon = true;
+            this.btnTarihAra.AutoSizeRightIcon = true;
+            this.btnTarihAra.BackColor = System.Drawing.Color.Transparent;
+            this.btnTarihAra.BackColor1 = System.Drawing.Color.WhiteSmoke;
+            this.btnTarihAra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTarihAra.BackgroundImage")));
+            this.btnTarihAra.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnTarihAra.ButtonText = "Tarih Ara";
+            this.btnTarihAra.ButtonTextMarginLeft = 0;
+            this.btnTarihAra.ColorContrastOnClick = 45;
+            this.btnTarihAra.ColorContrastOnHover = 45;
+            this.btnTarihAra.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnTarihAra.CustomizableEdges = borderEdges6;
+            this.btnTarihAra.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnTarihAra.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnTarihAra.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnTarihAra.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnTarihAra.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnTarihAra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTarihAra.ForeColor = System.Drawing.Color.DimGray;
+            this.btnTarihAra.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTarihAra.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnTarihAra.IconLeftPadding = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.btnTarihAra.IconMarginLeft = 11;
+            this.btnTarihAra.IconPadding = 11;
+            this.btnTarihAra.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTarihAra.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnTarihAra.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnTarihAra.IconSize = 20;
+            this.btnTarihAra.IdleBorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnTarihAra.IdleBorderRadius = 1;
+            this.btnTarihAra.IdleBorderThickness = 1;
+            this.btnTarihAra.IdleFillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnTarihAra.IdleIconLeftImage = null;
+            this.btnTarihAra.IdleIconRightImage = null;
+            this.btnTarihAra.IndicateFocus = false;
+            this.btnTarihAra.Location = new System.Drawing.Point(1168, 150);
+            this.btnTarihAra.Name = "btnTarihAra";
+            this.btnTarihAra.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnTarihAra.OnDisabledState.BorderRadius = 1;
+            this.btnTarihAra.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnTarihAra.OnDisabledState.BorderThickness = 1;
+            this.btnTarihAra.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnTarihAra.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnTarihAra.OnDisabledState.IconLeftImage = null;
+            this.btnTarihAra.OnDisabledState.IconRightImage = null;
+            this.btnTarihAra.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnTarihAra.onHoverState.BorderRadius = 1;
+            this.btnTarihAra.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnTarihAra.onHoverState.BorderThickness = 1;
+            this.btnTarihAra.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnTarihAra.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnTarihAra.onHoverState.IconLeftImage = null;
+            this.btnTarihAra.onHoverState.IconRightImage = null;
+            this.btnTarihAra.OnIdleState.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnTarihAra.OnIdleState.BorderRadius = 1;
+            this.btnTarihAra.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnTarihAra.OnIdleState.BorderThickness = 1;
+            this.btnTarihAra.OnIdleState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnTarihAra.OnIdleState.ForeColor = System.Drawing.Color.DimGray;
+            this.btnTarihAra.OnIdleState.IconLeftImage = null;
+            this.btnTarihAra.OnIdleState.IconRightImage = null;
+            this.btnTarihAra.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
+            this.btnTarihAra.OnPressedState.BorderRadius = 1;
+            this.btnTarihAra.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnTarihAra.OnPressedState.BorderThickness = 1;
+            this.btnTarihAra.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
+            this.btnTarihAra.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnTarihAra.OnPressedState.IconLeftImage = null;
+            this.btnTarihAra.OnPressedState.IconRightImage = null;
+            this.btnTarihAra.Size = new System.Drawing.Size(112, 32);
+            this.btnTarihAra.TabIndex = 167;
+            this.btnTarihAra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTarihAra.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnTarihAra.TextMarginLeft = 0;
+            this.btnTarihAra.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnTarihAra.UseDefaultRadiusAndThickness = true;
+            this.btnTarihAra.Click += new System.EventHandler(this.btnTarihAra_Click);
             // 
-            // dataGridViewTextBoxColumn5
+            // panel2
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "IzinBaslangic";
-            this.dataGridViewTextBoxColumn5.HeaderText = "IzinBaslangic";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(991, 150);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(38, 32);
+            this.panel2.TabIndex = 168;
             // 
-            // dataGridViewTextBoxColumn6
+            // label3
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "IzinBitis";
-            this.dataGridViewTextBoxColumn6.HeaderText = "IzinBitis";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "izinid";
-            this.dataGridViewTextBoxColumn7.HeaderText = "izinid";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Visible = false;
-            // 
-            // aciklamaDataGridViewTextBoxColumn
-            // 
-            this.aciklamaDataGridViewTextBoxColumn.DataPropertyName = "Aciklama";
-            this.aciklamaDataGridViewTextBoxColumn.HeaderText = "Aciklama";
-            this.aciklamaDataGridViewTextBoxColumn.Name = "aciklamaDataGridViewTextBoxColumn";
-            this.aciklamaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Location = new System.Drawing.Point(3, -8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 42);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "-";
             // 
             // IzinRaporlari
             // 
@@ -1031,10 +1293,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(1825, 991);
+            this.Controls.Add(this.btnTarihAra);
+            this.Controls.Add(this.bunifuDatePicker2);
+            this.Controls.Add(this.bunifuDatePicker1);
+            this.Controls.Add(this.btnYenile);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.IzinGridList);
             this.Controls.Add(this.pnlTopItems);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "IzinRaporlari";
             this.Text = "IzinRaporlari";
@@ -1042,10 +1309,12 @@
             this.pnlTopItems.ResumeLayout(false);
             this.pnlTopItems.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IzinGridList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewIzinBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewIzinDS)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.viewIzinDS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewIzinBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1094,5 +1363,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn aciklamaDataGridViewTextBoxColumn;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnYenile;
+        private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker1;
+        private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker2;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnTarihAra;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
     }
 }

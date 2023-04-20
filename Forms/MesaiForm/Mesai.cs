@@ -260,6 +260,11 @@ namespace PerModule.Forms.OzlukDosyasiRaporlariForm
         
         public string tcno, adi, soyadi, baslangictarihsaati, bitistarihsaati, odenmedurumugrid, aciklamagrid, mesaiturugrid;
 
+        private void btnYenile_Click(object sender, EventArgs e)
+        {
+            searchyenile();
+        }
+
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             if (dropPersonnel.Text == null)
