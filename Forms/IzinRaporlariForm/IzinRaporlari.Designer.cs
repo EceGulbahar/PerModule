@@ -86,6 +86,7 @@
             this.btnTarihAra = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnlTopItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IzinGridList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewIzinBindingSource)).BeginInit();
@@ -1144,7 +1145,7 @@
             this.bunifuDatePicker1.IconColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker1.LeftTextMargin = 5;
-            this.bunifuDatePicker1.Location = new System.Drawing.Point(851, 150);
+            this.bunifuDatePicker1.Location = new System.Drawing.Point(852, 150);
             this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
             this.bunifuDatePicker1.Size = new System.Drawing.Size(146, 32);
@@ -1287,12 +1288,24 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "-";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(53, 159);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(543, 22);
+            this.label4.TabIndex = 169;
+            this.label4.Text = "Tabloya çift tıklayarak iznin kaç gün olduğunu görebilirsiniz.";
+            // 
             // IzinRaporlari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(1825, 991);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnTarihAra);
             this.Controls.Add(this.bunifuDatePicker2);
             this.Controls.Add(this.bunifuDatePicker1);
@@ -1369,5 +1382,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnTarihAra;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

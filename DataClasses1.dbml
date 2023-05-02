@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PERSONNELMODULE" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PBA08N2;Initial Catalog=PERSONNELMODULE;Integrated Security=True;MultipleActiveResultSets=True" SettingsObjectName="PerModule.Properties.Settings" SettingsPropertyName="PerModuleCS" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Personnels" Member="Personnels">
+    <Type Name="Personnels">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PerTckn" Type="System.String" DbType="NVarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="PerAd" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PerSoyad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PerDogumTarihi" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PerMaas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PerCinsiyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PerMail" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PerTel" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PerGorsel" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="PerEgitimBilgileri" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PerKanGrubu" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PerMedeniHali" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Adresid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PerBaslamaT" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PerAyrilisT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PerAyrilmaSebebi" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Departmanid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PerNickName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PerPassword" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="PerYetki" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PerDogumYeri" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PerUyruk" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PerEhliyetS" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="PerSicilNo" Type="System.String" DbType="NVarChar(26)" CanBeNull="true" />
+      <Column Name="PerDEhliyetAlis" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PerSigaraK" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PerAskerlik" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PerIBAN" Type="System.String" DbType="NVarChar(26)" CanBeNull="true" />
+      <Column Name="Mesaiid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PerIsTel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PerWpTel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Yakini1AdSoyad" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="Yakini1Tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Yakini1Derece" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Yakini2AdSoyad" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="Yakini2Tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Yakini2Derece" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SertifikaLisans1Ad" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SertifikaLisans1VerenKurum" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SertifikaLisans1Tarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SertifikaLisans2Ad" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SertifikaLisans2VerenKurum" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SertifikaLisans2Tarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="YabanciDil1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="YabanciDil1Düzey" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="YabanciDil2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="YabanciDil2Düzey" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="YabanciDil3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="YabanciDil3Düzey" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsYeri1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsUnvan1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IseGirisD1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IstenCikis1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IstenAyrilis1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsYeri2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsUnvan2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IseGirisD2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IstenCikis2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IstenAyrilis2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsYeri3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsUnvan3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IseGirisD3" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IstenCikis3" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IstenAyrilis3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsYeri4" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsUnvan4" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IseGirisD4" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IstenCikis4" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IstenAyrilis4" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Durum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Departmans_Personnels" Member="Departmans" ThisKey="Departmanid" OtherKey="id" Type="Departmans" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Departmans" Member="Departmans">
+    <Type Name="Departmans">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DepAdi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DepRolu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Departmans_Personnels" Member="Personnels" ThisKey="id" OtherKey="Departmanid" Type="Personnels" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Izin" Member="Izin">
+    <Type Name="Izin">
+      <Column Name="izinid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KullaniciID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Personnelid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IzinTuru" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IzinBaslangic" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IzinBitis" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Islem" Type="System.String" DbType="NVarChar(550) NOT NULL" CanBeNull="false" />
+      <Column Name="Aciklama" Type="System.String" DbType="NVarChar(850) NOT NULL" CanBeNull="false" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Saat" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DonemAy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonemYil" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -53,7 +53,7 @@ namespace PerModule.Forms.PasswordForgotForm
                 MailMessage mail = new MailMessage();
                 string tarih = DateTime.Now.ToString();
                 string mailadress = ("wyrdsoft2022@outlook.com");
-                string sifre = ("23Huzur08.");
+                string sifre = ("123Asd/.");
                 string smptsrvr = "smtp.office365.com";
                 string kime = (oku["PerMail"].ToString());
                 string konu = ("Şifre Hatırlatma");

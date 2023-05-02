@@ -7,9 +7,11 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace PerModule.Forms.IzinRaporlariForm
@@ -336,6 +338,8 @@ namespace PerModule.Forms.IzinRaporlariForm
             }
         }
 
+        DateTime izinbashesap;
+        DateTime izinbithesap;
         private void IzinGridList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             secilendeger = IzinGridList.SelectedCells[0].RowIndex;
@@ -347,8 +351,13 @@ namespace PerModule.Forms.IzinRaporlariForm
             izinbitgrid = IzinGridList.Rows[secilendeger].Cells[5].Value.ToString();
             izinidgrid = Convert.ToInt16(IzinGridList.Rows[secilendeger].Cells[6].Value);
             aciklamagrid = IzinGridList.Rows[secilendeger].Cells[7].Value.ToString();
-            
-            
+
+            DateTime startDate = Convert.ToDateTime(IzinGridList.Rows[e.RowIndex].Cells[4].Value);
+            DateTime endDate = Convert.ToDateTime(IzinGridList.Rows[e.RowIndex].Cells[5].Value);
+            int daysBetween = (int)(endDate - startDate).TotalDays;
+            this.Alert("Gün Sayısı: " + daysBetween.ToString(), Form_Alert.enmType.Success);
+
+
             dropPersonnel.Text = adi + " " + soyadi;
             dropIzinTuru.Text = izinturugrid;
             txtAciklama.Text = aciklamagrid;
