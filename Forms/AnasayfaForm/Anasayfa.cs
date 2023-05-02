@@ -8,6 +8,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,13 +32,38 @@ namespace PerModule.Forms.AnasayfaForm
             Bitis();
             int personelSayisi = dc.Personnels.Count();
             // Mevcut personel sayısını alın
-
-
             // Panele eklenen nesne sayısını alın
             int nesneSayisi = panel3.Controls.OfType<UC_NewPersonnels>().Count();
             while (panel3.Controls.OfType<UC_NewPersonnels>().Count() > personelSayisi)
             {
                 panel3.Controls.RemoveAt(panel3.Controls.Count - 1);
+            }
+            displayDays();
+        }
+        static DateTime currentDT = DateTime.Now;
+static int currentYear = currentDT.Year;
+static int currentMonth = currentDT.Month;
+        int month, year;
+        private void displayDays()
+        {
+            DateTime now = DateTime.Now;
+            month = now.Month;
+            year = now.Year;
+            string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            lbldate.Text = monthname + " " + year;
+            DateTime startofmonth = new DateTime(year, month, 1);
+            int days = DateTime.DaysInMonth(year, month);
+            int dayoftheweek = Convert.ToInt32(startofmonth.DayOfWeek.ToString("d")) +1;
+            for(int i=1; i<dayoftheweek; i++)
+            {
+                UC_Calendar uccalendar = new UC_Calendar();
+                daycontainer.Controls.Add(uccalendar);
+            }
+            for(int i=1; i <= days;i++)
+            {
+                UC_Days ucdays = new UC_Days();
+                ucdays.days(i);
+                daycontainer.Controls.Add(ucdays);
             }
         }
 
@@ -76,6 +102,69 @@ namespace PerModule.Forms.AnasayfaForm
                 baglan.Close();
             }
         }
+
+        private void CalenderSag_Click(object sender, EventArgs e)
+        {
+            daycontainer.Controls.Clear();
+            if (month == 12)
+            {
+                year++;
+                month = 1;
+            }
+            else
+            {
+                month++;
+            }
+            string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            lbldate.Text = monthname + " " + year;
+            DateTime startofmonth = new DateTime(year, month, 1);
+            int days = DateTime.DaysInMonth(year, month);
+            int dayoftheweek = Convert.ToInt32(startofmonth.DayOfWeek.ToString("d")) + 1;
+            for (int i = 1; i < dayoftheweek; i++)
+            {
+                UC_Calendar uccalendar = new UC_Calendar();
+                daycontainer.Controls.Add(uccalendar);
+            }
+            for (int i = 1; i <= days; i++)
+            {
+                UC_Days ucdays = new UC_Days();
+                ucdays.days(i);
+                daycontainer.Controls.Add(ucdays);
+            }
+            
+        }
+
+        private void CalenderSol_Click(object sender, EventArgs e)
+        {
+            daycontainer.Controls.Clear();
+            if (month == 1)
+            {
+                year--;
+                month = 12;
+            }
+            else
+            {
+                month--;
+            }
+            string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            lbldate.Text = monthname + " " + year;
+            DateTime startofmonth = new DateTime(year, month, 1);
+            int days = DateTime.DaysInMonth(year, month);
+            int dayoftheweek = Convert.ToInt32(startofmonth.DayOfWeek.ToString("d")) + 1;
+            for (int i = 1; i < dayoftheweek; i++)
+            {
+                UC_Calendar uccalendar = new UC_Calendar();
+                daycontainer.Controls.Add(uccalendar);
+            }
+            for (int i = 1; i <= days; i++)
+            {
+                UC_Days ucdays = new UC_Days();
+                ucdays.days(i);
+                daycontainer.Controls.Add(ucdays);
+            }
+            
+        }
+
         public void Baslangic()
         {
             SqlCommand command1 = new SqlCommand("SELECT DepAdi,DepRolu FROM Departmans where id=@depcek", baglan);

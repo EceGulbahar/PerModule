@@ -187,6 +187,18 @@
     <Compile Include="Forms\AnasayfaForm\Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AnasayfaForm\UC_Calendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AnasayfaForm\UC_Calendar.Designer.cs">
+      <DependentUpon>UC_Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AnasayfaForm\UC_Days.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AnasayfaForm\UC_Days.Designer.cs">
+      <DependentUpon>UC_Days.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BackModel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -373,6 +385,12 @@
     </None>
     <EmbeddedResource Include="Forms\AnasayfaForm\Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AnasayfaForm\UC_Calendar.resx">
+      <DependentUpon>UC_Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AnasayfaForm\UC_Days.resx">
+      <DependentUpon>UC_Days.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BackModel.resx">
       <DependentUpon>BackModel.cs</DependentUpon>
