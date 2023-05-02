@@ -40,14 +40,14 @@ namespace PerModule.Forms.AnasayfaForm
                 panel3.Controls.RemoveAt(panel3.Controls.Count - 1);
             }
         }
-        
+
         int depcek;
         string depadi, deprolu;
         public void Bitis()
         {
             foreach( var deg in dc.Personnels)
             {
-                SqlCommand command = new SqlCommand("SELECT PerAd, PerSoyad, PerBaslamaT, Departmanid FROM Personnels", baglan);
+                SqlCommand command = new SqlCommand("SELECT PerAd, PerSoyad, PerBaslamaT, Departmanid,PerTckn FROM Personnels", baglan);
                 baglan.Open();
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
@@ -59,11 +59,20 @@ namespace PerModule.Forms.AnasayfaForm
                     depcek = reader.GetInt32(3);
                     Baslangic();
                     uc.lblaciklama.Text = deprolu + " / " + depadi + " departmanında\n " + uc.lbltarih.Text + " tarihinde işe başladı.";
+                    try
+                    {
+                        uc.pictureFoto.Image = Image.FromFile(Application.StartupPath + "\\kullaniciresimler\\" + reader.GetString(4) + ".jpg");
+                        uc.pictureFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                    catch
+                    {
+                        uc.pictureFoto.Image = Image.FromFile(Application.StartupPath + "\\kullaniciresimler\\resimyok.jpg");
+                        uc.pictureFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
                     uc.Dock = DockStyle.Top;
                     panel3.Controls.Add(uc);
                 }
                 reader.Close();
-
                 baglan.Close();
             }
         }

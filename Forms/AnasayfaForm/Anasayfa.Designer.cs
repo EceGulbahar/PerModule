@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Anasayfa));
             this.pnlTopItems = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.KontrolPanelLink = new System.Windows.Forms.LinkLabel();
             this.bunifuGradientPanel3 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,16 +45,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pnlTopItems.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTopItems
@@ -64,6 +64,16 @@
             this.pnlTopItems.Name = "pnlTopItems";
             this.pnlTopItems.Size = new System.Drawing.Size(1711, 48);
             this.pnlTopItems.TabIndex = 16;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1587, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // KontrolPanelLink
             // 
@@ -122,11 +132,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(39, 13);
+            this.label1.Location = new System.Drawing.Point(42, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(445, 33);
+            this.label1.Size = new System.Drawing.Size(347, 24);
             this.label1.TabIndex = 39;
             this.label1.Text = "BU GÜN DOĞUM GÜNÜ OLANLAR";
             // 
@@ -150,6 +160,13 @@
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(517, 636);
             this.bunifuGradientPanel2.TabIndex = 154;
             // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(18, 67);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(477, 557);
+            this.panel3.TabIndex = 160;
+            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(142)))), ((int)(((byte)(146)))));
@@ -171,11 +188,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(34, 18);
+            this.label2.Location = new System.Drawing.Point(39, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 33);
+            this.label2.Size = new System.Drawing.Size(162, 24);
             this.label2.TabIndex = 39;
             this.label2.Text = "YENİ PERSONEL";
             // 
@@ -209,9 +226,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(18, 17);
+            this.pictureBox2.Location = new System.Drawing.Point(18, 18);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(25, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 153;
             this.pictureBox2.TabStop = false;
@@ -219,30 +236,13 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 20.25F);
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label12.Location = new System.Drawing.Point(45, 13);
+            this.label12.Location = new System.Drawing.Point(39, 21);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(165, 33);
+            this.label12.Size = new System.Drawing.Size(129, 24);
             this.label12.TabIndex = 39;
             this.label12.Text = "DUYURULAR";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1587, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(18, 67);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(477, 557);
-            this.panel3.TabIndex = 160;
             // 
             // Anasayfa
             // 
@@ -260,6 +260,7 @@
             this.Load += new System.EventHandler(this.Anasayfa_Load);
             this.pnlTopItems.ResumeLayout(false);
             this.pnlTopItems.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuGradientPanel3.ResumeLayout(false);
             this.bunifuGradientPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -269,7 +270,6 @@
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
