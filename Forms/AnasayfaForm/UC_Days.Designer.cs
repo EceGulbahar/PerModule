@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbldays = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lbldays
@@ -43,6 +45,10 @@
             this.lbldays.TabIndex = 158;
             this.lbldays.Text = "00";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // UC_Days
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -52,13 +58,14 @@
             this.Name = "UC_Days";
             this.Size = new System.Drawing.Size(87, 63);
             this.Load += new System.EventHandler(this.UC_Days_Load);
+            this.Click += new System.EventHandler(this.UC_Days_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbldays;
+        private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Label lbldays;
     }
 }

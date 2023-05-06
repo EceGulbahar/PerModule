@@ -648,6 +648,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.Pmenu.ResumeLayout(false);
             this.Pmenu.PerformLayout();
             this.panel1.ResumeLayout(false);

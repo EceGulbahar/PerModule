@@ -27,6 +27,7 @@ namespace PerModule.Forms.AnasayfaForm
             
         }
 
+        int bday;
         private void Anasayfa_Load(object sender, EventArgs e)
         {
             Bitis();
@@ -39,18 +40,27 @@ namespace PerModule.Forms.AnasayfaForm
                 panel3.Controls.RemoveAt(panel3.Controls.Count - 1);
             }
             displayDays();
+            //her günü event var mı diye kontrol etmek için
+            
         }
+
+        
+
         static DateTime currentDT = DateTime.Now;
-static int currentYear = currentDT.Year;
-static int currentMonth = currentDT.Month;
+        static int currentYear = currentDT.Year;
+        static int currentMonth = currentDT.Month;
         int month, year;
-        private void displayDays()
+        public static int static_month,static_year;
+        
+        public void displayDays()
         {
             DateTime now = DateTime.Now;
             month = now.Month;
             year = now.Year;
             string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lbldate.Text = monthname + " " + year;
+            static_month = month;
+            static_year = year;
             DateTime startofmonth = new DateTime(year, month, 1);
             int days = DateTime.DaysInMonth(year, month);
             int dayoftheweek = Convert.ToInt32(startofmonth.DayOfWeek.ToString("d")) +1;
@@ -115,6 +125,8 @@ static int currentMonth = currentDT.Month;
             {
                 month++;
             }
+            static_month = month;
+            static_year = year;
             string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lbldate.Text = monthname + " " + year;
             DateTime startofmonth = new DateTime(year, month, 1);
@@ -146,6 +158,8 @@ static int currentMonth = currentDT.Month;
             {
                 month--;
             }
+            static_month = month;
+            static_year = year;
             string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lbldate.Text = monthname + " " + year;
             DateTime startofmonth = new DateTime(year, month, 1);
@@ -178,5 +192,6 @@ static int currentMonth = currentDT.Month;
             }
             reader1.Close();
         }
+
     }
 }

@@ -229,5 +229,11 @@ namespace PerModule
                 Application.Exit();
             }
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            Anasayfa anasayfa = new Anasayfa();
+            FormGetir(anasayfa);
+        }
     }
 }
