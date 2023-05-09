@@ -26,7 +26,7 @@ namespace PerModule.Forms.AnasayfaForm
             InitializeComponent();
             
         }
-
+        
         int bday;
         private void Anasayfa_Load(object sender, EventArgs e)
         {
@@ -39,9 +39,15 @@ namespace PerModule.Forms.AnasayfaForm
             {
                 panel3.Controls.RemoveAt(panel3.Controls.Count - 1);
             }
+            
             displayDays();
             //her günü event var mı diye kontrol etmek için
             UCYaklasanEtkinlik();
+            UCBugunEvents();
+            while (pnlMevcutEtkinlik.Controls.OfType<UC_BugunEvents>().Count() > rowCount)
+            {
+                pnlMevcutEtkinlik.Controls.RemoveAt(pnlMevcutEtkinlik.Controls.Count - 1);
+            }
         }
 
         static DateTime currentDT = DateTime.Now;
@@ -131,6 +137,40 @@ namespace PerModule.Forms.AnasayfaForm
                 baglan.Close();
             }
         }
+        int rowCount = 0;
+        DateTime dateOnly = DateTime.Now.Date;
+
+        public void UCBugunEvents()//çalışmıyor
+        {
+            foreach (var deg2 in dc.Calendar)
+            {
+                SqlCommand bmevcutkomut = new SqlCommand("select * from Calendar where date =@dtn order by date desc", baglan);
+                bmevcutkomut.Parameters.AddWithValue("@dtn", dateOnly);
+                baglan.Open();
+                SqlDataReader bmoku = bmevcutkomut.ExecuteReader();
+                while (bmoku.Read())
+                {
+                    UC_BugunEvents ucbmev = new UC_BugunEvents();
+                    ucbmev.lbleventsb.Text = bmoku.GetDateTime(0).ToShortDateString() + " tarihinde " + bmoku.GetString(1);
+                    ucbmev.Dock = DockStyle.Top;
+                    pnlMevcutEtkinlik.Controls.Add(ucbmev);
+                }
+                bmoku.Close();
+                baglan.Close();
+
+                baglan.Open();
+                string queryString = "SELECT COUNT(*) FROM Calendar where date =@dtn";
+                    SqlCommand command = new SqlCommand(queryString, baglan);
+                    command.Parameters.AddWithValue("@dtn", dateOnly);
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        rowCount = reader.GetInt32(0);
+                    }
+                baglan.Close();
+            }
+        }
+
         UC_Days ucdays = new UC_Days();
         private void CalenderSag_Click(object sender, EventArgs e)
         {

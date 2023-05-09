@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace PerModule.Forms.AnasayfaForm
 {
-    public partial class UC_YaklasanEvents : UserControl
+    public partial class UC_BugunEvents : UserControl
     {
-        public UC_YaklasanEvents()
+        public UC_BugunEvents()
         {
             InitializeComponent();
-        }
-
-        private void lbleventsy_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

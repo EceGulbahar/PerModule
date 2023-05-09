@@ -193,6 +193,12 @@
     <Compile Include="Forms\AnasayfaForm\EventForm.Designer.cs">
       <DependentUpon>EventForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AnasayfaForm\UC_BugunEvents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AnasayfaForm\UC_BugunEvents.Designer.cs">
+      <DependentUpon>UC_BugunEvents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AnasayfaForm\UC_Calendar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -400,6 +406,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AnasayfaForm\EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AnasayfaForm\UC_BugunEvents.resx">
+      <DependentUpon>UC_BugunEvents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AnasayfaForm\UC_Calendar.resx">
       <DependentUpon>UC_Calendar.cs</DependentUpon>

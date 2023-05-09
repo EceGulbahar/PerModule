@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Anasayfa));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pnlTopItems = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.KontrolPanelLink = new System.Windows.Forms.LinkLabel();
@@ -47,6 +47,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.bunifuGradientPanel4 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.pnlMevcutEtkinlik = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lblMevcut = new System.Windows.Forms.Label();
+            this.bunifuGradientPanel3 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.pnlYaklasanEtkinlikler = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -56,21 +66,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.bunifuGradientPanel3 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.pnlYaklasanEtkinlikler = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.pnlTopItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.bunifuGradientPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.bunifuGradientPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.bunifuGradientPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTopItems
@@ -147,11 +154,11 @@
             this.CalenderSol.ColorContrastOnClick = 45;
             this.CalenderSol.ColorContrastOnHover = 45;
             this.CalenderSol.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.CalenderSol.CustomizableEdges = borderEdges1;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.CalenderSol.CustomizableEdges = borderEdges5;
             this.CalenderSol.DialogResult = System.Windows.Forms.DialogResult.None;
             this.CalenderSol.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.CalenderSol.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -238,11 +245,11 @@
             this.CalenderSag.ColorContrastOnClick = 45;
             this.CalenderSag.ColorContrastOnHover = 45;
             this.CalenderSag.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.CalenderSag.CustomizableEdges = borderEdges2;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.CalenderSag.CustomizableEdges = borderEdges6;
             this.CalenderSag.DialogResult = System.Windows.Forms.DialogResult.None;
             this.CalenderSag.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.CalenderSag.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -415,6 +422,119 @@
             this.label1.TabIndex = 156;
             this.label1.Text = "PAZAR";
             // 
+            // bunifuGradientPanel4
+            // 
+            this.bunifuGradientPanel4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
+            this.bunifuGradientPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel4.BorderRadius = 1;
+            this.bunifuGradientPanel4.Controls.Add(this.pnlMevcutEtkinlik);
+            this.bunifuGradientPanel4.Controls.Add(this.panel7);
+            this.bunifuGradientPanel4.Controls.Add(this.pictureBox5);
+            this.bunifuGradientPanel4.Controls.Add(this.lblMevcut);
+            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.bunifuGradientPanel4.Location = new System.Drawing.Point(600, 683);
+            this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
+            this.bunifuGradientPanel4.Quality = 10;
+            this.bunifuGradientPanel4.Size = new System.Drawing.Size(489, 296);
+            this.bunifuGradientPanel4.TabIndex = 159;
+            // 
+            // pnlMevcutEtkinlik
+            // 
+            this.pnlMevcutEtkinlik.AutoScroll = true;
+            this.pnlMevcutEtkinlik.Location = new System.Drawing.Point(16, 58);
+            this.pnlMevcutEtkinlik.Name = "pnlMevcutEtkinlik";
+            this.pnlMevcutEtkinlik.Size = new System.Drawing.Size(457, 215);
+            this.pnlMevcutEtkinlik.TabIndex = 161;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(142)))), ((int)(((byte)(146)))));
+            this.panel7.Location = new System.Drawing.Point(16, 51);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(457, 1);
+            this.panel7.TabIndex = 160;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(16, 16);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 153;
+            this.pictureBox5.TabStop = false;
+            // 
+            // lblMevcut
+            // 
+            this.lblMevcut.AutoSize = true;
+            this.lblMevcut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMevcut.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblMevcut.Location = new System.Drawing.Point(40, 16);
+            this.lblMevcut.Name = "lblMevcut";
+            this.lblMevcut.Size = new System.Drawing.Size(327, 25);
+            this.lblMevcut.TabIndex = 39;
+            this.lblMevcut.Text = "GÜNÜN MEVCUT ETKİNLİKLERİ";
+            // 
+            // bunifuGradientPanel3
+            // 
+            this.bunifuGradientPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
+            this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel3.BorderRadius = 1;
+            this.bunifuGradientPanel3.Controls.Add(this.pnlYaklasanEtkinlikler);
+            this.bunifuGradientPanel3.Controls.Add(this.panel5);
+            this.bunifuGradientPanel3.Controls.Add(this.pictureBox4);
+            this.bunifuGradientPanel3.Controls.Add(this.label9);
+            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(1113, 683);
+            this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
+            this.bunifuGradientPanel3.Quality = 10;
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(655, 296);
+            this.bunifuGradientPanel3.TabIndex = 158;
+            // 
+            // pnlYaklasanEtkinlikler
+            // 
+            this.pnlYaklasanEtkinlikler.Location = new System.Drawing.Point(16, 58);
+            this.pnlYaklasanEtkinlikler.Name = "pnlYaklasanEtkinlikler";
+            this.pnlYaklasanEtkinlikler.Size = new System.Drawing.Size(625, 215);
+            this.pnlYaklasanEtkinlikler.TabIndex = 161;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(142)))), ((int)(((byte)(146)))));
+            this.panel5.Location = new System.Drawing.Point(16, 51);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(625, 1);
+            this.panel5.TabIndex = 160;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(16, 16);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(23, 25);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 153;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label9.Location = new System.Drawing.Point(40, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(263, 25);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "YAKLAŞAN ETKİNLİKLER";
+            // 
             // bunifuGradientPanel2
             // 
             this.bunifuGradientPanel2.BackColor = System.Drawing.Color.Transparent;
@@ -432,14 +552,14 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(57, 150);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(517, 656);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(517, 829);
             this.bunifuGradientPanel2.TabIndex = 154;
             // 
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(18, 67);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(477, 576);
+            this.panel3.Size = new System.Drawing.Size(477, 739);
             this.panel3.TabIndex = 160;
             // 
             // panel10
@@ -519,68 +639,13 @@
             this.label12.TabIndex = 39;
             this.label12.Text = "DUYURULAR";
             // 
-            // bunifuGradientPanel3
-            // 
-            this.bunifuGradientPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
-            this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel3.BorderRadius = 1;
-            this.bunifuGradientPanel3.Controls.Add(this.pnlYaklasanEtkinlikler);
-            this.bunifuGradientPanel3.Controls.Add(this.panel5);
-            this.bunifuGradientPanel3.Controls.Add(this.pictureBox4);
-            this.bunifuGradientPanel3.Controls.Add(this.label9);
-            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(1113, 703);
-            this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
-            this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(655, 276);
-            this.bunifuGradientPanel3.TabIndex = 158;
-            // 
-            // pnlYaklasanEtkinlikler
-            // 
-            this.pnlYaklasanEtkinlikler.Location = new System.Drawing.Point(16, 58);
-            this.pnlYaklasanEtkinlikler.Name = "pnlYaklasanEtkinlikler";
-            this.pnlYaklasanEtkinlikler.Size = new System.Drawing.Size(625, 215);
-            this.pnlYaklasanEtkinlikler.TabIndex = 161;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(142)))), ((int)(((byte)(146)))));
-            this.panel5.Location = new System.Drawing.Point(16, 51);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(625, 1);
-            this.panel5.TabIndex = 160;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(16, 13);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(25, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 153;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label9.Location = new System.Drawing.Point(37, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(263, 25);
-            this.label9.TabIndex = 39;
-            this.label9.Text = "YAKLAŞAN ETKİNLİKLER";
-            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(1825, 991);
+            this.Controls.Add(this.bunifuGradientPanel4);
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -597,15 +662,18 @@
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.bunifuGradientPanel4.ResumeLayout(false);
+            this.bunifuGradientPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.bunifuGradientPanel3.ResumeLayout(false);
+            this.bunifuGradientPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.bunifuGradientPanel3.ResumeLayout(false);
-            this.bunifuGradientPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -642,5 +710,10 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel pnlYaklasanEtkinlikler;
+        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel4;
+        private System.Windows.Forms.Panel pnlMevcutEtkinlik;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label lblMevcut;
     }
 }

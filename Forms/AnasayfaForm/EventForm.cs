@@ -48,6 +48,8 @@ namespace PerModule.Forms.AnasayfaForm
             }
             Anasayfa anasayfa = new Anasayfa();
             anasayfa.UCYaklasanEtkinlik();
+            anasayfa.UCBugunEvents();
+            this.Close();
         }
 
 
