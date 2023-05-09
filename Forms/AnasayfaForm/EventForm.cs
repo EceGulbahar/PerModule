@@ -46,6 +46,8 @@ namespace PerModule.Forms.AnasayfaForm
             {
                 baglan.Close();
             }
+            Anasayfa anasayfa = new Anasayfa();
+            anasayfa.UCYaklasanEtkinlik();
         }
 
 

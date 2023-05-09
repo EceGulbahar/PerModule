@@ -94,6 +94,14 @@ namespace PerModule
 				return this.GetTable<Izin>();
 			}
 		}
+		
+		public System.Data.Linq.Table<Calendar> Calendar
+		{
+			get
+			{
+				return this.GetTable<Calendar>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Personnels")]
@@ -2363,6 +2371,51 @@ namespace PerModule
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Calendar")]
+	public partial class Calendar
+	{
+		
+		private System.DateTime _date;
+		
+		private string _event;
+		
+		public Calendar()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date", DbType="Date NOT NULL")]
+		public System.DateTime date
+		{
+			get
+			{
+				return this._date;
+			}
+			set
+			{
+				if ((this._date != value))
+				{
+					this._date = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="event", Storage="_event", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string @event
+		{
+			get
+			{
+				return this._event;
+			}
+			set
+			{
+				if ((this._event != value))
+				{
+					this._event = value;
+				}
 			}
 		}
 	}

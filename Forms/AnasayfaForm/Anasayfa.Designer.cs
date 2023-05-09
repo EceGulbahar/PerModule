@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Anasayfa));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pnlTopItems = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.KontrolPanelLink = new System.Windows.Forms.LinkLabel();
@@ -56,6 +56,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.bunifuGradientPanel3 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.pnlYaklasanEtkinlikler = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.pnlTopItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -64,6 +69,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.bunifuGradientPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTopItems
@@ -132,7 +139,7 @@
             this.CalenderSol.AutoSizeLeftIcon = true;
             this.CalenderSol.AutoSizeRightIcon = true;
             this.CalenderSol.BackColor = System.Drawing.Color.Transparent;
-            this.CalenderSol.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(173)))), ((int)(((byte)(142)))));
+            this.CalenderSol.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(180)))), ((int)(((byte)(23)))));
             this.CalenderSol.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CalenderSol.BackgroundImage")));
             this.CalenderSol.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.CalenderSol.ButtonText = "";
@@ -140,11 +147,11 @@
             this.CalenderSol.ColorContrastOnClick = 45;
             this.CalenderSol.ColorContrastOnHover = 45;
             this.CalenderSol.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.CalenderSol.CustomizableEdges = borderEdges5;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.CalenderSol.CustomizableEdges = borderEdges1;
             this.CalenderSol.DialogResult = System.Windows.Forms.DialogResult.None;
             this.CalenderSol.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.CalenderSol.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -165,7 +172,7 @@
             this.CalenderSol.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(180)))), ((int)(((byte)(23)))));
             this.CalenderSol.IdleBorderRadius = 1;
             this.CalenderSol.IdleBorderThickness = 1;
-            this.CalenderSol.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(173)))), ((int)(((byte)(142)))));
+            this.CalenderSol.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(180)))), ((int)(((byte)(23)))));
             this.CalenderSol.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("CalenderSol.IdleIconLeftImage")));
             this.CalenderSol.IdleIconRightImage = null;
             this.CalenderSol.IndicateFocus = false;
@@ -179,11 +186,11 @@
             this.CalenderSol.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.CalenderSol.OnDisabledState.IconLeftImage = null;
             this.CalenderSol.OnDisabledState.IconRightImage = null;
-            this.CalenderSol.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(209)))), ((int)(((byte)(192)))));
+            this.CalenderSol.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(213)))), ((int)(((byte)(127)))));
             this.CalenderSol.onHoverState.BorderRadius = 1;
             this.CalenderSol.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.CalenderSol.onHoverState.BorderThickness = 1;
-            this.CalenderSol.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(209)))), ((int)(((byte)(192)))));
+            this.CalenderSol.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(213)))), ((int)(((byte)(127)))));
             this.CalenderSol.onHoverState.ForeColor = System.Drawing.Color.White;
             this.CalenderSol.onHoverState.IconLeftImage = null;
             this.CalenderSol.onHoverState.IconRightImage = null;
@@ -191,15 +198,15 @@
             this.CalenderSol.OnIdleState.BorderRadius = 1;
             this.CalenderSol.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.CalenderSol.OnIdleState.BorderThickness = 1;
-            this.CalenderSol.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(173)))), ((int)(((byte)(142)))));
+            this.CalenderSol.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(180)))), ((int)(((byte)(23)))));
             this.CalenderSol.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.CalenderSol.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("CalenderSol.OnIdleState.IconLeftImage")));
             this.CalenderSol.OnIdleState.IconRightImage = null;
-            this.CalenderSol.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
+            this.CalenderSol.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(99)))), ((int)(((byte)(12)))));
             this.CalenderSol.OnPressedState.BorderRadius = 1;
             this.CalenderSol.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.CalenderSol.OnPressedState.BorderThickness = 1;
-            this.CalenderSol.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
+            this.CalenderSol.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(99)))), ((int)(((byte)(12)))));
             this.CalenderSol.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.CalenderSol.OnPressedState.IconLeftImage = null;
             this.CalenderSol.OnPressedState.IconRightImage = null;
@@ -223,7 +230,7 @@
             this.CalenderSag.AutoSizeLeftIcon = true;
             this.CalenderSag.AutoSizeRightIcon = true;
             this.CalenderSag.BackColor = System.Drawing.Color.Transparent;
-            this.CalenderSag.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(173)))), ((int)(((byte)(142)))));
+            this.CalenderSag.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(180)))), ((int)(((byte)(23)))));
             this.CalenderSag.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CalenderSag.BackgroundImage")));
             this.CalenderSag.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.CalenderSag.ButtonText = "";
@@ -231,11 +238,11 @@
             this.CalenderSag.ColorContrastOnClick = 45;
             this.CalenderSag.ColorContrastOnHover = 45;
             this.CalenderSag.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.CalenderSag.CustomizableEdges = borderEdges6;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.CalenderSag.CustomizableEdges = borderEdges2;
             this.CalenderSag.DialogResult = System.Windows.Forms.DialogResult.None;
             this.CalenderSag.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.CalenderSag.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -256,7 +263,7 @@
             this.CalenderSag.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(180)))), ((int)(((byte)(23)))));
             this.CalenderSag.IdleBorderRadius = 1;
             this.CalenderSag.IdleBorderThickness = 1;
-            this.CalenderSag.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(173)))), ((int)(((byte)(142)))));
+            this.CalenderSag.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(180)))), ((int)(((byte)(23)))));
             this.CalenderSag.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("CalenderSag.IdleIconLeftImage")));
             this.CalenderSag.IdleIconRightImage = null;
             this.CalenderSag.IndicateFocus = false;
@@ -270,11 +277,11 @@
             this.CalenderSag.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.CalenderSag.OnDisabledState.IconLeftImage = null;
             this.CalenderSag.OnDisabledState.IconRightImage = null;
-            this.CalenderSag.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(209)))), ((int)(((byte)(192)))));
+            this.CalenderSag.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(213)))), ((int)(((byte)(127)))));
             this.CalenderSag.onHoverState.BorderRadius = 1;
             this.CalenderSag.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.CalenderSag.onHoverState.BorderThickness = 1;
-            this.CalenderSag.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(209)))), ((int)(((byte)(192)))));
+            this.CalenderSag.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(213)))), ((int)(((byte)(127)))));
             this.CalenderSag.onHoverState.ForeColor = System.Drawing.Color.White;
             this.CalenderSag.onHoverState.IconLeftImage = null;
             this.CalenderSag.onHoverState.IconRightImage = null;
@@ -282,15 +289,15 @@
             this.CalenderSag.OnIdleState.BorderRadius = 1;
             this.CalenderSag.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.CalenderSag.OnIdleState.BorderThickness = 1;
-            this.CalenderSag.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(173)))), ((int)(((byte)(142)))));
+            this.CalenderSag.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(180)))), ((int)(((byte)(23)))));
             this.CalenderSag.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.CalenderSag.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("CalenderSag.OnIdleState.IconLeftImage")));
             this.CalenderSag.OnIdleState.IconRightImage = null;
-            this.CalenderSag.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
+            this.CalenderSag.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(99)))), ((int)(((byte)(12)))));
             this.CalenderSag.OnPressedState.BorderRadius = 1;
             this.CalenderSag.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.CalenderSag.OnPressedState.BorderThickness = 1;
-            this.CalenderSag.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(95)))), ((int)(((byte)(78)))));
+            this.CalenderSag.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(99)))), ((int)(((byte)(12)))));
             this.CalenderSag.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.CalenderSag.OnPressedState.IconLeftImage = null;
             this.CalenderSag.OnPressedState.IconRightImage = null;
@@ -512,12 +519,69 @@
             this.label12.TabIndex = 39;
             this.label12.Text = "DUYURULAR";
             // 
+            // bunifuGradientPanel3
+            // 
+            this.bunifuGradientPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
+            this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel3.BorderRadius = 1;
+            this.bunifuGradientPanel3.Controls.Add(this.pnlYaklasanEtkinlikler);
+            this.bunifuGradientPanel3.Controls.Add(this.panel5);
+            this.bunifuGradientPanel3.Controls.Add(this.pictureBox4);
+            this.bunifuGradientPanel3.Controls.Add(this.label9);
+            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(1113, 703);
+            this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
+            this.bunifuGradientPanel3.Quality = 10;
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(655, 276);
+            this.bunifuGradientPanel3.TabIndex = 158;
+            // 
+            // pnlYaklasanEtkinlikler
+            // 
+            this.pnlYaklasanEtkinlikler.Location = new System.Drawing.Point(16, 58);
+            this.pnlYaklasanEtkinlikler.Name = "pnlYaklasanEtkinlikler";
+            this.pnlYaklasanEtkinlikler.Size = new System.Drawing.Size(625, 215);
+            this.pnlYaklasanEtkinlikler.TabIndex = 161;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(142)))), ((int)(((byte)(146)))));
+            this.panel5.Location = new System.Drawing.Point(16, 51);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(625, 1);
+            this.panel5.TabIndex = 160;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(16, 13);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(25, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 153;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label9.Location = new System.Drawing.Point(37, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(263, 25);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "YAKLAŞAN ETKİNLİKLER";
+            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(1825, 991);
+            this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuGradientPanel2);
@@ -539,6 +603,9 @@
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.bunifuGradientPanel3.ResumeLayout(false);
+            this.bunifuGradientPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -570,5 +637,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbldate;
         private System.Windows.Forms.Label label1;
+        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel pnlYaklasanEtkinlikler;
     }
 }

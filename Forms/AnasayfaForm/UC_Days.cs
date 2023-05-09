@@ -27,10 +27,11 @@ namespace PerModule.Forms.AnasayfaForm
         {
             timer1.Start();
         }
+
         
         public void days(int numday)
         {
-            lbldays.Text = numday+" ";
+            lbldays.Text = numday + " ";
         }
 
         private void UC_Days_Click(object sender, EventArgs e)
@@ -51,31 +52,39 @@ namespace PerModule.Forms.AnasayfaForm
             timer1.Start();
 
         }
-
-        bool kayitkontrol = false;
-        private void displayEvent()
+        public DateTime? date;
+        public bool kayitkontrol = false;
+        public void displayEvent()
         {
-            kayitkontrol = false;
-            if (baglan.State == ConnectionState.Closed)
+            try
             {
-                baglan.Open();
+                kayitkontrol = false;
+                if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                }
+                SqlCommand sqlkayitk = new SqlCommand("select * from Calendar where date=@date", baglan);
+                sqlkayitk.Parameters.AddWithValue("@date", Anasayfa.static_year + "-" + Anasayfa.static_month + "-" + lbldays.Text);
+                SqlDataReader kayitokuma = sqlkayitk.ExecuteReader();
+                while (kayitokuma.Read())
+                {
+                    kayitkontrol = true;
+                    //lbl yazdırma
+                    //date = kayitokuma.IsDBNull(kayitokuma.GetOrdinal("date")) ? (DateTime?)null : (DateTime)kayitokuma["date"];
+                    break;
+                }
+                if (kayitkontrol == false)
+                {
+                    BackColor = Color.FromArgb(149, 156, 163);
+                }
+                else if (kayitkontrol == true)
+                {
+                    BackColor = Color.FromArgb(255, 128, 128);
+                }
             }
-            SqlCommand sqlkayitk = new SqlCommand("select * from Calendar where date=@date", baglan);
-            sqlkayitk.Parameters.AddWithValue("@date", Anasayfa.static_year + "-" + Anasayfa.static_month + "-" + lbldays.Text);
-            SqlDataReader kayitokuma = sqlkayitk.ExecuteReader();
-            while (kayitokuma.Read())
+            catch 
             {
-                kayitkontrol = true;
-                //lbl yazdırma
-                break;
-            }
-            if (kayitkontrol == false)
-            {
-                BackColor = Color.FromArgb(149, 156, 163);
-            }
-            else if (kayitkontrol == true)
-            {
-                BackColor = Color.FromArgb(255, 128, 128);
+
             }
             if (baglan.State == ConnectionState.Open)
             {

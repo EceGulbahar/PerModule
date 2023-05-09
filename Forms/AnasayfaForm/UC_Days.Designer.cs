@@ -65,7 +65,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Label lbldays;
+        public System.Windows.Forms.Timer timer1;
     }
 }

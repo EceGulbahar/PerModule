@@ -205,6 +205,12 @@
     <Compile Include="Forms\AnasayfaForm\UC_Days.Designer.cs">
       <DependentUpon>UC_Days.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AnasayfaForm\UC_YaklasanEvents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AnasayfaForm\UC_YaklasanEvents.Designer.cs">
+      <DependentUpon>UC_YaklasanEvents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BackModel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -400,6 +406,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AnasayfaForm\UC_Days.resx">
       <DependentUpon>UC_Days.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AnasayfaForm\UC_YaklasanEvents.resx">
+      <DependentUpon>UC_YaklasanEvents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BackModel.resx">
       <DependentUpon>BackModel.cs</DependentUpon>

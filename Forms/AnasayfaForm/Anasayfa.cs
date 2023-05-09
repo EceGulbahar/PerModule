@@ -41,10 +41,8 @@ namespace PerModule.Forms.AnasayfaForm
             }
             displayDays();
             //her günü event var mı diye kontrol etmek için
-            
+            UCYaklasanEtkinlik();
         }
-
-        
 
         static DateTime currentDT = DateTime.Now;
         static int currentYear = currentDT.Year;
@@ -113,6 +111,27 @@ namespace PerModule.Forms.AnasayfaForm
             }
         }
 
+        DateTime datenow = DateTime.Now;
+        public void UCYaklasanEtkinlik()
+        {
+            foreach (var deg1 in dc.Calendar)
+            {
+                SqlCommand yaklasanekomut = new SqlCommand("select * from Calendar where date>= @datenow order by date desc", baglan);
+                yaklasanekomut.Parameters.AddWithValue("@datenow", datenow);
+                baglan.Open();
+                SqlDataReader yeoku = yaklasanekomut.ExecuteReader();
+                while (yeoku.Read())
+                {
+                    UC_YaklasanEvents ucye = new UC_YaklasanEvents();
+                    ucye.lbleventsy.Text = yeoku.GetDateTime(0).ToShortDateString() + " tarihinde " + yeoku.GetString(1);
+                    ucye.Dock = DockStyle.Top;
+                    pnlYaklasanEtkinlikler.Controls.Add(ucye);
+                }
+                yeoku.Close();
+                baglan.Close();
+            }
+        }
+        UC_Days ucdays = new UC_Days();
         private void CalenderSag_Click(object sender, EventArgs e)
         {
             daycontainer.Controls.Clear();
@@ -136,11 +155,13 @@ namespace PerModule.Forms.AnasayfaForm
             {
                 UC_Calendar uccalendar = new UC_Calendar();
                 daycontainer.Controls.Add(uccalendar);
+                
             }
             for (int i = 1; i <= days; i++)
             {
                 UC_Days ucdays = new UC_Days();
                 ucdays.days(i);
+                //ucdays.lbldays.Text = i.ToString();
                 daycontainer.Controls.Add(ucdays);
             }
             
@@ -169,6 +190,7 @@ namespace PerModule.Forms.AnasayfaForm
             {
                 UC_Calendar uccalendar = new UC_Calendar();
                 daycontainer.Controls.Add(uccalendar);
+                
             }
             for (int i = 1; i <= days; i++)
             {
