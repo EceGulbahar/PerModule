@@ -388,6 +388,11 @@
     <Compile Include="UC_NewPersonnels.Designer.cs">
       <DependentUpon>UC_NewPersonnels.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewBordroDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewBordroDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ViewIzinDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -551,6 +556,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ViewBordroDS.xsc">
+      <DependentUpon>ViewBordroDS.xsd</DependentUpon>
+    </None>
+    <None Include="ViewBordroDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ViewBordroDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ViewBordroDS.xss">
+      <DependentUpon>ViewBordroDS.xsd</DependentUpon>
+    </None>
     <None Include="ViewIzinDS.xsc">
       <DependentUpon>ViewIzinDS.xsd</DependentUpon>
     </None>

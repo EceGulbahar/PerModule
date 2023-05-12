@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ViewBordroDS" targetNamespace="http://tempuri.org/ViewBordroDS.xsd" xmlns:mstns="http://tempuri.org/ViewBordroDS.xsd" xmlns="http://tempuri.org/ViewBordroDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PerModuleCS" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerModuleCS (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PerModule.Properties.Settings.GlobalReference.Default.PerModuleCS" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewBordroTableAdapter" GeneratorDataComponentClassName="ViewBordroTableAdapter" Name="ViewBordro" UserDataComponentName="ViewBordroTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PerModuleCS (Settings)" DbObjectName="PERSONNELMODULE.dbo.ViewBordro" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PerTckn, PerAd, PerSoyad, Bordroid, personnelid, ToplamGun, IzinliGun, BrutMaas, NetMaas, DonemAy, DonemYil FROM dbo.ViewBordro</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PerTckn" DataSetColumn="PerTckn" />
+              <Mapping SourceColumn="PerAd" DataSetColumn="PerAd" />
+              <Mapping SourceColumn="PerSoyad" DataSetColumn="PerSoyad" />
+              <Mapping SourceColumn="Bordroid" DataSetColumn="Bordroid" />
+              <Mapping SourceColumn="personnelid" DataSetColumn="personnelid" />
+              <Mapping SourceColumn="ToplamGun" DataSetColumn="ToplamGun" />
+              <Mapping SourceColumn="IzinliGun" DataSetColumn="IzinliGun" />
+              <Mapping SourceColumn="BrutMaas" DataSetColumn="BrutMaas" />
+              <Mapping SourceColumn="NetMaas" DataSetColumn="NetMaas" />
+              <Mapping SourceColumn="DonemAy" DataSetColumn="DonemAy" />
+              <Mapping SourceColumn="DonemYil" DataSetColumn="DonemYil" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ViewBordroDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="ViewBordroDS" msprop:Generator_DataSetName="ViewBordroDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ViewBordro" msprop:Generator_RowEvHandlerName="ViewBordroRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewBordroRowDeleted" msprop:Generator_RowDeletingName="ViewBordroRowDeleting" msprop:Generator_RowEvArgName="ViewBordroRowChangeEvent" msprop:Generator_TablePropName="ViewBordro" msprop:Generator_RowChangedName="ViewBordroRowChanged" msprop:Generator_RowChangingName="ViewBordroRowChanging" msprop:Generator_TableClassName="ViewBordroDataTable" msprop:Generator_RowClassName="ViewBordroRow" msprop:Generator_TableVarName="tableViewBordro" msprop:Generator_UserTableName="ViewBordro">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PerTckn" msprop:Generator_ColumnPropNameInRow="PerTckn" msprop:Generator_ColumnPropNameInTable="PerTcknColumn" msprop:Generator_ColumnVarNameInTable="columnPerTckn" msprop:Generator_UserColumnName="PerTckn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PerAd" msprop:Generator_ColumnPropNameInRow="PerAd" msprop:Generator_ColumnPropNameInTable="PerAdColumn" msprop:Generator_ColumnVarNameInTable="columnPerAd" msprop:Generator_UserColumnName="PerAd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PerSoyad" msprop:Generator_ColumnPropNameInRow="PerSoyad" msprop:Generator_ColumnPropNameInTable="PerSoyadColumn" msprop:Generator_ColumnVarNameInTable="columnPerSoyad" msprop:Generator_UserColumnName="PerSoyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bordroid" msprop:Generator_ColumnPropNameInRow="Bordroid" msprop:Generator_ColumnPropNameInTable="BordroidColumn" msprop:Generator_ColumnVarNameInTable="columnBordroid" msprop:Generator_UserColumnName="Bordroid" type="xs:int" />
+              <xs:element name="personnelid" msprop:Generator_ColumnPropNameInRow="personnelid" msprop:Generator_ColumnPropNameInTable="personnelidColumn" msprop:Generator_ColumnVarNameInTable="columnpersonnelid" msprop:Generator_UserColumnName="personnelid" type="xs:int" />
+              <xs:element name="ToplamGun" msprop:Generator_ColumnPropNameInRow="ToplamGun" msprop:Generator_ColumnPropNameInTable="ToplamGunColumn" msprop:Generator_ColumnVarNameInTable="columnToplamGun" msprop:Generator_UserColumnName="ToplamGun" type="xs:int" />
+              <xs:element name="IzinliGun" msprop:Generator_ColumnPropNameInRow="IzinliGun" msprop:Generator_ColumnPropNameInTable="IzinliGunColumn" msprop:Generator_ColumnVarNameInTable="columnIzinliGun" msprop:Generator_UserColumnName="IzinliGun" type="xs:int" />
+              <xs:element name="BrutMaas" msprop:Generator_ColumnPropNameInRow="BrutMaas" msprop:Generator_ColumnPropNameInTable="BrutMaasColumn" msprop:Generator_ColumnVarNameInTable="columnBrutMaas" msprop:Generator_UserColumnName="BrutMaas" type="xs:int" />
+              <xs:element name="NetMaas" msprop:Generator_ColumnPropNameInRow="NetMaas" msprop:Generator_ColumnPropNameInTable="NetMaasColumn" msprop:Generator_ColumnVarNameInTable="columnNetMaas" msprop:Generator_UserColumnName="NetMaas" type="xs:int" />
+              <xs:element name="DonemAy" msprop:Generator_ColumnPropNameInRow="DonemAy" msprop:Generator_ColumnPropNameInTable="DonemAyColumn" msprop:Generator_ColumnVarNameInTable="columnDonemAy" msprop:Generator_UserColumnName="DonemAy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DonemYil" msprop:Generator_ColumnPropNameInRow="DonemYil" msprop:Generator_ColumnPropNameInTable="DonemYilColumn" msprop:Generator_ColumnVarNameInTable="columnDonemYil" msprop:Generator_UserColumnName="DonemYil">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewBordro" />
+      <xs:field xpath="mstns:Bordroid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
