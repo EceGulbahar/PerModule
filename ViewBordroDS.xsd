@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="PerModuleCS (Settings)" DbObjectName="PERSONNELMODULE.dbo.ViewBordro" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT PerTckn, PerAd, PerSoyad, Bordroid, personnelid, ToplamGun, IzinliGun, BrutMaas, NetMaas, DonemAy, DonemYil FROM dbo.ViewBordro</CommandText>
+                    <CommandText>SELECT PerTckn, PerAd, PerSoyad, Bordroid, personnelid, ToplamGun, IzinliGun, BrutMaas, NetMaas, DonemAy, DonemYil, kullaniciid FROM dbo.ViewBordro</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -30,6 +30,7 @@
               <Mapping SourceColumn="NetMaas" DataSetColumn="NetMaas" />
               <Mapping SourceColumn="DonemAy" DataSetColumn="DonemAy" />
               <Mapping SourceColumn="DonemYil" DataSetColumn="DonemYil" />
+              <Mapping SourceColumn="kullaniciid" DataSetColumn="kullaniciid" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -85,6 +86,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="kullaniciid" msprop:Generator_ColumnPropNameInRow="kullaniciid" msprop:Generator_ColumnPropNameInTable="kullaniciidColumn" msprop:Generator_ColumnVarNameInTable="columnkullaniciid" msprop:Generator_UserColumnName="kullaniciid" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -16,5 +16,10 @@ namespace PerModule
         {
             InitializeComponent();
         }
+
+        private void lblaciklama_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

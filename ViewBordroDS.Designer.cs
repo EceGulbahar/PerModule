@@ -301,6 +301,8 @@ namespace PerModule {
             
             private global::System.Data.DataColumn columnDonemYil;
             
+            private global::System.Data.DataColumn columnkullaniciid;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ViewBordroDataTable() {
@@ -424,6 +426,14 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn kullaniciidColumn {
+                get {
+                    return this.columnkullaniciid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -459,7 +469,7 @@ namespace PerModule {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ViewBordroRow AddViewBordroRow(string PerTckn, string PerAd, string PerSoyad, int Bordroid, int personnelid, int ToplamGun, int IzinliGun, int BrutMaas, int NetMaas, string DonemAy, string DonemYil) {
+            public ViewBordroRow AddViewBordroRow(string PerTckn, string PerAd, string PerSoyad, int Bordroid, int personnelid, int ToplamGun, int IzinliGun, int BrutMaas, int NetMaas, string DonemAy, string DonemYil, int kullaniciid) {
                 ViewBordroRow rowViewBordroRow = ((ViewBordroRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PerTckn,
@@ -472,7 +482,8 @@ namespace PerModule {
                         BrutMaas,
                         NetMaas,
                         DonemAy,
-                        DonemYil};
+                        DonemYil,
+                        kullaniciid};
                 rowViewBordroRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowViewBordroRow);
                 return rowViewBordroRow;
@@ -513,6 +524,7 @@ namespace PerModule {
                 this.columnNetMaas = base.Columns["NetMaas"];
                 this.columnDonemAy = base.Columns["DonemAy"];
                 this.columnDonemYil = base.Columns["DonemYil"];
+                this.columnkullaniciid = base.Columns["kullaniciid"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -540,6 +552,8 @@ namespace PerModule {
                 base.Columns.Add(this.columnDonemAy);
                 this.columnDonemYil = new global::System.Data.DataColumn("DonemYil", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDonemYil);
+                this.columnkullaniciid = new global::System.Data.DataColumn("kullaniciid", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnkullaniciid);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBordroid}, true));
                 this.columnPerTckn.AllowDBNull = false;
@@ -559,6 +573,7 @@ namespace PerModule {
                 this.columnDonemAy.MaxLength = 50;
                 this.columnDonemYil.AllowDBNull = false;
                 this.columnDonemYil.MaxLength = 50;
+                this.columnkullaniciid.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -819,6 +834,17 @@ namespace PerModule {
                     this[this.tableViewBordro.DonemYilColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int kullaniciid {
+                get {
+                    return ((int)(this[this.tableViewBordro.kullaniciidColumn]));
+                }
+                set {
+                    this[this.tableViewBordro.kullaniciidColumn] = value;
+                }
+            }
         }
         
         /// <summary>
@@ -991,6 +1017,7 @@ namespace PerModule.ViewBordroDSTableAdapters {
             tableMapping.ColumnMappings.Add("NetMaas", "NetMaas");
             tableMapping.ColumnMappings.Add("DonemAy", "DonemAy");
             tableMapping.ColumnMappings.Add("DonemYil", "DonemYil");
+            tableMapping.ColumnMappings.Add("kullaniciid", "kullaniciid");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1008,7 +1035,7 @@ namespace PerModule.ViewBordroDSTableAdapters {
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT PerTckn, PerAd, PerSoyad, Bordroid, personnelid, ToplamGun, IzinliGun, Bru" +
-                "tMaas, NetMaas, DonemAy, DonemYil FROM dbo.ViewBordro";
+                "tMaas, NetMaas, DonemAy, DonemYil, kullaniciid FROM dbo.ViewBordro";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -99,6 +99,7 @@
             this.lblaciklama.Size = new System.Drawing.Size(351, 34);
             this.lblaciklama.TabIndex = 16;
             this.lblaciklama.Text = "label1";
+            this.lblaciklama.Click += new System.EventHandler(this.lblaciklama_Click);
             // 
             // UC_NewPersonnels
             // 

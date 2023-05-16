@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PerModule.Forms.LoginForm;
+using PerModule.Forms.PersonelListForm;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,8 +41,10 @@ namespace PerModule.Forms.BordrosForm
             }
             //bordrohesapla();
         }
-        public decimal saatlikucreti;
-        public int Perpersonid;
+
+        public static decimal netMaas;
+        public int personnelid;
+        List<decimal> bordrolar = new List<decimal>();
         public static int bordroperid;
         public void bordrohesapla()
         {
@@ -48,10 +52,9 @@ namespace PerModule.Forms.BordrosForm
             {
                 baglan.Open();
             }
-            List<decimal> bordrolar = new List<decimal>();
             foreach (var bordro in dc.Personnels)
             {
-                int personnelid = bordro.id;
+                personnelid = bordro.id;
                 string query = "SELECT SUM(Tutar) FROM Mesai where Personnelid=@Personnelid and DonemAy=@da and DonemYil=@dy and OdenmeDurumu=@od";
                 using (SqlCommand bordrohesapla = new SqlCommand(query, baglan))
                 {
@@ -65,22 +68,54 @@ namespace PerModule.Forms.BordrosForm
                     {
                         if (bordrooku.Read())
                         {
-                            decimal sum = bordrooku.GetDecimal(0);
-                            bordrolar.Add(sum);
+                            if (!bordrooku.IsDBNull(0))
+                            {
+                                decimal sum = bordrooku.GetDecimal(0);
+                                bordrolar.Add(sum);
+                            }
+                            else
+                            {
+                                bordrolar.Add(0);
+                            }
                         }
                     }
                 }
             }
+            
             // Bütün bordroları ekranda göster veya başka bir amaçla kullan
             foreach (var bordro in bordrolar)
             {
-                Console.WriteLine("Bordro: " + bordro.ToString());
-            }
-            if (baglan.State == ConnectionState.Open)
-            {
-                baglan.Close();
+                BordroHesaplama hesaplayici = new BordroHesaplama();
+                netMaas = hesaplayici.netucrethesapla(bordro);
+                //Console.WriteLine("Bordro: " + bordro.ToString());
+                /*if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                }
+                SqlCommand bordroayekle = new SqlCommand("insert into Bordros(personnelid,ToplamGun,IzinliGun,BrutMaas,NetMaas,DonemAy,DonemYil,kullaniciid) values(@personnelid,@ToplamGun,@IzinliGun,@BrutMaas,@NetMaas,@DonemAy,@DonemYil,@kullaniciid)", baglan);
+                bordroayekle.Parameters.AddWithValue("@personnelid", personnelid);
+                bordroayekle.Parameters.AddWithValue("@ToplamGun", );
+                bordroayekle.Parameters.AddWithValue("@IzinliGun", );
+                bordroayekle.Parameters.AddWithValue("@BrutMaas", bordro);
+                bordroayekle.Parameters.AddWithValue("@NetMaas", netMaas);
+                bordroayekle.Parameters.AddWithValue("@kullaniciid", Login.kullanici);
+                bordroayekle.Parameters.AddWithValue("@DonemAy", Convert.ToInt32(dropDonemAy.Text));
+                bordroayekle.Parameters.AddWithValue("@DonemYil", Convert.ToInt32(dropDonemYil.Text));
+                bordroayekle.ExecuteNonQuery();
+                this.Alert("Mesai Ekleme Başarılı", Form_Alert.enmType.Success);
+                if (baglan.State == ConnectionState.Open)
+                {
+                    baglan.Close();
+                }*/
             }
         }
+
+        /*public double gelirvegisihesapla(double a)
+        {
+            a = BordroHesaplama.gelirvergisimatrahı;
+            a = (a*15 / 100)-1276.02;
+            return a;
+        }*/
 
         private void btnDonemlikBordroHesapla_Click(object sender, EventArgs e)
         {
