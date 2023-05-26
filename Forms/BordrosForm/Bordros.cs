@@ -1,4 +1,5 @@
-﻿using PerModule.Forms.LoginForm;
+﻿using PerModule.Classes;
+using PerModule.Forms.LoginForm;
 using PerModule.Forms.PersonelListForm;
 using System;
 using System.Collections;
@@ -43,8 +44,11 @@ namespace PerModule.Forms.BordrosForm
         }
 
         public static decimal netMaas;
+        int toplamgungelen;
+        int toplamizingelen;
         public int personnelid;
         List<decimal> bordrolar = new List<decimal>();
+        List<int> personnelIdList = new List<int>(); // PersonnelId'leri tutacak liste
         public static int bordroperid;
         public void bordrohesapla()
         {
@@ -81,41 +85,52 @@ namespace PerModule.Forms.BordrosForm
                     }
                 }
             }
-            
-            // Bütün bordroları ekranda göster veya başka bir amaçla kullan
-            foreach (var bordro in bordrolar)
+
+            foreach (var bordro in dc.Personnels)
             {
+                personnelid = bordro.id;
+                personnelIdList.Add(personnelid); // PersonnelId'yi listeye ekle
+
+                // Diğer kodlar...
+            }
+
+            // İşlemler burada yapılabilir
+            for (int i = 0; i < bordrolar.Count; i++)
+            {
+                var bordro = bordrolar[i];
+                var personnelId = personnelIdList[i];
+
                 BordroHesaplama hesaplayici = new BordroHesaplama();
                 netMaas = hesaplayici.netucrethesapla(bordro);
-                //Console.WriteLine("Bordro: " + bordro.ToString());
-                /*if (baglan.State == ConnectionState.Closed)
+                ToplamGun toplamgn = new ToplamGun();
+                toplamgungelen = toplamgn.Toplamgunhesapla(personnelId, Convert.ToInt32(dropDonemAy.Text), Convert.ToInt32(dropDonemYil.Text));
+                ToplamIzin toplamizin = new ToplamIzin();
+                toplamizingelen = toplamizin.ToplamIzinhesapla(personnelId, Convert.ToInt32(dropDonemAy.Text), Convert.ToInt32(dropDonemYil.Text));
+
+                if (baglan.State == ConnectionState.Closed)
                 {
                     baglan.Open();
                 }
+
                 SqlCommand bordroayekle = new SqlCommand("insert into Bordros(personnelid,ToplamGun,IzinliGun,BrutMaas,NetMaas,DonemAy,DonemYil,kullaniciid) values(@personnelid,@ToplamGun,@IzinliGun,@BrutMaas,@NetMaas,@DonemAy,@DonemYil,@kullaniciid)", baglan);
-                bordroayekle.Parameters.AddWithValue("@personnelid", personnelid);
-                bordroayekle.Parameters.AddWithValue("@ToplamGun", );
-                bordroayekle.Parameters.AddWithValue("@IzinliGun", );
+                bordroayekle.Parameters.AddWithValue("@personnelid", personnelId);
+                bordroayekle.Parameters.AddWithValue("@ToplamGun", toplamgungelen);
+                bordroayekle.Parameters.AddWithValue("@IzinliGun", toplamizingelen);
                 bordroayekle.Parameters.AddWithValue("@BrutMaas", bordro);
                 bordroayekle.Parameters.AddWithValue("@NetMaas", netMaas);
                 bordroayekle.Parameters.AddWithValue("@kullaniciid", Login.kullanici);
                 bordroayekle.Parameters.AddWithValue("@DonemAy", Convert.ToInt32(dropDonemAy.Text));
                 bordroayekle.Parameters.AddWithValue("@DonemYil", Convert.ToInt32(dropDonemYil.Text));
                 bordroayekle.ExecuteNonQuery();
-                this.Alert("Mesai Ekleme Başarılı", Form_Alert.enmType.Success);
+
                 if (baglan.State == ConnectionState.Open)
                 {
                     baglan.Close();
-                }*/
+                }
             }
-        }
 
-        /*public double gelirvegisihesapla(double a)
-        {
-            a = BordroHesaplama.gelirvergisimatrahı;
-            a = (a*15 / 100)-1276.02;
-            return a;
-        }*/
+            this.Alert("Bordro Hesaplama Başarılı", Form_Alert.enmType.Success);
+        }
 
         private void btnDonemlikBordroHesapla_Click(object sender, EventArgs e)
         {
