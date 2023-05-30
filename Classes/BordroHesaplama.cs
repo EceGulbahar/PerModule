@@ -30,5 +30,4 @@ namespace PerModule.Forms.BordrosForm
             return netmaas;
         }
     }
-
 }

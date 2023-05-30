@@ -18,6 +18,7 @@ namespace PerModule.Forms.BordrosForm
 {
     public partial class Bordros : Form
     {
+        bool kayitkontrol = false;
         SqlConnection baglan = new SqlConnection(ConfigurationManager.ConnectionStrings["PerModule.Properties.Settings.PerModuleCS"].ConnectionString);
         DataClasses1DataContext dc = new DataClasses1DataContext();
         public Bordros()
@@ -129,20 +130,214 @@ namespace PerModule.Forms.BordrosForm
                 }
             }
 
-            this.Alert("Bordro Hesaplama Başarılı", Form_Alert.enmType.Success);
+            this.Alert("Dönem"+ dropDonemAy.Text + " Hesaplama Başarılı", Form_Alert.enmType.Success);
+            searchyenile();
         }
 
         private void btnDonemlikBordroHesapla_Click(object sender, EventArgs e)
         {
+            kayitkontrol = false;
             if (dropDonemAy.Text != null && dropDonemYil.Text != null)
             {
-                bordrohesapla();
-
+                if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                }
+                SqlCommand sqlkayitk = new SqlCommand("select * from Bordros where DonemAy=@DonemAy and DonemYil=@DonemYil", baglan);
+                sqlkayitk.Parameters.AddWithValue("@DonemAy", Convert.ToInt32(dropDonemAy.Text));
+                sqlkayitk.Parameters.AddWithValue("@DonemYil", Convert.ToInt32(dropDonemYil.Text));
+                SqlDataReader kayitokuma = sqlkayitk.ExecuteReader();
+                while (kayitokuma.Read())
+                {
+                    kayitkontrol = true;
+                    this.Alert("Dönem: " + dropDonemAy.Text + "Yıl: "+ dropDonemYil.Text + " Zaten Hesaplanmış", Form_Alert.enmType.Success);
+                    break;
+                }
+                if (kayitkontrol == false)
+                {
+                    bordrohesapla();
+                }
             }
             else
             {
                 this.Alert("Dönem ve Yıl Seçiniz.", Form_Alert.enmType.Warning);
             }
+        }
+
+        DataTable dt = new DataTable("ViewBordro");
+        public void searchyenile()
+        {
+            dt.Clear();
+            txtSearchboxPerList.Text = txtSearchboxPerList.Text.Trim();
+            if (baglan.State == ConnectionState.Closed)
+            {
+                baglan.Open();
+            }
+            using (SqlDataAdapter dasearch = new SqlDataAdapter("select * from ViewBordro", baglan))
+            {
+                dasearch.Fill(dt);
+                BordroGridList.DataSource = dt;
+            }
+            if (baglan.State == ConnectionState.Open)
+            {
+                baglan.Close();
+            }
+            txtSearchboxPerList.Clear();
+        }
+
+        private void btnYenile_Click(object sender, EventArgs e)
+        {
+            searchyenile();
+            dropDonemAy.Text = "";
+            dropDonemYil.Text = "";
+            txtSearchboxPerList.Text = "";
+        }
+
+        private void btnDonemKayitSil_Click(object sender, EventArgs e)
+        {
+            kayitkontrol = false;
+            if (dropDonemAy.Text != null && dropDonemYil.Text != null)
+            {
+                try
+                {
+                    if (baglan.State == ConnectionState.Closed)
+                    {
+                        baglan.Open();
+                    }
+                    SqlCommand kayitk = new SqlCommand("select * from Bordros where DonemAy=@DonemAy and DonemYil=@DonemYil", baglan);
+                    kayitk.Parameters.AddWithValue("@DonemAy", Convert.ToInt32(dropDonemAy.Text));
+                    kayitk.Parameters.AddWithValue("@DonemYil", Convert.ToInt32(dropDonemYil.Text));
+                    SqlDataReader kayitokuma = kayitk.ExecuteReader();
+                    while (kayitokuma.Read())
+                    {
+                        kayitkontrol = true;
+                        kayitbulundu();
+                        searchyenile();
+                    }
+                    kayitokuma.Close();
+                    if (kayitkontrol == false)
+                    {
+                        this.Alert("Dönem: " + dropDonemAy.Text + " Yıl: " + dropDonemYil.Text + "İçin Kayit Bulunamadı", Form_Alert.enmType.Success);
+                    }
+                }
+                catch
+                {
+                   
+                }
+            }
+            else
+            {
+                this.Alert("Dönem ve Yıl Seçiniz.", Form_Alert.enmType.Warning);
+            }
+        }
+
+        public void kayitbulundu()
+        {
+            if (baglan.State == ConnectionState.Closed)
+            {
+                baglan.Open();
+            }
+            SqlCommand donaydelete = new SqlCommand("DELETE FROM Bordros where DonemAy=@DonemAy and DonemYil=@DonemYil", baglan);
+            donaydelete.Parameters.AddWithValue("@DonemAy", Convert.ToInt32(dropDonemAy.Text));
+            donaydelete.Parameters.AddWithValue("@DonemYil", Convert.ToInt32(dropDonemYil.Text));
+
+            if (donaydelete.ExecuteNonQuery() > 0)
+                this.Alert("Dönem: " + dropDonemAy.Text + " Yıl: " + dropDonemYil.Text + " İçin Aylik Kayit Silindi", Form_Alert.enmType.Success);
+
+            if (baglan.State == ConnectionState.Open)
+            {
+                baglan.Close();
+            }
+        }
+
+        private void btnExceleAl_Click(object sender, EventArgs e)
+        {
+            ExceleAl.Excel_Disa_Aktar(BordroGridList);
+            this.Alert("Excele aktarma başarılı", Form_Alert.enmType.Success);
+        }
+
+        private void txtSearchboxPerList_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtSearchboxPerList.Text))
+            {
+                searchyenile();
+            }
+            else
+            {
+                dt.Clear();
+                txtSearchboxPerList.Text = txtSearchboxPerList.Text.Trim();
+                if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                }
+                SqlCommand search = new SqlCommand("SELECT * FROM dbo.ViewBordro where PerAd like '%" + txtSearchboxPerList.Text + "%'", baglan);
+                SqlDataAdapter da = new SqlDataAdapter(search);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                BordroGridList.DataSource = ds.Tables[0];
+                if (baglan.State == ConnectionState.Open)
+                {
+                    baglan.Close();
+                }
+            }
+        }
+
+        private void dropDonemAy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(dropDonemAy.Text))
+            {
+                searchyenile();
+            }
+            else
+            {
+                dt.Clear();
+                txtSearchboxPerList.Text = txtSearchboxPerList.Text.Trim();
+                if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                }
+                SqlCommand search = new SqlCommand("SELECT * FROM dbo.ViewBordro where DonemAy like '%" + dropDonemAy.Text + "%'", baglan);
+                SqlDataAdapter da = new SqlDataAdapter(search);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                BordroGridList.DataSource = ds.Tables[0];
+                if (baglan.State == ConnectionState.Open)
+                {
+                    baglan.Close();
+                }
+            }
+        }
+
+        private void dropDonemYil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(dropDonemYil.Text))
+            {
+                searchyenile();
+            }
+            else
+            {
+                dt.Clear();
+                txtSearchboxPerList.Text = txtSearchboxPerList.Text.Trim();
+                if (baglan.State == ConnectionState.Closed)
+                {
+                    baglan.Open();
+                }
+                SqlCommand search = new SqlCommand("SELECT * FROM dbo.ViewBordro where DonemYil like '%" + dropDonemYil.Text + "%'", baglan);
+                SqlDataAdapter da = new SqlDataAdapter(search);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                BordroGridList.DataSource = ds.Tables[0];
+                if (baglan.State == ConnectionState.Open)
+                {
+                    baglan.Close();
+                }
+            }
+        }
+
+        private void btnPdfCikar_Click(object sender, EventArgs e)
+        {
+            PDFcikar.pdfcikra(BordroGridList);
+            this.Alert("PDF aktarma başarılı", Form_Alert.enmType.Success);
         }
     }
 }

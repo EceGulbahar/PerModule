@@ -93,7 +93,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
         }
 
         string notlartext = "";
-        int personnelid;
+        public static int personnelid;
         public void OnIzleme_Load(object sender, EventArgs e)
         {
             

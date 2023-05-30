@@ -48,7 +48,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -65,6 +64,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.btnPerCikar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnPerEkle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtSearchboxPerList = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -83,7 +83,6 @@
             this.txtTcnoAra = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnTcnoAra = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnYenile = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlDepGuncelle = new System.Windows.Forms.Panel();
             this.txtDepGunYeniAd = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnDepGuncelleDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -93,9 +92,6 @@
             this.btnDepGuncelle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GridHugeList = new System.Windows.Forms.DataGridView();
-            this.personelListGridViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pERSONNELMODULEDataSet = new PerModule.PERSONNELMODULEDataSet();
-            this.personelListGridViewTableAdapter = new PerModule.PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter();
             this.perTcknDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.perAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.perSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,6 +102,11 @@
             this.adresUlkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresSehirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kartlar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.personelListGridViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pERSONNELMODULEDataSet = new PerModule.PERSONNELMODULEDataSet();
+            this.personelListGridViewTableAdapter = new PerModule.PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter();
+            this.btnPdfCikar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnlDepEkle.SuspendLayout();
             this.pnlTopItems.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -927,10 +928,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.linkLabel1);
+            this.panel2.Controls.Add(this.btnPdfCikar);
             this.panel2.Controls.Add(this.txtTcnoAra);
             this.panel2.Controls.Add(this.btnTcnoAra);
             this.panel2.Controls.Add(this.btnYenile);
-            this.panel2.Controls.Add(this.bunifuButton1);
             this.panel2.Controls.Add(this.pnlDepGuncelle);
             this.panel2.Controls.Add(this.btnDepGuncelle);
             this.panel2.Controls.Add(this.btnDepEklePnlAc);
@@ -969,7 +971,7 @@
             this.txtTcnoAra.IconRight = null;
             this.txtTcnoAra.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTcnoAra.Lines = new string[0];
-            this.txtTcnoAra.Location = new System.Drawing.Point(848, 21);
+            this.txtTcnoAra.Location = new System.Drawing.Point(848, 23);
             this.txtTcnoAra.MaxLength = 32767;
             this.txtTcnoAra.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTcnoAra.Modified = false;
@@ -1005,7 +1007,7 @@
             this.txtTcnoAra.SelectionLength = 0;
             this.txtTcnoAra.SelectionStart = 0;
             this.txtTcnoAra.ShortcutsEnabled = true;
-            this.txtTcnoAra.Size = new System.Drawing.Size(173, 34);
+            this.txtTcnoAra.Size = new System.Drawing.Size(173, 32);
             this.txtTcnoAra.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.txtTcnoAra.TabIndex = 18;
             this.txtTcnoAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1037,11 +1039,11 @@
             this.btnTcnoAra.ColorContrastOnClick = 45;
             this.btnTcnoAra.ColorContrastOnHover = 45;
             this.btnTcnoAra.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.btnTcnoAra.CustomizableEdges = borderEdges7;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.btnTcnoAra.CustomizableEdges = borderEdges8;
             this.btnTcnoAra.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnTcnoAra.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(214)))), ((int)(((byte)(225)))));
             this.btnTcnoAra.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(214)))), ((int)(((byte)(225)))));
@@ -1127,11 +1129,11 @@
             this.btnYenile.ColorContrastOnClick = 45;
             this.btnYenile.ColorContrastOnHover = 45;
             this.btnYenile.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.btnYenile.CustomizableEdges = borderEdges8;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.btnYenile.CustomizableEdges = borderEdges9;
             this.btnYenile.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnYenile.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnYenile.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1197,97 +1199,6 @@
             this.btnYenile.TextPadding = new System.Windows.Forms.Padding(2, 0, 0, 0);
             this.btnYenile.UseDefaultRadiusAndThickness = true;
             this.btnYenile.Click += new System.EventHandler(this.btnYenile_Click);
-            // 
-            // bunifuButton1
-            // 
-            this.bunifuButton1.AllowAnimations = true;
-            this.bunifuButton1.AllowMouseEffects = true;
-            this.bunifuButton1.AllowToggling = false;
-            this.bunifuButton1.AnimationSpeed = 200;
-            this.bunifuButton1.AutoGenerateColors = false;
-            this.bunifuButton1.AutoRoundBorders = false;
-            this.bunifuButton1.AutoSizeLeftIcon = true;
-            this.bunifuButton1.AutoSizeRightIcon = true;
-            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackColor1 = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
-            this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Dash;
-            this.bunifuButton1.ButtonText = "";
-            this.bunifuButton1.ButtonTextMarginLeft = 0;
-            this.bunifuButton1.ColorContrastOnClick = 45;
-            this.bunifuButton1.ColorContrastOnHover = 45;
-            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges9;
-            this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton1.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.IconLeftAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IconLeftPadding = new System.Windows.Forms.Padding(5);
-            this.bunifuButton1.IconMarginLeft = 11;
-            this.bunifuButton1.IconPadding = 5;
-            this.bunifuButton1.IconRightAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Arrow;
-            this.bunifuButton1.IconRightPadding = new System.Windows.Forms.Padding(0);
-            this.bunifuButton1.IconSize = 25;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.IdleBorderRadius = 33;
-            this.bunifuButton1.IdleBorderThickness = 2;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.IdleIconLeftImage")));
-            this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(19, 78);
-            this.bunifuButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuButton1.Name = "bunifuButton1";
-            this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton1.OnDisabledState.BorderRadius = 33;
-            this.bunifuButton1.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.OnDisabledState.BorderThickness = 2;
-            this.bunifuButton1.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton1.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton1.OnDisabledState.IconLeftImage = null;
-            this.bunifuButton1.OnDisabledState.IconRightImage = null;
-            this.bunifuButton1.onHoverState.BorderColor = System.Drawing.Color.Gold;
-            this.bunifuButton1.onHoverState.BorderRadius = 33;
-            this.bunifuButton1.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Dash;
-            this.bunifuButton1.onHoverState.BorderThickness = 2;
-            this.bunifuButton1.onHoverState.FillColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.onHoverState.IconLeftImage = null;
-            this.bunifuButton1.onHoverState.IconRightImage = null;
-            this.bunifuButton1.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.OnIdleState.BorderRadius = 33;
-            this.bunifuButton1.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Dash;
-            this.bunifuButton1.OnIdleState.BorderThickness = 2;
-            this.bunifuButton1.OnIdleState.FillColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.OnIdleState.IconLeftImage")));
-            this.bunifuButton1.OnIdleState.IconRightImage = null;
-            this.bunifuButton1.OnPressedState.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.OnPressedState.BorderRadius = 33;
-            this.bunifuButton1.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.OnPressedState.BorderThickness = 2;
-            this.bunifuButton1.OnPressedState.FillColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.OnPressedState.IconLeftImage = null;
-            this.bunifuButton1.OnPressedState.IconRightImage = null;
-            this.bunifuButton1.Size = new System.Drawing.Size(33, 36);
-            this.bunifuButton1.TabIndex = 16;
-            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bunifuButton1.TextMarginLeft = 0;
-            this.bunifuButton1.TextPadding = new System.Windows.Forms.Padding(0);
-            this.bunifuButton1.UseDefaultRadiusAndThickness = true;
-            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
             // pnlDepGuncelle
             // 
@@ -1879,20 +1790,6 @@
             this.GridHugeList.TabIndex = 3;
             this.GridHugeList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridHugeList_CellContentClick);
             // 
-            // personelListGridViewBindingSource
-            // 
-            this.personelListGridViewBindingSource.DataMember = "PersonelListGridView";
-            this.personelListGridViewBindingSource.DataSource = this.pERSONNELMODULEDataSet;
-            // 
-            // pERSONNELMODULEDataSet
-            // 
-            this.pERSONNELMODULEDataSet.DataSetName = "PERSONNELMODULEDataSet";
-            this.pERSONNELMODULEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // personelListGridViewTableAdapter
-            // 
-            this.personelListGridViewTableAdapter.ClearBeforeFill = true;
-            // 
             // perTcknDataGridViewTextBoxColumn
             // 
             this.perTcknDataGridViewTextBoxColumn.DataPropertyName = "PerTckn";
@@ -1965,6 +1862,127 @@
             this.Kartlar.Text = "Kartı Görüntüle";
             this.Kartlar.UseColumnTextForButtonValue = true;
             // 
+            // personelListGridViewBindingSource
+            // 
+            this.personelListGridViewBindingSource.DataMember = "PersonelListGridView";
+            this.personelListGridViewBindingSource.DataSource = this.pERSONNELMODULEDataSet;
+            // 
+            // pERSONNELMODULEDataSet
+            // 
+            this.pERSONNELMODULEDataSet.DataSetName = "PERSONNELMODULEDataSet";
+            this.pERSONNELMODULEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // personelListGridViewTableAdapter
+            // 
+            this.personelListGridViewTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnPdfCikar
+            // 
+            this.btnPdfCikar.AllowAnimations = true;
+            this.btnPdfCikar.AllowMouseEffects = true;
+            this.btnPdfCikar.AllowToggling = false;
+            this.btnPdfCikar.AnimationSpeed = 200;
+            this.btnPdfCikar.AutoGenerateColors = false;
+            this.btnPdfCikar.AutoRoundBorders = false;
+            this.btnPdfCikar.AutoSizeLeftIcon = true;
+            this.btnPdfCikar.AutoSizeRightIcon = true;
+            this.btnPdfCikar.BackColor = System.Drawing.Color.Transparent;
+            this.btnPdfCikar.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
+            this.btnPdfCikar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPdfCikar.BackgroundImage")));
+            this.btnPdfCikar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPdfCikar.ButtonText = "PDF Olarak Çıkar\r\n";
+            this.btnPdfCikar.ButtonTextMarginLeft = 0;
+            this.btnPdfCikar.ColorContrastOnClick = 45;
+            this.btnPdfCikar.ColorContrastOnHover = 45;
+            this.btnPdfCikar.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btnPdfCikar.CustomizableEdges = borderEdges7;
+            this.btnPdfCikar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPdfCikar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnPdfCikar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnPdfCikar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnPdfCikar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnPdfCikar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnPdfCikar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPdfCikar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPdfCikar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnPdfCikar.IconLeftPadding = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.btnPdfCikar.IconMarginLeft = 11;
+            this.btnPdfCikar.IconPadding = 11;
+            this.btnPdfCikar.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPdfCikar.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnPdfCikar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnPdfCikar.IconSize = 20;
+            this.btnPdfCikar.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
+            this.btnPdfCikar.IdleBorderRadius = 1;
+            this.btnPdfCikar.IdleBorderThickness = 1;
+            this.btnPdfCikar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
+            this.btnPdfCikar.IdleIconLeftImage = null;
+            this.btnPdfCikar.IdleIconRightImage = null;
+            this.btnPdfCikar.IndicateFocus = false;
+            this.btnPdfCikar.Location = new System.Drawing.Point(485, 23);
+            this.btnPdfCikar.Name = "btnPdfCikar";
+            this.btnPdfCikar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnPdfCikar.OnDisabledState.BorderRadius = 1;
+            this.btnPdfCikar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPdfCikar.OnDisabledState.BorderThickness = 1;
+            this.btnPdfCikar.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnPdfCikar.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnPdfCikar.OnDisabledState.IconLeftImage = null;
+            this.btnPdfCikar.OnDisabledState.IconRightImage = null;
+            this.btnPdfCikar.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(125)))), ((int)(((byte)(126)))));
+            this.btnPdfCikar.onHoverState.BorderRadius = 1;
+            this.btnPdfCikar.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPdfCikar.onHoverState.BorderThickness = 1;
+            this.btnPdfCikar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(125)))), ((int)(((byte)(126)))));
+            this.btnPdfCikar.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnPdfCikar.onHoverState.IconLeftImage = null;
+            this.btnPdfCikar.onHoverState.IconRightImage = null;
+            this.btnPdfCikar.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
+            this.btnPdfCikar.OnIdleState.BorderRadius = 1;
+            this.btnPdfCikar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPdfCikar.OnIdleState.BorderThickness = 1;
+            this.btnPdfCikar.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
+            this.btnPdfCikar.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPdfCikar.OnIdleState.IconLeftImage = null;
+            this.btnPdfCikar.OnIdleState.IconRightImage = null;
+            this.btnPdfCikar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
+            this.btnPdfCikar.OnPressedState.BorderRadius = 1;
+            this.btnPdfCikar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPdfCikar.OnPressedState.BorderThickness = 1;
+            this.btnPdfCikar.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
+            this.btnPdfCikar.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnPdfCikar.OnPressedState.IconLeftImage = null;
+            this.btnPdfCikar.OnPressedState.IconRightImage = null;
+            this.btnPdfCikar.Size = new System.Drawing.Size(202, 32);
+            this.btnPdfCikar.TabIndex = 174;
+            this.btnPdfCikar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPdfCikar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnPdfCikar.TextMarginLeft = 0;
+            this.btnPdfCikar.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnPdfCikar.UseDefaultRadiusAndThickness = true;
+            this.btnPdfCikar.Click += new System.EventHandler(this.btnPdfCikar_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.WhiteSmoke;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.linkLabel1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel1.LinkColor = System.Drawing.Color.WhiteSmoke;
+            this.linkLabel1.Location = new System.Drawing.Point(690, 28);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(152, 22);
+            this.linkLabel1.TabIndex = 12;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Kimlik Numarası:";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            // 
             // PersonelList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1982,6 +2000,7 @@
             this.pnlTopItems.ResumeLayout(false);
             this.pnlTopItems.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.pnlDepGuncelle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridHugeList)).EndInit();
@@ -2027,7 +2046,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDepGuncelleLast;
         private Bunifu.UI.WinForms.BunifuTextBox txtDepGuncelleDepAd;
         private System.Windows.Forms.DataGridView GridHugeList;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private PERSONNELMODULEDataSet pERSONNELMODULEDataSet;
         private System.Windows.Forms.BindingSource personelListGridViewBindingSource;
         private PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter personelListGridViewTableAdapter;
@@ -2044,5 +2062,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn adresUlkeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresSehirDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Kartlar;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnPdfCikar;
     }
 }
