@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ViewOzlukB" targetNamespace="http://tempuri.org/ViewOzlukB.xsd" xmlns:mstns="http://tempuri.org/ViewOzlukB.xsd" xmlns="http://tempuri.org/ViewOzlukB.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PerModuleCS" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PerModuleCS (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PerModule.Properties.Settings.GlobalReference.Default.PerModuleCS" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewOzlukBTableAdapter" GeneratorDataComponentClassName="ViewOzlukBTableAdapter" Name="ViewOzlukB" UserDataComponentName="ViewOzlukBTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PerModuleCS (Settings)" DbObjectName="PERSONNELMODULE.dbo.ViewOzlukB" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PerTckn, PerAd, PerSoyad, pdfid, personnelid, kullaniciid, FileName, FileData FROM dbo.ViewOzlukB</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PerTckn" DataSetColumn="PerTckn" />
+              <Mapping SourceColumn="PerAd" DataSetColumn="PerAd" />
+              <Mapping SourceColumn="PerSoyad" DataSetColumn="PerSoyad" />
+              <Mapping SourceColumn="pdfid" DataSetColumn="pdfid" />
+              <Mapping SourceColumn="personnelid" DataSetColumn="personnelid" />
+              <Mapping SourceColumn="kullaniciid" DataSetColumn="kullaniciid" />
+              <Mapping SourceColumn="FileName" DataSetColumn="FileName" />
+              <Mapping SourceColumn="FileData" DataSetColumn="FileData" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ViewOzlukB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="ViewOzlukB" msprop:Generator_DataSetName="ViewOzlukB">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ViewOzlukB" msprop:Generator_RowEvHandlerName="ViewOzlukBRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewOzlukBRowDeleted" msprop:Generator_RowDeletingName="ViewOzlukBRowDeleting" msprop:Generator_RowEvArgName="ViewOzlukBRowChangeEvent" msprop:Generator_TablePropName="_ViewOzlukB" msprop:Generator_RowChangedName="ViewOzlukBRowChanged" msprop:Generator_RowChangingName="ViewOzlukBRowChanging" msprop:Generator_TableClassName="ViewOzlukBDataTable" msprop:Generator_RowClassName="ViewOzlukBRow" msprop:Generator_TableVarName="tableViewOzlukB" msprop:Generator_UserTableName="ViewOzlukB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PerTckn" msprop:Generator_ColumnPropNameInRow="PerTckn" msprop:Generator_ColumnPropNameInTable="PerTcknColumn" msprop:Generator_ColumnVarNameInTable="columnPerTckn" msprop:Generator_UserColumnName="PerTckn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PerAd" msprop:Generator_ColumnPropNameInRow="PerAd" msprop:Generator_ColumnPropNameInTable="PerAdColumn" msprop:Generator_ColumnVarNameInTable="columnPerAd" msprop:Generator_UserColumnName="PerAd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PerSoyad" msprop:Generator_ColumnPropNameInRow="PerSoyad" msprop:Generator_ColumnPropNameInTable="PerSoyadColumn" msprop:Generator_ColumnVarNameInTable="columnPerSoyad" msprop:Generator_UserColumnName="PerSoyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pdfid" msprop:Generator_ColumnPropNameInRow="pdfid" msprop:Generator_ColumnPropNameInTable="pdfidColumn" msprop:Generator_ColumnVarNameInTable="columnpdfid" msprop:Generator_UserColumnName="pdfid" type="xs:int" />
+              <xs:element name="personnelid" msprop:Generator_ColumnPropNameInRow="personnelid" msprop:Generator_ColumnPropNameInTable="personnelidColumn" msprop:Generator_ColumnVarNameInTable="columnpersonnelid" msprop:Generator_UserColumnName="personnelid" type="xs:int" />
+              <xs:element name="kullaniciid" msprop:Generator_ColumnPropNameInRow="kullaniciid" msprop:Generator_ColumnPropNameInTable="kullaniciidColumn" msprop:Generator_ColumnVarNameInTable="columnkullaniciid" msprop:Generator_UserColumnName="kullaniciid" type="xs:int" />
+              <xs:element name="FileName" msprop:Generator_ColumnPropNameInRow="FileName" msprop:Generator_ColumnPropNameInTable="FileNameColumn" msprop:Generator_ColumnVarNameInTable="columnFileName" msprop:Generator_UserColumnName="FileName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FileData" msprop:Generator_ColumnPropNameInRow="FileData" msprop:Generator_ColumnPropNameInTable="FileDataColumn" msprop:Generator_ColumnVarNameInTable="columnFileData" msprop:Generator_UserColumnName="FileData" type="xs:base64Binary" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewOzlukB" />
+      <xs:field xpath="mstns:pdfid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

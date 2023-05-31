@@ -235,12 +235,6 @@
     </Compile>
     <Compile Include="Classes\BordroHesaplama.cs" />
     <Compile Include="Classes\Calisan.cs" />
-    <Compile Include="Forms\DepartmanForm\Departmans.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\DepartmanForm\Departmans.Designer.cs">
-      <DependentUpon>Departmans.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\BordrosForm\Bordros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,23 +289,17 @@
     <Compile Include="Forms\PersonelListForm\PersonCard.Designer.cs">
       <DependentUpon>PersonCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Basvurucard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Basvurucard.Designer.cs">
-      <DependentUpon>Basvurucard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\PersonelListForm\PersonCardDrop\Bordrocard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\PersonelListForm\PersonCardDrop\Bordrocard.Designer.cs">
       <DependentUpon>Bordrocard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Hacizcard.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Izincards.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Hacizcard.Designer.cs">
-      <DependentUpon>Hacizcard.cs</DependentUpon>
+    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Izincards.Designer.cs">
+      <DependentUpon>Izincards.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PersonelListForm\PersonCardDrop\Izinlercard.cs">
       <SubType>Form</SubType>
@@ -325,12 +313,6 @@
     <Compile Include="Forms\PersonelListForm\PersonCardDrop\KisiselBilgilercard.Designer.cs">
       <DependentUpon>KisiselBilgilercard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Kvgmcard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Kvgmcard.Designer.cs">
-      <DependentUpon>Kvgmcard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\PersonelListForm\PersonCardDrop\OnIzleme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,23 +325,11 @@
     <Compile Include="Forms\PersonelListForm\PersonCardDrop\OzlukBcard.Designer.cs">
       <DependentUpon>OzlukBcard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Raporlarcard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Raporlarcard.Designer.cs">
-      <DependentUpon>Raporlarcard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\PersonelListForm\PersonCardDrop\UcretBcard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\PersonelListForm\PersonCardDrop\UcretBcard.Designer.cs">
       <DependentUpon>UcretBcard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Zimmetcard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCardDrop\Zimmetcard.Designer.cs">
-      <DependentUpon>Zimmetcard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PersonelListForm\PersonelList.cs">
       <SubType>Form</SubType>
@@ -372,12 +342,6 @@
     </Compile>
     <Compile Include="Forms\PersonelRaporlariForm\PersonelRaporlari.Designer.cs">
       <DependentUpon>PersonelRaporlari.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ZimmetRaporlariForm\ZimmetRaporlari.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ZimmetRaporlariForm\ZimmetRaporlari.Designer.cs">
-      <DependentUpon>ZimmetRaporlari.cs</DependentUpon>
     </Compile>
     <Compile Include="PERSONNELMODULEDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -415,6 +379,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ViewMesaiDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ViewOzlukB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewOzlukB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeScreenForm.Designer.cs">
+      <DependentUpon>WelcomeScreenForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="WelcomeScreenForm.resx">
+      <DependentUpon>WelcomeScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
@@ -438,9 +416,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BackModel.resx">
       <DependentUpon>BackModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DepartmanForm\Departmans.resx">
-      <DependentUpon>Departmans.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BordrosForm\Bordros.resx">
       <DependentUpon>Bordros.cs</DependentUpon>
@@ -469,14 +444,11 @@
     <EmbeddedResource Include="Forms\PersonelListForm\PersonCard.resx">
       <DependentUpon>PersonCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Basvurucard.resx">
-      <DependentUpon>Basvurucard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Bordrocard.resx">
       <DependentUpon>Bordrocard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Hacizcard.resx">
-      <DependentUpon>Hacizcard.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Izincards.resx">
+      <DependentUpon>Izincards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Izinlercard.resx">
       <DependentUpon>Izinlercard.cs</DependentUpon>
@@ -484,32 +456,20 @@
     <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\KisiselBilgilercard.resx">
       <DependentUpon>KisiselBilgilercard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Kvgmcard.resx">
-      <DependentUpon>Kvgmcard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\OnIzleme.resx">
       <DependentUpon>OnIzleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\OzlukBcard.resx">
       <DependentUpon>OzlukBcard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Raporlarcard.resx">
-      <DependentUpon>Raporlarcard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\UcretBcard.resx">
       <DependentUpon>UcretBcard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\Zimmetcard.resx">
-      <DependentUpon>Zimmetcard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelListForm\PersonelList.resx">
       <DependentUpon>PersonelList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelRaporlariForm\PersonelRaporlari.resx">
       <DependentUpon>PersonelRaporlari.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ZimmetRaporlariForm\ZimmetRaporlari.resx">
-      <DependentUpon>ZimmetRaporlari.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -600,6 +560,17 @@
     </None>
     <None Include="ViewMesaiDS.xss">
       <DependentUpon>ViewMesaiDS.xsd</DependentUpon>
+    </None>
+    <None Include="ViewOzlukB.xsc">
+      <DependentUpon>ViewOzlukB.xsd</DependentUpon>
+    </None>
+    <None Include="ViewOzlukB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ViewOzlukB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ViewOzlukB.xss">
+      <DependentUpon>ViewOzlukB.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

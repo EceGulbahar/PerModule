@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PerModule.Forms.PersonelListForm.PersonCardDrop
 {
-    public partial class Zimmetcard : Form
+    public partial class Izincards : UserControl
     {
-        public Zimmetcard()
+        public Izincards()
         {
             InitializeComponent();
         }

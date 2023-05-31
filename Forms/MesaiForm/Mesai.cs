@@ -13,7 +13,6 @@ using System.Windows.Forms;
 using PerModule.Forms.LoginForm;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Documents;
-using PerModule.Forms.DepartmanForm;
 using Bunifu.UI.WinForms;
 
 namespace PerModule.Forms.OzlukDosyasiRaporlariForm

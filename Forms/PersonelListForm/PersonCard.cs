@@ -61,19 +61,6 @@ namespace PerModule.Forms.PersonelListForm
             
         }
 
-        private void btnBasvuru_Click(object sender, EventArgs e)
-        {
-            PFormGetir.Controls.Clear();
-            Basvurucard basvurucard = new Basvurucard();
-            FormGetir(basvurucard);
-        }
-
-        private void btnZimmet_Click(object sender, EventArgs e)
-        {
-            PFormGetir.Controls.Clear();
-            Zimmetcard zimmetcard = new Zimmetcard();
-            FormGetir(zimmetcard);
-        }
 
         private void btnOzlukB_Click(object sender, EventArgs e)
         {
@@ -101,27 +88,6 @@ namespace PerModule.Forms.PersonelListForm
             PFormGetir.Controls.Clear();
             Izinlercard izinlercard = new Izinlercard();
             FormGetir(izinlercard);
-        }
-
-        private void btnRaporlar_Click(object sender, EventArgs e)
-        {
-            PFormGetir.Controls.Clear();
-            Raporlarcard raporlarcard = new Raporlarcard();
-            FormGetir(raporlarcard);
-        }
-
-        private void btnHaciz_Click(object sender, EventArgs e)
-        {
-            PFormGetir.Controls.Clear();
-            Hacizcard hacizcard = new Hacizcard();
-            FormGetir(hacizcard);
-        }
-
-        private void btnKVGM_Click(object sender, EventArgs e)
-        {
-            PFormGetir.Controls.Clear();
-            Kvgmcard kvgm = new Kvgmcard();
-            FormGetir(kvgm);
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)

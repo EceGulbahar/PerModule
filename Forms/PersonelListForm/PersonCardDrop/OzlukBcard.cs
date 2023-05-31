@@ -60,12 +60,12 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                     command.Parameters.AddWithValue("@FileName", fileName);
                     command.Parameters.AddWithValue("@FileData", fileBytes);
                     command.ExecuteNonQuery();
+                    searchyenile();
                 }
             }
         }
 
-        string fileName;
-        private void DisplayPDFFromDatabase()
+        public void DisplayPDFFromDatabase(string fileName)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["PerModule.Properties.Settings.PerModuleCS"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -75,7 +75,7 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 string query = "SELECT FileData FROM OzlukBFiles WHERE FileName = @FileName";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@FileName", "fileName"+".pdf");
+                    command.Parameters.AddWithValue("@FileName", fileName);
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
@@ -97,6 +97,46 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
             }
         }
 
+        private void OzlukBcard_Load(object sender, EventArgs e)
+        {
+            searchyenile();
+            // TODO: Bu kod satırı 'viewOzlukB._ViewOzlukB' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            //this.viewOzlukBTableAdapter.Fill(this.viewOzlukB._ViewOzlukB);
 
+        }
+
+        int secilendeger;
+        string fileName;
+        private void OzlukBGridList_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            secilendeger = OzlukBGridList.SelectedCells[0].RowIndex;
+            fileName = OzlukBGridList.Rows[secilendeger].Cells[5].Value.ToString();
+            DisplayPDFFromDatabase(fileName);
+        }
+
+        DataTable dt = new DataTable("ViewOzlukB");
+        public void searchyenile()
+        {
+            dt.Clear();
+            if (baglan.State == ConnectionState.Closed)
+            {
+                baglan.Open();
+            }
+            using (SqlDataAdapter dasearch = new SqlDataAdapter("select * from ViewOzlukB where personnelid=@personid", baglan))
+            {
+                dasearch.SelectCommand.Parameters.AddWithValue("@personid", OnIzleme.personnelid);
+                dasearch.Fill(dt);
+                OzlukBGridList.DataSource = dt;
+            }
+            if (baglan.State == ConnectionState.Open)
+            {
+                baglan.Close();
+            }
+        }
+
+        private void btnYenile_Click(object sender, EventArgs e)
+        {
+            searchyenile();
+        }
     }
 }

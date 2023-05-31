@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Anasayfa));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pnlTopItems = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.KontrolPanelLink = new System.Windows.Forms.LinkLabel();
@@ -63,9 +63,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlTopItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -154,11 +154,11 @@
             this.CalenderSol.ColorContrastOnClick = 45;
             this.CalenderSol.ColorContrastOnHover = 45;
             this.CalenderSol.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.CalenderSol.CustomizableEdges = borderEdges5;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.CalenderSol.CustomizableEdges = borderEdges1;
             this.CalenderSol.DialogResult = System.Windows.Forms.DialogResult.None;
             this.CalenderSol.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.CalenderSol.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -245,11 +245,11 @@
             this.CalenderSag.ColorContrastOnClick = 45;
             this.CalenderSag.ColorContrastOnHover = 45;
             this.CalenderSag.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.CalenderSag.CustomizableEdges = borderEdges6;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.CalenderSag.CustomizableEdges = borderEdges2;
             this.CalenderSag.DialogResult = System.Windows.Forms.DialogResult.None;
             this.CalenderSag.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.CalenderSag.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -610,13 +610,16 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(489, 485);
             this.bunifuGradientPanel1.TabIndex = 17;
             // 
-            // panel1
+            // label12
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(142)))), ((int)(((byte)(146)))));
-            this.panel1.Location = new System.Drawing.Point(16, 49);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(457, 1);
-            this.panel1.TabIndex = 160;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label12.Location = new System.Drawing.Point(37, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(143, 25);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "DUYURULAR";
             // 
             // pictureBox2
             // 
@@ -628,16 +631,13 @@
             this.pictureBox2.TabIndex = 153;
             this.pictureBox2.TabStop = false;
             // 
-            // label12
+            // panel1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label12.Location = new System.Drawing.Point(37, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(143, 25);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "DUYURULAR";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(142)))), ((int)(((byte)(146)))));
+            this.panel1.Location = new System.Drawing.Point(16, 49);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(457, 1);
+            this.panel1.TabIndex = 160;
             // 
             // Anasayfa
             // 
@@ -685,12 +685,9 @@
         private System.Windows.Forms.LinkLabel KontrolPanelLink;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.FlowLayoutPanel daycontainer;
         private System.Windows.Forms.Panel panel2;
@@ -715,5 +712,8 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lblMevcut;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label12;
     }
 }

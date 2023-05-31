@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
 using System.Data.SqlClient;
 using System.Configuration;
-using PerModule.Forms.DepartmanForm;
 using System.Text.RegularExpressions;
 //güvenli şifre oluşturmak için
 using System.IO;

@@ -3,7 +3,6 @@ using PerModule.Forms.IzinRaporlariForm;
 using PerModule.Forms.OzlukDosyasiRaporlariForm;
 using PerModule.Forms.PersonelListForm;
 using PerModule.Forms.PersonelRaporlariForm;
-using PerModule.Forms.ZimmetRaporlariForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +17,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using System.Drawing.Drawing2D;
 using System.Configuration;
 using PerModule.Forms.BordrosForm;
-using PerModule.Forms.DepartmanForm;
 using Microsoft.Office.Interop.Excel;
 using Application = System.Windows.Forms.Application;
 
@@ -119,12 +117,6 @@ namespace PerModule
 
         private void btnZimmet_Click_1(object sender, EventArgs e)
         {
-            ZimmetRaporlari Zimmets = new ZimmetRaporlari();
-            FormGetir(Zimmets);
-            pnlHLight.Height = btnZimmet.Height;
-            pnlHLight.Top = btnZimmet.Top;
-            pnlHLight1.Height = btnZimmet.Height;
-            pnlHLight1.Top = btnZimmet.Top;
 
         }
 
@@ -191,15 +183,7 @@ namespace PerModule
             BtnIzin.BackColor = System.Drawing.ColorTranslator.FromHtml("#6C757D");
         }
 
-        private void btnZimmet_MouseEnter(object sender, EventArgs e)
-        {
-            btnZimmet.BackColor = System.Drawing.ColorTranslator.FromHtml("#636970");
-        }
-
-        private void btnZimmet_MouseLeave(object sender, EventArgs e)
-        {
-            btnZimmet.BackColor = System.Drawing.ColorTranslator.FromHtml("#6C757D");
-        }
+       
 
         private void btnOzlukB_MouseEnter(object sender, EventArgs e)
         {
