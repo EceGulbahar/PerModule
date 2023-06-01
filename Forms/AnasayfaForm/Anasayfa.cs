@@ -48,6 +48,24 @@ namespace PerModule.Forms.AnasayfaForm
             {
                 pnlMevcutEtkinlik.Controls.RemoveAt(pnlMevcutEtkinlik.Controls.Count - 1);
             }
+            while (pnlYaklasanEtkinlikler.Controls.OfType<UC_YaklasanEvents>().Count() > rowCount1)
+            {
+                pnlYaklasanEtkinlikler.Controls.RemoveAt(pnlYaklasanEtkinlikler.Controls.Count - 1);
+            }
+            if (baglan.State == ConnectionState.Closed)
+            {
+                baglan.Open();
+            }
+            SqlCommand departmangrafik = new SqlCommand("select Departmanlar, Count(*) from DepartmanDrop group by Departmanlar", baglan);
+            SqlDataReader reader3 = departmangrafik.ExecuteReader();
+            while (reader3.Read())
+            {
+                chartDepartmans.Series["DepartmanDagilimi"].Points.AddXY(reader3[0].ToString(), reader3[1]);
+            }
+            if (baglan.State == ConnectionState.Open)
+            {
+                baglan.Close();
+            }
         }
 
         static DateTime currentDT = DateTime.Now;
@@ -116,7 +134,7 @@ namespace PerModule.Forms.AnasayfaForm
                 baglan.Close();
             }
         }
-
+        int rowCount1 = 0;
         DateTime datenow = DateTime.Now;
         public void UCYaklasanEtkinlik()
         {
@@ -134,6 +152,17 @@ namespace PerModule.Forms.AnasayfaForm
                     pnlYaklasanEtkinlikler.Controls.Add(ucye);
                 }
                 yeoku.Close();
+                baglan.Close();
+
+                baglan.Open();
+                string queryString = "SELECT COUNT(*) FROM Calendar where date>= @datenow";
+                SqlCommand command = new SqlCommand(queryString, baglan);
+                command.Parameters.AddWithValue("@datenow", datenow);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    rowCount1 = reader.GetInt32(0);
+                }
                 baglan.Close();
             }
         }

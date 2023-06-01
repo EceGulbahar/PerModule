@@ -44,6 +44,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -64,7 +65,6 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.btnPerCikar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnPerEkle = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtSearchboxPerList = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -80,6 +80,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.KontrolPanelLink = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnPdfCikar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtTcnoAra = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnTcnoAra = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnYenile = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -105,8 +107,6 @@
             this.personelListGridViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pERSONNELMODULEDataSet = new PerModule.PERSONNELMODULEDataSet();
             this.personelListGridViewTableAdapter = new PerModule.PERSONNELMODULEDataSetTableAdapters.PersonelListGridViewTableAdapter();
-            this.btnPdfCikar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnlDepEkle.SuspendLayout();
             this.pnlTopItems.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -497,7 +497,7 @@
             this.DropDepartmans.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.DropDepartmans.ItemHighLightForeColor = System.Drawing.Color.White;
             this.DropDepartmans.ItemTopMargin = 3;
-            this.DropDepartmans.Location = new System.Drawing.Point(1214, 23);
+            this.DropDepartmans.Location = new System.Drawing.Point(1018, 21);
             this.DropDepartmans.Name = "DropDepartmans";
             this.DropDepartmans.Size = new System.Drawing.Size(352, 32);
             this.DropDepartmans.TabIndex = 9;
@@ -553,7 +553,7 @@
             this.btnDepEklePnlAc.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDepEklePnlAc.IdleIconLeftImage")));
             this.btnDepEklePnlAc.IdleIconRightImage = null;
             this.btnDepEklePnlAc.IndicateFocus = false;
-            this.btnDepEklePnlAc.Location = new System.Drawing.Point(1572, 23);
+            this.btnDepEklePnlAc.Location = new System.Drawing.Point(1376, 21);
             this.btnDepEklePnlAc.Name = "btnDepEklePnlAc";
             this.btnDepEklePnlAc.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepEklePnlAc.OnDisabledState.BorderRadius = 1;
@@ -602,7 +602,7 @@
             this.pnlDepEkle.Controls.Add(this.btnDepEkleIptal);
             this.pnlDepEkle.Controls.Add(this.btnDepEkle);
             this.pnlDepEkle.Controls.Add(this.txtDepSec);
-            this.pnlDepEkle.Location = new System.Drawing.Point(1214, 61);
+            this.pnlDepEkle.Location = new System.Drawing.Point(1018, 59);
             this.pnlDepEkle.Name = "pnlDepEkle";
             this.pnlDepEkle.Size = new System.Drawing.Size(352, 101);
             this.pnlDepEkle.TabIndex = 11;
@@ -944,6 +944,113 @@
             this.panel2.Size = new System.Drawing.Size(1711, 205);
             this.panel2.TabIndex = 14;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.WhiteSmoke;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.linkLabel1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel1.LinkColor = System.Drawing.Color.WhiteSmoke;
+            this.linkLabel1.Location = new System.Drawing.Point(494, 26);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(152, 22);
+            this.linkLabel1.TabIndex = 12;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Kimlik Numarası:";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            // 
+            // btnPdfCikar
+            // 
+            this.btnPdfCikar.AllowAnimations = true;
+            this.btnPdfCikar.AllowMouseEffects = true;
+            this.btnPdfCikar.AllowToggling = false;
+            this.btnPdfCikar.AnimationSpeed = 200;
+            this.btnPdfCikar.AutoGenerateColors = false;
+            this.btnPdfCikar.AutoRoundBorders = false;
+            this.btnPdfCikar.AutoSizeLeftIcon = true;
+            this.btnPdfCikar.AutoSizeRightIcon = true;
+            this.btnPdfCikar.BackColor = System.Drawing.Color.Transparent;
+            this.btnPdfCikar.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
+            this.btnPdfCikar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPdfCikar.BackgroundImage")));
+            this.btnPdfCikar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPdfCikar.ButtonText = "PDF Olarak Çıkar\r\n";
+            this.btnPdfCikar.ButtonTextMarginLeft = 0;
+            this.btnPdfCikar.ColorContrastOnClick = 45;
+            this.btnPdfCikar.ColorContrastOnHover = 45;
+            this.btnPdfCikar.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btnPdfCikar.CustomizableEdges = borderEdges7;
+            this.btnPdfCikar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPdfCikar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnPdfCikar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnPdfCikar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnPdfCikar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnPdfCikar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnPdfCikar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPdfCikar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPdfCikar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnPdfCikar.IconLeftPadding = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.btnPdfCikar.IconMarginLeft = 11;
+            this.btnPdfCikar.IconPadding = 11;
+            this.btnPdfCikar.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPdfCikar.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnPdfCikar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnPdfCikar.IconSize = 20;
+            this.btnPdfCikar.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
+            this.btnPdfCikar.IdleBorderRadius = 1;
+            this.btnPdfCikar.IdleBorderThickness = 1;
+            this.btnPdfCikar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
+            this.btnPdfCikar.IdleIconLeftImage = null;
+            this.btnPdfCikar.IdleIconRightImage = null;
+            this.btnPdfCikar.IndicateFocus = false;
+            this.btnPdfCikar.Location = new System.Drawing.Point(1499, 21);
+            this.btnPdfCikar.Name = "btnPdfCikar";
+            this.btnPdfCikar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnPdfCikar.OnDisabledState.BorderRadius = 1;
+            this.btnPdfCikar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPdfCikar.OnDisabledState.BorderThickness = 1;
+            this.btnPdfCikar.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnPdfCikar.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnPdfCikar.OnDisabledState.IconLeftImage = null;
+            this.btnPdfCikar.OnDisabledState.IconRightImage = null;
+            this.btnPdfCikar.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(125)))), ((int)(((byte)(126)))));
+            this.btnPdfCikar.onHoverState.BorderRadius = 1;
+            this.btnPdfCikar.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPdfCikar.onHoverState.BorderThickness = 1;
+            this.btnPdfCikar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(125)))), ((int)(((byte)(126)))));
+            this.btnPdfCikar.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnPdfCikar.onHoverState.IconLeftImage = null;
+            this.btnPdfCikar.onHoverState.IconRightImage = null;
+            this.btnPdfCikar.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
+            this.btnPdfCikar.OnIdleState.BorderRadius = 1;
+            this.btnPdfCikar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPdfCikar.OnIdleState.BorderThickness = 1;
+            this.btnPdfCikar.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
+            this.btnPdfCikar.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPdfCikar.OnIdleState.IconLeftImage = null;
+            this.btnPdfCikar.OnIdleState.IconRightImage = null;
+            this.btnPdfCikar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
+            this.btnPdfCikar.OnPressedState.BorderRadius = 1;
+            this.btnPdfCikar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnPdfCikar.OnPressedState.BorderThickness = 1;
+            this.btnPdfCikar.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
+            this.btnPdfCikar.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnPdfCikar.OnPressedState.IconLeftImage = null;
+            this.btnPdfCikar.OnPressedState.IconRightImage = null;
+            this.btnPdfCikar.Size = new System.Drawing.Size(202, 32);
+            this.btnPdfCikar.TabIndex = 174;
+            this.btnPdfCikar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPdfCikar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnPdfCikar.TextMarginLeft = 0;
+            this.btnPdfCikar.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnPdfCikar.UseDefaultRadiusAndThickness = true;
+            this.btnPdfCikar.Click += new System.EventHandler(this.btnPdfCikar_Click);
+            // 
             // txtTcnoAra
             // 
             this.txtTcnoAra.AcceptsReturn = false;
@@ -971,7 +1078,7 @@
             this.txtTcnoAra.IconRight = null;
             this.txtTcnoAra.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTcnoAra.Lines = new string[0];
-            this.txtTcnoAra.Location = new System.Drawing.Point(848, 23);
+            this.txtTcnoAra.Location = new System.Drawing.Point(652, 21);
             this.txtTcnoAra.MaxLength = 32767;
             this.txtTcnoAra.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTcnoAra.Modified = false;
@@ -1067,7 +1174,7 @@
             this.btnTcnoAra.IdleIconLeftImage = null;
             this.btnTcnoAra.IdleIconRightImage = null;
             this.btnTcnoAra.IndicateFocus = false;
-            this.btnTcnoAra.Location = new System.Drawing.Point(1027, 23);
+            this.btnTcnoAra.Location = new System.Drawing.Point(831, 21);
             this.btnTcnoAra.Name = "btnTcnoAra";
             this.btnTcnoAra.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(214)))), ((int)(((byte)(225)))));
             this.btnTcnoAra.OnDisabledState.BorderRadius = 1;
@@ -1157,7 +1264,7 @@
             this.btnYenile.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnYenile.IdleIconLeftImage")));
             this.btnYenile.IdleIconRightImage = null;
             this.btnYenile.IndicateFocus = false;
-            this.btnYenile.Location = new System.Drawing.Point(1654, 23);
+            this.btnYenile.Location = new System.Drawing.Point(1458, 21);
             this.btnYenile.Name = "btnYenile";
             this.btnYenile.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnYenile.OnDisabledState.BorderRadius = 1;
@@ -1208,7 +1315,7 @@
             this.pnlDepGuncelle.Controls.Add(this.btnDepGuncelIptal);
             this.pnlDepGuncelle.Controls.Add(this.btnDepGuncelleLast);
             this.pnlDepGuncelle.Controls.Add(this.txtDepGuncelleDepAd);
-            this.pnlDepGuncelle.Location = new System.Drawing.Point(1214, 61);
+            this.pnlDepGuncelle.Location = new System.Drawing.Point(1018, 59);
             this.pnlDepGuncelle.Name = "pnlDepGuncelle";
             this.pnlDepGuncelle.Size = new System.Drawing.Size(352, 134);
             this.pnlDepGuncelle.TabIndex = 12;
@@ -1683,7 +1790,7 @@
             this.btnDepGuncelle.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnDepGuncelle.IdleIconLeftImage")));
             this.btnDepGuncelle.IdleIconRightImage = null;
             this.btnDepGuncelle.IndicateFocus = false;
-            this.btnDepGuncelle.Location = new System.Drawing.Point(1613, 23);
+            this.btnDepGuncelle.Location = new System.Drawing.Point(1417, 21);
             this.btnDepGuncelle.Name = "btnDepGuncelle";
             this.btnDepGuncelle.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDepGuncelle.OnDisabledState.BorderRadius = 1;
@@ -1729,7 +1836,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1449, 78);
+            this.pictureBox1.Location = new System.Drawing.Point(1253, 76);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(229, 101);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1875,113 +1982,6 @@
             // personelListGridViewTableAdapter
             // 
             this.personelListGridViewTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnPdfCikar
-            // 
-            this.btnPdfCikar.AllowAnimations = true;
-            this.btnPdfCikar.AllowMouseEffects = true;
-            this.btnPdfCikar.AllowToggling = false;
-            this.btnPdfCikar.AnimationSpeed = 200;
-            this.btnPdfCikar.AutoGenerateColors = false;
-            this.btnPdfCikar.AutoRoundBorders = false;
-            this.btnPdfCikar.AutoSizeLeftIcon = true;
-            this.btnPdfCikar.AutoSizeRightIcon = true;
-            this.btnPdfCikar.BackColor = System.Drawing.Color.Transparent;
-            this.btnPdfCikar.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
-            this.btnPdfCikar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPdfCikar.BackgroundImage")));
-            this.btnPdfCikar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnPdfCikar.ButtonText = "PDF Olarak Çıkar\r\n";
-            this.btnPdfCikar.ButtonTextMarginLeft = 0;
-            this.btnPdfCikar.ColorContrastOnClick = 45;
-            this.btnPdfCikar.ColorContrastOnHover = 45;
-            this.btnPdfCikar.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.btnPdfCikar.CustomizableEdges = borderEdges7;
-            this.btnPdfCikar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnPdfCikar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnPdfCikar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnPdfCikar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnPdfCikar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnPdfCikar.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnPdfCikar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPdfCikar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPdfCikar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnPdfCikar.IconLeftPadding = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.btnPdfCikar.IconMarginLeft = 11;
-            this.btnPdfCikar.IconPadding = 11;
-            this.btnPdfCikar.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPdfCikar.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnPdfCikar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnPdfCikar.IconSize = 20;
-            this.btnPdfCikar.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
-            this.btnPdfCikar.IdleBorderRadius = 1;
-            this.btnPdfCikar.IdleBorderThickness = 1;
-            this.btnPdfCikar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
-            this.btnPdfCikar.IdleIconLeftImage = null;
-            this.btnPdfCikar.IdleIconRightImage = null;
-            this.btnPdfCikar.IndicateFocus = false;
-            this.btnPdfCikar.Location = new System.Drawing.Point(485, 23);
-            this.btnPdfCikar.Name = "btnPdfCikar";
-            this.btnPdfCikar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnPdfCikar.OnDisabledState.BorderRadius = 1;
-            this.btnPdfCikar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnPdfCikar.OnDisabledState.BorderThickness = 1;
-            this.btnPdfCikar.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnPdfCikar.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnPdfCikar.OnDisabledState.IconLeftImage = null;
-            this.btnPdfCikar.OnDisabledState.IconRightImage = null;
-            this.btnPdfCikar.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(125)))), ((int)(((byte)(126)))));
-            this.btnPdfCikar.onHoverState.BorderRadius = 1;
-            this.btnPdfCikar.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnPdfCikar.onHoverState.BorderThickness = 1;
-            this.btnPdfCikar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(125)))), ((int)(((byte)(126)))));
-            this.btnPdfCikar.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnPdfCikar.onHoverState.IconLeftImage = null;
-            this.btnPdfCikar.onHoverState.IconRightImage = null;
-            this.btnPdfCikar.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
-            this.btnPdfCikar.OnIdleState.BorderRadius = 1;
-            this.btnPdfCikar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnPdfCikar.OnIdleState.BorderThickness = 1;
-            this.btnPdfCikar.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(19)))), ((int)(((byte)(21)))));
-            this.btnPdfCikar.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPdfCikar.OnIdleState.IconLeftImage = null;
-            this.btnPdfCikar.OnIdleState.IconRightImage = null;
-            this.btnPdfCikar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
-            this.btnPdfCikar.OnPressedState.BorderRadius = 1;
-            this.btnPdfCikar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnPdfCikar.OnPressedState.BorderThickness = 1;
-            this.btnPdfCikar.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
-            this.btnPdfCikar.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnPdfCikar.OnPressedState.IconLeftImage = null;
-            this.btnPdfCikar.OnPressedState.IconRightImage = null;
-            this.btnPdfCikar.Size = new System.Drawing.Size(202, 32);
-            this.btnPdfCikar.TabIndex = 174;
-            this.btnPdfCikar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPdfCikar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnPdfCikar.TextMarginLeft = 0;
-            this.btnPdfCikar.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnPdfCikar.UseDefaultRadiusAndThickness = true;
-            this.btnPdfCikar.Click += new System.EventHandler(this.btnPdfCikar_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.WhiteSmoke;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.linkLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.linkLabel1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.WhiteSmoke;
-            this.linkLabel1.Location = new System.Drawing.Point(690, 28);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(152, 22);
-            this.linkLabel1.TabIndex = 12;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Kimlik Numarası:";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             // 
             // PersonelList
             // 
