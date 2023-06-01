@@ -69,12 +69,7 @@ namespace PerModule.Forms.PersonelListForm
             FormGetir(ozlukBcard);
         }
 
-        private void btnUcretP_Click(object sender, EventArgs e)
-        {
-            PFormGetir.Controls.Clear();
-            UcretBcard ucretBcard = new UcretBcard();
-            FormGetir(ucretBcard);
-        }
+       
 
         private void btnBordro_Click(object sender, EventArgs e)
         {

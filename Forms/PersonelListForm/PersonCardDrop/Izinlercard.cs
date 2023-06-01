@@ -1,4 +1,5 @@
-﻿using PerModule.Forms.AnasayfaForm;
+﻿using PerModule.Classes;
+using PerModule.Forms.AnasayfaForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -68,6 +69,11 @@ namespace PerModule.Forms.PersonelListForm.PersonCardDrop
                 oku.Close();
                 baglan.Close();
             }
+        }
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
         }
     }
 }

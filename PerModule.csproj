@@ -325,12 +325,6 @@
     <Compile Include="Forms\PersonelListForm\PersonCardDrop\OzlukBcard.Designer.cs">
       <DependentUpon>OzlukBcard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCardDrop\UcretBcard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\PersonelListForm\PersonCardDrop\UcretBcard.Designer.cs">
-      <DependentUpon>UcretBcard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\PersonelListForm\PersonelList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -461,9 +455,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\OzlukBcard.resx">
       <DependentUpon>OzlukBcard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PersonelListForm\PersonCardDrop\UcretBcard.resx">
-      <DependentUpon>UcretBcard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PersonelListForm\PersonelList.resx">
       <DependentUpon>PersonelList.cs</DependentUpon>
